@@ -72,45 +72,77 @@
   <!-- Page Content -->
   <form acton="action_page.php">
   <div class="container">
-    <h1>Zgłoś się!</h1>
-    <p>Wypełnij ten formularz, aby zgłosić swoją drużynę!</p>
+    <br/>
+    <h2>Wypełnij ten formularz, aby zgłosić swoją drużynę!</h2>
     <hr>
 
+    <div class="row">
+    <div class="col-md-6">
     <label for"name-of-team"><b>Pełna nazwa firmy lub drużyny</b></label>
     <input type="text" name="name-of-team" required><br/><br/>
+  </div>
+</div>
 
-    <p>Adres firmy lub zgłaszającego:</p>
 
+    <p><b>Adres firmy lub zgłaszającego:</b></p>
+
+    <div class="row">
+    <div class="col-md-3">
     <label for="street"><b>Ulica</b></label>
     <input type="text" name="street" required><br/>
-
+  </div>
+    <div class="col-md-3">
     <label for="city"><b>Miejscowość</b></label>
     <input type="text" name="city" required><br/>
+  </div>
+</div>
 
+    <div class="row">
+    <div class="col-md-3">
     <label for="post-code"><b>Kod Pocztowy</b></label>
     <input type="text" name="post-code" required><br/>
+  </div>
 
     <!-- za NIP chyba lepiej podstawić text(String) aniżeli wartość liczbową -->
+    <div class="col-md-3">
     <label for="nip"><b>NIP</b></label>
     <input type="text" name="nip" required><br/><br/>
+  </div>
+</div>
+<br/>
 
-    <label for="name-surname"><b>Imię i nazwisko osoby zgłaszającej (w imieniu firmy,reprezentant drużyny):</b></label><br/>
+    <div class="row">
+    <div class="col-md-6">
+    <label for="name-surname"><b>Imię i nazwisko osoby zgłaszającej:</b></label><br/>
     <input type="text" name="name-surname" required><br/>
+  </div>
+</div>
 
-    <label for="phone"><b>Telefon zgłaszającego:</b></label><br/>
+    <div class="row">
+    <div class="col-md-3">
+    <label for="phone"><b>Telefon:</b></label><br/>
     <input type="text" name="phone" required><br/>
+  </div>
 
-    <label for="email-adress"><b>Adres email zgłaszającego:</b></label><br/>
+    <div class="col-md-3">
+    <label for="email-adress"><b>Adres email:</b></label><br/>
     <input type="text" name="email-adress" required><br/>
+  </div>
+</div>
 
-    <label for="id"><b>Nr dowodu osobistego zgłaszającego:</b></label><br/>
+    <div class="row">
+    <div class="col-md-3">
+    <label for="id"><b>Nr dowodu osobistego:</b></label><br/>
     <input type="text" name="id" required><br/>
+  </div>
 
+    <div class="col-md-3">
     <label for="pesel"><b>Nr PESEL zgłaszającego:</b></label><br/>
     <input type="text" name="pesel" required><br/>
+  </div>
+</div>
 
-    <p><b>Wyrażam zgodę przetwarzanie danych: <input type="checkbox" id="myCheck" onclick="myFunction()"></b></p>
-
+    <p> <input type="checkbox" id="myCheck" onclick="myFunction()"> <b>Wyrażam zgodę przetwarzanie danych.</b></p>
 
     <div class="row">
       <div class="col-lg-12 text-center">
