@@ -87,3 +87,19 @@ color: #8AFF8C;
 .links a:hover{
 color: white;
 }
+
+.space50{
+	height: 50px;
+}
+
+.space100{
+	height: 100px;
+}
+
+.space150{
+	height: 150px;
+}
+
+.space200{
+	height: 200px;
+}
