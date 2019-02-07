@@ -7,11 +7,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
+  <style media="screen">
+  body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: black;
+}
 
-  <title>Nazwa</title>
+* {
+box-sizing: border-box;
+
+}
+
+/* Add padding to containers */
+.container {
+padding: 16px;
+background-color: white  ;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+background-color: #4CAF50;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+.registerbtn:hover {
+opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+background-color: #f1f1f1;
+text-align: center;
+}
+  </style>
+
+  <title>Zgłoś się!</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
 
 </head>
 
@@ -67,14 +134,51 @@
   </nav>
 
   <!-- Page Content -->
+  <form acton="action_page.php">
   <div class="container">
+    <h1>Zgłoś się!</h1>
+    <p>Wypełnij ten formularz, aby zgłosić swoją drużynę!</p>
+    <hr>
+
+    <label for"name-of-team"><b>Pełna nazwa firmy lub drużyny</b></label>
+    <input type="text" name="name-of-team" required><br/><br/>
+
+    <p>Adres firmy lub zgłaszającego:</p>
+
+    <label for="street"><b>Ulica</b></label>
+    <input type="text" name="street" required><br/>
+
+    <label for="city"><b>Miejscowość</b></label>
+    <input type="text" name="city" required><br/>
+
+    <label for="post-code"><b>Kod Pocztowy</b></label>
+    <input type="text" name="post-code" required><br/>
+
+<!-- za NIP chyba lepiej podstawić text(String) aniżeli wartość liczbową -->
+    <label for="nip"><b>NIP</b></label>
+    <input type="text" name="nip" required><br/><br/>
+
+    <label for="name-surname"><b>Imię i nazwisko osoby zgłaszającej (w imieniu firmy,reprezentant drużyny):</b></label><br/>
+    <input type="text" name="name-surname" required><br/>
+
+    <label for="phone"><b>Telefon zgłaszającego:</b></label><br/>
+    <input type="text" name="phone" required><br/>
+
+    <label for="email-adress"><b>Adres email zgłaszającego:</b></label><br/>
+    <input type="text" name="email-adress" required><br/>
+
+    <label for="id"><b>Nr dowodu osobistego zgłaszającego:</b></label><br/>
+    <input type="text" name="id" required><br/>
+
+    <label for="pesel"><b>Nr PESEL zgłaszającego:</b></label><br/>
+    <input type="text" name="pesel" required><br/>
+
+<p><b>Wyrażam zgodę przetwarzanie danych: <input type="checkbox" id="myCheck" onclick="myFunction()"></b></p>
+
+
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h1 class="mt-5">Nagłówek strony</h1>
-        <p class="lead">Tekst na stronie</p>
         <ul class="list-unstyled">
-          <li>Bootstrap 4.2.1</li>
-          <li>jQuery 3.3.1</li>
 		  <li> </br> </li>
         </ul>
       </div>
@@ -84,7 +188,7 @@
     <!-- Footer -->
     <footer class="py-5 bg-dark">
       <div class="container">
-        <p class="m-0 text-center text-white">Główczewski 2019 &copy; All rights reserved.</p>
+        <p class="m-0 text-center text-white">Główczewski&Burzałka 2019 &copy; All rights reserved.</p>
       </div>
       <!-- /.container -->
     </footer>
@@ -92,6 +196,17 @@
   <!-- Bootstrap core JavaScript -->
   <script src="../vendor/jquery/jquery.min.js"></script>
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+  } else {
+     text.style.display = "none";
+  }
+}
+</script>
 
 </body>
 
