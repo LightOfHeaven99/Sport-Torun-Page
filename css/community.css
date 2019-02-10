@@ -18,6 +18,14 @@ width: 400px;
 background-color: rgba(0,0,0,0.5) !important;
 }
 
+.card-signup{
+height: 473px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
@@ -71,6 +79,28 @@ width: 70px;
 }
 
 .login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.signup_btn{
+color: black;
+background-color: #8AFF8C;
+width: 75px;
+}
+
+.signup_btn:hover{
+color: black;
+background-color: white;
+}
+
+.logout_btn{
+color: black;
+background-color: #8AFF8C;
+width: 90px;
+}
+
+.logout_btn:hover{
 color: black;
 background-color: white;
 }
