@@ -3,7 +3,7 @@
 $servername = "localhost";
 $dBUsername = "root";
 $dBPassword = "";
-$dBName = "sport-torun-page";
+$dBName = "tls-torun";
 
 $conn = mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 

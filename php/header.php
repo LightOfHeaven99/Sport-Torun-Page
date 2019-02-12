@@ -1,3 +1,7 @@
+<?php
+  session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,9 +69,18 @@
             <li class="nav-item">
               <a class="nav-link" href="./about.html">O lidze</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./join.html">Zgłoś się!</a>
-            </li>
+            <?php
+            if (isset($_SESSION['userId'])) {
+                echo  '<li class="nav-item">
+                        <a class="nav-link" href="#">ADMIN</a>
+                       </li>';
+            }
+            else {
+                echo  '<li class="nav-item">
+                        <a class="nav-link" href="./join.html">Zgłoś się!</a>
+                       </li>';
+            }
+            ?>
           </ul>
         </div>
       </div>

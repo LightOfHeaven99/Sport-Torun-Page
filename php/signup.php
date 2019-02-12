@@ -19,7 +19,34 @@
         </div>
         <div class="card-body">
           <h4 style="color:white">Podaj dane</h4>
-
+					<?php
+						if (isset($_GET["error"])) {
+							if ($_GET["error"] == "emptyfields") {
+								echo '<p class="signuperror">Uzupełnij wszystkie pola!</p>';
+							}
+							else if ($_GET["error"] == "invalidfirstname") {
+								echo '<p class="signuperror">Błędne imię!</p>';
+							}
+							else if ($_GET["error"] == "invalidlastname") {
+								echo '<p class="signuperror">Błędne nazwisko!</p>';
+							}
+							else if ($_GET["error"] == "invaliduid") {
+								echo '<p class="signuperror">Błędny login!</p>';
+							}
+							else if ($_GET["error"] == "invalidmail") {
+								echo '<p class="signuperror">Błędny e-mail!</p>';
+							}
+							else if ($_GET["error"] == "passwordcheck") {
+								echo '<p class="signuperror">Podane hasła nie są poprawne!</p>';
+							}
+							else if ($_GET["error"] == "usertaken") {
+								echo '<p class="signuperror">Login jest już zajęty!</p>';
+							}
+						}
+						else if (isset($_GET["signup"])) {
+							echo '<p class="signupsuccess">Zarejestrowano pomyślnie!</p>';
+						}
+					?>
           <form action="includes/signup.inc.php" method="post">
             <div class="input-group form-group">
               <input type="text" name="first-name" class="form-control" placeholder="Imię">
@@ -43,6 +70,7 @@
             <div class="form-group">
               <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn">
             </div>
+						<div class="space20"></div>
           </form>
         </div>
       </div>
