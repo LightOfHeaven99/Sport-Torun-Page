@@ -101,7 +101,7 @@
 							echo '<p class="signupsuccess">Zarejestrowano pomyślnie!</p>';
 						}
 					?>
-          <form action="includes/signup.inc" method="post">
+          <form action="includes/signup.inc.php" method="post">
             <div class="input-group form-group">
               <input type="text" name="first-name" class="form-control" placeholder="Imię">
               <input type="text" name="last-name" class="form-control" placeholder="Nazwisko">
