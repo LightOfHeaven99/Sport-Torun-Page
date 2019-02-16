@@ -93,6 +93,9 @@
 							else if ($_GET["error"] == "usertaken") {
 								echo '<p class="signuperror">Login jest już zajęty!</p>';
 							}
+              else if ($_GET["error"] == "mailtaken") {
+                echo '<p class="signuperror">E-mail jest już zajęty!</p>';
+              }
 						}
 						else if (isset($_GET["signup"])) {
 							echo '<p class="signupsuccess">Zarejestrowano pomyślnie!</p>';

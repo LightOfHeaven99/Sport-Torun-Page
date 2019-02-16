@@ -63,7 +63,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="mt-5">Toruńska Liga Siatkowa</h1>
+        <h1 class="mt-5">Toruńska Liga Siatkówki</h1>
         <p>Tu zadzieją się wielkie rzeczy</p>
       </div>
     </div>
