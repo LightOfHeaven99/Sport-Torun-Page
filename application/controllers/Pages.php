@@ -1,6 +1,11 @@
 <?php
 class Pages extends CI_Controller {
 
+  public function __construct()
+  {
+      parent::__construct();
+      $this->load->helper('form');
+  }
     public function view($page = 'main')
     {
       if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
