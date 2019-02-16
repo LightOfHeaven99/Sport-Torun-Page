@@ -102,7 +102,7 @@
 						}
 					?>
           <!-- <form action="register" method="post"> -->
-          <?php form_open('register') ?>
+          <?= form_open('register') ?>
             <div class="input-group form-group">
               <input type="text" name="first-name" class="form-control" placeholder="Imię">
               <input type="text" name="last-name" class="form-control" placeholder="Nazwisko">
@@ -127,7 +127,7 @@
             </div>
 						<div class="space20"></div>
           <!-- </form> -->
-          <?php form_close() ?>
+          <?= form_close() ?>
         </div>
       </div>
     </div>
