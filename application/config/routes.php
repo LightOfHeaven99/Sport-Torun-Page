@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['(:any)'] = 'pages/view/$1';
+$route['(:any)/(:any)'] = 'pages/view/$1/$2';
