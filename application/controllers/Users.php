@@ -26,7 +26,7 @@ class Users extends CI_Controller {
     }
   }
 
-  private function containsOnlyLetters($string) {
+  public function containsOnlyLetters($string) {
     return preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŹŻ]*$/", $string);
   }
 
