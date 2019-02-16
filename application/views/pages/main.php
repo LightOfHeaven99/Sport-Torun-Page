@@ -64,7 +64,7 @@
     <div class="row">
       <div class="col-lg-6">
         <h1 class="mt-5">Toruńska Liga Siatkówki</h1>
-        <p>Tu zadzieją się wielkie rzeczy</p>
+        <p><b>Kocham Burzałkę bo jest najlepszym informatykiem świata!</b></p>
       </div>
     </div>
   </div>
