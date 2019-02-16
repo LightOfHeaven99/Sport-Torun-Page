@@ -101,7 +101,8 @@
 							echo '<p class="signupsuccess">Zarejestrowano pomyślnie!</p>';
 						}
 					?>
-          <form action="includes/signup.inc.php" method="post">
+          <!-- <form action="register" method="post"> -->
+          <?php form_open('register') ?>
             <div class="input-group form-group">
               <input type="text" name="first-name" class="form-control" placeholder="Imię">
               <input type="text" name="last-name" class="form-control" placeholder="Nazwisko">
@@ -125,7 +126,8 @@
               <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn">
             </div>
 						<div class="space20"></div>
-          </form>
+          <!-- </form> -->
+          <?php form_close() ?>
         </div>
       </div>
     </div>
