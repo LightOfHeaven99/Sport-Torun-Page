@@ -1,15 +1,36 @@
 .move {
 position: relative;
-left: 300px;
-
+left: 125px;
 }
 
 .footercol {
 border-radius: 10px;
 background-color: #3d46c2;
 color: white;
-padding: 4px 7px;
-margin: 4px 0;
+padding: 4px 10px;
+margin: 4px 158px;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+.footercol2 {
+border-radius: 10px;
+background-color: #3d46c2;
+color: white;
+padding: 4px 10px;
+margin: 4px 150px;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+.footercol3 {
+border-radius: 10px;
+background-color: #3d46c2;
+color: white;
+padding: 4px 10px;
+margin: 4px 185px;
 border: none;
 cursor: pointer;
 width: 22%;
@@ -28,8 +49,12 @@ A {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 5px;
+  grid-template-columns: 400px 400px 400px;
+  grid-gap: 10px;
   background-color: inherit;
-  padding: 15px;
+  padding: 20px;
+}
+
+div.a {
+  text-align: center;
 }
