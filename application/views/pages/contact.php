@@ -45,8 +45,8 @@
           <div class="dropdown">
           <button class="dropbtn dropbtnClicked">O lidze</button>
           <div class="dropdown-content">
-            <a class="nav-link" href="contact">Kontakt
-            <span class="sr-only">(current)</a>
+            <a class="nav-link" href="contact"><font color="black">&nbsp;&nbsp;Kontakt</font>
+            <span class="sr-only">(current)</span></a>
             <a href="regulations">Regulamin</a>
            <a href="documents">Dokumenty</a>
        </div>
