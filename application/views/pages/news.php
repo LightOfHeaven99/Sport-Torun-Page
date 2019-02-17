@@ -64,13 +64,7 @@
     <div class="container">
 
       <!-- Page Heading -->
-<<<<<<< HEAD
-      <h1 class="my-4">Aktualności
-        <small>Sezon letni 2019</small>
-      </h1>
-=======
       <h1 class="my-4"><b><font color="blue">Aktualności</font></b></h1>
->>>>>>> 019612edd82a8be73f7504977808dc1c8c33778e
 
       <!-- Project One -->
       <div class="row">

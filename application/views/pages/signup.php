@@ -101,12 +101,10 @@
 							echo '<p class="signupsuccess">Zarejestrowano pomyślnie!</p>';
 						}
 					?>
-<<<<<<< HEAD
+
           <!-- <form action="register" method="post"> -->
-          <?= form_open('register') ?>
-=======
-          <form action="includes/signup.inc.php" method="post">
->>>>>>> parent of 62276fe... commit
+          <?= form_open('signup.inc') ?>
+
             <div class="input-group form-group">
               <input type="text" name="first-name" class="form-control" placeholder="Imię">
               <input type="text" name="last-name" class="form-control" placeholder="Nazwisko">
@@ -130,12 +128,10 @@
               <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn">
             </div>
 						<div class="space20"></div>
-<<<<<<< HEAD
+
           <!-- </form> -->
           <?= form_close() ?>
-=======
-          </form>
->>>>>>> parent of 62276fe... commit
+
         </div>
       </div>
     </div>

@@ -72,7 +72,7 @@
 
   				<?php
   					if (isset($_SESSION['userId'])) {
-  						echo '<form action="includes/logout.inc" method="post">
+  						echo '<form action="logout.inc" method="post">
   										<div class="card-header">
   											<h3>Zalogowany jako</h3>
   										</div>
@@ -95,7 +95,7 @@
   									</form>';
   					}
   					else {
-  						echo '<form action="includes/login.inc" method="post">
+  						echo '<form action="login.inc" method="post">
   										<div class="card-header">
   											<h3>Zaloguj się</h3>
   											<div class="d-flex justify-content-end social_icon">
