@@ -64,9 +64,7 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
-      </h1>
+      <h1 class="my-4"><b><font color="blue">Aktualności</font></b></h1>
 
       <!-- Project One -->
       <div class="row">

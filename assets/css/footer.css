@@ -1,0 +1,35 @@
+.move {
+position: relative;
+left: 300px;
+
+}
+
+.footercol {
+border-radius: 10px;
+background-color: #3d46c2;
+color: white;
+padding: 4px 7px;
+margin: 4px 0;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+
+.footerundercol{
+  text-align: justify;
+  text-decoration: none;
+  color: white;
+}
+
+A {
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 5px;
+  background-color: inherit;
+  padding: 15px;
+}
