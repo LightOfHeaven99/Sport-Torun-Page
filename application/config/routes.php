@@ -53,8 +53,6 @@ $route['default_controller'] = 'pages/view';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['register'] = 'users/signup';
-
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';
 $route['(:any)/(:any)/(:any)'] = 'pages/view/$1/$2/$3';

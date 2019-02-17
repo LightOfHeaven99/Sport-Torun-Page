@@ -1,9 +1,4 @@
-html,body{
-background-image: url('../img/.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-}
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
 border-radius: 10px;
