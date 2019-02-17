@@ -64,8 +64,8 @@
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4">Page Heading
-        <small>Secondary Text</small>
+      <h1 class="my-4">Aktualności
+        <small>Sezon letni 2019</small>
       </h1>
 
       <!-- Project One -->

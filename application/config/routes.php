@@ -57,3 +57,4 @@ $route['register'] = 'users/signup';
 
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';
+$route['(:any)/(:any)/(:any)'] = 'pages/view/$1/$2/$3';
