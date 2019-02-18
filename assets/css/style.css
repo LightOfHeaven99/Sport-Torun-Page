@@ -324,7 +324,7 @@ opacity: 0.9;
 }
 .footercol2 {
 border-radius: 10px;
-background-color: #3d46c2;
+background-color: #b3b300;
 color: white;
 padding: 4px 10px;
 margin: 4px 150px;
@@ -455,8 +455,8 @@ tr:nth-child(even) {
 background-color: #dddddd;
 }
 
-
-body{
+/* Klasa do przetrzymywania zdjęcia dla oddzielnej strony */
+.start-bg {
 background-image: url('../img/start-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
