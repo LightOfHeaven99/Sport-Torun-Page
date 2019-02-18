@@ -1,0 +1,456 @@
+/* html,body{
+background-image: url('../img/community-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+} */
+
+/* body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+} */
+
+/* body {
+  background: url('http://placehold.it/1920x1080') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover; */
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: inherit;
+  color: #A3A1AB;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover {
+  color: lightgray;
+}
+
+/* Style The Dropdown Button (contact, documents, regulations) */
+.dropbtnClicked {
+  color: white;
+}
+
+.dropbtnClicked:hover {
+  color: white;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 18px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: inherit;
+}
+
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+.card{
+height: auto;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.card-signup{
+height: auto;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #8AFF8C;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #8AFF8C;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #8AFF8C;
+width: 70px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.signup_btn{
+color: black;
+background-color: #8AFF8C;
+width: 75px;
+}
+
+.signup_btn:hover{
+color: black;
+background-color: white;
+}
+
+.logout_btn{
+color: black;
+background-color: #8AFF8C;
+width: 90px;
+}
+
+.logout_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+color: #8AFF8C;
+}
+
+.links a:hover{
+color: white;
+}
+
+.signuperror{
+color: red;
+text-align: center;
+}
+
+.signupsuccess{
+color: lightgreen;
+text-align: center;
+}
+
+.space10{
+	height: 10px;
+}
+
+.space20{
+	height: 20px;
+}
+
+.space30{
+	height: 30px;
+}
+
+.space40{
+	height: 40px;
+}
+
+.space50{
+	height: 50px;
+}
+
+.space100{
+	height: 100px;
+}
+
+.space150{
+	height: 150px;
+}
+
+.space200{
+	height: 200px;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+border-radius: 10px;
+width: 100%;
+padding: 5px;
+margin: 3px 0 11px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+.message {
+  border-radius: 10px;
+  width: 100%;
+  padding: 40px;
+  margin: 3px 0 11px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.right {
+position: absolute;
+right: 30px;
+width: 500px;
+padding: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+border-radius: 10px;
+background-color: #404040;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+
+.registerbtn:hover {
+opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+background-color: #f1f1f1;
+text-align: center;
+}
+
+.move {
+position: relative;
+left: 125px;
+}
+
+.footercol {
+border-radius: 10px;
+background-color: #3d46c2;
+color: white;
+padding: 4px 10px;
+margin: 4px 158px;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+.footercol2 {
+border-radius: 10px;
+background-color: #3d46c2;
+color: white;
+padding: 4px 10px;
+margin: 4px 150px;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+.footercol3 {
+border-radius: 10px;
+background-color: #3d46c2;
+color: white;
+padding: 4px 10px;
+margin: 4px 185px;
+border: none;
+cursor: pointer;
+width: 22%;
+opacity: 0.9;
+}
+
+.footerundercol{
+  text-align: justify;
+  text-decoration: none;
+  color: white;
+}
+
+A {
+  text-decoration: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-gap: 10px;
+  background-color: inherit;
+  padding: 20px;
+}
+
+div.a {
+  text-align: center;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 5px;
+margin: 3px 0 11px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+.right {
+position: absolute;
+right: 30px;
+width: 500px;
+padding: 10px;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+background-color: #404040;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+.registerbtn:hover {
+opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+background-color: #f1f1f1;
+text-align: center;
+}
+
+/*!
+ * Start Bootstrap - The Big Picture (https://startbootstrap.com/template-overviews/the-big-picture)
+ * Copyright 2013-2019 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-the-big-picture/blob/master/LICENSE)
+ */
+
+
+/*!
+ * Start Bootstrap - 1 Col Portfolio (https://startbootstrap.com/template-overviews/1-col-portfolio)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/blob/master/LICENSE)
+ */
+
+.pagination {
+  margin-bottom: 15px;
+}
+
+table{
+font-family: arial, sans-serif;
+border-collapse: collapse;
+width: 100%;
+}
+
+td, th {
+border: 1px solid #dddddd;
+text-align: left;
+padding: 6px;
+}
+
+tr:nth-child(even) {
+background-color: #dddddd;
+}
