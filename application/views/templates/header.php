@@ -19,7 +19,10 @@
   <!-- Own CSS style -->
   <link href="../../../assets/css/style.css" rel="stylesheet">
   <link href="../../../assets/css/about-dropdown.css" rel="stylesheet">
+  <link href="../../../assets/css/highlight.css" rel="stylesheet" />
   <link href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" rel="stylesheet" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../../../assets/js/highlight.js"></script>
 
 
 </head>
