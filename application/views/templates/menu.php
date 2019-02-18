@@ -22,7 +22,7 @@
         <li class="nav-item">
           <a class="nav-link" href="table">Tabela</a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
           <a class="nav-link" href="statistics">Statystyki</a>
         </li>
         <li class="nav-item">
