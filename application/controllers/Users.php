@@ -6,44 +6,86 @@ class Users extends CI_Controller {
       parent::__construct();
       $this->load->helper('form');
       $this->load->library('form_validation');
+      $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
       // $this->load->model('events_model');
   }
 
-  public function signup() {
+
+  public function register() {
     $this->form_validation->set_rules('first-name', 'Imię', 'required|callback_containsOnlyLetters', array(
       'required' => 'Pole jest wymagane.',
-      'callback_containsOnlyLetters' => 'Pole zawiera znaki inne niż litery.'
+      'callback_containsOnlyLetters' => 'Pole może zawierać tylko litery.'
     ));
 
     $this->form_validation->set_rules('last-name', 'Nazwisko', 'required|callback_containsOnlyLetters', array(
       'required' => 'Pole jest wymagane.',
-      'callback_containsOnlyLetters' => 'Pole zawiera znaki inne niż litery.'
+      'callback_containsOnlyLetters' => 'Pole może zawierać tylko litery.'
     ));
 
-    $this->form_validation->set_rules('uid', 'Login', 'required|callback_containsOnlyLettersAndNumbers', array(
+    $this->form_validation->set_rules('uid', 'Login', 'required|callback_containsOnlyLettersAndNumbers|max_length[15]|is_unique[users.uidUsers]', array(
       'required' => 'Pole jest wymagane.',
-      'callback_containsOnlyLettersAndNumbers' => 'Pole zawiera znaki inne niż litery i cyfry.'
+      'callback_containsOnlyLettersAndNumbers' => 'Pole może zawierać tylko litery i cyfry.',
+      'max_length[15]' => 'Login może zawierać maksymalnie 15 znaków.',
+      'is_unique[users.uidUsers]' => 'Podany login jest zajęty.'
     ));
 
-    $this->form_validation->set_rules('pwd', 'Hasło', 'required', array(
-      'required' => 'Pole jest wymagane.'
+    // alpha_numeric (login) OR alpha (first-name/last-name)
+
+    $this->form_validation->set_rules('pwd', 'Hasło', 'required|min_length[8]', array(
+      'required' => 'Pole jest wymagane.',
+      'required' => 'Hasło musi zawierać minimum 8 znaków.'
     ));
 
-    $this->form_validation->set_rules('pwd-repeat', 'Hasło-powtórz', 'required', array(
-      'required' => 'Pole jest wymagane.'
+    $this->form_validation->set_rules('pwd-repeat', 'Powtórz hasło', 'required|matches[pwd]', array(
+      'required' => 'Pole jest wymagane.',
+      'matches[pwd]' => 'Podane hasła różnią się.'
     ));
 
-    $this->form_validation->set_rules('mail', 'E-mail', 'required', array(
-      'required' => 'Pole jest wymagane.'
+    $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email|is_unique[users.emailUsers]', array(
+      'required' => 'Pole jest wymagane.',
+      'valid_email' => 'Niepoprawny email.',
+      'is_unique[users.emailUsers]' => 'Podany email jest zajęty.'
     ));
 
-    if($this->form_validation->run() === true) {
+    if($this->form_validation->run('register') === true) {
       // TODO: Obsługa rejestracji
-      die("Też błąd, ale mniejszy.");
+      $this->load->view('formsuccess');
     } else {
       // TODO: Niepowodzenie, błędy w formularzu.
-      die("Błąd!");
+      $this->load->view('signup');
     }
+  }
+
+  public function login()
+  {
+      $this->form_validation->set_rules('uid', 'Login', 'required', array(
+          'required' => "Login jest wymagany."
+      ));
+      $this->form_validation->set_rules('pwd', 'Hasło', 'required', array(
+          'required' => "Hasło jest wymagane."
+      ));
+
+      if ($this->form_validation->run() === true) {
+
+          $userExistenceAndAccountType = $this->users_model->checkUserCredentialsDuringLogin(
+            $this->input->post('uid'),
+              $this->input->post('pwd'));
+          if ($userExistenceAndAccountType) {
+
+                  $this->users_model->createNewSession(
+                    $this->input->post('uid'));
+
+                  header('Location: ' . site_url(''));
+          }
+      } else {
+          header('Location: ' . site_url('login'));
+      }
+  }
+
+  public function logout() {
+      $this->session->sess_destroy();
+
+      header('Location: /');
   }
 
   public function containsOnlyLetters($string) {

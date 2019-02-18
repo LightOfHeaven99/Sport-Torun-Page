@@ -34,8 +34,8 @@
               <span class="footercol3">Pomoc</span>
               <ul style="list-style-type:none;">
                 <li><a href="#"><span class="footerundercol">FAQ</span></a></li>
-                <li><a href="#"><span class="footerundercol">Polityka Prywatności</span></a></li>
                 <li><a href="#"><span class="footerundercol">Społeczność</span></a></li>
+                <li><a href="#"><span class="footerundercol">Polityka Prywatności</span></a></li>
               </ul>
             </div>
             </div>
