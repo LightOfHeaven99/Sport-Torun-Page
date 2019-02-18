@@ -8,11 +8,11 @@ if (isset($_POST['signup-submit'])) {
   $username = $_POST['uid'];
   $password = $_POST['pwd'];
   $passwrodRepeat = $_POST['pwd-repeat'];
-  $email = $_POST['mail'];
+  $email = $_POST['email'];
   $displayLogin = isset($_POST['display-login']) ? 1 : 0;
 
   if(empty($username) || empty($firstName) || empty($lastName) || empty($password) || empty($passwrodRepeat) || empty($email)){
-    header("Location: ../signup.php?error=emptyfields&uid=".$username."&mail=".$email);
+    header("Location: ../signup.php?error=emptyfields&uid=".$username."&email=".$email);
     exit();
   }
   else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username)){
@@ -23,19 +23,19 @@ if (isset($_POST['signup-submit'])) {
     exit();
   }
   else if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŹŻ]*$/", $firstName)) {
-    header("Location: ../signup.php?error=invalidfirstname&mail=".$email);
+    header("Location: ../signup.php?error=invalidfirstname&email=".$email);
     exit();
   }
   else if (!preg_match("/^[a-ząćęłńóśźżA-ZĄĆĘŁŃÓŚŹŻ]*$/", $lastName)) {
-    header("Location: ../signup.php?error=invalidlastname&mail=".$email);
+    header("Location: ../signup.php?error=invalidlastname&email=".$email);
     exit();
   }
   else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    header("Location: ../signup.php?error=invaliduid&mail=".$email);
+    header("Location: ../signup.php?error=invaliduid&email=".$email);
     exit();
   }
   else if ($password !== $passwrodRepeat){
-    header("Location: ../signup.php?error=passwordcheck&uid=".$username."&mail=".$email);
+    header("Location: ../signup.php?error=passwordcheck&uid=".$username."&email=".$email);
     exit();
   }
   else {
@@ -62,7 +62,7 @@ if (isset($_POST['signup-submit'])) {
         exit();
       }
       else if ($resultCheck > 0) {
-        header("Location: ../signup.php?error=usertaken&mail=".$email);
+        header("Location: ../signup.php?error=usertaken&email=".$email);
         exit();
       }
       else {

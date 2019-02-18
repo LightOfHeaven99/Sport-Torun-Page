@@ -103,26 +103,34 @@
 					?>
 
           <!-- <form action="register" method="post"> -->
-          <?= form_open('signup.inc') ?>
+          <?php echo validation_errors(); ?>
+
+          <?= form_open('login/register'); ?>
 
             <div class="input-group form-group">
-              <input type="text" name="first-name" class="form-control" placeholder="Imię">
-              <input type="text" name="last-name" class="form-control" placeholder="Nazwisko">
+              <?php echo form_error('first-name'); ?>
+              <input type="text" name="first-name" class="form-control" placeholder="Imię" value="<?php echo set_value('first-name'); ?>">
+              <?php echo form_error('last-name'); ?>
+              <input type="text" name="last-name" class="form-control" placeholder="Nazwisko" value="<?php echo set_value('last-name'); ?>">
             </div>
             <div class="input-group form-group">
-              <input type="text" name="uid" class="form-control" placeholder="Login">
+              <?php echo form_error('uid'); ?>
+              <input type="text" name="uid" class="form-control" placeholder="Login" value="<?php echo set_value('uid'); ?>">
             </div>
             <div class="input-group form-group">
-              <input type="password" name="pwd" class="form-control" placeholder="Hasło">
+              <?php echo form_error('pwd'); ?>
+              <input type="password" name="pwd" class="form-control" placeholder="Hasło" value="<?php echo set_value('pwd'); ?>">
             </div>
             <div class="input-group form-group">
-              <input type="password" name="pwd-repeat" class="form-control" placeholder="Powtórz hasło">
+              <?php echo form_error('pwd-repeat'); ?>
+              <input type="password" name="pwd-repeat" class="form-control" placeholder="Powtórz hasło" value="<?php echo set_value('pwd-repeat'); ?>">
             </div>
             <div class="input-group form-group">
-              <input type="text" name="mail" class="form-control" placeholder="E-mail">
+              <?php echo form_error('email'); ?>
+              <input type="text" name="mail" class="form-control" placeholder="E-mail" value="<?php echo set_value('mail'); ?>">
             </div>
             <div class="row align-items-center remember">
-              <input type="checkbox" name="display-login">Chcę być widoczny jako mój login
+              <input type="checkbox" name="display-login" value="<?php echo set_value('display-login'); ?>">Chcę być widoczny jako mój login
             </div>
             <div class="form-group">
               <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn">
