@@ -1,4 +1,5 @@
   <!-- Page Content -->
+  <div class="start-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -12,3 +13,4 @@
       </div>
     </div>
   </div>
+  

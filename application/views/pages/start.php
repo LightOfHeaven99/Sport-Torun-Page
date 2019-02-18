@@ -1,4 +1,5 @@
   <!-- Page Content -->
+  <div class="start-bg">
   <div class="container">
     <div style="height:50px;"></div>
     <div class="col-12 col-md-7 col-sm-12 hover-header d-none d-lg-block">
@@ -50,6 +51,7 @@
       <div style="height: 30px;"></div>
     </div>
   </div>
+</div>
 
   <script src="../../../assets/js/blueimp-gallery.min.js"></script>
   <script src="../../../assets/js/countDown.js"></script>
