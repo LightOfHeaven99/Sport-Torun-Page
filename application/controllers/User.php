@@ -8,7 +8,7 @@ class User extends CI_Controller
       parent::__construct();
       $this->load->helper('form');
       $this->load->library('form_validation');
-      $this->load->model('user_model');
+      $this->load->model('login_model');
   }
 
   public function login(){
@@ -34,9 +34,9 @@ class User extends CI_Controller
       }
       else
       {
-        $response_val = $this->user_model->login_user($uid, $pwd);
+        $response_val = $this->login_model->login_user($uid, $pwd);
         if($response_val == true){
-          $val = $this->user_model->get_user_info($uid);
+          $val = $this->login_model->get_user_info($uid);
           $this->session->set_userdata($val[0]);
           $this->session->set_userdata('login', 'true');
           redirect('/');
