@@ -60,8 +60,8 @@ $autoload['packages'] = array();
 */
 
 
-//$autoload['libraries'] = array();
-$autoload['libraries'] = array('database', 'session');
+$autoload['libraries'] = array();                                  // LOCAL
+//$autoload['libraries'] = array('database', 'session');           // tls-torun.pl
 
 
 /*

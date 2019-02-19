@@ -1,5 +1,5 @@
 <!-- Page Content -->
-<section>
+<div class="main-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-</section>
+</div>
 
 </body>
 </html>

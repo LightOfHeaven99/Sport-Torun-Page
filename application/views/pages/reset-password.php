@@ -1,5 +1,6 @@
 	<!-- Recovery password window -->
-	<div class="container community_img">
+	<div class="login-bg">
+	<div class="container">
 		<div class="space50"></div>
 		<div class="space50"></div>
 		<div class="d-flex justify-content-center">
@@ -9,7 +10,7 @@
         </div>
         <div class="card-body">
           <div class="input-group form-group">
-            <input type="text" name="uid" class="form-control" placeholder="e-mail...">
+            <input type="text" name="uid" class="form-control" placeholder="E-mail">
           </div>
           <div class="form-group">
             <input type="submit" name="login-submit" value="Wyślij" class="btn float-right login_btn">
@@ -19,3 +20,4 @@
       </div>
     </div>
   </div>
+</div>

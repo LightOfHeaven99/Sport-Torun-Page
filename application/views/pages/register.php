@@ -1,5 +1,6 @@
 <!-- Signup window -->
-<div class="container community_img">
+<div class="login-bg">
+<div class="container">
 
   <form class="form-signin" method="POST">
 
@@ -151,4 +152,5 @@
 
   </form>
 
+</div>
 </div>

@@ -1,4 +1,5 @@
   <!-- Page Content -->
+  <div class="table-bg">
   <br>
   <h2 align="center"><b>Tablela Rozgrywek Zima 2018/2019</b></h2>
 
@@ -65,5 +66,4 @@
     </tr>
   </table>
   <br><br>
-
-</body>
+</div>

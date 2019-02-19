@@ -1,4 +1,5 @@
-  <!-- Page Content -->
+<!-- Page Content -->
+<div class="join-bg">
   <form acton="action_page.php">
   <div class="container">
     <br/>
@@ -97,6 +98,7 @@ Phasellus feugiat ante eu mauris mattis, ac sagittis diam pretium. Vivamus metus
     </div>
 
   </div>
+</div>
 
   <!-- Functional scripts -->
   <script>

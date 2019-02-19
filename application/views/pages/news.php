@@ -1,9 +1,11 @@
-    <!-- Page Content -->
+  <!-- Page Content -->
+  <div class="news-bg">
     <div class="container">
 
       <!-- Page Heading -->
-      <h1 class="my-4"><b><font color="blue">Aktualności</font></b></h1>
-
+      <div class="space20"></div>
+      <h1>Aktualności</h1>
+      <div class="space20"></div>
       <!-- Project One -->
       <div class="row">
         <div class="col-md-7">
@@ -99,3 +101,4 @@
       </ul>
 
     </div>
+  </div>

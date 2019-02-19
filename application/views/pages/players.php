@@ -1,8 +1,10 @@
 <!-- Page Content -->
+<div class="players-bg">
 <div class="container">
   <div class="row">
     <div class="col-lg-12 text-center">
       <h1 class="mt-5">Przeglądaj zawodników</h1>
     </div>
   </div>
+</div>
 </div>

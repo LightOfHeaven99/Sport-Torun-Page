@@ -108,7 +108,7 @@ background-color: rgba(0,0,0,0.5) !important;
 .social_icon span{
 font-size: 60px;
 margin-left: 10px;
-color: #8AFF8C;
+color: #364FD2;
 }
 
 .social_icon span:hover{
@@ -128,7 +128,7 @@ top: -45px;
 
 .input-group-prepend span{
 width: 50px;
-background-color: #8AFF8C;
+background-color: #364FD2;
 color: black;
 border:0 !important;
 }
@@ -151,9 +151,24 @@ margin-left: 15px;
 margin-right: 5px;
 }
 
+.news-text {
+color: black;
+text-align: justify;
+}
+
+.btn-primary {
+color: black;
+background-color: #364FD2;
+}
+
+.btn-primary:hover{
+color: black;
+background-color: white;
+}
+
 .login_btn{
 color: black;
-background-color: #8AFF8C;
+background-color: #364FD2;
 width: 70px;
 }
 
@@ -164,7 +179,7 @@ background-color: white;
 
 .signup_btn{
 color: black;
-background-color: #8AFF8C;
+background-color: #364FD2;
 width: 75px;
 }
 
@@ -175,7 +190,7 @@ background-color: white;
 
 .logout_btn{
 color: black;
-background-color: #8AFF8C;
+background-color: #364FD2;
 width: 90px;
 }
 
@@ -190,7 +205,7 @@ color: white;
 
 .links a{
 margin-left: 4px;
-color: #8AFF8C;
+color: #364FD2;
 }
 
 .links a:hover{
@@ -455,14 +470,6 @@ tr:nth-child(even) {
 background-color: #dddddd;
 }
 
-/* Klasa do przetrzymywania zdjęcia dla oddzielnej strony */
-.start-bg {
-background-image: url('../img/start-bg.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-}
-
 h4{
 font-size: 40px;
 color: white;
@@ -514,7 +521,7 @@ color: white;
 .parallax-wrapper {
   height: 500px;
 }
-.parallax-card {
+.parallax-card-start-1 {
   background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 400px;
@@ -522,4 +529,104 @@ color: white;
   box-shadow: -20px 30px 116px 0 rgba(51, 62, 225, 0.54);
   z-index: 4;
 }
+
+.parallax-card-timetable {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  height: 500px;
+  border-radius: 5px;
+  z-index: 4;
+}
 /* END FRAME */
+
+/* Klasy do przetrzymywania zdjęć dla oddzielnych stron */
+.main-bg {
+background-image: url('../img/main-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.start-bg {
+background-image: url('../img/start-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.news-bg {
+background-image: url('../img/news-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.timetable-bg {
+background-image: url('../img/timetable-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.results-bg {
+background-image: url('../img/results-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.table-bg {
+background-image: url('../img/table-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.statistics-bg {
+background-image: url('../img/statistics-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.gallery-bg {
+background-image: url('../img/gallery-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.video-bg {
+background-image: url('../img/video-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.teams-bg {
+background-image: url('../img/teams-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.players-bg {
+background-image: url('../img/players-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.courts-bg {
+background-image: url('../img/courts-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.join-bg {
+background-image: url('../img/join-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
