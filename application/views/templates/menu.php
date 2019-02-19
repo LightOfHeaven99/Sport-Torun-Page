@@ -32,7 +32,7 @@
           <a class="nav-link" href="video">Video</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="community">Społeczność</a>
+          <a class="nav-link" href="login">Społeczność</a>
         </li>
         <div class="dropdown">
         <button class="dropbtn">O lidze</button>

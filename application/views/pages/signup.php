@@ -1,5 +1,5 @@
 <!-- Signup window -->
-<div class="container">
+<div class="container community_img">
 
   <form class="form-signin" method="POST">
 

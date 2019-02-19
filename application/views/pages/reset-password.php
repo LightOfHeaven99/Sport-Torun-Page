@@ -1,5 +1,5 @@
 	<!-- Recovery password window -->
-	<div class="container">
+	<div class="container community_img">
 		<div class="space50"></div>
 		<div class="space50"></div>
 		<div class="d-flex justify-content-center">
