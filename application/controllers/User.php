@@ -3,6 +3,14 @@
 class User extends CI_Controller
 {
 
+  public function __construct()
+  {
+      parent::__construct();
+      $this->load->model('user_model');
+      $this->load->helper('form');
+      $this->load->library('form_validation');
+  }
+
   public function index(){
     echo "index";
   }
@@ -21,8 +29,6 @@ class User extends CI_Controller
     $username = $this->input->post('uid');
     $password = $this->input->post('pwd');
 
-    $this->load->model('user');
-    $this->load->library('form_validation');
     $this->form_validation->set_rules('uid', 'Login', 'required');
     $this->form_validation->set_rules('pwd', 'Hasło', 'required');
 
@@ -52,13 +58,10 @@ class User extends CI_Controller
       redirect('/');
     }
 
-    $this->load->model('user');
-    $this->load->library('form_validation');
-
-    $this->form_validation->set_rules('first-name', 'Imię', 'required|alpha');
-    $this->form_validation->set_rules('last-name', 'Nazwisko', 'required|alpha');
-    $this->form_validation->set_rules('uid', 'Login', 'required|max_length[15]|is_unique[users.uid]');
-    $this->form_validation->set_rules('pwd', 'Hasło', 'required|min_length[8]');
+    $this->form_validation->set_rules('first-name', 'Imię', 'required');
+    $this->form_validation->set_rules('last-name', 'Nazwisko', 'required');
+    $this->form_validation->set_rules('uid', 'Login', 'required|is_unique[users.uid]');
+    $this->form_validation->set_rules('pwd', 'Hasło', 'required');
     $this->form_validation->set_rules('pwd-repeat', 'Powtórz hasło', 'required|matches[pwd]');
     $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email|is_unique[users.email]');
 
