@@ -21,5 +21,6 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('welcome_message');
+		//$this->db->query('INSERT INTO users (first_name, last_name, uid, pwd, email, display_login) VALUES ("Łukasz", "Bania", "Admin", md5("witkowskiego123"), "bania.zenbox@gmail.com", 1)');
 	}
 }

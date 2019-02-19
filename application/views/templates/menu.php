@@ -37,9 +37,9 @@
         <div class="dropdown">
         <button class="dropbtn">O lidze</button>
         <div class="dropdown-content">
-          <a href="contact">Kontakt</a>
-          <a href="regulations">Regulamin</a>
-         <a href="documents">Dokumenty</a>
+          <a href="teams">Drużyny</a>
+          <a href="players">Zawodnicy</a>
+         <a href="courts">Boiska</a>
      </div>
   </div>
         <li class="nav-item">
