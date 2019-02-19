@@ -52,7 +52,7 @@ class User extends CI_Controller
       redirect('/');
     }
 
-    $this->load->model('user_model');
+    
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('first-name', 'Imię', 'required|alpha');
