@@ -21,7 +21,7 @@ class User extends CI_Controller
     $username = $this->input->post('uid');
     $password = $this->input->post('pwd');
 
-    $this->load->model('user_model', 'auth');
+    $this->load->model('user_model');
     $this->load->library('form_validation');
     $this->form_validation->set_rules('uid', 'Login', 'required');
     $this->form_validation->set_rules('pwd', 'Hasło', 'required');
@@ -32,9 +32,9 @@ class User extends CI_Controller
       }
       else
       {
-        $response_val = $this->auth->login_user($uid, $pwd);
+        $response_val = $this->user_model->login_user($uid, $pwd);
         if($response_val == true){
-          $val = $this->auth->get_user_info($uid);
+          $val = $this->user_model->get_user_info($uid);
           $this->session->set_userdata($val[0]);
           $this->session->set_userdata('login', 'true');
           redirect('/');
