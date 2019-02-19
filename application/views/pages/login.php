@@ -119,6 +119,7 @@
 
 
 		</div>
+    <div class="space50"></div>
 	</div>
 
   <?php echo form_close(); ?>
