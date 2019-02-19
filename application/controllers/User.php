@@ -21,7 +21,7 @@ class User extends CI_Controller
     $username = $this->input->post('uid');
     $password = $this->input->post('pwd');
 
-    $this->load->model('user_model');
+    $this->load->model('user');
     $this->load->library('form_validation');
     $this->form_validation->set_rules('uid', 'Login', 'required');
     $this->form_validation->set_rules('pwd', 'Hasło', 'required');
@@ -52,7 +52,7 @@ class User extends CI_Controller
       redirect('/');
     }
 
-    $this->load->model('user_model');
+    $this->load->model('user');
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('first-name', 'Imię', 'required|alpha');
