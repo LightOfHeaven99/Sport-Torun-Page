@@ -38,7 +38,7 @@ class User extends CI_Controller
 
         }elseif($response_val == false){
           $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
-          $this->session->flashdata('login_info');
+          //$this->session->flashdata('login_info');
           $this->login();
         }
       }

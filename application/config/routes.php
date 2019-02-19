@@ -53,10 +53,9 @@ $route['default_controller'] = 'pages/view';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['login'] = 'pages/community';
-$route['login/login'] = 'users/login';
-$route['logout'] = 'users/logout';
-$route['register'] = 'users/register';
+$route['login'] = 'user/login';
+$route['register'] = 'user/register';
+$route['logout'] = 'user/logout';
 
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';
