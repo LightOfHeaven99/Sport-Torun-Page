@@ -4,7 +4,7 @@
     <div style="height:50px;"></div>
     <div class="col-12 col-md-7 col-sm-12 hover-header d-none d-lg-block">
       <div class="parallax-wrapper">
-       <div class="parallax-card-start-1">
+       <div class="parallax-card">
          <div class="card__cometOuter">
          </div>
          <div style="height: 20px;"></div>

@@ -521,7 +521,7 @@ color: white;
 .parallax-wrapper {
   height: 500px;
 }
-.parallax-card-start-1 {
+.parallax-card {
   background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 400px;
@@ -598,6 +598,13 @@ height: 100%;
 
 .video-bg {
 background-image: url('../img/video-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.login-bg {
+background-image: url('../img/login-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
