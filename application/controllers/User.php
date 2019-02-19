@@ -66,14 +66,14 @@ class User extends CI_Controller
     {
       $this->load->view('templates/header');
       $this->load->view('templates/menu');
-      $this->load->view('pages/signup');
+      $this->load->view('pages/register');
       $this->load->view('templates/footer');
     }
     else
     {
       $this->load->view('templates/header');
       $this->load->view('templates/menu');
-      $this->load->view('pages/signup-update');
+      $this->load->view('pages/register-update');
       $this->load->view('templates/footer');
     }
   }

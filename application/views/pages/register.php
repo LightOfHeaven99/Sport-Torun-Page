@@ -17,7 +17,7 @@
       <div class="card-body">
         <h4 style="color:white">Podaj dane</h4>
         <?php
-          //echo $this->session->flashdata('signup_info');
+          //echo $this->session->flashdata('register_info');
           echo validation_errors('<div class="alert alert-danger">', '</div>');
         ?>
           <div class="input-group form-group">

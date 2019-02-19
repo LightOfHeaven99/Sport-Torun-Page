@@ -109,7 +109,7 @@
 
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-					Nie masz konta?<a href="signup">Zarejestruj się!</a>
+					Nie masz konta?<a href="register">Zarejestruj się!</a>
 				</div>
 				<div class="d-flex justify-content-center links">
 					<a href="reset-password">Zapomniałeś hasła?</a>

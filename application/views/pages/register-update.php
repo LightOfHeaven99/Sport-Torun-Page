@@ -7,6 +7,6 @@
   $displayLogin = isset($_POST['display-login']) ? 1 : 0;
 
   $this->auth->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
-  $this->session->set_flashdata('signup_info', 'Zarejestrowano pomyślnie!');
-  redirect('signup');
+  $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
+  redirect('register');
 ?>
