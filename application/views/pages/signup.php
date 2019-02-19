@@ -1,84 +1,154 @@
-	<!-- Signup window -->
-  <div class="container">
-		<div class="space50"></div>
-    <div class="d-flex justify-content-center">
-      <div class="card-signup">
-        <div class="card-header">
-          <h3>Zarejestruj się</h3>
-        </div>
-        <div class="card-body">
-          <h4 style="color:white">Podaj dane</h4>
-					<?php
-						if (isset($_GET["error"])) {
-							if ($_GET["error"] == "emptyfields") {
-								echo '<p class="signuperror">Uzupełnij wszystkie pola!</p>';
-							}
-							else if ($_GET["error"] == "invalidfirstname") {
-								echo '<p class="signuperror">Błędne imię!</p>';
-							}
-							else if ($_GET["error"] == "invalidlastname") {
-								echo '<p class="signuperror">Błędne nazwisko!</p>';
-							}
-							else if ($_GET["error"] == "invaliduid") {
-								echo '<p class="signuperror">Błędny login!</p>';
-							}
-							else if ($_GET["error"] == "invalidmail") {
-								echo '<p class="signuperror">Błędny e-mail!</p>';
-							}
-							else if ($_GET["error"] == "passwordcheck") {
-								echo '<p class="signuperror">Podane hasła nie są poprawne!</p>';
-							}
-							else if ($_GET["error"] == "usertaken") {
-								echo '<p class="signuperror">Login jest już zajęty!</p>';
-							}
-              else if ($_GET["error"] == "mailtaken") {
-                echo '<p class="signuperror">E-mail jest już zajęty!</p>';
-              }
-						}
-						else if (isset($_GET["signup"])) {
-							echo '<p class="signupsuccess">Zarejestrowano pomyślnie!</p>';
-						}
-					?>
+<!-- Signup window -->
+<div class="container">
 
-          <!-- <form action="register" method="post"> -->
-          <?php echo validation_errors(); ?>
+  <form class="form-signin" method="POST">
 
-          <?= form_open('login/register'); ?>
+  <?php
+    $attributes = array('class' => 'form-signin');
+    echo form_open('register', $attributes);
+  ?>
 
-            <div class="input-group form-group">
-              <?php echo form_error('first-name'); ?>
-              <input type="text" name="first-name" class="form-control" placeholder="Imię" value="<?php echo set_value('first-name'); ?>">
-              <?php echo form_error('last-name'); ?>
-              <input type="text" name="last-name" class="form-control" placeholder="Nazwisko" value="<?php echo set_value('last-name'); ?>">
-            </div>
-            <div class="input-group form-group">
-              <?php echo form_error('uid'); ?>
-              <input type="text" name="uid" class="form-control" placeholder="Login" value="<?php echo set_value('uid'); ?>">
-            </div>
-            <div class="input-group form-group">
-              <?php echo form_error('pwd'); ?>
-              <input type="password" name="pwd" class="form-control" placeholder="Hasło" value="<?php echo set_value('pwd'); ?>">
-            </div>
-            <div class="input-group form-group">
-              <?php echo form_error('pwd-repeat'); ?>
-              <input type="password" name="pwd-repeat" class="form-control" placeholder="Powtórz hasło" value="<?php echo set_value('pwd-repeat'); ?>">
-            </div>
-            <div class="input-group form-group">
-              <?php echo form_error('email'); ?>
-              <input type="text" name="mail" class="form-control" placeholder="E-mail" value="<?php echo set_value('mail'); ?>">
-            </div>
-            <div class="row align-items-center remember">
-              <input type="checkbox" name="display-login" value="<?php echo set_value('display-login'); ?>">Chcę być widoczny jako mój login
-            </div>
-            <div class="form-group">
-              <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn">
-            </div>
-						<div class="space20"></div>
+  <div class="space50"></div>
+  <div class="d-flex justify-content-center">
+    <div class="card-signup">
+      <div class="card-header">
+        <h3>Zarejestruj się</h3>
+      </div>
+      <div class="card-body">
+        <h4 style="color:white">Podaj dane</h4>
+        <?php
+          //echo $this->session->flashdata('signup_info');
+          echo validation_errors('<div class="alert alert-danger">', '</div>');
+        ?>
+          <div class="input-group form-group">
 
-          <!-- </form> -->
-          <?= form_close() ?>
+            <!-- <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Imię" required> -->
+            <?php
+              $data = array(
+                'name'          => 'first-name',
+                'id'            => 'first-name',
+                'class'         => 'form-control',
+                'placeholder'   => 'Imię'
+                //'required'      => 'required'
+              );
+              $val = set_value('first-name');
+              echo form_input($data, $val);
+            ?>
 
-        </div>
+            <!-- <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Nazwisko" required> -->
+            <?php
+              $data = array(
+                'name'          => 'last-name',
+                'id'            => 'last-name',
+                'class'         => 'form-control',
+                'placeholder'   => 'Nazwisko'
+                //'required'      => 'required'
+              );
+              $val = set_value('last-name');
+              echo form_input($data, $val);
+            ?>
+
+          </div>
+          <div class="input-group form-group">
+
+            <!-- <input type="text" name="uid" id="uid" class="form-control" placeholder="Login" required> -->
+            <?php
+              $data = array(
+                'name'          => 'uid',
+                'id'            => 'uid',
+                'class'         => 'form-control',
+                'placeholder'   => 'Login'
+                //'required'      => 'required'
+              );
+              $val = set_value('uid');
+              echo form_input($data, $val);
+            ?>
+
+          </div>
+          <div class="input-group form-group">
+
+            <!-- <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Hasło" required> -->
+            <?php
+              $data = array(
+                'type'          => 'password',
+                'name'          => 'pwd',
+                'id'            => 'pwd',
+                'class'         => 'form-control',
+                'placeholder'   => 'Hasło'
+                //'required'      => 'required'
+              );
+              echo form_input($data);
+            ?>
+
+          </div>
+          <div class="input-group form-group">
+
+            <!-- <input type="password" name="pwd-repeat" id="pwd-repeat" class="form-control" placeholder="Powtórz hasło" required> -->
+            <?php
+              $data = array(
+                'type'          => 'password',
+                'name'          => 'pwd-repeat',
+                'id'            => 'pwd-repeat',
+                'class'         => 'form-control',
+                'placeholder'   => 'Powtórz hasło'
+                //'required'      => 'required'
+              );
+              echo form_input($data);
+            ?>
+
+          </div>
+          <div class="input-group form-group">
+
+            <!-- <input type="text" name="email" id="email" class="form-control" placeholder="E-mail" required autofocus> -->
+            <?php
+              $data = array(
+                'type'          => 'email',
+                'name'          => 'email',
+                'id'            => 'email',
+                'class'         => 'form-control',
+                'placeholder'   => 'E-mail'
+                //'required'      => 'required'
+              );
+              $val = set_value('email');
+              echo form_input($data, $val);
+            ?>
+
+          </div>
+          <div class="row align-items-center remember">
+
+            <!--<input type="checkbox" name="display-login" id="display-login">Chcę być widoczny jako mój login -->
+            <?php
+              $data = array(
+                'type'          => 'checkbox',
+                'name'          => 'display-login',
+                'id'            => 'display-login'
+              );
+              echo form_input($data);
+            ?>
+            <p style="font-size: 20px; color: white;">Chcę być widoczny jako mój login</p>
+          </div>
+
+          <div class="form-group">
+
+            <!-- <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn"> -->
+            <?php
+              $data = array(
+                'type'          => 'submit',
+                'name'          => 'signup-submit',
+                'class'         => 'btn float-right signup_btn',
+                'value'         => 'Dołącz'
+              );
+              echo form_submit($data);
+            ?>
+
+          </div>
+					<div class="space20"></div>
       </div>
     </div>
   </div>
+
+  <?php echo form_close(); ?>
+
+  </form>
+
+</div>
