@@ -52,12 +52,12 @@ class User extends CI_Controller
       redirect('/');
     }
 
-    
+
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('first-name', 'Imię', 'required|alpha');
     $this->form_validation->set_rules('last-name', 'Nazwisko', 'required|alpha');
-    $this->form_validation->set_rules('uid', 'Login', 'required|alpha_num|max_length[15]|is_unique[users.uid]');
+    $this->form_validation->set_rules('uid', 'Login', 'required|max_length[15]|is_unique[users.uid]');
     $this->form_validation->set_rules('pwd', 'Hasło', 'required|min_length[8]');
     $this->form_validation->set_rules('pwd-repeat', 'Powtórz hasło', 'required|matches[pwd]');
     $this->form_validation->set_rules('email', 'E-mail', 'required|valid_email|is_unique[users.email]');
