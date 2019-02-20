@@ -7,7 +7,7 @@
 
   <?php
     $attributes = array('class' => 'form-signin');
-    echo form_open('logging', $attributes);
+    echo form_open('logged', $attributes);
   ?>
 
   <div class="space50"></div>
@@ -16,7 +16,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if(isset($isLoggedUser)) : ?>
+      <?php if(isset($this->session->userdata($session_data['logged_in']))) : ?>
 
 			<div class="card-header">
 				<h3>Zalogowany jako</h3>
