@@ -15,28 +15,32 @@
 	<div class="d-flex justify-content-center">
 		<div class="card">
 
-  <!--
-				<div class="card-header">
-					<h3>Zalogowany jako</h3>
-				</div>
-				<div class="card-header">
-					<div class ="space10"></div>
-					<h4 style="color: white; text-align: center;">Imię Nazwisko</h4>
-					<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
-				</div>
-				<div class="card-body">
-					<a href="#" style="color: #8AFF8C;">Zmień wyświetlanie na login</a></br>
-					<a href="#" style="color: #8AFF8C;">Edytuj swoje dane</a></br>
-					<a href="#" style="color: #8AFF8C;">Usuń konto</a>
-				</div>
-				<div class="card-footer">
-					<div class="form-group">
-						<input type="submit" value="Wyloguj" name="logout-submit" class="btn float-right logout_btn">
-					</div>
-					<div class="space20"></div>
-				</div>
-  -->
+      <!-- JEŚLI ZALOGOWANO -->
+      <?php if($this->session->login == 'true') : ?>
 
+			<div class="card-header">
+				<h3>Zalogowany jako</h3>
+			</div>
+			<div class="card-header">
+				<div class ="space10"></div>
+				<h4 style="color: white; text-align: center;">Imię Nazwisko</h4>
+				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
+			</div>
+			<div class="card-body">
+				<a href="#" style="color: #364FD2;">Zmień wyświetlanie na login</a></br>
+				<a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br>
+				<a href="#" style="color: #364FD2;">Usuń konto</a>
+			</div>
+			<div class="card-footer">
+				<div class="form-group">
+					<input type="submit" value="Wyloguj" name="logout-submit" class="btn float-right logout_btn">
+				</div>
+				<div class="space20"></div>
+			</div>
+
+
+      <!-- JEŚLI WYLOGOWANO -->
+      <?php else : ?>
 
 		  <div class="card-header">
 				<h3>Zaloguj się</h3>
@@ -117,6 +121,8 @@
 				</div>
 			</div>
 
+      <!-- KONIEC WARUNKU ZALOGOWANO/WYLOGOWANO -->
+      <?php endif; ?>
 
 		</div>
     <div class="space50"></div>
