@@ -1,10 +1,15 @@
 <!-- Page Content -->
 <div class="main-bg">
+    <div class="main-logo-bg">
+      <div class="main-player-bg">
+        <div class="main-ball-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-6">
-        <h1 class="mt-5">Toruńska Liga Siatkówki</h1>
-        <p><b>Toruńska Liga Siatkówki</b></p>
+        <h1 class="mt-5"></h1>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br>
       </div>
     </div>
   </div>

@@ -637,3 +637,28 @@ background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 }
+
+.main-ball-bg {
+background-image: url('../img/main-ball.png');
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+height: 100%;
+}
+
+.main-logo-bg {
+background-image: url('../img/main-logo.png');
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+top: -25px;
+height: 100%;
+}
+.main-player-bg {
+background-image: url('../img/main-player.png');
+background-size: cover;
+background-repeat: no-repeat;
+position: relative;
+top:
+height: 100%;
+}
