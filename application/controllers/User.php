@@ -1,7 +1,5 @@
 <?php
 
-session_start();
-
 class User extends CI_Controller
 {
 
