@@ -16,7 +16,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->userdata('logged_in')) : ?>
+      <?php if(session_status() == PHP_SESSION_ACTIVE) : ?>
 
 			<div class="card-header">
 				<h3>Zalogowany jako</h3>
@@ -24,7 +24,7 @@
 			<div class="card-header">
 				<div class ="space10"></div>
 				<h4 style="color: white; text-align: center;">
-          
+          Imię Naziwsko
         </h4>
 				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
 			</div>
