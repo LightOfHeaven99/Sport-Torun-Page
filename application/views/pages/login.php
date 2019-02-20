@@ -7,7 +7,7 @@
 
   <?php
     $attributes = array('class' => 'form-signin');
-    echo form_open('login_post', $attributes);
+    echo form_open('login/login', $attributes);
   ?>
 
   <div class="space50"></div>
