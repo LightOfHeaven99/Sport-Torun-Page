@@ -53,7 +53,8 @@ class User extends CI_Controller
           'last_name' => $result[0]->last_name,
           'uid' => $result[0]->uid,
           'email' => $result[0]->email,
-          'display_login' => $result[0]->display_login
+          'display_login' => $result[0]->display_login,
+          'logged_in' => TRUE
           );
           // Dodanie informacji o użytkowniku do sesji
           $this->session->set_userdata('logged_in', $session_data);
