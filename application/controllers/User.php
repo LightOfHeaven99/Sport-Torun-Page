@@ -74,6 +74,7 @@ class User extends CI_Controller
           $displayLoginUser = $this->session->userdata($session_data['display_login']);
           $isLoggedUser = $this->session->userdata($session_data['logged_in']);
 
+          $this->login();
         }
         else {
           // Błąd przy czytaniu informacji z bazy danych
