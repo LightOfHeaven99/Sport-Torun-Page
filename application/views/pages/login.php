@@ -24,12 +24,7 @@
 			<div class="card-header">
 				<div class ="space10"></div>
 				<h4 style="color: white; text-align: center;">
-          <?php/* if(isset($displayLoginUser)){
-            echo $uidUser;
-          } else {
-            echo $firstNameUser;
-          }*/
-          ?>
+          
         </h4>
 				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
 			</div>
