@@ -11,7 +11,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if(session_status() == PHP_SESSION_ACTIVE) : ?>
+      <?php if(!session_status() == PHP_SESSION_ACTIVE) : ?>
 
       <?php
         $attributes = array('class' => 'form-signin');
