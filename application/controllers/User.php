@@ -3,12 +3,12 @@
 class User extends CI_Controller
 {
 
-  public $firstNameUser;
-  public $lastNameUser;
-  public $uidUser;
-  public $emaileUser;
-  public $displayLoginUser;
-  public $isLoggedUser;
+  global $firstNameUser = null;
+  global $lastNameUser = null;
+  global $uidUser = null;
+  global $emaileUser = null;
+  global $displayLoginUser = null;
+  global $isLoggedUser = null;
 
   public $session_data;
 
@@ -119,6 +119,14 @@ class User extends CI_Controller
   public function logout(){
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
+
+    $firstNameUser = null;
+    $lastNameUser = null;
+    $uidUser = null;
+    $emaileUser = null;
+    $displayLoginUser = null;
+    $isLoggedUser = null;
+
     redirect('login');
   }
 }

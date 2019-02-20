@@ -16,7 +16,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->userdata($session_data['logged_in'])) : ?>
+      <?php if($isLoggedUser) : ?>
 
 			<div class="card-header">
 				<h3>Zalogowany jako</h3>
