@@ -16,4 +16,11 @@
 </div>
 
 </body>
+
+<!-- <script type="text/javascript">
+setTimeout(function(){
+    document.getElementById('main-logo.png').style.display = 'block';
+},60);
+</script> -->
+
 </html>
