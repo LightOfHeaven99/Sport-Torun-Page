@@ -1,15 +1,14 @@
 <?php
 
+$firstNameUser = null;
+$lastNameUser = null;
+$uidUser = null;
+$emaileUser = null;
+$displayLoginUser = null;
+$isLoggedUser = null;
+
 class User extends CI_Controller
 {
-
-  global $firstNameUser = null;
-  global $lastNameUser = null;
-  global $uidUser = null;
-  global $emaileUser = null;
-  global $displayLoginUser = null;
-  global $isLoggedUser = null;
-
   public $session_data;
 
   public function __construct()
@@ -67,12 +66,12 @@ class User extends CI_Controller
           $this->session->set_userdata($session_data);
 
           // Uzupełnienie zmiennych globalnych do użycia na stronie
-          $firstNameUser = $this->session->userdata($session_data['first_name']);
-          $lastNameUser = $this->session->userdata($session_data["last_name"]);
-          $uidUser = $this->session->userdata($session_data['uid']);
-          $emaileUser = $this->session->userdata($session_data['email']);
-          $displayLoginUser = $this->session->userdata($session_data['display_login']);
-          $isLoggedUser = $this->session->userdata($session_data['logged_in']);
+          global $firstNameUser = $this->session->userdata($session_data['first_name']);
+          global $lastNameUser = $this->session->userdata($session_data["last_name"]);
+          global $uidUser = $this->session->userdata($session_data['uid']);
+          global $emaileUser = $this->session->userdata($session_data['email']);
+          global $displayLoginUser = $this->session->userdata($session_data['display_login']);
+          global $isLoggedUser = $this->session->userdata($session_data['logged_in']);
 
           $this->login();
         }
@@ -120,12 +119,12 @@ class User extends CI_Controller
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
 
-    $firstNameUser = null;
-    $lastNameUser = null;
-    $uidUser = null;
-    $emaileUser = null;
-    $displayLoginUser = null;
-    $isLoggedUser = null;
+    global $firstNameUser = null;
+    global $lastNameUser = null;
+    global $uidUser = null;
+    global $emaileUser = null;
+    global $displayLoginUser = null;
+    global $isLoggedUser = null;
 
     redirect('login');
   }
