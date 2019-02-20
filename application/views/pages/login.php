@@ -7,7 +7,7 @@
 
   <?php
     $attributes = array('class' => 'form-signin');
-    echo form_open('login-post', $attributes);
+    echo form_open($this->User->login_post(), $attributes);
   ?>
 
   <div class="space50"></div>
