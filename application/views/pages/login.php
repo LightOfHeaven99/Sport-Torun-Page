@@ -11,7 +11,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+      <?php if($this->session->userdata('logged_in') == FALSE) : ?>
 
       <?php
         $attributes = array('class' => 'form-signin');
