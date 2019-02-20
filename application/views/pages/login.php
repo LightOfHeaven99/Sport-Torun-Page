@@ -82,6 +82,7 @@
           <!-- <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Hasło" required> -->
           <?php
             $data = array(
+              'type'          => 'password',
               'name'          => 'pwd',
               'id'            => 'pwd',
               'class'         => 'form-control',
@@ -93,7 +94,17 @@
 
         </div>
 				<div class="row align-items-center remember">
-					<input type="checkbox">Zapamiętaj mnie
+
+					<!-- <input type="checkbox">Zapamiętaj mnie -->
+          <?php
+          $data = array(
+            'type'          => 'checkbox',
+            'name'          => 'remember-me',
+            'id'            => 'remember-me'
+          );
+          echo form_input($data);
+          ?>
+
 				</div>
 				<div class="form-group">
 
