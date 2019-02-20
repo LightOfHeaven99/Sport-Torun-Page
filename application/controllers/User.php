@@ -120,12 +120,13 @@ class User extends CI_Controller
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
 
-    global $firstNameUser = null;
-    global $lastNameUser = null;
-    global $uidUser = null;
-    global $emailUser = null;
-    global $displayLoginUser = null;
-    global $isLoggedUser = null;
+    global $firstNameUser, $lastNameUser, $uidUser, $emailUser, $displayLoginUser, $isLoggedUser;
+    $firstNameUser = null;
+    $lastNameUser = null;
+    $uidUser = null;
+    $emailUser = null;
+    $displayLoginUser = null;
+    $isLoggedUser = null;
 
     redirect('login');
   }
