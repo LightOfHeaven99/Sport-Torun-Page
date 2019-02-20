@@ -1,3 +1,18 @@
+<?php
+
+$isLogged = isset($this->session->userdata['logged_in']);
+
+if(isset($isLogged))
+{
+  $firstNameUser = ($this->session->userdata['logged_in']['first_name']);
+  $lastNameUser = ($this->session->userdata['logged_in']['last_name']);
+  $uidUser = ($this->session->userdata['logged_in']['uid']);
+  $emailUser = ($this->session->userdata['logged_in']['email']);
+  $displayLoginUser = ($this->session->userdata['logged_in']['display_login']);
+}
+
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 

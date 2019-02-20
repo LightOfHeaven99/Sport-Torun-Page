@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 class User extends CI_Controller
 {
 
@@ -30,24 +32,42 @@ class User extends CI_Controller
     $this->form_validation->set_rules('pwd', 'Hasło', 'required');
 
     if ($this->form_validation->run() == FALSE)
+    {
+      $this->login();
+    }
+    else
+    {
+      if($this->login_model->login_user($uid, $pwd) == true)
       {
-        $this->login();
-      }
-      else
-      {
-        $response_val = $this->login_model->login_user($uid, $pwd);
-        if($response_val == true){
-          $val = $this->login_model->get_user_info($uid);
-          $this->session->set_userdata($val[0]);
-          $this->session->set_userdata('login', 'true');
-          redirect('login');
+        /*
+        $val = $this->login_model->get_user_info($uid);
+        $this->session->set_userdata($val[0]);
+        $this->session->set_userdata('login', 'true');
+        redirect('login');
+        */
 
-        }elseif($response_val == false){
-          $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
-          //$this->session->flashdata('login_info');
-          $this->login();
+        $result = $this->login_model->read_user_information($uid);
+        if ($result != false) {
+          $session_data = array(
+          'first_name' => $result[0]->first_name,
+          'last_name' => $result[0]->last_name,
+          'uid' => $result[0]->uid,
+          'email' => $result[0]->email,
+          'display_login' => $result[0]->display_login
+          );
+          // Dodanie informacji o użytkowniku do sesji
+          $this->session->set_userdata('logged_in', $session_data);
+        }
+        else {
+          // Błąd przy czytaniu informacji z bazy danych
         }
       }
+      else {
+        $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
+        //$this->session->flashdata('login_info');
+        $this->login();
+      }
+    }
   }
 
   public function register(){
