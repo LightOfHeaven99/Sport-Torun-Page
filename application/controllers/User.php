@@ -5,6 +5,15 @@ session_start();
 class User extends CI_Controller
 {
 
+  public $firstNameUser;
+  public $lastNameUser;
+  public $uidUser;
+  public $emaileUser;
+  public $displayLoginUser;
+  public $isLoggedUser;
+
+  public $session_data;
+
   public function __construct()
   {
       parent::__construct();
@@ -57,7 +66,16 @@ class User extends CI_Controller
           'logged_in' => TRUE
           );
           // Dodanie informacji o użytkowniku do sesji
-          $this->session->set_userdata('logged_in', $session_data);
+          $this->session->set_userdata($session_data);
+
+          // Uzupełnienie zmiennych globalnych do użycia na stronie
+          $firstNameUser = $this->session->userdata($session_data[0]);
+          $lastNameUser = $this->session->userdata($session_data[1]);
+          $uidUser = $this->session->userdata($session_data[2]);
+          $emaileUser = $this->session->userdata($session_data[3]);
+          $displayLoginUser = $this->session->userdata($session_data[4]);
+          $isLoggedUser = $this->session->userdata($session_data[5]);
+
         }
         else {
           // Błąd przy czytaniu informacji z bazy danych
@@ -100,7 +118,8 @@ class User extends CI_Controller
   }
 
   public function logout(){
+    $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
-    redirect('');
+    redirect('login');
   }
 }

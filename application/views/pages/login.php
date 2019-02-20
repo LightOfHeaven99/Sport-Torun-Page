@@ -16,7 +16,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if(isset($isLogged)) : ?>
+      <?php if(isset($isLoggedUser)) : ?>
 
 			<div class="card-header">
 				<h3>Zalogowany jako</h3>
