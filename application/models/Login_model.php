@@ -22,7 +22,7 @@ class Login_model extends CI_Model
 
     $condition = "uid =" . "'" . $uid . "'";
     $this->db->select('*');
-    $this->db->from('user');
+    $this->db->from('users');
     $this->db->where($condition);
     $this->db->limit(1);
     $query = $this->db->get();
