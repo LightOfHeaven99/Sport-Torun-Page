@@ -67,12 +67,12 @@ class User extends CI_Controller
           $this->session->set_userdata($session_data);
 
           // Uzupełnienie zmiennych globalnych do użycia na stronie
-          $firstNameUser = $this->session->userdata($session_data[0]);
-          $lastNameUser = $this->session->userdata($session_data[1]);
-          $uidUser = $this->session->userdata($session_data[2]);
-          $emaileUser = $this->session->userdata($session_data[3]);
-          $displayLoginUser = $this->session->userdata($session_data[4]);
-          $isLoggedUser = $this->session->userdata($session_data[5]);
+          $firstNameUser = $this->session->userdata($session_data['first_name']);
+          $lastNameUser = $this->session->userdata($session_data["last_name"]);
+          $uidUser = $this->session->userdata($session_data['uid']);
+          $emaileUser = $this->session->userdata($session_data['email']);
+          $displayLoginUser = $this->session->userdata($session_data['display_login']);
+          $isLoggedUser = $this->session->userdata($session_data['logged_in']);
 
         }
         else {
