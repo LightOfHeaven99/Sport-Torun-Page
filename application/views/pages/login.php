@@ -3,7 +3,7 @@
 <div class="login-bg">
 <div class="container">
 
-  <form class="form-signin" method="POST">
+  <!-- <form class="form-signin" method="POST"> -->
 
   <?php
     $attributes = array('class' => 'form-signin');
@@ -16,7 +16,7 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->login == 'true') : ?>
+      <?php if(isset($_SESSION['login'])) : ?>
 
 			<div class="card-header">
 				<h3>Zalogowany jako</h3>
@@ -105,6 +105,7 @@
           echo form_input($data);
           ?>
 
+          <p style="font-size: 20px; color: white;">Zapamiętaj mnie</p>
 				</div>
 				<div class="form-group">
 
@@ -141,7 +142,7 @@
 
   <?php echo form_close(); ?>
 
-  </form>
+  <!-- </form> -->
 
 </div>
 </div>

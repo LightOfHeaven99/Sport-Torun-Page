@@ -8,6 +8,7 @@ class User extends CI_Controller
       parent::__construct();
       $this->load->helper('form');
       $this->load->library('form_validation');
+      $this->load->library('session');
       $this->load->model('login_model');
   }
 
@@ -39,7 +40,7 @@ class User extends CI_Controller
           $val = $this->login_model->get_user_info($uid);
           $this->session->set_userdata($val[0]);
           $this->session->set_userdata('login', 'true');
-          redirect('/');
+          redirect('login');
 
         }elseif($response_val == false){
           $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
@@ -51,7 +52,7 @@ class User extends CI_Controller
 
   public function register(){
     if($this->session->login == 'true'){
-      redirect('/');
+      redirect('login');
     }
 
     $this->form_validation->set_rules('first-name', 'Imię', 'required');
