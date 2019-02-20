@@ -27,7 +27,7 @@
           <?php if(isset($displayLoginUser)){
             echo $uidUser;
           } else {
-            echo "{$row->firstNameUser} {$row->lastNameUser}";
+            echo $firstNameUser;
           }
           ?>
         </h4>
