@@ -22,8 +22,8 @@ class User extends CI_Controller
   }
 
   public function login_post(){
-    $username = $this->input->post('uid');
-    $password = $this->input->post('pwd');
+    $uid = $this->input->post('uid');
+    $pwd = $this->input->post('pwd');
 
     $this->form_validation->set_rules('uid', 'Login', 'required');
     $this->form_validation->set_rules('pwd', 'Hasło', 'required');
