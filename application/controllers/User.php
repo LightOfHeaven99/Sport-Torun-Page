@@ -52,7 +52,7 @@ class User extends CI_Controller
 
   public function register(){
     if($this->session->login == 'true'){
-      redirect('login');
+      redirect('');
     }
 
     $this->form_validation->set_rules('first-name', 'Imię', 'required');
@@ -80,6 +80,6 @@ class User extends CI_Controller
 
   public function logout(){
     $this->session->sess_destroy();
-    redirect('login');
+    redirect('');
   }
 }

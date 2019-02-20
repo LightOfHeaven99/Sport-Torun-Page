@@ -5,11 +5,6 @@
 
   <!-- <form class="form-signin" method="POST"> -->
 
-  <?php
-    $attributes = array('class' => 'form-signin');
-    echo form_open('login-post', $attributes);
-  ?>
-
   <div class="space50"></div>
   <div class="space50"></div>
 	<div class="d-flex justify-content-center">
@@ -17,6 +12,11 @@
 
       <!-- JEŚLI ZALOGOWANO -->
       <?php if(isset($_SESSION['login'])) : ?>
+
+      <?php
+        $attributes = array('class' => 'form-signin');
+        echo form_open($this->logout(), $attributes);
+      ?>
 
 			<div class="card-header">
 				<h3>Zalogowany jako</h3>
@@ -33,14 +33,32 @@
 			</div>
 			<div class="card-footer">
 				<div class="form-group">
-					<input type="submit" value="Wyloguj" name="logout-submit" class="btn float-right logout_btn">
-				</div>
+
+          <!-- <input type="submit" value="Wyloguj" name="logout-submit" class="btn float-right logout_btn"> -->
+          <?php
+            $data = array(
+              'type'          => 'submit',
+              'name'          => 'logout-submit',
+              'class'         => 'btn float-right logout_btn',
+              'value'         => 'Wyloguj'
+            );
+            echo form_submit($data);
+          ?>
+
+        </div>
 				<div class="space20"></div>
 			</div>
+
+      <?php echo form_close(); ?>
 
 
       <!-- JEŚLI WYLOGOWANO -->
       <?php else : ?>
+
+      <?php
+        $attributes = array('class' => 'form-signin');
+        echo form_open($this->login_post(), $attributes);
+      ?>
 
 		  <div class="card-header">
 				<h3>Zaloguj się</h3>
