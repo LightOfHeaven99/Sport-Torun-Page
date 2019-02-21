@@ -53,7 +53,7 @@
           </h4>
   			</div>
         <div class="card-body">
-        <a href="admin/news-panel" style="color: #364FD2;">Zarządzaj aktualnościami</a></br>
+        <a href="news-panel" style="color: #364FD2;">Zarządzaj aktualnościami</a></br>
 				<a href="#" style="color: #364FD2;">Zarządzaj meczami</a></br>
 				<a href="#" style="color: #364FD2;">Zarządzaj drużynami</a></br>
         <a href="#" style="color: #364FD2;">Zarządzaj zawodnikami</a></br>

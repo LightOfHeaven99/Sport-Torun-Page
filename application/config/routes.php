@@ -61,3 +61,5 @@ $route['logout'] = 'user/logout';
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';
 $route['(:any)/(:any)/(:any)'] = 'pages/view/$1/$2/$3';
+
+$route['news-panel'] = 'pages/view/admin/news-panel';
