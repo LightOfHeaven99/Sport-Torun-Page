@@ -13,7 +13,7 @@
 
       <!-- JEŚLI ZALOGOWANO -->
       <?php // if($this->session->userdata('logged_in') == TRUE) : ?>
-      <?php if($isLoggedUser) == TRUE) : ?>
+      <?php if($isLoggedUser == TRUE) : ?>
 
       <?php
         $attributes = array('class' => 'form-signin');
