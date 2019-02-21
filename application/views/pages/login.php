@@ -44,7 +44,7 @@
 
       <?php else : ?>
         <div class="card-header">
-          <h3 style="color: #DD4E4E";>ADMIN</h3>
+          <h3 style="color: #364FD2";>ADMIN</h3>
         </div>
         <div class="card-header">
   				<div class ="space10"></div>
