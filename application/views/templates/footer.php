@@ -1,7 +1,7 @@
   <!-- Footer -->
   <footer class="py-1 bg-dark">
       <div class="grid-container">
-        <div class="container">
+        <!-- <div class="container"> -->
           <div class="move">
             <div class="a">
               <span class="footercol">Informacje</span>
@@ -12,8 +12,8 @@
                 </ul>
             </div>
           </div>
-        </div>
-        <div class="container">
+        <!-- </div> -->
+        <!-- <div class="container"> -->
           <div class="move">
             <div class="a">
               <span class="footercol2">Współpraca</span>
@@ -24,8 +24,8 @@
               </ul>
             </div>
           </div>
-        </div>
-        <div class="container">
+        <!-- </div> -->
+        <!-- <div class="container"> -->
           <div class="move">
             <div class="a">
               <span class="footercol3">Pomoc</span>
@@ -36,7 +36,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
     <p class="m-0 text-center text-white"><font size="3">Toruńska Liga Siatkówki 2019 &copy; All rights reserved.</font></p>
 </footer>
