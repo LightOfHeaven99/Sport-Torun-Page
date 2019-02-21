@@ -1,5 +1,3 @@
-<?php include '../../controllers/User.php'; ?>
-
 <!-- Login widnow -->
 <div class="login-bg">
 <div class="container">
@@ -12,32 +10,31 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php // if($this->session->userdata('logged_in') == TRUE) : ?>
-      <?php if($isLoggedUser == TRUE) : ?>
+      <?php if($this->session->userdata('logged_in') == TRUE) : ?>
 
       <?php
         $attributes = array('class' => 'form-signin');
         echo form_open('logout', $attributes);
       ?>
 
-      <?php if($isAdminUser == 0) : ?>
+      <?php if($this->session->userdata('is_admin') == 0) : ?>
   			<div class="card-header">
   				<h3>Zalogowany jako</h3>
   			</div>
   			<div class="card-header">
   				<div class ="space10"></div>
   				<h4 style="color: white; text-align: center;">
-            <?php if($displayLoginUser == 0) {
-              echo $firstNameUser." ".$lastNameUser;
+            <?php if($this->session->userdata('display_login') == 0) {
+              echo $this->session->userdata('first_name')." ".$this->session->userdata('last_name');
             } else {
-              echo $uidUser;
+              echo $this->session->userdata('uid') ;
             }
             ?>
           </h4>
   				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
   			</div>
   			<div class="card-body">
-          <?php if($displayLoginUser == 0) : ?>
+          <?php if($this->session->userdata('display_login') == 0) : ?>
             <a href="#" style="color: #364FD2;">Zmień wyświetlanie na login</a></br> <!-- display_login 0->1 -->
           <?php else : ?>
             <a href="#" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
@@ -52,7 +49,7 @@
         <div class="card-header">
   				<div class ="space10"></div>
   				<h4 style="color: white; text-align: center;">
-            <?= $firstNameUser." ".$lastNameUser; ?>
+            <?= $this->session->userdata('first_name')." ".$this->session->userdata('last_name'); ?>
           </h4>
   			</div>
         <div class="card-body">
