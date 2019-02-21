@@ -3,7 +3,7 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12 text-center">
-      <h1 class="mt-5">Najpiękniejsze zdjęcia</h1>
+      <h1 class="mt-5">Wybrane zdjęcia</h1>
     </div>
   </div>
 </div>
