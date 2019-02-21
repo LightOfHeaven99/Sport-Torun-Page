@@ -25,20 +25,20 @@
             </div>
           </div>
         </div>
-        <div class="move">
-          <div class="a">
-            <span class="footercol3">Pomoc</span>
-            <ul style="list-style-type:none;">
-              <li><a href="faq"><span class="footerundercol">FAQ</span></a></li>
-              <li><a href="forum"><span class="footerundercol">Forum</span></a></li>
-              <li><a href="policy"><span class="footerundercol">Polityka prywatności</span></a></li>
-            </ul>
+        <!-- <div class="container"> -->
+          <div class="move">
+            <div class="a">
+              <span class="footercol3">Pomoc</span>
+              <ul style="list-style-type:none;">
+                <li><a href="faq"><span class="footerundercol">FAQ</span></a></li>
+                <li><a href="forum"><span class="footerundercol">Forum</span></a></li>
+                <li><a href="policy"><span class="footerundercol">Polityka prywatności</span></a></li>
+              </ul>
+            </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
-    </div>
     <p class="m-0 text-center text-white"><font size="3">Toruńska Liga Siatkówki 2019 &copy; All rights reserved.</font></p>
-  </div>
 </footer>
 
 </body>

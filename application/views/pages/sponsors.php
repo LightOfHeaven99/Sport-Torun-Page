@@ -1,8 +1,6 @@
 <!-- Page Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h1 class="mt-5">Zasłużeni sponsorzy</h1>
-    </div>
+<div class="sponsors-bg">
+  <div class="container">
+    <div style="height: 650px;"></div>
   </div>
 </div>

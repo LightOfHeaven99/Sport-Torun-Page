@@ -39,7 +39,7 @@
         <div class="dropdown-content">
           <a href="teams">Drużyny</a>
           <a href="players">Zawodnicy</a>
-         <a href="courts">Boiska</a>
+         <a href="information">Informacje</a>
      </div>
   </div>
         <li class="nav-item">

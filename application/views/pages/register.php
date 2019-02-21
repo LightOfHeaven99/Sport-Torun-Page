@@ -2,8 +2,6 @@
 <div class="login-bg">
 <div class="container">
 
-  <form class="form-signin" method="POST">
-
   <?php
     $attributes = array('class' => 'form-signin');
     echo form_open('register', $attributes);
@@ -14,6 +12,7 @@
     <div class="card-signup">
       <div class="card-header">
         <h3>Zarejestruj się</h3>
+        <a href="login" style="color: #364FD2;">Wróc do logowania</a></br>
       </div>
       <div class="card-body">
         <h4 style="color:white">Podaj dane</h4>
@@ -23,7 +22,6 @@
         ?>
           <div class="input-group form-group">
 
-            <!-- <input type="text" name="first-name" id="first-name" class="form-control" placeholder="Imię" required> -->
             <?php
               $data = array(
                 'name'          => 'first-name',
@@ -36,7 +34,6 @@
               echo form_input($data, $val);
             ?>
 
-            <!-- <input type="text" name="last-name" id="last-name" class="form-control" placeholder="Nazwisko" required> -->
             <?php
               $data = array(
                 'name'          => 'last-name',
@@ -52,7 +49,6 @@
           </div>
           <div class="input-group form-group">
 
-            <!-- <input type="text" name="uid" id="uid" class="form-control" placeholder="Login" required> -->
             <?php
               $data = array(
                 'name'          => 'uid',
@@ -68,7 +64,6 @@
           </div>
           <div class="input-group form-group">
 
-            <!-- <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Hasło" required> -->
             <?php
               $data = array(
                 'type'          => 'password',
@@ -84,7 +79,6 @@
           </div>
           <div class="input-group form-group">
 
-            <!-- <input type="password" name="pwd-repeat" id="pwd-repeat" class="form-control" placeholder="Powtórz hasło" required> -->
             <?php
               $data = array(
                 'type'          => 'password',
@@ -100,7 +94,6 @@
           </div>
           <div class="input-group form-group">
 
-            <!-- <input type="text" name="email" id="email" class="form-control" placeholder="E-mail" required autofocus> -->
             <?php
               $data = array(
                 'type'          => 'email',
@@ -117,7 +110,6 @@
           </div>
           <div class="row align-items-center remember">
 
-            <!--<input type="checkbox" name="display-login" id="display-login">Chcę być widoczny jako mój login -->
             <?php
               $data = array(
                 'type'          => 'checkbox',
@@ -131,7 +123,6 @@
 
           <div class="form-group">
 
-            <!-- <input type="submit" name="signup-submit" value="Dołącz" class="btn float-right signup_btn"> -->
             <?php
               $data = array(
                 'type'          => 'submit',
@@ -146,12 +137,12 @@
 					<div class="space20"></div>
       </div>
     </div>
-    <div class="space30"></div>
   </div>
 
   <?php echo form_close(); ?>
 
-  </form>
+  <div class="space50"></div>
+  <div class="space30"></div>
 
-</div>
+  </div>
 </div>

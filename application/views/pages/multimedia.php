@@ -1,8 +1,6 @@
-<!-- Page Content -->
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12 text-center">
-      <h1 class="mt-5">Obsługa multimedialna</h1>
-    </div>
+  <!-- Page Content -->
+<div class"multimedia-bg">
+  <div class="container">
+    <div style="height: 650px;"></div>
   </div>
 </div>

@@ -7,6 +7,7 @@
 			<div class="card">
         <div class="card-header">
           <h3>Zresetuj hasło</h3>
+					<a href="login" style="color: #364FD2;">Wróc do logowania</a></br>
         </div>
         <div class="card-body">
           <div class="input-group form-group">
@@ -18,7 +19,7 @@
           <div class="space20"></div>
         </div>
       </div>
-			<div class="space50"></div>
     </div>
+		<div class="space100"></div>	
   </div>
 </div>
