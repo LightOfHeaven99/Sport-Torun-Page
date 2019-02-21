@@ -12,8 +12,8 @@ class Pages extends CI_Controller {
   {
     if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
     {
-            // Whoops, we don't have a page for that!
-            show_404();
+        // Whoops, we don't have a page for that!
+        show_404();
     }
 
     $data['title'] = ucfirst($page); // Capitalize the first letter
@@ -30,15 +30,26 @@ class Pages extends CI_Controller {
   {
     if ( ! file_exists(APPPATH.'views/admin/'.$page.'.php'))
     {
-            // Whoops, we don't have a page for that!
-            show_404();
+        show_404();
     }
 
-    $data['title'] = ucfirst($page); // Capitalize the first letter
+    $data['title'] = ucfirst($page);
 
-    $this->load->view('admin/templates/header');
-    $this->load->view('admin/templates/menu');
-    $this->load->view('admin/'.$page, $data);
-    $this->load->view('admin/templates/footer');
+    if($this->session->userdata('logged_in') == TRUE)
+    {
+      if($this->session->userdata('is_admin') == 1)
+      {
+        $this->load->view('admin/templates/header');
+        $this->load->view('admin/templates/menu');
+        $this->load->view('admin/'.$page, $data);
+        $this->load->view('admin/templates/footer');
+      }
+      else {
+        show_404(); // BRAK UPRAWNIEŃ
+      }
+    }
+    else {
+      show_404(); // NIEZALOGOWANY
+    }
   }
 }
