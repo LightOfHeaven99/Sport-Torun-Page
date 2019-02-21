@@ -16,7 +16,7 @@
         <div class="container">
           <div class="move">
             <div class="a">
-              <span class="footercol">Współpraca</span>
+              <span class="footercol2">Współpraca</span>
               <ul style="list-style-type:none;">
                 <li><a href="sponsors"><span class="footerundercol">Sponsorzy</span></a></li>
                 <li><a href="advertisement"><span class="footerundercol">Możliwość reklamy</span></a></li>
@@ -28,7 +28,7 @@
         <!-- <div class="container"> -->
           <div class="move">
             <div class="a">
-              <span class="footercol">Pomoc</span>
+              <span class="footercol3">Pomoc</span>
               <ul style="list-style-type:none;">
                 <li><a href="faq"><span class="footerundercol">FAQ</span></a></li>
                 <li><a href="forum"><span class="footerundercol">Forum</span></a></li>
