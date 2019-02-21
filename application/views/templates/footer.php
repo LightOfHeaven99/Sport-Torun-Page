@@ -36,9 +36,7 @@
           </div>
         </div>
       </div>
-    </div>
     <p class="m-0 text-center text-white"><font size="3">Toruńska Liga Siatkówki 2019 &copy; All rights reserved.</font></p>
-  </div>
 </footer>
 
 </body>
