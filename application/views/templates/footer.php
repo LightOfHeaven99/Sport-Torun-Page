@@ -1,7 +1,7 @@
   <!-- Footer -->
   <footer class="py-1 bg-dark">
       <div class="grid-container">
-        <!-- <div class="container"> -->
+        <div class="container">
           <div class="move">
             <div class="a">
               <span class="footercol">Informacje</span>
@@ -12,11 +12,11 @@
                 </ul>
             </div>
           </div>
-        <!-- </div> -->
-        <!-- <div class="container"> -->
+        </div>
+        <div class="container">
           <div class="move">
             <div class="a">
-              <span class="footercol2">Współpraca</span>
+              <span class="footercol">Współpraca</span>
               <ul style="list-style-type:none;">
                 <li><a href="sponsors"><span class="footerundercol">Sponsorzy</span></a></li>
                 <li><a href="advertisement"><span class="footerundercol">Możliwość reklamy</span></a></li>
@@ -24,11 +24,11 @@
               </ul>
             </div>
           </div>
-        <!-- </div> -->
+        </div>
         <!-- <div class="container"> -->
           <div class="move">
             <div class="a">
-              <span class="footercol3">Pomoc</span>
+              <span class="footercol">Pomoc</span>
               <ul style="list-style-type:none;">
                 <li><a href="faq"><span class="footerundercol">FAQ</span></a></li>
                 <li><a href="forum"><span class="footerundercol">Forum</span></a></li>
