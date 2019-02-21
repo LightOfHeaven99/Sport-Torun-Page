@@ -37,9 +37,9 @@
         <div class="dropdown">
         <button class="dropbtn">O lidze</button>
         <div class="dropdown-content">
-          <a class="nav-link" href="teams">Drużyny</a>
-          <a class="nav-link" href="players">Zawodnicy</a>
-         <a class="nav-link" href="information">Informacje</a>
+          <a href="teams">Drużyny</a>
+          <a href="players">Zawodnicy</a>
+         <a href="information">Informacje</a>
      </div>
   </div>
         <li class="nav-item">
