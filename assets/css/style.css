@@ -631,8 +631,71 @@ background-repeat: no-repeat;
 height: 100%;
 }
 
-.join-bg {
-background-image: url('../img/join-bg.jpg');
+.contact-bg {
+background-image: url('../img/contact-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.regulations-bg {
+background-image: url('../img/regulations-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.documents-bg {
+background-image: url('../img/documents-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.sponsors-bg {
+background-image: url('../img/sponsorts-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.advertisement-bg {
+background-image: url('../img/advertisement-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.multimedia-bg {
+background-image: url('../img/multimedia-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.faq-bg {
+background-image: url('../img/faq-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.forum-bg {
+background-image: url('../img/forum-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.policy-bg {
+background-image: url('../img/policy-bg.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+}
+
+.admin-bg {
+background-image: url('../img/admin-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;

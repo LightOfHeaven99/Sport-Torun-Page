@@ -1,5 +1,5 @@
 <!-- Footer -->
-<footer class="py-1 bg-dark" style="background-color: #DD4E4E;">
+<footer class="py-1 bg-dark" style="background: #DD4E4E;">
   <div class="grid-container">
     <div class="container">
 

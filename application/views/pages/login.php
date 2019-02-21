@@ -5,18 +5,18 @@
   <!-- <form class="form-signin" method="POST"> -->
 
   <div class="space50"></div>
-  <div class="space50"></div>
-	<div class="d-flex justify-content-center">
-		<div class="card">
 
-      <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+    <!-- JEŚLI ZALOGOWANO -->
+    <?php if($this->session->userdata('logged_in') == TRUE) : ?>
 
-      <?php
-        $attributes = array('class' => 'form-signin');
-        echo form_open('logout', $attributes);
-      ?>
+    <?php
+      $attributes = array('class' => 'form-signin');
+      echo form_open('logout', $attributes);
+    ?>
 
+    <div class="space30"></div>
+    <div class="d-flex justify-content-center">
+      <div class="card">
       <?php if($this->session->userdata('is_admin') == 0) : ?>
   			<div class="card-header">
   				<h3>Zalogowany jako</h3>
@@ -89,7 +89,9 @@
         $attributes = array('class' => 'form-signin');
         echo form_open('logged', $attributes);
       ?>
-
+    <div class="space50"></div>
+  	<div class="d-flex justify-content-center">
+  		<div class="card">
 		  <div class="card-header">
 				<h3>Zaloguj się</h3>
 				<div class="d-flex justify-content-end social_icon">
