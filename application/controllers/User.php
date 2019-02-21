@@ -61,6 +61,7 @@ class User extends CI_Controller
           'uid' => $result[0]->uid,
           'email' => $result[0]->email,
           'display_login' => $result[0]->display_login,
+          'is_admin' => $result[0]->is_admin,
           'logged_in' => TRUE
           );
           // Dodanie informacji o użytkowniku do sesji
