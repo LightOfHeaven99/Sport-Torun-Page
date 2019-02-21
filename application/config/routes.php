@@ -63,7 +63,7 @@ $route['news-panel'] = 'pages/admin/news-panel';
 $route['matches-panel'] = 'pages/admin/matches-panel';
 $route['teams-panel'] = 'pages/admin/teams-panel';
 $route['players-panel'] = 'pages/admin/players-panel';
-$route['media-panel'] = 'pages/admin/multimedia-panel';
+$route['multimedia-panel'] = 'pages/admin/multimedia-panel';
 $route['users-panel'] = 'pages/admin/users-panel';
 $route['back'] = 'pages/view/login';
 

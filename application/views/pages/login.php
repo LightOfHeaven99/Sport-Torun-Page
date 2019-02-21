@@ -53,13 +53,13 @@
           </h4>
   			</div>
         <div class="card-body">
-        <a href="admin-panel" style="color: #DD4E4E;">Główny panel</a></br>
-        <a href="news-panel" style="color: #DD4E4E;">Zarządzaj aktualnościami</a></br>
-				<a href="matches-panel" style="color: #DD4E4E;">Zarządzaj meczami</a></br>
-				<a href="teams-panel" style="color: #DD4E4E;">Zarządzaj drużynami</a></br>
-        <a href="players-panel" style="color: #DD4E4E;">Zarządzaj zawodnikami</a></br>
-        <a href="multimedia-panel" style="color: #DD4E4E;">Zarządzaj multimediami</a></br>
-        <a href="users-panel" style="color: #DD4E4E;">Zarządzaj użytkownikami</a>
+        <a href="admin-panel" style="color: #364FD2;">Główny panel</a></br> <!-- DD4E4E czerwony -->
+        <a href="news-panel" style="color: #364FD2;">Zarządzaj aktualnościami</a></br>
+				<a href="matches-panel" style="color: #364FD2;">Zarządzaj meczami</a></br>
+				<a href="teams-panel" style="color: #364FD2;">Zarządzaj drużynami</a></br>
+        <a href="players-panel" style="color: #364FD2;">Zarządzaj zawodnikami</a></br>
+        <a href="multimedia-panel" style="color: #364FD2;">Zarządzaj multimediami</a></br>
+        <a href="users-panel" style="color: #364FD2;">Zarządzaj użytkownikami</a>
       <?php endif; ?>
 
 			</div>

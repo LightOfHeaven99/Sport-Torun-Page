@@ -624,8 +624,8 @@ background-repeat: no-repeat;
 height: 100%;
 }
 
-.courts-bg {
-background-image: url('../img/courts-bg.jpg');
+.information-bg {
+background-image: url('../img/information-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
