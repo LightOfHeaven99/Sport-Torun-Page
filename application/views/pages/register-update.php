@@ -8,5 +8,5 @@
 
   $this->login_model->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
   $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
-  redirect('register');
+  redirect('login');
 ?>

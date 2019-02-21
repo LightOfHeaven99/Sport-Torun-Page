@@ -1,3 +1,4 @@
+<?php include '../../controllers/User.php'; ?>
 
 <!-- Login widnow -->
 <div class="login-bg">
@@ -11,32 +12,62 @@
 		<div class="card">
 
       <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+      <?php // if($this->session->userdata('logged_in') == TRUE) : ?>
+      <?php if($isLoggedUser) == TRUE) : ?>
 
       <?php
         $attributes = array('class' => 'form-signin');
         echo form_open('logout', $attributes);
       ?>
 
-			<div class="card-header">
-				<h3>Zalogowany jako</h3>
-			</div>
-			<div class="card-header">
-				<div class ="space10"></div>
-				<h4 style="color: white; text-align: center;">
-          Imię Naziwsko
-        </h4>
-				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
-			</div>
-			<div class="card-body">
-				<a href="#" style="color: #364FD2;">Zmień wyświetlanie na login</a></br>
-				<a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br>
-				<a href="#" style="color: #364FD2;">Usuń konto</a>
+      <?php if($isAdminUser == 0) : ?>
+  			<div class="card-header">
+  				<h3>Zalogowany jako</h3>
+  			</div>
+  			<div class="card-header">
+  				<div class ="space10"></div>
+  				<h4 style="color: white; text-align: center;">
+            <?php if($displayLoginUser == 0) {
+              echo $firstNameUser." ".$lastNameUser;
+            } else {
+              echo $uidUser;
+            }
+            ?>
+          </h4>
+  				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
+  			</div>
+  			<div class="card-body">
+          <?php if($displayLoginUser == 0) : ?>
+            <a href="#" style="color: #364FD2;">Zmień wyświetlanie na login</a></br> <!-- display_login 0->1 -->
+          <?php else : ?>
+            <a href="#" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
+          <?php endif; ?>
+          <a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br> <!-- podobne do panelu rejestracji -->
+  				<a href="#" style="color: #364FD2;">Usuń konto</a>  <!-- ostrzeżenie do akceptacji, usunięcie rekordu z tabeli i LOGOUT -->
+
+      <?php else : ?>
+        <div class="card-header">
+          <h3 style="color: #364FD2";>ADMIN</h3>
+        </div>
+        <div class="card-header">
+  				<div class ="space10"></div>
+  				<h4 style="color: white; text-align: center;">
+            <?= $firstNameUser." ".$lastNameUser; ?>
+          </h4>
+  			</div>
+        <div class="card-body">
+        <a href="admin/news-panel" style="color: #364FD2;">Zarządzaj aktualnościami</a></br>
+				<a href="#" style="color: #364FD2;">Zarządzaj meczami</a></br>
+				<a href="#" style="color: #364FD2;">Zarządzaj drużynami</a></br>
+        <a href="#" style="color: #364FD2;">Zarządzaj zawodnikami</a></br>
+        <a href="#" style="color: #364FD2;">Zarządzaj multimediami</a></br>
+        <a href="#" style="color: #364FD2;">Zarządzaj użytkownikami</a>
+      <?php endif; ?>
+
 			</div>
 			<div class="card-footer">
 				<div class="form-group">
 
-          <!-- <input type="submit" value="Wyloguj" name="logout-submit" class="btn float-right logout_btn"> -->
           <?php
             $data = array(
               'type'          => 'submit',
@@ -80,7 +111,6 @@
 						<span class="input-group-text"><i class="fas fa-user"></i></span>
 					</div>
 
-          <!-- <input type="text" name="uid" id="uid" class="form-control" placeholder="Login" required> -->
           <?php
             $data = array(
               'name'          => 'uid',
@@ -98,7 +128,6 @@
 						<span class="input-group-text"><i class="fas fa-key"></i></span>
 					</div>
 
-          <!-- <input type="password" name="pwd" id="pwd" class="form-control" placeholder="Hasło" required> -->
           <?php
             $data = array(
               'type'          => 'password',
@@ -114,7 +143,6 @@
         </div>
 				<div class="row align-items-center remember">
 
-					<!-- <input type="checkbox">Zapamiętaj mnie -->
           <?php
           $data = array(
             'type'          => 'checkbox',
@@ -128,7 +156,6 @@
 				</div>
 				<div class="form-group">
 
-          <!-- <input type="submit" name="login-submit" value="OK" class="btn float-right login_btn"> -->
           <?php
             $data = array(
               'type'          => 'submit',
@@ -158,8 +185,8 @@
       <?php endif; ?>
 
 		</div>
-    <div class="space50"></div>
 	</div>
 
-</div>
+  <div class="space50"></div>
+  </div>
 </div>
