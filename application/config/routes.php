@@ -58,14 +58,38 @@ $route['logged'] = 'user/login_post';
 $route['register'] = 'user/register';
 $route['logout'] = 'user/logout';
 
-$route['admin-panel'] = 'pages/admin/admin-panel';
-$route['news-panel'] = 'pages/admin/news-panel';
-$route['matches-panel'] = 'pages/admin/matches-panel';
-$route['teams-panel'] = 'pages/admin/teams-panel';
-$route['players-panel'] = 'pages/admin/players-panel';
-$route['multimedia-panel'] = 'pages/admin/multimedia-panel';
-$route['users-panel'] = 'pages/admin/users-panel';
-$route['back'] = 'pages/view/login';
+if($this->session->userdata('logged_in') == TRUE)
+{
+  if($this->session->userdata('is_admin') == 0)
+  {
+    $route['admin-panel'] = 'pages/admin/admin-panel';
+    $route['news-panel'] = 'pages/admin/news-panel';
+    $route['matches-panel'] = 'pages/admin/matches-panel';
+    $route['teams-panel'] = 'pages/admin/teams-panel';
+    $route['players-panel'] = 'pages/admin/players-panel';
+    $route['multimedia-panel'] = 'pages/admin/multimedia-panel';
+    $route['users-panel'] = 'pages/admin/users-panel';
+    $route['back'] = 'pages/view/login';
+  } else {
+    $route['admin-panel'] = 'permission_denied';
+    $route['news-panel'] = 'permission_denied';
+    $route['matches-panel'] = 'permission_denied';
+    $route['teams-panel'] = 'permission_denied';
+    $route['players-panel'] = 'permission_denied';
+    $route['multimedia-panel'] = 'permission_denied';
+    $route['users-panel'] = 'permission_denied';
+    $route['back'] = 'pages/view/login';
+  }
+} else {
+  $route['admin-panel'] = 'please_login';
+  $route['news-panel'] = 'please_login';
+  $route['matches-panel'] = 'please_login';
+  $route['teams-panel'] = 'please_login';
+  $route['players-panel'] = 'please_login';
+  $route['multimedia-panel'] = 'please_login';
+  $route['users-panel'] = 'please_login';
+  $route['back'] = 'pages/view/login';
+}
 
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';
