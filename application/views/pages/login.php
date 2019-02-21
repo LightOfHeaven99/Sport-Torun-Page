@@ -184,6 +184,6 @@
 		</div>
 	</div>
 
-  <div class="space50"></div>
+  <div class="space100"></div>
   </div>
 </div>
