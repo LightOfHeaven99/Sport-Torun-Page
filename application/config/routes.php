@@ -58,10 +58,6 @@ $route['logged'] = 'user/login_post';
 $route['register'] = 'user/register';
 $route['logout'] = 'user/logout';
 
-$route['(:any)'] = 'pages/view/$1';
-$route['(:any)/(:any)'] = 'pages/view/$1/$2';
-$route['(:any)/(:any)/(:any)'] = 'pages/view/$1/$2/$3';
-
 $route['admin-panel'] = 'pages/admin/admin-panel';
 $route['news-panel'] = 'pages/admin/news-panel';
 $route['matches-panel'] = 'pages/admin/matches-panel';
@@ -70,3 +66,7 @@ $route['players-panel'] = 'pages/admin/players-panel';
 $route['media-panel'] = 'pages/admin/multimedia-panel';
 $route['users-panel'] = 'pages/admin/users-panel';
 $route['back'] = 'pages/view/login';
+
+$route['(:any)'] = 'pages/view/$1';
+$route['(:any)/(:any)'] = 'pages/view/$1/$2';
+$route['(:any)/(:any)/(:any)'] = 'pages/view/$1/$2/$3';

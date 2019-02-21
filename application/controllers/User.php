@@ -22,9 +22,9 @@ class User extends CI_Controller
   }
 
   public function login(){
-    if($this->session->login == 'true'){
-      redirect('/');
-    }
+    // if($this->session->login == 'true'){
+    //   redirect('/');
+    // }
     $this->load->view('templates/header');
     $this->load->view('templates/menu');
     $this->load->view('pages/login');
