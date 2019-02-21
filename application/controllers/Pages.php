@@ -38,7 +38,7 @@ class Pages extends CI_Controller {
 
     $this->load->view('admin/templates/header');
     $this->load->view('admin/templates/menu');
-    $this->load->view('admin'.$page, $data);
+    $this->load->view('admin/'.$page, $data);
     $this->load->view('admin/templates/footer');
   }
 }
