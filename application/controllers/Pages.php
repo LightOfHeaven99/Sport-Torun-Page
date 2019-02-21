@@ -6,20 +6,39 @@ class Pages extends CI_Controller {
       parent::__construct();
       $this->load->helper('form');
   }
-    public function view($page = 'main')
+
+  // GŁÓWNE PODSTRONY
+  public function view($page = 'main')
+  {
+    if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
     {
-      if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
-      {
-              // Whoops, we don't have a page for that!
-              show_404();
-      }
-
-      $data['title'] = ucfirst($page); // Capitalize the first letter
-
-      $this->load->view('templates/header');
-      $this->load->view('templates/menu');
-      $this->load->view('pages/'.$page, $data);
-      if ($page != 'main')
-        $this->load->view('templates/footer');
+            // Whoops, we don't have a page for that!
+            show_404();
     }
+
+    $data['title'] = ucfirst($page); // Capitalize the first letter
+
+    $this->load->view('templates/header');
+    $this->load->view('templates/menu');
+    $this->load->view('pages/'.$page, $data);
+    if ($page != 'main')
+      $this->load->view('templates/footer');
+  }
+
+  // PANEL ADMINA
+  public function admin($page = 'admin-panel')
+  {
+    if ( ! file_exists(APPPATH.'views/admin/'.$page.'.php'))
+    {
+            // Whoops, we don't have a page for that!
+            show_404();
+    }
+
+    $data['title'] = ucfirst($page); // Capitalize the first letter
+
+    $this->load->view('admin/templates/header');
+    $this->load->view('admin/templates/menu');
+    $this->load->view('admin'.$page, $data);
+    $this->load->view('admin/templates/footer');
+  }
 }
