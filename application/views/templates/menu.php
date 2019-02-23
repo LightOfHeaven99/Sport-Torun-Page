@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+<nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color:  #002266">
   <div class="container">
     <a class="navbar-brand" href="main">Toruńska Liga Siatkówki</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,6 +39,7 @@
         <div class="dropdown-content">
           <a href="teams">Drużyny</a>
           <a href="players">Zawodnicy</a>
+          <a href="forum">Forum</a>
          <a href="information">Informacje</a>
      </div>
   </div>

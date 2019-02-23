@@ -11,7 +11,10 @@ section .section-title {
     text-transform: uppercase;
 }
 #footer {
-  background: !important;
+  background:  #002266
+
+
+ !important;
 }
 
 }
