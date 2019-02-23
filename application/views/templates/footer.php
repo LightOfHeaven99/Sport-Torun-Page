@@ -1,5 +1,6 @@
   <!-- Footer -->
   <footer class="py-1 bg-dark">
+    <div class="row">
       <div class="grid-container">
         <div class="container">
           <div class="move">
@@ -38,8 +39,6 @@
           </div>
         <!-- </div> -->
       </div>
+    </div>
     <p class="m-0 text-center text-white"><font size="3">Toruńska Liga Siatkówki 2019 &copy; All rights reserved.</font></p>
 </footer>
-
-</body>
-</html>
