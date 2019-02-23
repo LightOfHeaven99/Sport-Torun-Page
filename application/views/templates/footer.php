@@ -1,45 +1,49 @@
-  <!-- Footer -->
-  <footer class="py-1 bg-dark">
-      <div class="grid-container">
-        <div class="container">
-          <div class="move">
-            <div class="a">
-              <span class="footercol">Informacje</span>
-                <ul style="list-style-type:none;">
-                  <li><a href="/contact"><span class="footerundercol">Kontakt</span></a></li>
-                  <li><a href="/regulations"><span class="footerundercol">Regulamin</span></a></li>
-                  <li><a href="/documents"><span class="footerundercol">Dokumenty</span></a></li>
-                </ul>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="move">
-            <div class="a">
-              <span class="footercol2">Współpraca</span>
-              <ul style="list-style-type:none;">
-                <li><a href="sponsors"><span class="footerundercol">Sponsorzy</span></a></li>
-                <li><a href="advertisement"><span class="footerundercol">Możliwość reklamy</span></a></li>
-                <li><a href="multimedia"><span class="footerundercol">Obsługa multimedialna</span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="container"> -->
-          <div class="move">
-            <div class="a">
-              <span class="footercol3">Pomoc</span>
-              <ul style="list-style-type:none;">
-                <li><a href="faq"><span class="footerundercol">FAQ</span></a></li>
-                <li><a href="forum"><span class="footerundercol">Forum</span></a></li>
-                <li><a href="policy"><span class="footerundercol">Polityka prywatności</span></a></li>
-              </ul>
-            </div>
-          </div>
-        <!-- </div> -->
-      </div>
-    <p class="m-0 text-center text-white"><font size="3">Toruńska Liga Siatkówki 2019 &copy; All rights reserved.</font></p>
-</footer>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="../../../assets/css/footer.css" rel="stylesheet">
+<link href="../../../assets/css/style.css" rel="stylesheet">
+<!--- Include the above in your HEAD tag ---------->
 
-</body>
-</html>
+<!-- Footer -->
+<footer class="py-1 bg-dark">
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-center text-md-center">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Informacje</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Kontakt</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Regulamin</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Dokumenty</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Współpraca</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Sponsorzy</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Możliwość reklamy</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Obsuga multimedialna</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Pomoc</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="faq"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Forum</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Polityka Prywatności</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p class="h6">Toruńska Liga Siatkówki &copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank"></a></p>
+				</div>
+				</hr>
+			</div>
+		</div>
+	</section>
+</footer>
+	<!-- ./Footer -->

@@ -326,6 +326,7 @@ position: relative;
 left: 125px;
 }
 
+/* FOOTER */
 .footercol {
 border-radius: 10px;
 background-color: #3d46c2;
@@ -382,6 +383,9 @@ div.a {
   text-align: center;
 }
 
+/* END OF FOOTER */
+
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
 width: 100%;
@@ -398,6 +402,7 @@ right: 30px;
 width: 500px;
 padding: 10px;
 }
+
 
 input[type=text]:focus, input[type=password]:focus {
 background-color: #ddd;
@@ -653,7 +658,7 @@ height: 100%;
 }
 
 .sponsors-bg {
-background-image: url('../img/sponsorts-bg.jpg');
+background-image: url('../img/sponsors-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
@@ -674,7 +679,7 @@ height: 100%;
 }
 
 .faq-bg {
-background-image: url('../img/faq-bg.jpg');
+background-image: url('../img/question-mark-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
