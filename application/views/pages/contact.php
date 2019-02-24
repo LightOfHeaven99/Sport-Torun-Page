@@ -20,7 +20,8 @@
                     'type'          => 'text',
                     'name'          => 'name-contact',
                     'id'            => 'name-contact',
-                    'class'         => 'form-control'
+                    'class'         => 'form-control',
+                    'placeholder'   => 'Imię Nazwisko'
                     //'required'      => 'required'
                   );
                   echo form_input($data);
@@ -33,7 +34,8 @@
                     'type'          => 'email',
                     'name'          => 'email-contact',
                     'id'            => 'email-contact',
-                    'class'         => 'form-control'
+                    'class'         => 'form-control',
+                    'placeholder'   => 'E-mail'
                     //'required'      => 'required'
                   );
                   echo form_input($data);
@@ -46,7 +48,8 @@
                     'type'          => 'text',
                     'name'          => 'topic-contact',
                     'id'            => 'topic-contact',
-                    'class'         => 'form-control'
+                    'class'         => 'form-control',
+                    'placeholder'   => 'Temat'
                     //'required'      => 'required'
                   );
                   echo form_input($data);
@@ -64,7 +67,8 @@
                     'type'          => 'textarea',
                     'name'          => 'message-contact',
                     'id'            => 'message-contact',
-                    'class'         => 'form-control'
+                    'class'         => 'form-control',
+                    'placeholder'   => 'Wiadomość'
                     //'required'      => 'required'
                   );
                   echo form_input($data);
