@@ -26,7 +26,7 @@ class Mailer extends CI_Controller
       $this->email->from($emailContact, $nameContact);
       $this->email->to('biuro@tls-torun.pl');
 
-      $this->email->cc($emailContact);
+      //$this->email->cc($emailContact);
       //$this->email->bcc('them@their-example.com');
 
       $this->email->subject('[Forumularz kontaktowy] '.$topicContact);
