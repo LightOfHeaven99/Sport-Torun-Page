@@ -81,7 +81,7 @@
                 $data = array(
                   'type'          => 'submit',
                   'name'          => 'mail-submit',
-                  'class'         => 'registerbtn2',
+                  'class'         => 'btn float-right login_btn', //registerbtn2
                   'value'         => 'Wyślij wiadomość!'
                 );
                 echo form_submit($data);
