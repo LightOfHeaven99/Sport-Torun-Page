@@ -56,9 +56,9 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'user/login';
 $route['logged'] = 'user/login_post';
 $route['register'] = 'user/register';
-$route['logout'] = 'user/loguserout';
+$route['logout'] = 'user/logout';
 
-$route['mailsent'] = 'user/sendmail';
+$route['mailsent'] = 'mailer/sendmail';
 
 $route['admin-panel'] = 'pages/admin/admin-panel';
 $route['news-panel'] = 'pages/admin/news-panel';

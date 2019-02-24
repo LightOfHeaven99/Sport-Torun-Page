@@ -12,16 +12,19 @@ class Mailer extends CI_Controller
 
   public function sendmail()
   {
-      $this->email->clear();
-
       $nameContact = $this->input->post('name-contact');
       $emailContact = $this->input->post('email-contact');
-      $topicContact = $this->input->post('topic-contact');
-      $messageContact = $this->input->post('message-contact');
+      //$topicContact = $this->input->post('topic-contact');
+      //$messageContact = $this->input->post('message-contact');
+
+      $topicContact = 'temat';
+      $messageContact = 'wiadomosć';
 
       $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
       $this->form_validation->set_rules('email-contact', 'E-mail', 'required');
       $this->form_validation->set_rules('topic-contact', 'Wiadomość', 'required');
+
+      $this->email->clear();
 
       $this->email->from($emailContact, $nameContact);
       $this->email->to('biuro@tls-torun.pl');
