@@ -8,6 +8,7 @@ class Mailer extends CI_Controller
       $this->load->library('form_validation');
       $this->load->helper('email');
       $this->load->library('email');
+      $this->load->library('session');
   }
 
   public function sendmail()

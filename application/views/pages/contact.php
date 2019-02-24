@@ -9,7 +9,7 @@
           echo form_open('mailsent', $attributes);
         ?>
 
-        <!-- <br/>
+        <br/>
           <h1><font color="#3d46c2">Kontakt</font></h1>
             <div class="row">
               <div class="col-md-3">
@@ -91,7 +91,7 @@
           <p><b>TLS Toruńska Liga Siatkówki</b></p>
           <p><font size="4">E-mail: biuro@torun.pl</p>
             <p>Telefon: +48 612 231 512</p>
-            <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br> -->
+            <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br>
 
           <?php echo form_close(); ?>
       </div>
