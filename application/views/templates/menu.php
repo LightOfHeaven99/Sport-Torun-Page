@@ -4,7 +4,7 @@
 <div class="header-up-nav">
   <h1><b>Toruńska Liga Siatkówki</b></h1>
 </div>
-<nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color:  #002266">
+<nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color:#002266">
   <div class="container">
     <a class="navbar-brand" href="main">Toruńska Liga Siatkówki</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
