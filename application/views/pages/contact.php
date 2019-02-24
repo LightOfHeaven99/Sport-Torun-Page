@@ -1,13 +1,14 @@
   <!-- Page Content -->
   <form acton="action_page.php">
+    <?php
+      $attributes = array('class' => 'form-signin');
+      echo form_open('mailsent', $attributes);
+    ?>
   <div class="container">
     <div class="row">
       <div class="col-lg-12 left">
 
-        <?php
-          $attributes = array('class' => 'form-signin');
-          echo form_open('mailsent', $attributes);
-        ?>
+
 
         <br/>
           <h1><font color="#3d46c2">Kontakt</font></h1>
@@ -80,9 +81,9 @@
               <?php
                 $data = array(
                   'type'          => 'submit',
-                  'name'          => 'login-submit',
-                  'class'         => 'btn float-right login_btn',
-                  'value'         => 'OK'
+                  'name'          => 'mail-submit',
+                  'class'         => 'registerbtn2',
+                  'value'         => 'Wyślij wiadomość!'
                 );
                 echo form_submit($data);
               ?>
@@ -93,7 +94,9 @@
             <p>Telefon: +48 612 231 512</p>
             <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br>
 
-          <?php echo form_close(); ?>
+
       </div>
     </div>
   </div>
+
+  <?php echo form_close(); ?>
