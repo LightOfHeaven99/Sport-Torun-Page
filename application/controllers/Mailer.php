@@ -6,6 +6,8 @@ class Mailer extends CI_Controller {
       parent::__construct();
       $this->load->helper('email');
       $this->load->library('email');
+      $this->load->helper('form');
+      $this->load->library('form_validation');
   }
 
   public function sendmail()
@@ -30,6 +32,7 @@ class Mailer extends CI_Controller {
   //$visitor_email = $_POST['email'];
   //$message = $_POST['message'];
 
+  /*
   $name = 'Kacper Burzała';
   $visitor_email = 'kacburza@interia.pl';
   $message = 'Siemka, jak się zapisać?';
@@ -46,7 +49,7 @@ class Mailer extends CI_Controller {
   $headers .= "Reply-To: $visitor_email \r\n";
 
   mail($to,$email_subject,$email_body,$headers);
-
+  */
   }
 
 
