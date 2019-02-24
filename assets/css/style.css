@@ -1,26 +1,6 @@
- /* html,body {
-background-image: url('../img/community-bg.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-} */
-
   /* body {
-  padding-top: 54px;
-}
-
-@media (min-width: 992px) {
-  body {
-    padding-top: 56px;
-  }
-}
-
-  body {
-  background: url('http://placehold.it/1920x1080') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover; */
+  backgorund-color: grey;
+} */
 
 .header-up-nav {
   padding: 40px;
