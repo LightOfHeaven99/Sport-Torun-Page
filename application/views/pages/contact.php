@@ -6,7 +6,7 @@
         <br/>
 
         <?php
-          $attributes = array('class' => 'form-signin');
+          $attributes = array('class' => 'form-mailer');
           echo form_open('sendmail', $attributes);
         ?>
 
