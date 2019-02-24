@@ -78,28 +78,27 @@ class Mailer extends CI_Controller {
 
       mail($to,$email_subject,$email_body,$headers);
 
-  }
 
-  public function IsInjected($str)
-  {
-    $injections = array('(\n+)',
-                '(\r+)',
-                '(\t+)',
-                '(%0A+)',
-                '(%0D+)',
-                '(%08+)',
-                '(%09+)'
-                );
-    $inject = join('|', $injections);
-    $inject = "/$inject/i";
-    if(preg_match($inject,$str)){
-      return true;
-    }
-    else {
-      return false;
-    }
+      function IsInjected($str)
+      {
+        $injections = array('(\n+)',
+                    '(\r+)',
+                    '(\t+)',
+                    '(%0A+)',
+                    '(%0D+)',
+                    '(%08+)',
+                    '(%09+)'
+                    );
+        $inject = join('|', $injections);
+        $inject = "/$inject/i";
+        if(preg_match($inject,$str)){
+          return true;
+        }
+        else {
+          return false;
+        }
+      }
   }
-
 
 
 }
