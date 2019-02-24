@@ -6,7 +6,7 @@
 
         <?php
           $attributes = array('class' => 'form-signin');
-          echo form_open('logout', $attributes);
+          echo form_open('mailsent', $attributes);
         ?>
 
         <br/>
@@ -80,16 +80,16 @@
               <?php
                 $data = array(
                   'type'          => 'submit',
-                  'name'          => 'mail-submit',
-                  'class'         => 'registerbtn2',
-                  'value'         => 'Wyślij wiadomość!'
+                  'name'          => 'login-submit',
+                  'class'         => 'btn float-right login_btn',
+                  'value'         => 'OK'
                 );
                 echo form_submit($data);
               ?>
 
           <br><br>
           <p><b>TLS Toruńska Liga Siatkówki</b></p>
-          <p><font size="4">E-mail: biuro@torun.pl</p>
+          <p><font size="4">E-mail: biuro@tls-torun.pl</p>
             <p>Telefon: +48 612 231 512</p>
             <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br>
 
