@@ -1,3 +1,5 @@
+<script src="../../../assets/js/checkbox.js"></script>
+
 <!-- Page Content -->
 <div class="join-bg">
   <form acton="action_page.php">
@@ -99,16 +101,3 @@ Phasellus feugiat ante eu mauris mattis, ac sagittis diam pretium. Vivamus metus
 
   </div>
 </div>
-
-  <!-- Functional scripts -->
-  <script>
-  function myFunction() {
-  var checkBox = document.getElementById("myCheck");
-  var text = document.getElementById("text");
-  if (checkBox.checked == true){
-    text.style.display = "block";
-  } else {
-     text.style.display = "none";
-    }
-  }
-  </script>

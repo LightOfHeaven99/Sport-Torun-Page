@@ -5,21 +5,15 @@
       <div class="col-lg-12 left">
         <br/>
         <h1><font color="#3d46c2">Kontakt</font></h1>
-        <p><font size="4">E-mail: biuro.tls-torun@torun.pl</p>
-          <p><b>Łukasz Bania</b> - koordynator rozgrywek.</p>
-          <p>kom. (+48) 612 231 512</p><br/>
           <div class="row">
             <div class="col-md-3">
-              <label for="name-surname">Imię i nazwisko (<font color="red">*</font>)</label>
+              <label for="name-surname"><b>Imię i nazwisko</b></label>
               <input type="text" name="name-surname" required><br/>
 
-              <label for="email">E-mail (<font color="red">*</font>)</label>
+              <label for="email"><b>E-mail</b></label>
               <input type="text" name="email" required><br>
 
-              <label for="phone">Telefon</label>
-              <input type="text" name="phone" optional><br/>
-
-              <label for="topic">Temat (<font color="red">*</font>)</label>
+              <label for="topic"><b>Temat</b></label>
               <input type="text" name="topic" required><br/>
 
             </div>
@@ -27,21 +21,25 @@
 
           <div class="row">
             <div class="col-md-6">
-              <label for="message">Wiadomość (<font color="red">*</font>)</label>
+              <p><b>Wiadomość</b></p>
+            <!--  <label for="message"><b>Wiadomość</b></label>
                 <div class="message">
-                  <input type="text" name="message" required>
-                <!--  <textarea placeholder="Enter Your text here..."></textarea> -->
+                  <input type="text" name="message" required> -->
+                  <textarea >
+                    </textarea>
                 </div>
             </div>
-          </div>
           <br>
-          <p>Pola oznaczone (<font color="red">*</font>) są wymagane.</p><br>
+          <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>
+            <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
+            <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p>
 
-          <button type="submit" class="registerbtn">Wyślij wiadomość!</button>
-
-        <ul class="list-unstyled">
-		  <li> <br/> </li>
-        </ul>
+          <button type="submit" class="registerbtn2">Wyślij wiadomość!</button>
+          <br><br>
+          <p><b>TLS Toruńska Liga Siatkówki</b></p>
+          <p><font size="4">E-mail: biuro.tls-torun@torun.pl</p>
+            <p>Telefon: +48 612 231 512</p>
+            <p><b>Łukasz Bania</b> - koordynator rozgrywek.</p><br>
       </div>
     </div>
   </div>
