@@ -33,7 +33,7 @@ class Mailer extends CI_Controller
       //$this->email->bcc('them@their-example.com');
 
       $this->email->subject('[Forumularz kontaktowy] '.$topicContact);
-      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n\r\n'.$messageContact);
+      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'. Treść: '.$messageContact);
 
       $this->email->send();
 
