@@ -14,13 +14,12 @@
             <div class="row">
               <div class="col-md-3">
                 <label for="name-surname"><b>Imię i nazwisko</b></label>
-                <!-- <input type="text" name="name-surname" required><br/> -->
 
                 <?php
                   $data = array(
                     'type'          => 'text',
-                    'name'          => 'name-surname',
-                    'id'            => 'name-surname',
+                    'name'          => 'name-contact',
+                    'id'            => 'name-contact',
                     'class'         => 'form-control'
                     //'required'      => 'required'
                   );
@@ -28,10 +27,30 @@
                 ?>
 
                 <label for="email"><b>E-mail</b></label>
-                <input type="text" name="email" required><br>
+
+                <?php
+                  $data = array(
+                    'type'          => 'email',
+                    'name'          => 'email-contact',
+                    'id'            => 'email-contact',
+                    'class'         => 'form-control'
+                    //'required'      => 'required'
+                  );
+                  echo form_input($data);
+                ?>
 
                 <label for="topic"><b>Temat</b></label>
-                <input type="text" name="topic" required><br/>
+
+                <?php
+                  $data = array(
+                    'type'          => 'text',
+                    'name'          => 'topic-contact',
+                    'id'            => 'topic-contact',
+                    'class'         => 'form-control'
+                    //'required'      => 'required'
+                  );
+                  echo form_input($data);
+                ?>
 
               </div>
             </div>
@@ -39,12 +58,19 @@
             <div class="row">
               <div class="col-md-6">
                 <p><b>Wiadomość</b></p>
-              <!--  <label for="message"><b>Wiadomość</b></label>
-                  <div class="message">
-                    <input type="text" name="message" required> -->
-                    <textarea>
-                      </textarea>
-                  </div>
+
+                <?php
+                  $data = array(
+                    'type'          => 'textarea',
+                    'name'          => 'message-contact',
+                    'id'            => 'message-contact',
+                    'class'         => 'form-control'
+                    //'required'      => 'required'
+                  );
+                  echo form_input($data);
+                ?>
+
+                </div>
               </div>
             <br>
             <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>

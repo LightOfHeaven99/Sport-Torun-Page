@@ -14,18 +14,26 @@ class Mailer extends CI_Controller {
   {
       $this->email->clear();
 
-      $this->email->from('kacburza@interia.pl', 'Kacper Burzała');
+      $nameContact = $this->input->post('name-contact');
+      $emailContact = $this->input->post('email-contact');
+      $topicContact = $this->input->post('topi-contact');
+      $messageContact = $this->input->post('message-contact');
+
+      $this->email->from($emailContact, $nameContact);
       $this->email->to('biuro@tls-torun.pl');
-      //$this->email->cc('another@another-example.com');
+
+      $this->email->cc($emailContact);
       //$this->email->bcc('them@their-example.com');
 
-      $this->email->subject('Email Test');
-      $this->email->message('Testowanie klasy email.');
+      $this->email->subject('[Forumularz kontaktowy] ');
+      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n'.'\r\n'.$messageContact);
 
       $this->email->send();
 
       echo $this->email->print_debugger();
       echo "Dziękujemy za wiadomość!";
+
+      redirect('contact')
 
 
 
