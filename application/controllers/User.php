@@ -90,7 +90,8 @@ class User extends CI_Controller
     }
   }
 
-  public function register(){
+  public function register()
+  {
     if($this->session->login == 'true'){
       redirect('');
     }
@@ -118,7 +119,8 @@ class User extends CI_Controller
     }
   }
 
-  public function logout(){
+  public function logout()
+  {
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
 
