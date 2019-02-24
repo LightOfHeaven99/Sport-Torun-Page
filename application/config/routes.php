@@ -58,7 +58,7 @@ $route['logged'] = 'user/login_post';
 $route['register'] = 'user/register';
 $route['logout'] = 'user/logout';
 
-$route['mailsent'] = 'mailer/sendmail';
+$route['mailsent'] = 'Mailer/sendmail';
 
 $route['admin-panel'] = 'pages/admin/admin-panel';
 $route['news-panel'] = 'pages/admin/news-panel';
