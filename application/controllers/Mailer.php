@@ -33,7 +33,7 @@ class Mailer extends CI_Controller {
       echo $this->email->print_debugger();
       echo "Dziękujemy za wiadomość!";
 
-      redirect('contact')
+      redirect('contact');
 
 
 
