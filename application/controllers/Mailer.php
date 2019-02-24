@@ -14,11 +14,8 @@ class Mailer extends CI_Controller
   {
       $nameContact = $this->input->post('name-contact');
       $emailContact = $this->input->post('email-contact');
-      //$topicContact = $this->input->post('topic-contact');
-      //$messageContact = $this->input->post('message-contact');
-
-      $topicContact = 'temat';
-      $messageContact = 'wiadomosć';
+      $topicContact = $this->input->post('topic-contact');
+      $messageContact = $this->input->post('message-contact');
 
       $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
       $this->form_validation->set_rules('email-contact', 'E-mail', 'required');

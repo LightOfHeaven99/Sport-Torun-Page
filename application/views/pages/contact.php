@@ -15,14 +15,8 @@
       <!-- JEŚLI WYLOGOWANO -->
       <?php else : ?>
 
-      <div class="space50"></div>
-    	<div class="d-flex justify-content-center">
-  		<div class="card">
-  		  <div class="card-header">
-  				<h3>Zaloguj się</h3>
-  			</div>
+  		  <h1><font color="#3d46c2">Kontakt</font></h1>
 
-  			<div class="card-body">
           <?php
             //echo $this->session->flashdata('login_info');
             echo validation_errors('<div class="alert alert-danger">', '</div>');
@@ -116,9 +110,7 @@
 
         <!-- KONIEC WARUNKU ZALOGOWANO/WYLOGOWANO -->
         <?php endif; ?>
-  		</div>
 
       <?php echo form_close(); ?>
 
-  	</div>
   </div>
