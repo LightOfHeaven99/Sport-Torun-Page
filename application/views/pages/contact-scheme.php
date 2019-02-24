@@ -1,32 +1,16 @@
 <!-- Page Content -->
-  <div class="container">
+<form acton="action_page.php">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 left">
 
-    <div class="space50"></div>
+      <?php
+        $attributes = array('class' => 'form-signin');
+        echo form_open('mailsent', $attributes);
+      ?>
 
-    <?php
-      $attributes = array('class' => 'form-signin');
-      echo form_open('mailsent', $attributes);
-    ?>
-
-      <!-- JEŚLI ZALOGOWANO -->
-      <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-
-
-      <!-- JEŚLI WYLOGOWANO -->
-      <?php else : ?>
-
-      <div class="space50"></div>
-    	<div class="d-flex justify-content-center">
-  		<div class="card">
-  		  <div class="card-header">
-  				<h3>Zaloguj się</h3>
-  			</div>
-
-  			<div class="card-body">
-          <?php
-            //echo $this->session->flashdata('login_info');
-            echo validation_errors('<div class="alert alert-danger">', '</div>');
-          ?>
+      <br/>
+        <h1><font color="#3d46c2">Kontakt</font></h1>
           <div class="row">
             <div class="col-md-3">
               <label for="name-contact"><b>Imię i nazwisko</b></label>
@@ -88,8 +72,10 @@
 
               </div>
             </div>
-
-  				<div class="form-group">
+          <br>
+          <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>
+            <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
+            <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p>
 
             <?php
               $data = array(
@@ -101,24 +87,14 @@
               echo form_submit($data);
             ?>
 
-          </div>
-  				<div class="space30"></div>
-  			</div>
+            <?php echo form_close(); ?>
 
-  			<div class="card-footer">
-  				<div class="d-flex justify-content-center links">
-  					Nie masz konta?<a href="register">Zarejestruj się!</a>
-  				</div>
-  				<div class="d-flex justify-content-center links">
-  					<a href="reset-password">Zapomniałeś hasła?</a>
-  				</div>
-  			</div>
+        <br><br>
+        <p><b>TLS Toruńska Liga Siatkówki</b></p>
+        <p><font size="4">E-mail: biuro@tls-torun.pl</p>
+          <p>Telefon: +48 612 231 512</p>
+          <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br>
 
-        <!-- KONIEC WARUNKU ZALOGOWANO/WYLOGOWANO -->
-        <?php endif; ?>
-  		</div>
-
-      <?php echo form_close(); ?>
-
-  	</div>
+    </div>
   </div>
+</div>
