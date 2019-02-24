@@ -1,13 +1,5 @@
 <?php
 
-// $firstNameUser = null;
-// $lastNameUser = null;
-// $uidUser = null;
-// $emailUser = null;
-// $displayLoginUser = null;
-// $isAdminUser = null;
-// $isLoggedUser = null;
-
 class User extends CI_Controller
 {
   public $session_data;
@@ -67,15 +59,6 @@ class User extends CI_Controller
           // Dodanie informacji o użytkowniku do sesji
           $this->session->set_userdata($session_data);
 
-          // global $firstNameUser, $lastNameUser, $uidUser, $emailUser, $displayLoginUser, $isAdminUser, $isLoggedUser;
-          // $firstNameUser = $this->session->userdata($session_data['first_name']);
-          // $lastNameUser = $this->session->userdata($session_data["last_name"]);
-          // $uidUser = $this->session->userdata($session_data['uid']);
-          // $emailUser = $this->session->userdata($session_data['email']);
-          // $displayLoginUser = $this->session->userdata($session_data['display_login']);
-          // $isAdminUser = $this->session->userdata($session_data['is_admin']);
-          // $isLoggedUser = $this->session->userdata($session_data['logged_in']);
-
           $this->login();
         }
         else {
@@ -123,15 +106,6 @@ class User extends CI_Controller
   {
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
-
-    // global $firstNameUser, $lastNameUser, $uidUser, $emailUser, $displayLoginUser, $isAdminUser, $isLoggedUser;
-    // $firstNameUser = null;
-    // $lastNameUser = null;
-    // $uidUser = null;
-    // $emailUser = null;
-    // $displayLoginUser = null;
-    // $isAdminUser = null;
-    // $isLoggedUser = null;
 
     redirect('login');
   }

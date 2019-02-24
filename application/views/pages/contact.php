@@ -6,7 +6,7 @@
 
         <?php
           $attributes = array('class' => 'form-signin');
-          echo form_open('sendmail', $attributes);
+          echo form_open('mailsent', $attributes);
         ?>
 
         <br/>
@@ -81,7 +81,7 @@
                 $data = array(
                   'type'          => 'submit',
                   'name'          => 'mail-submit',
-                  'class'         => 'btn float-right login_btn', //registerbtn2
+                  'class'         => 'registerbtn2',
                   'value'         => 'Wyślij wiadomość!'
                 );
                 echo form_submit($data);
