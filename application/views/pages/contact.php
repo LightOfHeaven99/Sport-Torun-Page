@@ -5,7 +5,7 @@
       <div class="col-lg-12 left">
 
         <?php
-          $attributes = array('class' => 'sendmail');
+          $attributes = array('class' => 'form-signin');
           echo form_open('sendmail', $attributes);
         ?>
 

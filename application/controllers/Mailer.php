@@ -4,10 +4,10 @@ class Mailer extends CI_Controller {
   public function __construct()
   {
       parent::__construct();
-      $this->load->helper('email');
-      $this->load->library('email');
       $this->load->helper('form');
       $this->load->library('form_validation');
+      $this->load->helper('email');
+      $this->load->library('email');
   }
 
   public function sendmail()
