@@ -8,7 +8,7 @@ class Mailer extends CI_Controller {
       $this->load->library('email');
   }
 
-  public function SendMail()
+  public function sendmail()
   {
   $this->email->from('kacburza@interia.pl', 'Kacper Burzała');
   $this->email->to('biuro@tls-torun.pl');
