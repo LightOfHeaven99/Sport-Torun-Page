@@ -12,48 +12,48 @@
 
   <div class="accordion">
     <div class="accordion-item">
-      <a>Why is the moon sometimes out during the day?</a>
+      <a>Gdzie mogę otrzymać informacje związane z rozgrywkami?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Why is the sky blue?</a>
+      <a>Kto może wziąć udział w rozgrywkach Toruńskiej Ligi Siatkówki?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Will we ever discover aliens?</a>
+      <a>Jak można zgłosić zespół do Toruńskiej Ligi Siatkówki?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>How much does the Earth weigh?</a>
+      <a>Czy można rozłożyć płatność za udział w Toruńskiej Ligi Siatkówki na raty?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>How do airplanes stay up?</a>
+      <a>Jaki jest koszt udziału drużyny w Toruńskiej Ligi Siatkówki?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>How is it to be a human?</a>
+      <a>W jakie dni rozgrywane będą mecze Toruńskiej Ligi Siatkówki?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>What do you do in your free time?</a>
+      <a>W jakich godzinach będą rozgrywane mecze?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>
     </div><div class="accordion-item">
-      <a>What music do you listen to?</a>
+      <a>Czym jest Toruńska Liga Siatkówki?</a>
       <div class="content">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
       </div>

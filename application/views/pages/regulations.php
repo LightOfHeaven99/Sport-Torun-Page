@@ -3,6 +3,7 @@
     <br>
     <h2><b>REGULAMIN ROZGRYWEK TORUŃSKIEJ LIGI SIATKÓWKI WIOSNA’19</b></h2>
     <br>
+    <div align="justify">
     <ol type="I">
       <li><b>Cel</b>
         <ol type="1">
@@ -144,6 +145,7 @@
       </li>
     </ol>
     <br><br><br><br><br>
+  </div>
 
       <p align="right"><b>Łukasz Bania</b><br>
         w imieniu organizatora - <b> Toruńskiej Ligi Siatkówki</b></p><br><br>
