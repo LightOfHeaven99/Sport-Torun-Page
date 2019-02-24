@@ -9,11 +9,11 @@
           echo form_open('mailsent', $attributes);
         ?>
 
-        <br/>
+        <!-- <br/>
           <h1><font color="#3d46c2">Kontakt</font></h1>
             <div class="row">
               <div class="col-md-3">
-                <label for="name-surname"><b>Imię i nazwisko</b></label>
+                <label for="name-contact"><b>Imię i nazwisko</b></label>
 
                 <?php
                   $data = array(
@@ -26,7 +26,7 @@
                   echo form_input($data);
                 ?>
 
-                <label for="email"><b>E-mail</b></label>
+                <label for="email-contact"><b>E-mail</b></label>
 
                 <?php
                   $data = array(
@@ -39,7 +39,7 @@
                   echo form_input($data);
                 ?>
 
-                <label for="topic"><b>Temat</b></label>
+                <label for="topic-contact"><b>Temat</b></label>
 
                 <?php
                   $data = array(
@@ -72,10 +72,10 @@
 
                 </div>
               </div>
-            <!-- <br>
+            <br>
             <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>
               <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
-              <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p> -->
+              <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p>
 
               <?php
                 $data = array(
@@ -91,7 +91,7 @@
           <p><b>TLS Toruńska Liga Siatkówki</b></p>
           <p><font size="4">E-mail: biuro@torun.pl</p>
             <p>Telefon: +48 612 231 512</p>
-            <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br>
+            <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br> -->
 
           <?php echo form_close(); ?>
       </div>
