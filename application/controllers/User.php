@@ -11,6 +11,8 @@ class User extends CI_Controller
       $this->load->library('form_validation');
       $this->load->library('session');
       $this->load->model('login_model');
+      $this->load->helper('email');
+      $this->load->library('email');
   }
 
   public function login(){
@@ -108,5 +110,35 @@ class User extends CI_Controller
     $this->session->sess_destroy();
 
     redirect('login');
+  }
+
+  public function sendmail()
+  {
+      $this->email->clear();
+
+      $nameContact = $this->input->post('name-contact');
+      $emailContact = $this->input->post('email-contact');
+      $topicContact = $this->input->post('topic-contact');
+      $messageContact = $this->input->post('message-contact');
+
+      $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
+      $this->form_validation->set_rules('email-contact', 'E-mail', 'required');
+      $this->form_validation->set_rules('topic-contact', 'Wiadomość', 'required');
+
+      $this->email->from($emailContact, $nameContact);
+      $this->email->to('biuro@tls-torun.pl');
+
+      $this->email->cc($emailContact);
+      //$this->email->bcc('them@their-example.com');
+
+      $this->email->subject('[Forumularz kontaktowy] '.$topicContact);
+      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n\r\n'.$messageContact);
+
+      $this->email->send();
+
+      echo $this->email->print_debugger();
+      echo "Dziękujemy za wiadomość!";
+
+      redirect('contact');
   }
 }
