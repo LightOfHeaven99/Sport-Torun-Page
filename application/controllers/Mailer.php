@@ -12,6 +12,8 @@ class Mailer extends CI_Controller {
 
   public function sendmail()
   {
+  $this->email->clear();
+
   $this->email->from('kacburza@interia.pl', 'Kacper Burzała');
   $this->email->to('biuro@tls-torun.pl');
   //$this->email->cc('another@another-example.com');
@@ -23,21 +25,19 @@ class Mailer extends CI_Controller {
   $this->email->send();
 
   echo $this->email->print_debugger();
-
-  redirect('login');
-
+  echo "Dziękujemy za wiadomość!";
 
 
   //$name = $_POST['name'];
   //$visitor_email = $_POST['email'];
   //$message = $_POST['message'];
 
-  /*
+
   $name = 'Kacper Burzała';
   $visitor_email = 'kacburza@interia.pl';
   $message = 'Siemka, jak się zapisać?';
 
-  $email_from = 'yourname@yourwebsite.com';
+  $email_from = 'no-reply@tls-torun.pl';
 
   $email_subject = "New Form submission";
 
@@ -49,7 +49,7 @@ class Mailer extends CI_Controller {
   $headers .= "Reply-To: $visitor_email \r\n";
 
   mail($to,$email_subject,$email_body,$headers);
-  */
+
   }
 
 
