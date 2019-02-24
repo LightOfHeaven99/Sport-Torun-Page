@@ -2,8 +2,6 @@
 <div class="login-bg">
 <div class="container">
 
-  <!-- <form class="form-signin" method="POST"> -->
-
   <div class="space50"></div>
 
     <!-- JEŚLI ZALOGOWANO -->

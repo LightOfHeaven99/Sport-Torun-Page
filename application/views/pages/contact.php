@@ -2,14 +2,14 @@
   <form acton="action_page.php">
   <div class="container">
     <div class="row">
+
+      <?php
+        $attributes = array('class' => 'sendmail');
+        echo form_open('sendmail', $attributes);
+      ?>
+
       <div class="col-lg-12 left">
         <br/>
-
-        <?php
-          $attributes = array('class' => 'form-mailer');
-          echo form_open('sendmail', $attributes);
-        ?>
-
           <h1><font color="#3d46c2">Kontakt</font></h1>
             <div class="row">
               <div class="col-md-3">
@@ -31,7 +31,7 @@
               <!--  <label for="message"><b>Wiadomość</b></label>
                   <div class="message">
                     <input type="text" name="message" required> -->
-                    <textarea >
+                    <textarea>
                       </textarea>
                   </div>
               </div>
@@ -50,13 +50,14 @@
               echo form_submit($data);
             ?>
 
-          <?php echo form_close(); ?>
-
           <br><br>
           <p><b>TLS Toruńska Liga Siatkówki</b></p>
           <p><font size="4">E-mail: biuro@torun.pl</p>
             <p>Telefon: +48 612 231 512</p>
             <p><b>Łukasz Bania</b> - koordynator rozgrywek</p><br>
       </div>
+
+      <?php echo form_close(); ?>
+
     </div>
   </div>
