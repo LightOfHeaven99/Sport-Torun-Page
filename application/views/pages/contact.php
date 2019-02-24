@@ -6,7 +6,7 @@
 
         <?php
           $attributes = array('class' => 'form-signin');
-          echo form_open('mailsent', $attributes);
+          echo form_open('logout', $attributes);
         ?>
 
         <br/>

@@ -8,7 +8,6 @@ class Mailer extends CI_Controller
       $this->load->library('form_validation');
       $this->load->helper('email');
       $this->load->library('email');
-      $this->load->library('session');
   }
 
   public function sendmail()
@@ -26,8 +25,8 @@ class Mailer extends CI_Controller
       $this->email->cc($emailContact);
       //$this->email->bcc('them@their-example.com');
 
-      $this->email->subject('[Forumularz kontaktowy] ');
-      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n'.'\r\n'.$messageContact);
+      $this->email->subject('[Forumularz kontaktowy] '.$topicContact);
+      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n\r\n'.$messageContact);
 
       $this->email->send();
 
