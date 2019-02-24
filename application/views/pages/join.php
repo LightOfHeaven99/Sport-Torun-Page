@@ -16,10 +16,24 @@ Phasellus feugiat ante eu mauris mattis, ac sagittis diam pretium. Vivamus metus
    </div>
 </div>
 
+    <?php
+      $attributes = array('class' => 'form-signin');
+      echo form_open('teamsent', $attributes);
+    ?>
+
     <div class="row">
     <div class="col-md-6">
     <label for"name-of-team"><b>Pełna nazwa drużyny:</b></label>
-    <input type="text" name="name-of-team" required><br/><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'team-join',
+        'id'            => 'team-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 </div>
 
@@ -28,24 +42,60 @@ Phasellus feugiat ante eu mauris mattis, ac sagittis diam pretium. Vivamus metus
     <div class="row">
     <div class="col-md-3">
     <label for="street"><b>Ulica</b></label>
-    <input type="text" name="street" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'street-join',
+        'id'            => 'street-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
     <div class="col-md-3">
     <label for="city"><b>Miejscowość</b></label>
-    <input type="text" name="city" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'city-join',
+        'id'            => 'city-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 </div>
 
     <div class="row">
     <div class="col-md-3">
     <label for="post-code"><b>Kod Pocztowy</b></label>
-    <input type="text" name="post-code" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'postcode-join',
+        'id'            => 'postcode-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 
     <!-- za NIP chyba lepiej podstawić text(String) aniżeli wartość liczbową -->
     <div class="col-md-3">
     <label for="nip"><b>NIP<font color="red">*</font></b></label>
-    <input type="text" name="nip" optional><br/><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'nip-join',
+        'id'            => 'nip-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 </div>
 <br/>
@@ -59,37 +109,90 @@ Phasellus feugiat ante eu mauris mattis, ac sagittis diam pretium. Vivamus metus
     <div class="row">
     <div class="col-md-6">
     <label for="name-surname"><b>Imię i nazwisko osoby zgłaszającej:</b></label><br/>
-    <input type="text" name="name-surname" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'name-join',
+        'id'            => 'name-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 </div>
 
     <div class="row">
     <div class="col-md-3">
     <label for="phone"><b>Telefon:</b></label><br/>
-    <input type="text" name="phone" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'phone-join',
+        'id'            => 'phone-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 
     <div class="col-md-3">
     <label for="email-adress"><b>Adres email:</b></label><br/>
-    <input type="text" name="email-adress" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'email-join',
+        'id'            => 'email-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 </div>
 
     <div class="row">
     <div class="col-md-3">
     <label for="id"><b>Nr dowodu osobistego:</b></label><br/>
-    <input type="text" name="id" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'idcard-join',
+        'id'            => 'idcard-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 
     <div class="col-md-3">
     <label for="pesel"><b>Nr PESEL zgłaszającego:</b></label><br/>
-    <input type="text" name="pesel" required><br/>
+    <?php
+      $data = array(
+        'type'          => 'textarea',
+        'name'          => 'pesel-join',
+        'id'            => 'pesel-join',
+        'class'         => 'form-control'
+        //'required'      => 'required'
+      );
+      echo form_input($data);
+    ?>
   </div>
 </div>
 
 <p><font color="red">*</font> To pole nie jest wymagane.</p>
 
-<button type="submit" class="registerbtn">Zgłoś się!</button>
+<?php
+  $data = array(
+    'type'          => 'submit',
+    'name'          => 'join-submit',
+    'class'         => 'registerbtn',
+    'value'         => 'Zgłoś się!'
+  );
+  echo form_submit($data);
+?>
 
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -98,6 +201,8 @@ Phasellus feugiat ante eu mauris mattis, ac sagittis diam pretium. Vivamus metus
         </ul>
       </div>
     </div>
+
+    <?php echo form_close(); ?>
 
   </div>
 </div>
