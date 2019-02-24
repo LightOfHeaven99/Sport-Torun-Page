@@ -14,7 +14,18 @@
             <div class="row">
               <div class="col-md-3">
                 <label for="name-surname"><b>Imię i nazwisko</b></label>
-                <input type="text" name="name-surname" required><br/>
+                <!-- <input type="text" name="name-surname" required><br/> -->
+
+                <?php
+                  $data = array(
+                    'type'          => 'text',
+                    'name'          => 'name-surname',
+                    'id'            => 'name-surname',
+                    'class'         => 'form-control'
+                    //'required'      => 'required'
+                  );
+                  echo form_input($data);
+                ?>
 
                 <label for="email"><b>E-mail</b></label>
                 <input type="text" name="email" required><br>

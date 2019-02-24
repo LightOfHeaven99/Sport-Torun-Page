@@ -61,13 +61,6 @@ class Mailer extends CI_Controller {
       $visitor_email = 'kacburza@interia.pl';
       $message = 'Siemka, jak się zapisać?';
 
-      //Validate first
-      if(empty($name)||empty($visitor_email))
-      {
-          echo "Name and email are mandatory!";
-          exit;
-      }
-
       if(IsInjected($visitor_email))
       {
           echo "Bad email value!";
@@ -75,7 +68,7 @@ class Mailer extends CI_Controller {
       }
 
       $email_from = 'no-reply@tls-torun.pl';
-      $email_subject = "New Form submission";
+      $email_subject = "ZAPISY";
       $email_body = "You have received a new message from the user $name.\n".
           "Here is the message:\n $message".
 
@@ -87,7 +80,7 @@ class Mailer extends CI_Controller {
 
   }
 
-  function IsInjected($str)
+  public function IsInjected($str)
   {
     $injections = array('(\n+)',
                 '(\r+)',
