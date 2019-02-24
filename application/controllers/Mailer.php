@@ -1,13 +1,13 @@
 <?php
-class Mailer extends CI_Controller {
-
+class Mailer extends CI_Controller
+{
   public function __construct()
   {
       parent::__construct();
-      $this->load->helper('email');
-      $this->load->library('email');
       $this->load->helper('form');
       $this->load->library('form_validation');
+      $this->load->helper('email');
+      $this->load->library('email');
   }
 
   public function sendmail()
@@ -16,8 +16,12 @@ class Mailer extends CI_Controller {
 
       $nameContact = $this->input->post('name-contact');
       $emailContact = $this->input->post('email-contact');
-      $topicContact = $this->input->post('topi-contact');
+      $topicContact = $this->input->post('topic-contact');
       $messageContact = $this->input->post('message-contact');
+
+      $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
+      $this->form_validation->set_rules('email-contact', 'E-mail', 'required');
+      $this->form_validation->set_rules('topic-contact', 'Wiadomość', 'required');
 
       $this->email->from($emailContact, $nameContact);
       $this->email->to('biuro@tls-torun.pl');
@@ -25,15 +29,15 @@ class Mailer extends CI_Controller {
       $this->email->cc($emailContact);
       //$this->email->bcc('them@their-example.com');
 
-      $this->email->subject('[Forumularz kontaktowy] ');
-      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n'.'\r\n'.$messageContact);
+      $this->email->subject('[Forumularz kontaktowy] '.$topicContact);
+      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n\r\n'.$messageContact);
 
       $this->email->send();
 
       echo $this->email->print_debugger();
       echo "Dziękujemy za wiadomość!";
 
-      redirect('contact')
+      redirect('contact');
 
 
 

@@ -1,13 +1,5 @@
 <?php
 
-// $firstNameUser = null;
-// $lastNameUser = null;
-// $uidUser = null;
-// $emailUser = null;
-// $displayLoginUser = null;
-// $isAdminUser = null;
-// $isLoggedUser = null;
-
 class User extends CI_Controller
 {
   public $session_data;
@@ -19,6 +11,8 @@ class User extends CI_Controller
       $this->load->library('form_validation');
       $this->load->library('session');
       $this->load->model('login_model');
+      $this->load->helper('email');
+      $this->load->library('email');
   }
 
   public function login(){
@@ -67,15 +61,6 @@ class User extends CI_Controller
           // Dodanie informacji o użytkowniku do sesji
           $this->session->set_userdata($session_data);
 
-          // global $firstNameUser, $lastNameUser, $uidUser, $emailUser, $displayLoginUser, $isAdminUser, $isLoggedUser;
-          // $firstNameUser = $this->session->userdata($session_data['first_name']);
-          // $lastNameUser = $this->session->userdata($session_data["last_name"]);
-          // $uidUser = $this->session->userdata($session_data['uid']);
-          // $emailUser = $this->session->userdata($session_data['email']);
-          // $displayLoginUser = $this->session->userdata($session_data['display_login']);
-          // $isAdminUser = $this->session->userdata($session_data['is_admin']);
-          // $isLoggedUser = $this->session->userdata($session_data['logged_in']);
-
           $this->login();
         }
         else {
@@ -90,7 +75,8 @@ class User extends CI_Controller
     }
   }
 
-  public function register(){
+  public function register()
+  {
     if($this->session->login == 'true'){
       redirect('');
     }
@@ -118,19 +104,41 @@ class User extends CI_Controller
     }
   }
 
-  public function logout(){
+  public function logout()
+  {
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
 
-    // global $firstNameUser, $lastNameUser, $uidUser, $emailUser, $displayLoginUser, $isAdminUser, $isLoggedUser;
-    // $firstNameUser = null;
-    // $lastNameUser = null;
-    // $uidUser = null;
-    // $emailUser = null;
-    // $displayLoginUser = null;
-    // $isAdminUser = null;
-    // $isLoggedUser = null;
-
     redirect('login');
+  }
+
+  public function sendmail()
+  {
+      $this->email->clear();
+
+      $nameContact = $this->input->post('name-contact');
+      $emailContact = $this->input->post('email-contact');
+      $topicContact = $this->input->post('topic-contact');
+      $messageContact = $this->input->post('message-contact');
+
+      $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
+      $this->form_validation->set_rules('email-contact', 'E-mail', 'required');
+      $this->form_validation->set_rules('topic-contact', 'Wiadomość', 'required');
+
+      $this->email->from($emailContact, $nameContact);
+      $this->email->to('biuro@tls-torun.pl');
+
+      $this->email->cc($emailContact);
+      //$this->email->bcc('them@their-example.com');
+
+      $this->email->subject('[Forumularz kontaktowy] '.$topicContact);
+      $this->email->message('Wiadomość od użytkownika: '.$nameContact.'\r\n\r\n'.$messageContact);
+
+      $this->email->send();
+
+      echo $this->email->print_debugger();
+      echo "Dziękujemy za wiadomość!";
+
+      redirect('contact');
   }
 }
