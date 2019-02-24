@@ -6,6 +6,7 @@
 <!-- Page Content -->
 <!--<div class="faq-bg"> -->
 <div class="container">
+
   <br>
 
   <h2>Frequently Asked Questions</h2>
@@ -59,10 +60,8 @@
       </div>
     </div>
   </div>
-
  </div>
 <br>
-
 <script>
 
 const items = document.querySelectorAll(".accordion a");

@@ -36,11 +36,8 @@
         <li class="nav-item">
           <a class="nav-link" href="video">Video</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login">Społeczność</a>
-        </li>
         <div class="dropdown">
-        <button class="dropbtn">O lidze</button>
+        <button class="dropbtn"><font color="#a3a3c2">O lidze</font></button>
         <div class="dropdown-content">
           <a href="teams">Drużyny</a>
           <a href="players">Zawodnicy</a>
@@ -50,6 +47,9 @@
   </div>
         <li class="nav-item">
           <a class="nav-link" href="join">Zgłoś się!</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login">Zaloguj</a>
         </li>
       </ul>
     </div>
