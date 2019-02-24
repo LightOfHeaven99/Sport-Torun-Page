@@ -35,3 +35,6 @@
 </head>
 
 <body>
+  <div class="container" style="background-color: lightgray">
+
+  </div>
