@@ -19,6 +19,10 @@ class Mailer extends CI_Controller {
   $this->email->message('Testowanie klasy email.');
 
   $this->email->send();
+
+  echo $this->email->print_debugger();
+
+  redirect('login');
   }
 
 
