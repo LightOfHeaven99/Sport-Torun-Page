@@ -1,4 +1,9 @@
+
+
 <!-- Navigation -->
+<div class="header-up-nav">
+  <h1><b>Toruńska Liga Siatkówki</b></h1>
+</div>
 <nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color:  #002266">
   <div class="container">
     <a class="navbar-brand" href="main">Toruńska Liga Siatkówki</a>

@@ -21,7 +21,28 @@ height: 100%;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover; */
-}  */
+
+.header-up-nav {
+  padding: 50px;
+  text-align: center;
+  background:  #e6b800;
+  color: white;
+  font-size: 30px;
+}
+.header-up-nav h1 {
+  font-size: 40px;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #e6b800 ;
+  color: white;
+  padding: auto;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  border: none;
+}
 
 .navbar-bg{
   background:  #24248f

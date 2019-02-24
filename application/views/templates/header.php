@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Toruńska Liga Siatkówski</title>
+  <title>Toruńska Liga Siatkówki</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../../../assets/default/bootstrap/css/bootstrap.min.css" rel="stylesheet">
