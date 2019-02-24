@@ -17,6 +17,7 @@
 
               <?php
                 $data = array(
+                  'type'          => 'text',
                   'name'          => 'name-contact',
                   'id'            => 'name-contact',
                   'class'         => 'form-control'
@@ -42,6 +43,7 @@
 
               <?php
                 $data = array(
+                  'type'          => 'text',
                   'name'          => 'topic-contact',
                   'id'            => 'topic-contact',
                   'class'         => 'form-control'
