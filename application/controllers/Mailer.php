@@ -61,11 +61,11 @@ class Mailer extends CI_Controller {
       $visitor_email = 'kacburza@interia.pl';
       $message = 'Siemka, jak się zapisać?';
 
-      if(IsInjected($visitor_email))
-      {
-          echo "Bad email value!";
-          exit;
-      }
+      // if(IsInjected($visitor_email))
+      // {
+      //     echo "Bad email value!";
+      //     exit;
+      // }
 
       $email_from = 'no-reply@tls-torun.pl';
       $email_subject = "ZAPISY";
@@ -79,25 +79,25 @@ class Mailer extends CI_Controller {
       mail($to,$email_subject,$email_body,$headers);
 
 
-      function IsInjected($str)
-      {
-        $injections = array('(\n+)',
-                    '(\r+)',
-                    '(\t+)',
-                    '(%0A+)',
-                    '(%0D+)',
-                    '(%08+)',
-                    '(%09+)'
-                    );
-        $inject = join('|', $injections);
-        $inject = "/$inject/i";
-        if(preg_match($inject,$str)){
-          return true;
-        }
-        else {
-          return false;
-        }
-      }
+      // function IsInjected($str)
+      // {
+      //   $injections = array('(\n+)',
+      //               '(\r+)',
+      //               '(\t+)',
+      //               '(%0A+)',
+      //               '(%0D+)',
+      //               '(%08+)',
+      //               '(%09+)'
+      //               );
+      //   $inject = join('|', $injections);
+      //   $inject = "/$inject/i";
+      //   if(preg_match($inject,$str)){
+      //     return true;
+      //   }
+      //   else {
+      //     return false;
+      //   }
+      // }
   }
 
 
