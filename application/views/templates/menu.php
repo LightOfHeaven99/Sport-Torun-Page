@@ -37,14 +37,22 @@
           <a class="nav-link" href="video">Video</a>
         </li>
         <div class="dropdown">
-        <button class="dropbtn"><font color="#a3a3c2">O lidze</font></button>
+        <button class="dropbtn"><font color="#959eb5">O lidze</font></button>
         <div class="dropdown-content">
           <a href="teams">Drużyny</a>
           <a href="players">Zawodnicy</a>
-          <a href="forum">Forum</a>
          <a href="information">Informacje</a>
+         <a href="regulations">Regulamin</a>
      </div>
   </div>
+  <div class="dropdown">
+  <button class="dropbtn"><font color="#959eb5">Forum</font></button>
+  <div class="dropdown-content">
+    <a href="#">Drużyna poszukuje</a>
+    <a href="#">Poszukuję drużyny</a>
+   <a href="#">Dodaj ogłoszenie</a>
+</div>
+</div>
         <li class="nav-item">
           <a class="nav-link" href="join">Zgłoś się!</a>
         </li>

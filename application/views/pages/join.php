@@ -15,7 +15,7 @@
         echo validation_errors('<div class="alert alert-danger">', '</div>');
       ?>
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-md-4">
           <label for="team-join"><b>Pełna nazwa drużyny:</b></label>
 
           <?php
@@ -28,7 +28,7 @@
             );
             echo form_input($data);
           ?>
-
+          
           <h3>Adres firmy lub zgłaszającego</h3>
           <label for="street-join"><b>Ulica:</b></label>
 
@@ -156,8 +156,17 @@
         </div>
 
         <br>
-        <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się<br>
-          <p><font size="2.5">Lorem lipsum coś tam coś tam.</font><br>
+          <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>
+            <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
+            <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p><br>
+
+            <form class="md-form" action="#">
+          <span><font size="2.5">Tu zamieść formularz zgłoszeniowy zawodników oraz logo drużyny o wymiarach 400x400.</font></span><br>
+          <input type="file" multiple>
+        <div class="file-path-wrapper">
+          <!-- <input class="file-path validate" type="text" placeholder="Upload one or more files"> -->
+      </div>
+    </form><br>
 
         <?php
           $data = array(
