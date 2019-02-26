@@ -140,10 +140,10 @@ class Mailer extends CI_Controller
 
       //email body content
       $htmlContent = "Drużyna: ".$teamJoin.
-                      "\n\nZgłaszający: ".$nameJoin.
-                      "\nNumer PESEL: ".$peselJoin.
-                      "\nNumer dowodu: ".$idcardJoin.
-                      "\n\nAdres:\n".
+                      "<br><br>Zgłaszający: ".$nameJoin.
+                      "<br>Numer PESEL: ".$peselJoin.
+                      "<br>Numer dowodu: ".$idcardJoin.
+                      "<br><br>Adres:\n".
                       $streetJoin."\n".
                       $postcodeJoin.", ".$cityJoin.
                       "\n\nE-mail: ".$emailJoin.
