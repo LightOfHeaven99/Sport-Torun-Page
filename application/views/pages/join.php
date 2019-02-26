@@ -28,9 +28,9 @@
             );
             echo form_input($data);
           ?>
-          
+
           <h3>Adres firmy lub zgłaszającego</h3>
-          <label for="street-join"><b>Ulica:</b></label>
+          <label for="street-join"><b>Nazwa ulicy z numerem:</b></label>
 
           <?php
             $data = array(
@@ -160,13 +160,51 @@
             <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
             <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p><br>
 
-            <form class="md-form" action="#">
-          <span><font size="2.5">Tu zamieść formularz zgłoszeniowy zawodników oraz logo drużyny o wymiarach 400x400.</font></span><br>
-          <input type="file" multiple>
-        <div class="file-path-wrapper">
-          <!-- <input class="file-path validate" type="text" placeholder="Upload one or more files"> -->
-      </div>
-    </form><br>
+            <p><b>Załączniki:</b></p>
+            <!-- <form class="md-form" action="#"> -->
+              <span><font size="2.5">Wymogi: logo drużyny -> PNG (400x400) / skład drużyny -> PDF / potwierdzenie wpłaty -> PDF</font></span><br>
+
+              <?php
+                $data = array(
+                  'type'          => 'file',
+                  'name'          => 'logo-join',
+                  'id'            => 'logo-join',
+                  'accept'        => 'image/x-png',
+                  'placeholder'   => 'Wstaw logo'
+                );
+                echo form_input($data);
+              ?>
+
+              <script>
+                $("input[type=file]").checkImageSize();
+              </script>
+
+              <?php
+                $data = array(
+                  'type'          => 'file',
+                  'name'          => 'squad-join',
+                  'id'            => 'squad-join',
+                  'accept'        => 'application/pdf',
+                  'placeholder'   => 'Wstaw skład'
+                );
+                echo form_input($data);
+              ?>
+
+              <?php
+                $data = array(
+                  'type'          => 'file',
+                  'name'          => 'payment-join',
+                  'id'            => 'payment-join',
+                  'accept'        => 'application/pdf',
+                  'placeholder'   => 'Wstaw potwierdzenie'
+                );
+                echo form_input($data);
+              ?>
+              <div class="file-path-wrapper">
+                <!-- <input class="file-path validate" type="text" placeholder="Upload one or more files"> -->
+              </div>
+            <!-- </form><br> -->
+            <br>
 
         <?php
           $data = array(
