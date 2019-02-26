@@ -53,9 +53,9 @@ class Mailer extends CI_Controller
       $idcardJoin = $this->input->post('idcard-join');
       $peselJoin = $this->input->post('pesel-join');
 
-      $squadJoin = null; //załącznik PDF
-      $logoJoin = null; //załącznik PNG
-      $paymentJoin = null; //potwierdzenie wpłaty
+      $logoJoin = $this->input->post('logo-join');
+      $squadJoin = $this->input->post('squad-join');
+      $paymentJoin = $this->input->post('payment-join');
 
       $this->form_validation->set_rules('team-join', 'Drużyna', 'required');
       $this->form_validation->set_rules('street-join', 'Ulica', 'required');
@@ -68,13 +68,11 @@ class Mailer extends CI_Controller
       $this->form_validation->set_rules('idcard-join', 'Numer dowodu', 'required');
       $this->form_validation->set_rules('pesel-join', 'PESEL', 'required|exact_length[11]');
 
+      /*
       $this->email->clear();
 
       $this->email->from($emailJoin, $nameJoin);
       $this->email->to('biuro@tls-torun.pl');
-
-      //$this->email->cc($emailContact);
-      //$this->email->bcc('them@their-example.com');
 
       $messageJoin =  "Drużyna: ".$teamJoin.
                       "\n\nZgłaszający: ".$nameJoin.
@@ -110,8 +108,6 @@ class Mailer extends CI_Controller
         $messageJoin .= "NIE";
       }
 
-
-
       $this->email->subject('[ZGŁOSZENIE] '.$teamJoin);
       $this->email->message($messageJoin);
 
@@ -119,6 +115,131 @@ class Mailer extends CI_Controller
 
       echo $this->email->print_debugger();
       echo "Dziękujemy za zgłoszenie!";
+      */
+
+
+      //WERSJA NIE-CODEIGNITEROWA Z ZAŁĄCZNIKAMI
+
+      //recipient
+      $to = 'biuro@tls-torun.pl';
+
+      //sender
+      $from = $emailJoin;
+      $fromName = $nameJoin;
+
+      //email subject
+      $subject = '[ZGŁOSZENIE] '.$teamJoin;
+
+      //attachment file path
+      $file1 = $logoJoin;
+      $file2 = $squadJoin;
+      $file3 = $paymentJoin;
+
+      //email body content
+      $htmlContent = "Drużyna: ".$teamJoin.
+                      "\n\nZgłaszający: ".$nameJoin.
+                      "\nNumer PESEL: ".$peselJoin.
+                      "\nNumer dowodu: ".$idcardJoin.
+                      "\n\nAdres:\n".
+                      $streetJoin."\n".
+                      $postcodeJoin.", ".$cityJoin.
+                      "\n\nE-mail: ".$emailJoin.
+                      "\nTelefon: ".$phoneJoin.
+                      "\n\n=========================".
+                      "\nCzy dołączono skład: ";
+
+                      if($squadJoin){
+                        $htmlContent .= "TAK";
+                      } else {
+                        $htmlContent .= "NIE";
+                      }
+
+                      $htmlContent .= "\nCzy dołączono logo: ";
+
+                      if($logoJoin){
+                        $htmlContent .= "TAK";
+                      } else {
+                        $htmlContent .= "NIE";
+                      }
+
+                      $htmlContent .= "\nCzy dołączono potwierdzenie: ";
+
+                      if($paymentJoin){
+                        $htmlContent .= "TAK";
+                      } else {
+                        $htmlContent .= "NIE";
+                      }
+
+      //header for sender info
+      $headers = "From: $nameJoin"." <".$from.">";
+
+      //boundary
+      $semi_rand = md5(time());
+      $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
+
+      //headers for attachment
+      $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
+
+      //multipart boundary
+      $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
+      "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
+
+      //preparing attachment
+      if(!empty($file1) > 0){
+          if(is_file($file1)){
+              $message .= "--{$mime_boundary}\n";
+              $fp =    @fopen($file1,"rb");
+              $data =  @fread($fp,filesize($file1));
+
+              @fclose($fp);
+              $data = chunk_split(base64_encode($data));
+              $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
+              "Content-Description: ".basename($file1)."\n" .
+              "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size=".filesize($file1).";\n" .
+              "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+          }
+      }
+
+      //preparing attachment
+      if(!empty($file2) > 0){
+          if(is_file($file2)){
+              $message .= "--{$mime_boundary}\n";
+              $fp =    @fopen($file2,"rb");
+              $data =  @fread($fp,filesize($file2));
+
+              @fclose($fp);
+              $data = chunk_split(base64_encode($data));
+              $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
+              "Content-Description: ".basename($file2)."\n" .
+              "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size=".filesize($file2).";\n" .
+              "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+          }
+      }
+
+      //preparing attachment
+      if(!empty($file3) > 0){
+          if(is_file($file3)){
+              $message .= "--{$mime_boundary}\n";
+              $fp =    @fopen($file3,"rb");
+              $data =  @fread($fp,filesize($file3));
+
+              @fclose($fp);
+              $data = chunk_split(base64_encode($data));
+              $message .= "Content-Type: application/octet-stream; name=\"".basename($file3)."\"\n" .
+              "Content-Description: ".basename($file3)."\n" .
+              "Content-Disposition: attachment;\n" . " filename=\"".basename($file3)."\"; size=".filesize($file3).";\n" .
+              "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+          }
+      }
+
+      $message .= "--{$mime_boundary}--";
+      $returnpath = "-f" . $from;
+
+      //send email
+      $mail = @mail($to, $subject, $message, $headers, $returnpath);
+
+      //email sending status
+      echo $mail?"<h1>Mail wysłany.</h1>":"<h1>Nieudana próba wysłania maila.</h1>";
 
       redirect('join');
   }
