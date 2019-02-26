@@ -30,7 +30,7 @@
           ?>
 
           <h3>Adres firmy lub zgłaszającego</h3>
-          <label for="street-join"><b>Ulica:</b></label>
+          <label for="street-join"><b>Nazwa ulicy z numerem:</b></label>
 
           <?php
             $data = array(

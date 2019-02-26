@@ -133,23 +133,18 @@ class Mailer extends CI_Controller
       //email subject
       $subject = '[ZGŁOSZENIE] '.$teamJoin;
 
-      //attachment file path
-      $file1 = $logoJoin;
-      $file2 = $squadJoin;
-      $file3 = $paymentJoin;
-
       //email body content
-      $htmlContent = "Drużyna: ".$teamJoin.
-                      "<br><br>Zgłaszający: ".$nameJoin.
-                      "<br>Numer PESEL: ".$peselJoin.
-                      "<br>Numer dowodu: ".$idcardJoin.
-                      "<br><br>Adres:\n".
-                      $streetJoin."\n".
+      $htmlContent = "<b>Drużyna:</b> ".$teamJoin.
+                      "<br><br><b>Zgłaszający:</b> ".$nameJoin.
+                      "<br><b>Numer PESEL:</b> ".$peselJoin.
+                      "<br><b>Numer dowodu:</b> ".$idcardJoin.
+                      "<br><br><b>Adres:</b><br>ul. ".
+                      $streetJoin."<br>".
                       $postcodeJoin.", ".$cityJoin.
-                      "\n\nE-mail: ".$emailJoin.
-                      "\nTelefon: ".$phoneJoin.
-                      "\n\n=========================".
-                      "\nCzy dołączono skład: ";
+                      "<br><br><b>E-mail:</b> ".$emailJoin.
+                      "<br><b>Telefon:</b> ".$phoneJoin.
+                      "<br><br>=========================".
+                      "<br>Czy dołączono skład: ";
 
                       if($squadJoin){
                         $htmlContent .= "TAK";
@@ -157,7 +152,7 @@ class Mailer extends CI_Controller
                         $htmlContent .= "NIE";
                       }
 
-                      $htmlContent .= "\nCzy dołączono logo: ";
+                      $htmlContent .= "<br>Czy dołączono logo: ";
 
                       if($logoJoin){
                         $htmlContent .= "TAK";
@@ -165,7 +160,7 @@ class Mailer extends CI_Controller
                         $htmlContent .= "NIE";
                       }
 
-                      $htmlContent .= "\nCzy dołączono potwierdzenie: ";
+                      $htmlContent .= "<br>Czy dołączono potwierdzenie: ";
 
                       if($paymentJoin){
                         $htmlContent .= "TAK";
@@ -184,46 +179,46 @@ class Mailer extends CI_Controller
       $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
       //multipart boundary
-      $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
+      $message = "--{$mime_boundary}--\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
       "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
 
 
       //preparing attachment 1
-      $message .= "--{$mime_boundary}\n";
-      $fp =    @fopen($file1,"rb");
-      $data =  @fread($fp,filesize($file1));
+      $message .= "--{$mime_boundary}--\n";
+      $fp =    @fopen($logoJoin,"rb");
+      $data =  @fread($fp,filesize($logoJoin));
 
       @fclose($fp);
       $data = chunk_split(base64_encode($data));
-      $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
-      "Content-Description: ".basename($file1)."\n" .
-      "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size="./*filesize($file1).*/";\n" .
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($logoJoin)."\"\n" .
+      "Content-Description: ".basename($logoJoin)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($logoJoin)."\"; size=".filesize($logoJoin).";\n" .
       "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
 
       //preparing attachment 2
-      $message .= "--{$mime_boundary}\n";
-      $fp =    @fopen($file2,"rb");
-      $data =  @fread($fp,filesize($file2));
+      $message .= "--{$mime_boundary}--\n";
+      $fp =    @fopen($squadJoin,"rb");
+      $data =  @fread($fp,filesize($squadJoin));
 
       @fclose($fp);
       $data = chunk_split(base64_encode($data));
-      $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
-      "Content-Description: ".basename($file2)."\n" .
-      "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size="./*filesize($file2).*/";\n" .
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($squadJoin)."\"\n" .
+      "Content-Description: ".basename($squadJoin)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($squadJoin)."\"; size=".filesize($squadJoin).";\n" .
       "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
 
       //preparing attachment 3
-      $message .= "--{$mime_boundary}\n";
-      $fp =    @fopen($file3,"rb");
-      $data =  @fread($fp,filesize($file3));
+      $message .= "--{$mime_boundary}--\n";
+      $fp =    @fopen($paymentJoin,"rb");
+      $data =  @fread($fp,filesize($paymentJoin));
 
       @fclose($fp);
       $data = chunk_split(base64_encode($data));
-      $message .= "Content-Type: application/octet-stream; name=\"".basename($file3)."\"\n" .
-      "Content-Description: ".basename($file3)."\n" .
-      "Content-Disposition: attachment;\n" . " filename=\"".basename($file3)."\"; size="./*filesize($file3).*/";\n" .
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($paymentJoin)."\"\n" .
+      "Content-Description: ".basename($paymentJoin)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($paymentJoin)."\"; size=".filesize($paymentJoin).";\n" .
       "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
       $message .= "--{$mime_boundary}--";
