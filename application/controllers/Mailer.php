@@ -179,12 +179,12 @@ class Mailer extends CI_Controller
       $headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
       //multipart boundary
-      $message = "--{$mime_boundary}--\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
+      $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
       "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
 
 
       //preparing attachment 1
-      $message .= "--{$mime_boundary}--\n";
+      $message .= "--{$mime_boundary}\n";
       $fp =    @fopen($logoJoin,"rb");
       $data =  @fread($fp,filesize($logoJoin));
 
@@ -197,7 +197,7 @@ class Mailer extends CI_Controller
 
 
       //preparing attachment 2
-      $message .= "--{$mime_boundary}--\n";
+      $message .= "--{$mime_boundary}\n";
       $fp =    @fopen($squadJoin,"rb");
       $data =  @fread($fp,filesize($squadJoin));
 
@@ -210,7 +210,7 @@ class Mailer extends CI_Controller
 
 
       //preparing attachment 3
-      $message .= "--{$mime_boundary}--\n";
+      $message .= "--{$mime_boundary}\n";
       $fp =    @fopen($paymentJoin,"rb");
       $data =  @fread($fp,filesize($paymentJoin));
 
