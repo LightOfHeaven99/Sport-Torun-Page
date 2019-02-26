@@ -239,7 +239,7 @@ class Mailer extends CI_Controller
       $returnpath = "-f" . $from;
 
       //send email
-      $mail = @mail($to, $subject, $message, $headers, $returnpath);
+      $mail = mail($to, $subject, $message, $headers, $returnpath);
 
       //email sending status
       echo $mail?"<h1>Mail wysłany.</h1>":"<h1>Nieudana próba wysłania maila.</h1>";
