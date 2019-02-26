@@ -251,7 +251,7 @@ class Mailer extends CI_Controller
       $mail->Password = 'witkowskiego123';                  // SMTP password
       $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
-      $mail->From = $emailJoin;
+      $mail->From = 'no-reply@tls-torun.pl';
       $mail->FromName = $nameJoin;
       $mail->AddAddress('biuro@tls-torun.pl', 'Łukasz Bania');  // Add a recipient
       //$mail->AddAddress('ellen@example.com');               // Name is optional
