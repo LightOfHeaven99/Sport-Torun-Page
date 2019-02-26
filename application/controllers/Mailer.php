@@ -138,13 +138,6 @@ class Mailer extends CI_Controller
       //email subject
       $subject = '[ZGŁOSZENIE] '.$teamJoin;
 
-            $random_hash = md5(date('r', time()));
-
-            // Define the headers
-            $headers = "From: noreply@logikdev.com\r\n";
-            // Add boundary string and mime type specification
-            $headers .= "Content-Type: multipart/mixed; boundary=\"PHP-mixed-".$random_hash."\"";
-
       //email body content
       $htmlContent = "<b>Drużyna:</b> ".$teamJoin.
                       "<br><br><b>Zgłaszający:</b> ".$nameJoin.
@@ -180,23 +173,6 @@ class Mailer extends CI_Controller
                         $htmlContent .= "NIE";
                       }
 
-      $attachment = chunk_split(base64_encode(file_get_contents($logoJoin)));
-
-      $htmlContent .= "
-                      --PHP-mixed-$random_hash
-                      Content-Type: text/plain; charset='iso-8859-1'
-
-                      This is a test email message sent with PHP.
-
-                      --PHP-mixed-$random_hash
-                      Content-Type: application/zip; name=attachment.zip
-                      Content-Transfer-Encoding: base64
-                      Content-Disposition: attachment
-
-                      $attachment
-                      --PHP-mixed-$random_hash--";
-
-
       //header for sender info
       $headers = "From: $nameJoin"." <".$from.">";
 
@@ -211,47 +187,47 @@ class Mailer extends CI_Controller
       $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
       "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
 
-      //$file1 = file_get_contents($logoJoin);
-      //$file2 = file_get_contents($squadJoin);
-      //$file3 = file_get_contents($paymentJoin);
+      $file1 = file_get_contents($logoJoin);
+      $file2 = file_get_contents($squadJoin);
+      $file3 = file_get_contents($paymentJoin);
 
-      // //preparing attachment 1
-      // $message .= "--{$mime_boundary}\n";
-      // $fp =    @fopen($file1,"rb");
-      // $data =  @fread($fp,filesize($file1));
-      //
-      // @fclose($fp);
-      // $data = chunk_split(base64_encode($data));
-      // $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
-      // "Content-Description: ".basename($file1)."\n" .
-      // "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size=".filesize($file1).";\n" .
-      // "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+      //preparing attachment 1
+      $message .= "--{$mime_boundary}\n";
+      $fp =    @fopen($file1,"rb");
+      $data =  @fread($fp,filesize($file1));
+
+      @fclose($fp);
+      $data = chunk_split(base64_encode($data));
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
+      "Content-Description: ".basename($file1)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size=".filesize($file1).";\n" .
+      "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
 
-      // //preparing attachment 2
-      // $message .= "--{$mime_boundary}\n";
-      // $fp =    @fopen($file2,"rb");
-      // $data =  @fread($fp,filesize($file2));
-      //
-      // @fclose($fp);
-      // $data = chunk_split(base64_encode($data));
-      // $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
-      // "Content-Description: ".basename($file2)."\n" .
-      // "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size=".filesize($file2).";\n" .
-      // "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-      //
-      //
-      // //preparing attachment 3
-      // $message .= "--{$mime_boundary}\n";
-      // $fp =    @fopen($file3,"rb");
-      // $data =  @fread($fp,filesize($file3));
-      //
-      // @fclose($fp);
-      // $data = chunk_split(base64_encode($data));
-      // $message .= "Content-Type: application/octet-stream; name=\"".basename($file3)."\"\n" .
-      // "Content-Description: ".basename($file3)."\n" .
-      // "Content-Disposition: attachment;\n" . " filename=\"".basename($file3)."\"; size=".filesize($file3).";\n" .
-      // "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+      //preparing attachment 2
+      $message .= "--{$mime_boundary}\n";
+      $fp =    @fopen($file2,"rb");
+      $data =  @fread($fp,filesize($file2));
+
+      @fclose($fp);
+      $data = chunk_split(base64_encode($data));
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
+      "Content-Description: ".basename($file2)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size=".filesize($file2).";\n" .
+      "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+
+
+      //preparing attachment 3
+      $message .= "--{$mime_boundary}\n";
+      $fp =    @fopen($file3,"rb");
+      $data =  @fread($fp,filesize($file3));
+
+      @fclose($fp);
+      $data = chunk_split(base64_encode($data));
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file3)."\"\n" .
+      "Content-Description: ".basename($file3)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file3)."\"; size=".filesize($file3).";\n" .
+      "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
       $message .= "--{$mime_boundary}--";
 
@@ -263,9 +239,6 @@ class Mailer extends CI_Controller
 
       //email sending status
       echo $mail?"<h1>Mail wysłany.</h1>":"<h1>Nieudana próba wysłania maila.</h1>";
-
-
-
 
 
 /*      $mail = new PHPMailer;
