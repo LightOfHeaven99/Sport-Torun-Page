@@ -244,14 +244,14 @@ class Mailer extends CI_Controller
       $mail = new PHPMailer;
 
       $mail->IsSMTP();                                      // Set mailer to use SMTP
-      $mail->Host = 'smtp.zenbox.pl';                       // Specify main and backup server
+      $mail->Host = 'tls-torun.pl';                       // Specify main and backup server
       $mail->Port = 587;                                    // Set the SMTP port
       $mail->SMTPAuth = true;                               // Enable SMTP authentication
       $mail->Username = 'biuro@tls-torun.pl';               // SMTP username
       $mail->Password = 'witkowskiego123';                  // SMTP password
       $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
 
-      $mail->From = 'no-reply@tls-torun.pl';
+      $mail->From = $emailJoin;
       $mail->FromName = $nameJoin;
       $mail->AddAddress('biuro@tls-torun.pl', 'Łukasz Bania');  // Add a recipient
       //$mail->AddAddress('ellen@example.com');               // Name is optional
