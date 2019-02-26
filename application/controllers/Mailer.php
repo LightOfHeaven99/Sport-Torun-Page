@@ -138,6 +138,13 @@ class Mailer extends CI_Controller
       //email subject
       $subject = '[ZGŁOSZENIE] '.$teamJoin;
 
+            $random_hash = md5(date('r', time()));
+
+            // Define the headers
+            $headers = "From: noreply@logikdev.com\r\n";
+            // Add boundary string and mime type specification
+            $headers .= "Content-Type: multipart/mixed; boundary=\"PHP-mixed-".$random_hash."\"";
+
       //email body content
       $htmlContent = "<b>Drużyna:</b> ".$teamJoin.
                       "<br><br><b>Zgłaszający:</b> ".$nameJoin.
@@ -204,9 +211,9 @@ class Mailer extends CI_Controller
       $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
       "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
 
-      $file1 = file_get_contents($logoJoin);
-      $file2 = file_get_contents($squadJoin);
-      $file3 = file_get_contents($paymentJoin);
+      //$file1 = file_get_contents($logoJoin);
+      //$file2 = file_get_contents($squadJoin);
+      //$file3 = file_get_contents($paymentJoin);
 
       // //preparing attachment 1
       // $message .= "--{$mime_boundary}\n";
