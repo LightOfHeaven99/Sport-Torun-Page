@@ -1,7 +1,6 @@
 <?php
 
-require '../../assets/default/phpmailer/src/PHPMailer.php';
-
+require_once dirname(__FILE__) . '/../../assets/default/phpmailer/src/PHPMailer.php';
 
 class Mailer extends CI_Controller
 {
