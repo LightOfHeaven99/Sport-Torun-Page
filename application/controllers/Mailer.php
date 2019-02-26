@@ -1,6 +1,6 @@
 <?php
 
-require '../../assets/default/phpmailer/_lib/phpmailer-fe.php';
+//require '../../assets/default/phpmailer/_lib/phpmailer-fe.php';
 require '../../assets/default/phpmailer/_lib/class.phpmailer.php';
 
 class Mailer extends CI_Controller
