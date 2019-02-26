@@ -187,55 +187,46 @@ class Mailer extends CI_Controller
       $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
       "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
 
-      //preparing attachment
-      if(!empty($file1) > 0){
-          if(is_file($file1)){
-              $message .= "--{$mime_boundary}\n";
-              $fp =    @fopen($file1,"rb");
-              $data =  @fread($fp,filesize($file1));
 
-              @fclose($fp);
-              $data = chunk_split(base64_encode($data));
-              $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
-              "Content-Description: ".basename($file1)."\n" .
-              "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size=".filesize($file1).";\n" .
-              "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-          }
-      }
+      //preparing attachment 1
+      $message .= "--{$mime_boundary}\n";
+      $fp =    @fopen($file1,"rb");
+      $data =  @fread($fp,filesize($file1));
 
-      //preparing attachment
-      if(!empty($file2) > 0){
-          if(is_file($file2)){
-              $message .= "--{$mime_boundary}\n";
-              $fp =    @fopen($file2,"rb");
-              $data =  @fread($fp,filesize($file2));
+      @fclose($fp);
+      $data = chunk_split(base64_encode($data));
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
+      "Content-Description: ".basename($file1)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size=".filesize($file1).";\n" .
+      "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
-              @fclose($fp);
-              $data = chunk_split(base64_encode($data));
-              $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
-              "Content-Description: ".basename($file2)."\n" .
-              "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size=".filesize($file2).";\n" .
-              "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-          }
-      }
 
-      //preparing attachment
-      if(!empty($file3) > 0){
-          if(is_file($file3)){
-              $message .= "--{$mime_boundary}\n";
-              $fp =    @fopen($file3,"rb");
-              $data =  @fread($fp,filesize($file3));
+      //preparing attachment 2
+      $message .= "--{$mime_boundary}\n";
+      $fp =    @fopen($file2,"rb");
+      $data =  @fread($fp,filesize($file2));
 
-              @fclose($fp);
-              $data = chunk_split(base64_encode($data));
-              $message .= "Content-Type: application/octet-stream; name=\"".basename($file3)."\"\n" .
-              "Content-Description: ".basename($file3)."\n" .
-              "Content-Disposition: attachment;\n" . " filename=\"".basename($file3)."\"; size=".filesize($file3).";\n" .
-              "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-          }
-      }
+      @fclose($fp);
+      $data = chunk_split(base64_encode($data));
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
+      "Content-Description: ".basename($file2)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size=".filesize($file2).";\n" .
+      "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+
+
+      //preparing attachment 3
+      $message .= "--{$mime_boundary}";
+      $file = fopen($file3,"rb");
+      $data = fread($file,filesize($file3));
+      fclose($file);
+      $data = chunk_split(base64_encode($data));
+      $message .= "Content-Type: {\"application/octet-stream\"};\n" . " name=\"$file3\"\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"$file3\"\n" .
+      "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
       $message .= "--{$mime_boundary}--";
+
+
       $returnpath = "-f" . $from;
 
       //send email
