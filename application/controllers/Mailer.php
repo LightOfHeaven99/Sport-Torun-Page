@@ -182,43 +182,46 @@ class Mailer extends CI_Controller
       $message = "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"UTF-8\"\n" .
       "Content-Transfer-Encoding: 7bit\n\n" . $htmlContent . "\n\n";
 
+      $file1 = file_get_contents($logoJoin);
+      $file2 = file_get_contents($squadJoin);
+      $file3 = file_get_contents($paymentJoin);
 
       //preparing attachment 1
       $message .= "--{$mime_boundary}\n";
-      $fp =    @fopen($logoJoin,"rb");
-      $data =  @fread($fp,filesize($logoJoin));
+      $fp =    @fopen($file1,"rb");
+      $data =  @fread($fp,filesize($file1));
 
       @fclose($fp);
       $data = chunk_split(base64_encode($data));
-      $message .= "Content-Type: application/octet-stream; name=\"".basename($logoJoin)."\"\n" .
-      "Content-Description: ".basename($logoJoin)."\n" .
-      "Content-Disposition: attachment;\n" . " filename=\"".basename($logoJoin)."\"; size=".filesize($logoJoin).";\n" .
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file1)."\"\n" .
+      "Content-Description: ".basename($file1)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file1)."\"; size=".filesize($file1).";\n" .
       "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
 
       //preparing attachment 2
       $message .= "--{$mime_boundary}\n";
-      $fp =    @fopen($squadJoin,"rb");
-      $data =  @fread($fp,filesize($squadJoin));
+      $fp =    @fopen($file2,"rb");
+      $data =  @fread($fp,filesize($file2));
 
       @fclose($fp);
       $data = chunk_split(base64_encode($data));
-      $message .= "Content-Type: application/octet-stream; name=\"".basename($squadJoin)."\"\n" .
-      "Content-Description: ".basename($squadJoin)."\n" .
-      "Content-Disposition: attachment;\n" . " filename=\"".basename($squadJoin)."\"; size=".filesize($squadJoin).";\n" .
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file2)."\"\n" .
+      "Content-Description: ".basename($file2)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file2)."\"; size=".filesize($file2).";\n" .
       "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
 
       //preparing attachment 3
       $message .= "--{$mime_boundary}\n";
-      $fp =    @fopen($paymentJoin,"rb");
-      $data =  @fread($fp,filesize($paymentJoin));
+      $fp =    @fopen($file3,"rb");
+      $data =  @fread($fp,filesize($file3));
 
       @fclose($fp);
       $data = chunk_split(base64_encode($data));
-      $message .= "Content-Type: application/octet-stream; name=\"".basename($paymentJoin)."\"\n" .
-      "Content-Description: ".basename($paymentJoin)."\n" .
-      "Content-Disposition: attachment;\n" . " filename=\"".basename($paymentJoin)."\"; size=".filesize($paymentJoin).";\n" .
+      $message .= "Content-Type: application/octet-stream; name=\"".basename($file3)."\"\n" .
+      "Content-Description: ".basename($file3)."\n" .
+      "Content-Disposition: attachment;\n" . " filename=\"".basename($file3)."\"; size=".filesize($file3).";\n" .
       "Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 
       $message .= "--{$mime_boundary}--";
