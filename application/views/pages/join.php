@@ -161,46 +161,50 @@
             <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p><br>
 
             <p><b>Załączniki:</b></p>
-            <form class="md-form" action="#">
+            <!-- <form class="md-form" action="#"> -->
               <span><font size="2.5">Wymogi: logo drużyny -> PNG (400x400) / skład drużyny -> PDF / potwierdzenie wpłaty -> PDF</font></span><br>
-              <!-- <input type="file" value="Skład drużyny"> -->
-              <!-- <input type="file" value="Logo 400x400"> -->
-              <!-- <input type="file" value="Potwierdzenie"> -->
+
               <?php
                 $data = array(
                   'type'          => 'file',
                   'name'          => 'logo-join',
                   'id'            => 'logo-join',
                   'accept'        => 'image/x-png',
-                  'value'         => 'Wstaw logo'
+                  'placeholder'   => 'Wstaw logo'
                 );
                 echo form_input($data);
+              ?>
 
+              <script>
+                $("input[type=file]").checkImageSize();
+              </script>
+
+              <?php
                 $data = array(
                   'type'          => 'file',
                   'name'          => 'squad-join',
                   'id'            => 'squad-join',
                   'accept'        => 'application/pdf',
-                  'value'         => 'Wstaw skład'
+                  'placeholder'   => 'Wstaw skład'
                 );
                 echo form_input($data);
+              ?>
 
+              <?php
                 $data = array(
                   'type'          => 'file',
                   'name'          => 'payment-join',
                   'id'            => 'payment-join',
                   'accept'        => 'application/pdf',
-                  'value'         => 'Wstaw potwierdzenie'
+                  'placeholder'   => 'Wstaw potwierdzenie'
                 );
                 echo form_input($data);
               ?>
-              <script>
-                $("input[type=file]").checkImageSize();
-              </script>
               <div class="file-path-wrapper">
                 <!-- <input class="file-path validate" type="text" placeholder="Upload one or more files"> -->
               </div>
-            </form><br>
+            <!-- </form><br> -->
+            <br>
 
         <?php
           $data = array(
