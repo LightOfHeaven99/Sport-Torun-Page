@@ -1,4 +1,8 @@
 <?php
+
+require '../../assets/default/phpmailer/_lib/phpmailer-fe.php';
+require '../../assets/default/phpmailer/_lib/class.phpmailer.php';
+
 class Mailer extends CI_Controller
 {
   public function __construct()
@@ -121,8 +125,10 @@ class Mailer extends CI_Controller
       */
 
 
-      //WERSJA NIE-CODEIGNITEROWA Z ZAŁĄCZNIKAMI
 
+
+      //WERSJA NIE-CODEIGNITEROWA Z ZAŁĄCZNIKAMI
+/*
       //recipient
       $to = 'biuro@tls-torun.pl';
 
@@ -234,6 +240,78 @@ class Mailer extends CI_Controller
 
       //email sending status
       echo $mail?"<h1>Mail wysłany.</h1>":"<h1>Nieudana próba wysłania maila.</h1>";
+*/
+
+      $mail = new PHPMailer;
+
+      $mail->IsSMTP();                                      // Set mailer to use SMTP
+      $mail->Host = 'smtp.zenbox.pl';                       // Specify main and backup server
+      $mail->Port = 587;                                    // Set the SMTP port
+      $mail->SMTPAuth = true;                               // Enable SMTP authentication
+      $mail->Username = 'biuro@tls-torun.pl';               // SMTP username
+      $mail->Password = 'witkowskiego123';                  // SMTP password
+      $mail->SMTPSecure = 'tls';                            // Enable encryption, 'ssl' also accepted
+
+      $mail->From = $emailJoin;
+      $mail->FromName = $nameJoin;
+      $mail->AddAddress('biuro@tls-torun.pl', 'Łukasz Bania');  // Add a recipient
+      //$mail->AddAddress('ellen@example.com');               // Name is optional
+
+      $mail->IsHTML(true);                                  // Set email format to HTML
+
+      $mail->Subject = '[ZGŁOSZENIE] '.$teamJoin;
+      $mail->Body    = "<b>Drużyna:</b> ".$teamJoin.
+                      "<br><br><b>Zgłaszający:</b> ".$nameJoin.
+                      "<br><b>Numer PESEL:</b> ".$peselJoin.
+                      "<br><b>Numer dowodu:</b> ".$idcardJoin.
+                      "<br><br><b>Adres:</b><br>ul. ".
+                      $streetJoin."<br>".
+                      $postcodeJoin.", ".$cityJoin.
+                      "<br><br><b>E-mail:</b> ".$emailJoin.
+                      "<br><b>Telefon:</b> ".$phoneJoin.
+                      "<br><br>=========================".
+                      "<br>Czy dołączono logo: ";
+
+                      if($logoJoin){
+                        $mail->Body .= "TAK";
+                        $mail->AddAttachment($logoJoin);
+                      } else {
+                        $mail->Body .= "NIE";
+                      }
+
+                      $mail->Body .= "<br>Czy dołączono skład: ";
+
+                      if($squadJoin){
+                        $mail->Body .= "TAK";
+                        $mail->AddAttachment($squadJoin);
+                      } else {
+                        $mail->Body .= "NIE";
+                      }
+
+                      $mail->Body .= "<br>Czy dołączono potwierdzenie: ";
+
+                      if($paymentJoin){
+                        $mail->Body .= "TAK";
+                        $mail->AddAttachment($paymentJoin);
+                      } else {
+                        $mail->Body .= "NIE";
+                      }
+
+
+      // if (isset($_FILES['uploaded_file']) &&
+      //           $_FILES['uploaded_file']['error'] == UPLOAD_ERR_OK)
+      // {
+      //   $mail->AddAttachment($_FILES['uploaded_file']['tmp_name'],
+      //                        $_FILES['uploaded_file']['name']);
+      // }
+
+      if(!$mail->Send()) {
+         echo 'Zgłoszenie nie mogło zostać wysłane.';
+         echo 'Błąd: ' . $mail->ErrorInfo;
+         exit;
+      }
+
+      echo 'Zgłoszenie wysłano pomyślnie!';
 
       redirect('join');
   }
