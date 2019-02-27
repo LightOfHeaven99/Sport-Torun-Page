@@ -132,10 +132,10 @@ top: -45px;
 }
 
 .input-group-prepend span{
-width: 50px;
-background-color: #364FD2;
-color: black;
-border:0 !important;
+  width: 50px;
+  background-color: #364FD2;
+  color: black;
+  border:0 !important;
 }
 
 input:focus{
@@ -200,6 +200,17 @@ width: 90px;
 }
 
 .logout_btn:hover{
+color: black;
+background-color: white;
+}
+
+.reset_code_btn{
+color: black;
+background-color: #364FD2;
+width: 100px;
+}
+
+.reset_code_btn:hover{
 color: black;
 background-color: white;
 }
