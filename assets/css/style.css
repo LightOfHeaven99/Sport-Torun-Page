@@ -3,6 +3,7 @@
 } */
 
 .header-up-nav {
+  background-image: url('../assets/img/navbar-logo.png');
   padding: 25px;
   text-align: center;
   background:  #e6b800;

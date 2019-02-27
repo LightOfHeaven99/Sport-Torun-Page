@@ -1,35 +1,18 @@
 <!-- Page Content -->
+<div class="timetable-bg">
   <div class="container">
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="../assets/img/start-bg.jpg" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/img/start-bg.jpg" alt="Second slide">
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="../assets/img/start-bg.jpg" alt="Third slide">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="space20"></div>
+        <div class="parallax-card-timetable">
+          <div class="space10"></div>
+          <h1 style="color: white;">Wyniki</h1>
+          <h3 style="color: white;">Tu będą pojawiać się wyniki meczów, które odbędą się już na początku kwietnia!</h3>
+        </div>
+        <div class="space50"></div>
+      </div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-  </div>
+  <br><br><br><br><br><br><br><br>
 
-  <script>
-  $('.carousel').carousel({
-  interval: 2000
-})
-</script>
+</div>
