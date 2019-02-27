@@ -1,3 +1,5 @@
+
+
 <!-- Signup window -->
 <div class="login-bg">
 <div class="container">
@@ -15,7 +17,7 @@
         <a href="login" style="color: #364FD2;">Wróc do logowania</a></br>
       </div>
       <div class="card-body">
-        <h4 style="color:white">Podaj dane</h4>
+        <h3 style="color:white"><b>Podaj dane</b></h3>
         <?php
           //echo $this->session->flashdata('register_info');
           echo validation_errors('<div class="alert alert-danger">', '</div>');
@@ -24,6 +26,12 @@
 
             <?php
               $data = array(
+                'type'          => 'text',
+                'style'         => 'padding: 15px 13px 15px 15px;
+                                    background-color: white;
+                                    -moz-border-radius: 4px 0px 0px 4px;
+                                    -webkit-border-radius: 4px 0px 0px 4px;
+                                    border-radius: 4px 0px 0px 4px;',
                 'name'          => 'first-name',
                 'id'            => 'first-name',
                 'class'         => 'form-control',
@@ -36,6 +44,12 @@
 
             <?php
               $data = array(
+                'type'          => 'text',
+                'style'         => 'padding: 15px 13px 15px 0px;
+                                    background-color: white;
+                                    -moz-border-radius: 0px 4px 4px 0px;
+                                    -webkit-border-radius: 0px 4px 4px 0px;
+                                    border-radius: 0px 4px 4px 0px;',
                 'name'          => 'last-name',
                 'id'            => 'last-name',
                 'class'         => 'form-control',
@@ -51,6 +65,12 @@
 
             <?php
               $data = array(
+                'type'          => 'text',
+                'style'         => 'padding: 15px 13px 15px 15px;
+                                    background-color: white;
+                                    -moz-border-radius: 4px 4px 4px 4px;
+                                    -webkit-border-radius: 4px 4px 4px 4px;
+                                    border-radius: 4px 4px 4px 4px;',
                 'name'          => 'uid',
                 'id'            => 'uid',
                 'class'         => 'form-control',
@@ -67,6 +87,11 @@
             <?php
               $data = array(
                 'type'          => 'password',
+                'style'         => 'padding: 15px 13px 15px 15px;
+                                    background-color: white;
+                                    -moz-border-radius: 4px 4px 4px 4px;
+                                    -webkit-border-radius: 4px 4px 4px 4px;
+                                    border-radius: 4px 4px 4px 4px;',
                 'name'          => 'pwd',
                 'id'            => 'pwd',
                 'class'         => 'form-control',
@@ -82,6 +107,11 @@
             <?php
               $data = array(
                 'type'          => 'password',
+                'style'         => 'padding: 15px 13px 15px 15px;
+                                    background-color: white;
+                                    -moz-border-radius: 4px 4px 4px 4px;
+                                    -webkit-border-radius: 4px 4px 4px 4px;
+                                    border-radius: 4px 4px 4px 4px;',
                 'name'          => 'pwd-repeat',
                 'id'            => 'pwd-repeat',
                 'class'         => 'form-control',
@@ -97,6 +127,11 @@
             <?php
               $data = array(
                 'type'          => 'email',
+                'style'         => 'padding: 15px 13px 15px 15px;
+                                    background-color: white;
+                                    -moz-border-radius: 4px 4px 4px 4px;
+                                    -webkit-border-radius: 4px 4px 4px 4px;
+                                    border-radius: 4px 4px 4px 4px;',
                 'name'          => 'email',
                 'id'            => 'email',
                 'class'         => 'form-control',
@@ -118,7 +153,8 @@
               );
               echo form_input($data);
             ?>
-            <p style="font-size: 20px; color: white;">Chcę być widoczny jako mój login</p>
+            <label for="display-login" style="padding-left: 3px; padding-top: 7px;">Chcę być widoczny jako mój login</label>
+
           </div>
 
           <div class="form-group">

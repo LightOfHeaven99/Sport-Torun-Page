@@ -29,9 +29,9 @@
 					<h5>O serwisie</h5>
 					<ul class="list-unstyled quick-links">
 						<li><a href="faq"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href="policy"><i class="fa fa-angle-double-right"></i>Polityka Prywatności</a></li>
-            <li><a href="cookies"><i class="fa fa-angle-double-right"></i>Polityka Cookies</a></li>
-					</ul>
+						<li><a href="cookies"><i class="fa fa-angle-double-right"></i>Polityka Cookies</a></li>
+            <li><a href="policy"><i class="fa fa-angle-double-right"></i>Polityka Prywatności</a></li>
+          </ul>
 				</div>
 			</div>
 			<div class="row">

@@ -105,12 +105,18 @@
           echo validation_errors('<div class="alert alert-danger">', '</div>');
         ?>
 				<div class="input-group form-group">
-					<div class="input-group-prepend">
+					<div class="input-group-prepend" style="padding-top: 3px;">
 						<span class="input-group-text"><i class="fas fa-user"></i></span>
 					</div>
 
           <?php
             $data = array(
+              'type'          => 'text',
+              'style'         => 'padding: 15px 13px 15px 15px;
+                                  background-color: white;
+                                  -moz-border-radius: 0px 4px 4px 0px;
+                                  -webkit-border-radius: 0px 4px 4px 0px;
+                                  border-radius: 0px 4px 4px 0px;',
               'name'          => 'uid',
               'id'            => 'uid',
               'class'         => 'form-control',
@@ -122,13 +128,19 @@
 
         </div>
 				<div class="input-group form-group">
-					<div class="input-group-prepend">
+					<div class="input-group-prepend" style="padding-top: 3px;">
 						<span class="input-group-text"><i class="fas fa-key"></i></span>
 					</div>
 
           <?php
             $data = array(
               'type'          => 'password',
+              'style'         => '
+                                  padding: 15px 13px 15px 15px;
+                                  background-color: white;
+                                  -moz-border-radius: 0px 4px 4px 0px;
+                                  -webkit-border-radius: 0px 4px 4px 0px;
+                                  border-radius: 0px 4px 4px 0px;',
               'name'          => 'pwd',
               'id'            => 'pwd',
               'class'         => 'form-control',
@@ -149,8 +161,7 @@
           );
           echo form_input($data);
           ?>
-
-          <p style="font-size: 20px; color: white;">Zapamiętaj mnie</p>
+          <label for="remember-me" style="padding-left: 3px; padding-top: 7px;">Zapamiętaj mnie</label>
 				</div>
 				<div class="form-group">
 
@@ -173,7 +184,7 @@
 					Nie masz konta?<a href="register">Zarejestruj się!</a>
 				</div>
 				<div class="d-flex justify-content-center links">
-					<a href="reset-password">Zapomniałeś hasła?</a>
+					<a href="reset-account">Zapomniałeś hasła?</a>
 				</div>
 			</div>
 
