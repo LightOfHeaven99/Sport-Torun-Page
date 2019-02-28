@@ -18,6 +18,18 @@ class Login_model extends CI_Model
     }
   }
 
+  public function check_user_mail($email){
+    $query = $this->db->query("SELECT * FROM users WHERE email='$email'");
+    if($query->num_rows() == 1)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
   public function read_user_information($uid) {
 
     $condition = "uid =" . "'" . $uid . "'";

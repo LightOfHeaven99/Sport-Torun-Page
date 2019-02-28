@@ -8,15 +8,15 @@
       echo form_open('teamsent', $attributes);
     ?>
 
-	  <h1><font color="#3d46c2">Wypełnij ten formularz, aby zgłosić swoją drużynę!</font></h1>
-
+	  <h1><font color="#3d46c2">Wypełnij ten formularz, aby zgłosić swoją drużynę!</font></h1><
+    <br>
       <?php
         //echo $this->session->flashdata('login_info');
         echo validation_errors('<div class="alert alert-danger">', '</div>');
       ?>
       <div class="row">
         <div class="col-md-4">
-          <label for="team-join"><b>Pełna nazwa drużyny:</b></label>
+          <label for="team-join"><b>Pełna nazwa drużyny</b></label>
 
           <?php
             $data = array(
@@ -28,9 +28,10 @@
             );
             echo form_input($data);
           ?>
+          <br>
 
-          <h3>Adres firmy lub zgłaszającego</h3>
-          <label for="street-join"><b>Nazwa ulicy z numerem:</b></label>
+          <h5>Adres firmy/osoby</h5>
+          <label for="street-join"><b>Ulica z numerem</b></label>
 
           <?php
             $data = array(
@@ -43,7 +44,7 @@
             echo form_input($data);
           ?>
 
-          <label for="city-join"><b>Miejscowość:</b></label>
+          <label for="city-join"><b>Miejscowość</b></label>
 
           <?php
             $data = array(
@@ -56,7 +57,7 @@
             echo form_input($data);
           ?>
 
-          <label for="postcode-join"><b>Kod pocztowy:</b></label>
+          <label for="postcode-join"><b>Kod pocztowy</b></label>
 
           <?php
             $data = array(
@@ -69,7 +70,7 @@
             echo form_input($data);
           ?>
 
-          <label for="nip-join"><b>NIP*:</b></label>
+          <label for="nip-join"><b>NIP<font color="#ce5f52">*</font></b></label>
 
           <?php
             $data = array(
@@ -82,7 +83,7 @@
             echo form_input($data);
           ?>
 
-          <label for="name-join"><b>Imię i nazwisko zgłaszającego:</b></label>
+          <label for="name-join"><b>Imię i nazwisko zgłaszającego</b></label>
 
           <?php
             $data = array(
@@ -95,33 +96,7 @@
             echo form_input($data);
           ?>
 
-          <label for="phone-join"><b>Telefon:</b></label>
-
-          <?php
-            $data = array(
-              'type'          => 'textarea',
-              'name'          => 'phone-join',
-              'id'            => 'phone-join',
-              'class'         => 'form-control'
-              //'required'      => 'required'
-            );
-            echo form_input($data);
-          ?>
-
-          <label for="email-join"><b>E-mail:</b></label>
-
-          <?php
-            $data = array(
-              'type'          => 'textarea',
-              'name'          => 'email-join',
-              'id'            => 'email-join',
-              'class'         => 'form-control'
-              //'required'      => 'required'
-            );
-            echo form_input($data);
-          ?>
-
-          <label for="idcard-join"><b>Nr dowodu:</b></label>
+          <label for="idcard-join"><b>Numer dowodu</b></label>
 
           <?php
             $data = array(
@@ -134,12 +109,7 @@
             echo form_input($data);
           ?>
 
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <p><b>Nr PESEL:</b></p>
+          <p><b>PESEL</b></p>
 
           <?php
             $data = array(
@@ -152,16 +122,53 @@
             echo form_input($data);
           ?>
 
-          </div>
+          <label for="phone-join"><b>Telefon</b></label>
+
+          <?php
+            $data = array(
+              'type'          => 'textarea',
+              'name'          => 'phone-join',
+              'id'            => 'phone-join',
+              'class'         => 'form-control'
+              //'required'      => 'required'
+            );
+            echo form_input($data);
+          ?>
+
+          <label for="email-join"><b>E-mail</b></label>
+
+          <?php
+            $data = array(
+              'type'          => 'textarea',
+              'name'          => 'email-join',
+              'id'            => 'email-join',
+              'class'         => 'form-control'
+              //'required'      => 'required'
+            );
+            echo form_input($data);
+          ?>
+
+          <p><font color="#ce5f52">*pole nieobowiązkowe</font></p>
+
         </div>
+      </div>
 
         <br>
           <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>
             <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
             <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p><br>
 
+            <br>
+            <br>
+            <br>
+
+            <p><font size="2.5">Po pozytywnym rozpatrzeniu zgłoszenia otrzymasz mail zwrotny z dalszą instrukcją.</font></p><br>
+            <p><font size="2.5">Przygotuj LOGO drużyny w rozmiarze <b>600</b>x<b>600</b> i formacie <b>PNG</b> (<a href="../assets/downloads/Schemat Logo.png"><font color="#e6b800" size="2.5">przykład</font></a>).</font></p><br>
+            <p><font size="2.5">Pobierz i wypełnij <a href="../assets/downloads/Skład Drużyny.xml"><font color="#e6b800" size="2.5">tabelę z zawodnikami</font></a>, a gotową zapisz do formatu <b>PDF</b>.</font></p><br>
+
+            <?php /*
+
             <p><b>Załączniki:</b></p>
-            <!-- <form class="md-form" action="#"> -->
               <span><font size="2.5">Wymogi: logo drużyny -> PNG (400x400) / skład drużyny -> PDF / potwierdzenie wpłaty -> PDF</font></span><br>
 
               <?php
@@ -201,9 +208,10 @@
                 echo form_input($data);
               ?>
               <div class="file-path-wrapper">
-                <!-- <input class="file-path validate" type="text" placeholder="Upload one or more files"> -->
+
+              */?>
+
               </div>
-            <!-- </form><br> -->
             <br>
 
         <?php

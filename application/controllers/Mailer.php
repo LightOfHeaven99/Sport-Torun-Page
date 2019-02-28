@@ -11,6 +11,7 @@ class Mailer extends CI_Controller
       $this->load->library('form_validation');
       $this->load->helper('email');
       $this->load->library('email');
+      $this->load->model('login_model');
   }
 
   public function sendcontact()
@@ -317,37 +318,44 @@ class Mailer extends CI_Controller
       // TODO: sprawdzawnie, czy istnieje w bazie taki; jak nie - exit
       // takie odzyskanie musi zmieniać równiez konto is_active na 1
 
-      $this->email->clear();
+      if($this->login_model->check_user_mail($emailReset) == true)
+      {
+        $this->email->clear();
 
-      $this->email->from('no-reply@tls-torun.pl', 'Administracja');
-      $this->email->to($emailReset);
+        $this->email->from('no-reply@tls-torun.pl', 'Administracja');
+        $this->email->to($emailReset);
 
-      //$this->email->cc($emailContact);
-      //$this->email->bcc('them@their-example.com');
+        //$this->email->cc($emailContact);
+        //$this->email->bcc('them@their-example.com');
 
-      $code = generateRandomString(10);
-      $date = date("D M d, Y G:i");
+        $code = generateRandomString(10);
+        $date = date("D M d, Y G:i");
 
-      $this->email->subject('Kod odzyskania konta na TLS-Toruń '.$emailReset);
-      $this->email->message(
-      'Drogi użytkowniku,'."\n".'dnia '.$date.' został wygenerowany'
-      ."\n".'dla Ciebie kod do odzyskania konta na stronie www.tls-torun.pl.'.
-      "\n\n".'Powróć na otwarte okno naszej strony albo bezpośrednio pod link'.
-      "\n".'www.tls-torun.pl/enter-reset-code i wprowadź 10-znakowy kod:'.
-      "\n\n".'                 '.$code."\n\n\n".
-      'Po wciśnięciu przycisku [Odblokuj] zostaniesz zalogowany,'.
-      "\n".'a powyższy kod zresetowany. Koniecznie zmień w ustawieniach '.
-      "\n".'swoje hasło, które od teraz z łatwością zapamiętasz!'.
-      "\n\n".'Gorąco pozdrawiamy,'."\n".'Administracja TLS-Toruń');
+        $this->email->subject('Kod odzyskania konta na TLS-Toruń '.$emailReset);
+        $this->email->message(
+        'Drogi użytkowniku,'."\n".'dnia '.$date.' został wygenerowany'
+        ."\n".'dla Ciebie kod do odzyskania konta na stronie www.tls-torun.pl.'.
+        "\n\n".'Powróć na otwarte okno naszej strony albo bezpośrednio pod link'.
+        "\n".'www.tls-torun.pl/enter-reset-code i wprowadź 10-znakowy kod:'.
+        "\n\n".'                 '.$code."\n\n\n".
+        'Po wciśnięciu przycisku [Odblokuj] zostaniesz zalogowany,'.
+        "\n".'a powyższy kod zresetowany. Koniecznie zmień w ustawieniach '.
+        "\n".'swoje hasło, które od teraz z łatwością zapamiętasz!'.
+        "\n\n".'Gorąco pozdrawiamy,'."\n".'Administracja TLS-Toruń');
 
-      if($nameContact && $emailContact && $topicContact && $messageContact){
-        $this->email->send();
+        if($nameContact && $emailContact && $topicContact && $messageContact){
+          $this->email->send();
+        }
+
+        echo $this->email->print_debugger();
+        echo "Kod został wysłany na podaną skrzynke pocztową!";
+
+        redirect('enter-reset-code');
       }
-
-      echo $this->email->print_debugger();
-      echo "Kod został wysłany na podaną skrzynke pocztową!";
-
-      redirect('enter-reset-code');
+      else
+      {
+        redirect('reset-account');
+      }
   }
 
 }
