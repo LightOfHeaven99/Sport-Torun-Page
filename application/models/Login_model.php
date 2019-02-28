@@ -34,7 +34,7 @@ class Login_model extends CI_Model
 
       return $r;  */
 
-      $query = $this->db->query("UPDATE `users` SET
+      $query = $this->db->query("UPDATE 'users' SET
         'first_name' = $first_name,
         'last_name' = $last_name,
         'uid' = $uid,
