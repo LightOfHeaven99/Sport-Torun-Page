@@ -48,6 +48,7 @@ class User extends CI_Controller
         $result = $this->login_model->read_user_information($uid);
         if ($result != false) {
           $session_data = array(
+          'id' => $result[0]->id,
           'first_name' => $result[0]->first_name,
           'last_name' => $result[0]->last_name,
           'uid' => $result[0]->uid,
