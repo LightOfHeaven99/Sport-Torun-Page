@@ -131,7 +131,11 @@ class User extends CI_Controller
       $this->session->userdata('is_active'),
       $this->session->userdata('code')
     );
-    redirect('login');
+
+    $this->load->view('templates/header');
+    $this->load->view('templates/menu');
+    $this->load->view('pages/login');
+    $this->load->view('templates/footer');
   }
 
 
@@ -149,6 +153,10 @@ class User extends CI_Controller
       $this->session->userdata('is_active'),
       $this->session->userdata('code')
     );
-    redirect('login');
+    
+    $this->load->view('templates/header');
+    $this->load->view('templates/menu');
+    $this->load->view('pages/login');
+    $this->load->view('templates/footer');
   }
 }
