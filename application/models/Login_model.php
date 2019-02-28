@@ -30,7 +30,7 @@ class Login_model extends CI_Model
         'code' => $code
       );
 
-      $r = $this->db->where('id', $id)->update('user', $dane);
+      $r = $this->db->where('id', $id)->update('users', $dane);
 
       return $r;
   }
