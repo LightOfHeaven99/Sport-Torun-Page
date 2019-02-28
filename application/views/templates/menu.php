@@ -8,12 +8,14 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
-      <div class="container">
+      <div class="row">
       <ul class="nav ml-left">
         <li class="no-color">
           <a class="nav-link"></a>
+        </li><li class="no-color">
+          <a class="nav-link"></a>
         </li>
-      
+
         <li class="no-color">
           <a class="nav-link"></a>
         </li>
