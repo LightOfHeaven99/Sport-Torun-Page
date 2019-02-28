@@ -73,6 +73,7 @@ $route['multimedia-panel'] = 'pages/admin/multimedia-panel';
 $route['users-panel'] = 'pages/admin/users-panel';
 $route['back'] = 'pages/view/login';
 
+$route['usersdeleted'] = 'pages/admin/admin-panel';
 $route['newsadded'] = 'news/add_news';
 
 $route['(:any)'] = 'pages/view/$1';
