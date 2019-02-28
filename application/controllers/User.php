@@ -38,7 +38,27 @@ class User extends CI_Controller
     {
       if($this->login_model->login_user($uid, $pwd) == true)
       {
-          load_user_variables($uid);
+        $result = $this->login_model->read_user_information($uid);
+        if ($result != false) {
+          $session_data = array(
+          'id' => $result[0]->id,
+          'first_name' => $result[0]->first_name,
+          'last_name' => $result[0]->last_name,
+          'uid' => $result[0]->uid,
+          'pwd' => $result[0]->pwd,
+          'email' => $result[0]->email,
+          'display_login' => $result[0]->display_login,
+          'is_admin' => $result[0]->is_admin,
+          'is_active' => $result[0]->is_active,
+          'code' => $result[0]->code,
+          'logged_in' => TRUE
+          );
+          // Dodanie informacji o użytkowniku do sesji
+          $this->session->set_userdata($session_data);
+        }
+        else {
+          // blad przy czytaniu z bazy danych
+        }
 
           $this->login();
       }
@@ -89,31 +109,6 @@ class User extends CI_Controller
     redirect('login');
   }
 
-  public function load_user_variables($uid)
-  {
-    $result = $this->login_model->read_user_information($uid);
-    if ($result != false) {
-      $session_data = array(
-      'id' => $result[0]->id,
-      'first_name' => $result[0]->first_name,
-      'last_name' => $result[0]->last_name,
-      'uid' => $result[0]->uid,
-      'pwd' => $result[0]->pwd,
-      'email' => $result[0]->email,
-      'display_login' => $result[0]->display_login,
-      'is_admin' => $result[0]->is_admin,
-      'is_active' => $result[0]->is_active,
-      'code' => $result[0]->code,
-      'logged_in' => TRUE
-      );
-      // Dodanie informacji o użytkowniku do sesji
-      $this->session->set_userdata($session_data);
-    }
-    else {
-      // blad przy czytaniu z bazy danych
-    }
-  }
-
 
   public function change_display_to_login()
   {
@@ -130,8 +125,8 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-    load_user_variables($this->session->userdata('uid'));
-    redirect('login');
+
+    redirect('login_post');
   }
 
 
@@ -150,7 +145,7 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-    load_user_variables($this->session->userdata('uid'));
-    redirect('login');
+
+    redirect('login_post');
   }
 }
