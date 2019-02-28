@@ -41,11 +41,7 @@ class User extends CI_Controller
           load_user_variables($uid);
 
           $this->login();
-        }
-        else {
-          // Błąd przy czytaniu informacji z bazy danych
-        }
-
+      }
       else {
         $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
         //$this->session->flashdata('login_info');
