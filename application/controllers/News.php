@@ -8,7 +8,16 @@ class News extends CI_Controller
       $this->load->helper('form');
       $this->load->library('form_validation');
       $this->load->model('news_model');
+
+      $this->data['posts'] = $this->news_model->get_posts();
   }
+
+
+  public function index()
+  {
+
+  }
+
 
   public function add_news()
   {
