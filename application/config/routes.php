@@ -58,6 +58,9 @@ $route['logged'] = 'user/login_post';
 $route['register'] = 'user/register';
 $route['logout'] = 'user/logout';
 
+$route['nametologin'] = 'user/change_display_to_login';
+$route['logintoname'] = 'user/change_display_to_name';
+
 $route['mailsent'] = 'mailer/sendcontact';
 $route['teamsent'] = 'mailer/sendteam';
 

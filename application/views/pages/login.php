@@ -33,9 +33,9 @@
   			</div>
   			<div class="card-body">
           <?php if($this->session->userdata('display_login') == 0) : ?>
-            <a href="#" style="color: #364FD2;">Zmień wyświetlanie na login</a></br> <!-- display_login 0->1 -->
+            <a href="nametologin" style="color: #364FD2;">Zmień wyświetlanie na login</a></br> <!-- display_login 0->1 -->
           <?php else : ?>
-            <a href="#" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
+            <a href="logintoname" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
           <?php endif; ?>
           <a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br> <!-- podobne do panelu rejestracji -->
   				<a href="#" style="color: #364FD2;">Usuń konto</a>  <!-- ostrzeżenie do akceptacji, usunięcie rekordu z tabeli i LOGOUT -->

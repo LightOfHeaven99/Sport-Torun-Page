@@ -73,6 +73,7 @@ class User extends CI_Controller
     }
   }
 
+
   public function register()
   {
     if($this->session->login == 'true'){
@@ -102,11 +103,48 @@ class User extends CI_Controller
     }
   }
 
+
   public function logout()
   {
     $this->session->unset_userdata($session_data);
     $this->session->sess_destroy();
 
+    redirect('login');
+  }
+
+
+  public function change_display_to_login()
+  {
+    $this->login_model->update_user(
+      $this->session->userdata('id'),
+      $this->session->userdata('first_name'),
+      $this->session->userdata('last_name'),
+      $this->session->userdata('uid'),
+      $this->session->userdata('pwd'),
+      $this->session->userdata('email'),
+      1,
+      $this->session->userdata('is_admin'),
+      $this->session->userdata('is_active'),
+      $this->session->userdata('code')
+    );
+    redirect('login');
+  }
+
+
+  public function change_display_to_name()
+  {
+    $this->login_model->update_user(
+      $this->session->userdata('id'),
+      $this->session->userdata('first_name'),
+      $this->session->userdata('last_name'),
+      $this->session->userdata('uid'),
+      $this->session->userdata('pwd'),
+      $this->session->userdata('email'),
+      0,
+      $this->session->userdata('is_admin'),
+      $this->session->userdata('is_active'),
+      $this->session->userdata('code')
+    );
     redirect('login');
   }
 }

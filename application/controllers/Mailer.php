@@ -315,18 +315,12 @@ class Mailer extends CI_Controller
 
       $this->form_validation->set_rules('reset-code', 'E-mail', 'required|valid_email');
 
-      // TODO: sprawdzawnie, czy istnieje w bazie taki; jak nie - exit
-      // takie odzyskanie musi zmieniać równiez konto is_active na 1
-
       if($this->login_model->check_user_mail($emailReset) == true)
       {
         $this->email->clear();
 
         $this->email->from('no-reply@tls-torun.pl', 'Administracja');
         $this->email->to($emailReset);
-
-        //$this->email->cc($emailContact);
-        //$this->email->bcc('them@their-example.com');
 
         $code = generateRandomString(10);
         $date = date("D M d, Y G:i");

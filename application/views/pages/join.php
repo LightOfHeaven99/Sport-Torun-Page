@@ -8,7 +8,7 @@
       echo form_open('teamsent', $attributes);
     ?>
 
-	  <h1><font color="#3d46c2">Wypełnij ten formularz, aby zgłosić swoją drużynę!</font></h1><
+	  <h1><font color="#3d46c2">Wypełnij ten formularz, aby zgłosić swoją drużynę!</font></h1>
     <br>
       <?php
         //echo $this->session->flashdata('login_info');
@@ -28,60 +28,8 @@
             );
             echo form_input($data);
           ?>
+
           <br>
-
-          <h5>Adres firmy/osoby</h5>
-          <label for="street-join"><b>Ulica z numerem</b></label>
-
-          <?php
-            $data = array(
-              'type'          => 'textarea',
-              'name'          => 'street-join',
-              'id'            => 'street-join',
-              'class'         => 'form-control'
-              //'required'      => 'required'
-            );
-            echo form_input($data);
-          ?>
-
-          <label for="city-join"><b>Miejscowość</b></label>
-
-          <?php
-            $data = array(
-              'type'          => 'textarea',
-              'name'          => 'city-join',
-              'id'            => 'city-join',
-              'class'         => 'form-control'
-              //'required'      => 'required'
-            );
-            echo form_input($data);
-          ?>
-
-          <label for="postcode-join"><b>Kod pocztowy</b></label>
-
-          <?php
-            $data = array(
-              'type'          => 'textarea',
-              'name'          => 'postcode-join',
-              'id'            => 'postcode-join',
-              'class'         => 'form-control'
-              //'required'      => 'required'
-            );
-            echo form_input($data);
-          ?>
-
-          <label for="nip-join"><b>NIP<font color="#ce5f52">*</font></b></label>
-
-          <?php
-            $data = array(
-              'type'          => 'textarea',
-              'name'          => 'nip-join',
-              'id'            => 'nip-join',
-              'class'         => 'form-control'
-              //'required'      => 'required'
-            );
-            echo form_input($data);
-          ?>
 
           <label for="name-join"><b>Imię i nazwisko zgłaszającego</b></label>
 
@@ -148,6 +96,60 @@
             echo form_input($data);
           ?>
 
+          <br>
+
+          <h5>Adres firmy/osoby</h5>
+          <label for="street-join"><b>Ulica z numerem</b></label>
+
+          <?php
+            $data = array(
+              'type'          => 'textarea',
+              'name'          => 'street-join',
+              'id'            => 'street-join',
+              'class'         => 'form-control'
+              //'required'      => 'required'
+            );
+            echo form_input($data);
+          ?>
+
+          <label for="city-join"><b>Miejscowość</b></label>
+
+          <?php
+            $data = array(
+              'type'          => 'textarea',
+              'name'          => 'city-join',
+              'id'            => 'city-join',
+              'class'         => 'form-control'
+              //'required'      => 'required'
+            );
+            echo form_input($data);
+          ?>
+
+          <label for="postcode-join"><b>Kod pocztowy</b></label>
+
+          <?php
+            $data = array(
+              'type'          => 'textarea',
+              'name'          => 'postcode-join',
+              'id'            => 'postcode-join',
+              'class'         => 'form-control'
+              //'required'      => 'required'
+            );
+            echo form_input($data);
+          ?>
+
+          <label for="nip-join"><b>NIP<font color="#ce5f52">*</font></b></label>
+
+          <?php
+            $data = array(
+              'type'          => 'textarea',
+              'name'          => 'nip-join',
+              'id'            => 'nip-join',
+              'class'         => 'form-control'
+              //'required'      => 'required'
+            );
+            echo form_input($data);
+          ?>
           <p><font color="#ce5f52">*pole nieobowiązkowe</font></p>
 
         </div>
@@ -160,11 +162,10 @@
 
             <br>
             <br>
-            <br>
 
-            <p><font size="2.5">Po pozytywnym rozpatrzeniu zgłoszenia otrzymasz mail zwrotny z dalszą instrukcją.</font></p><br>
-            <p><font size="2.5">Przygotuj LOGO drużyny w rozmiarze <b>600</b>x<b>600</b> i formacie <b>PNG</b> (<a href="../assets/downloads/Schemat Logo.png"><font color="#e6b800" size="2.5">przykład</font></a>).</font></p><br>
-            <p><font size="2.5">Pobierz i wypełnij <a href="../assets/downloads/Skład Drużyny.xml"><font color="#e6b800" size="2.5">tabelę z zawodnikami</font></a>, a gotową zapisz do formatu <b>PDF</b>.</font></p><br>
+            <p><font size="2.5">Po pozytywnym rozpatrzeniu zgłoszenia otrzymasz mail zwrotny z dalszą instrukcją.</font></p>
+            <p><font size="2.5">Przygotuj LOGO drużyny w rozmiarze <b>600</b>x<b>600</b> i formacie <b>PNG</b> (<a href="../assets/downloads/Schemat Logo.png"><font color="#e6b800" size="2.5">przykład</font></a>).</font></p>
+            <p><font size="2.5">Pobierz i wypełnij <a href="../assets/downloads/Skład Drużyny.xml"><font color="#e6b800" size="2.5">tabelę z zawodnikami</font></a>, a gotową zapisz do formatu <b>PDF</b>.</font></p>
 
             <?php /*
 
@@ -211,7 +212,6 @@
 
               */?>
 
-              </div>
             <br>
 
         <?php
