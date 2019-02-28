@@ -126,7 +126,7 @@ class User extends CI_Controller
     );
 
 
-    redirect('login_post');
+    redirect('logged');
   }
 
 
@@ -146,6 +146,6 @@ class User extends CI_Controller
     );
 
 
-    redirect('login_post');
+    redirect('logged');
   }
 }
