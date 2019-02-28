@@ -125,8 +125,25 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-
-    redirect('logged');
+    $result = $this->login_model->read_user_information($this->session->userdata('uid'));
+    if ($result != false) {
+      $session_data = array(
+      'id' => $result[0]->id,
+      'first_name' => $result[0]->first_name,
+      'last_name' => $result[0]->last_name,
+      'uid' => $result[0]->uid,
+      'pwd' => $result[0]->pwd,
+      'email' => $result[0]->email,
+      'display_login' => $result[0]->display_login,
+      'is_admin' => $result[0]->is_admin,
+      'is_active' => $result[0]->is_active,
+      'code' => $result[0]->code,
+      'logged_in' => TRUE
+      );
+      // Dodanie informacji o użytkowniku do sesji
+      $this->session->set_userdata($session_data);
+    }
+    redirect('login');
   }
 
 
@@ -145,7 +162,24 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-
-    redirect('logged');
+    $result = $this->login_model->read_user_information($this->session->userdata('uid'));
+    if ($result != false) {
+      $session_data = array(
+      'id' => $result[0]->id,
+      'first_name' => $result[0]->first_name,
+      'last_name' => $result[0]->last_name,
+      'uid' => $result[0]->uid,
+      'pwd' => $result[0]->pwd,
+      'email' => $result[0]->email,
+      'display_login' => $result[0]->display_login,
+      'is_admin' => $result[0]->is_admin,
+      'is_active' => $result[0]->is_active,
+      'code' => $result[0]->code,
+      'logged_in' => TRUE
+      );
+      // Dodanie informacji o użytkowniku do sesji
+      $this->session->set_userdata($session_data);
+    }
+    redirect('login');
   }
 }
