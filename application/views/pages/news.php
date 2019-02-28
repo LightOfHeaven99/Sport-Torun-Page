@@ -8,11 +8,13 @@
       <div class="space20"></div>
 
 
-      <?php foreach($posts as $post){?>
+      <?php foreach($this->data['posts'] as $post){?>
         <div class="row">
           <div class="col-md-7">
             <a href="#">
-              <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+              <!-- <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""> -->
+              <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
+              <?php echo $post->image;?>
             </a>
           </div>
           <div class="col-md-5">

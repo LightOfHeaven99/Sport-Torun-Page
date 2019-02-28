@@ -3,7 +3,7 @@
 class News_model extends CI_Model
 {
 
-  function getPosts()
+  function get_posts()
   {
      $this->db->select("id, title, content, image, postdate, voting, commenting");
      $this->db->from('news');

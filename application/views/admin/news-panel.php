@@ -54,15 +54,21 @@
           <div class="col-md-6">
             <p><b>Zdjęcie</b></p>
 
-            <?php
+            <?php /*
               $data = array(
                 'type'          => 'file',
                 'name'          => 'image-news',
                 'id'            => 'image-news'
                 //'required'      => 'required'
               );
-              echo form_input($data);
+              echo form_input($data); */
             ?>
+
+            <?php echo form_open_multipart('fileuploaded');?>
+              <input type="file" name="image-news" id="image-news" size="20" />
+              <br /><br />
+              <input type="submit" value="załaduj" />
+            </form>
 
             </div>
           </div>
