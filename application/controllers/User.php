@@ -116,6 +116,8 @@ class User extends CI_Controller
     redirect('login');
   }
 
+  public function load_user_variables($uid)
+
 
   public function change_display_to_login()
   {
@@ -132,10 +134,9 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-    $this->load->view('templates/header');
-    $this->load->view('templates/menu');
-    $this->load->view('pages/login');
-    $this->load->view('templates/footer');
+    $this->session->set_userdata($session_data);
+
+    redirect('login');
   }
 
 
@@ -153,10 +154,9 @@ class User extends CI_Controller
       $this->session->userdata('is_active'),
       $this->session->userdata('code')
     );
-    
-    $this->load->view('templates/header');
-    $this->load->view('templates/menu');
-    $this->load->view('pages/login');
-    $this->load->view('templates/footer');
+
+    $this->session->set_userdata($session_data);
+
+    redirect('login');
   }
 }
