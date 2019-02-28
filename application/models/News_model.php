@@ -2,11 +2,24 @@
 
 class News_model extends CI_Model
 {
-  public function insert_user($title, $content, $image, $postdate){
-    $query = $this->db->query("INSERT INTO news (title, content, image, postdate) VALUES ('$title', '$content', '$image', '$postdate')");
+
+  function getPosts()
+  {
+     $this->db->select("id, title, content, image, postdate, voting, commenting");
+     $this->db->from('news');
+     $query = $this->db->get();
+     return $query->result();
   }
 
-  public function update_user(
+
+  public function insert_news($title, $content, $image, $postdate)
+  {
+    $query = $this->db->query("INSERT
+                              INTO news (title, content, image, postdate)
+                              VALUES ('$title', '$content', '$image', '$postdate')");
+  }
+
+  public function update_news(
     $id,
     $title,
     $content,

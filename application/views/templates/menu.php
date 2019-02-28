@@ -65,7 +65,11 @@
           <a class="nav-link" href="join">Zgłoszenia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login">Zaloguj się!</a>
+          <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+            <a class="nav-link" href="login">Profil</a>
+          <?php else : ?>
+            <a class="nav-link" href="login">Zaloguj się!</a>
+          <?php endif; ?>
         </li>
       </ul>
     </div>
