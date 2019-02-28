@@ -1,6 +1,7 @@
 <!-- Navigation -->
 <div class="header-up-nav">
-  <h1><b>Toruńska Liga Siatkówki</b></h1>
+  <img src="../assets/img/navbar-logo.png" style="display: block; margin-left: auto; margin-right: auto;" alt="">
+  <!-- <h1><b>Toruńska Liga Siatkówki</b></h1> -->
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark static-top" style="background-color:#002266">
   <div class="container">
