@@ -5,6 +5,10 @@
   <h1><b>Toruńska Liga Siatkówki</b></h1>
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#002266">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarResponsive">
   <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
       <ul class="nav ml-auto text-center">
         <li class="nav-item">
