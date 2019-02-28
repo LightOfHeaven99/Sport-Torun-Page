@@ -6,7 +6,7 @@
   background-image: url('../assets/img/navbar-logo.png');
   padding: 25px;
   text-align: center;
-  background:  #e6b800;
+  background:  #ffd200;
   color: white;
   font-size: 30px;
 }
@@ -77,7 +77,7 @@
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a:hover {background-color: #e6b800}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
@@ -86,7 +86,13 @@
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
-  background-color: inherit;
+  background-color: #e6b800 ;
+  color: white;
+  padding: auto;
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+  border: none;
 }
 
 

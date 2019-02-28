@@ -8,7 +8,7 @@ class Pages extends CI_Controller {
   }
 
   // GŁÓWNE PODSTRONY
-  public function view($page = 'main')
+  public function view($page = 'start')
   {
     if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
     {
