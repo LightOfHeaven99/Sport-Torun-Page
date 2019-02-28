@@ -108,6 +108,10 @@ class User extends CI_Controller
       );
       // Dodanie informacji o użytkowniku do sesji
       $this->session->set_userdata($session_data);
+    }
+    else {
+      // blad przy czytaniu z bazy danych
+    }
   }
 
 
