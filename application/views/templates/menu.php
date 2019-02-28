@@ -8,14 +8,13 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
+      <div class="container">
       <ul class="nav ml-left">
-        <li class="nav-item">
+        <li class="no-color">
           <a class="nav-link"></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" ></a>
-        </li>
-        <li class="nav-item">
+      
+        <li class="no-color">
           <a class="nav-link"></a>
         </li>
         <li class="nav-item">
@@ -60,12 +59,13 @@
 </div>
 </div>
         <li class="nav-item">
-          <a class="nav-link" href="join">Zgłoś się!</a>
+          <a class="nav-link" href="join">Zgłoszenia</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="login">Zaloguj</a>
+          <a class="nav-link" href="login">Zaloguj się!</a>
         </li>
       </ul>
+    </div>
     </div>
   </div>
 </nav>
