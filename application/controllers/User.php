@@ -130,7 +130,7 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-    load_user_variables($uid);
+    load_user_variables($this->session->userdata('uid'));
     redirect('login');
   }
 
@@ -150,7 +150,7 @@ class User extends CI_Controller
       $this->session->userdata('code')
     );
 
-    load_user_variables($uid);
+    load_user_variables($this->session->userdata('uid'));
     redirect('login');
   }
 }
