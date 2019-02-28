@@ -17,7 +17,7 @@
           'type'          => 'submit',
           'name'          => 'delete-noactive',
           'id'            => 'delete-noactive',
-          'class'         => 'btn float-right signup_btn',
+          'class'         => 'btn float-left delete_users_btn',
           'value'         => 'Usuń nieaktywnych'
         );
         echo form_submit($data);
@@ -25,6 +25,12 @@
     </div>
     <?php echo form_close(); ?>
 
-    <div style="height: 600px;"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <input type="button" onclick="https://poczta.zenbox.pl/?_task=mail&_mbox=INBOX" class="btn float-left delete_users_btn">Poczta Zenbox</input>
+
+    <div style="height: 100px;"></div>
   </div>
 </div>

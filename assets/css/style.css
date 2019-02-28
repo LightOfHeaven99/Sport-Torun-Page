@@ -238,6 +238,17 @@ color: black;
 background-color: white;
 }
 
+.delete_users_btn{
+color: black;
+background-color: #DD4E4E;
+width: 180px;
+}
+
+.delete_users_btn:hover{
+color: black;
+background-color: white;
+}
+
 .links{
 color: white;
 }
