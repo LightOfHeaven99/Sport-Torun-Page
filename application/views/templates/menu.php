@@ -13,9 +13,9 @@
       <ul class="nav ml-left">
         <li class="no-color">
           <a class="nav-link"></a>
-        </li><li class="no-color">
+          </li><li class="no-color">
           <a class="nav-link"></a>
-        </li>
+          </li>
 
         <li class="no-color">
           <a class="nav-link"></a>
