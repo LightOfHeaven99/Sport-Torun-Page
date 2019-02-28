@@ -58,8 +58,7 @@
               $data = array(
                 'type'          => 'file',
                 'name'          => 'image-news',
-                'id'            => 'image-news',
-                'class'         => 'form-control'
+                'id'            => 'image-news'
                 //'required'      => 'required'
               );
               echo form_input($data);
@@ -67,6 +66,15 @@
 
             </div>
           </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <p>lub wybierz z <b>domyślnych</b></p>
+
+              <input type="checkbox"><input type="checkbox"><input type="checkbox">
+
+              </div>
+            </div>
 
           <div class="row align-items-center remember">
 
@@ -103,8 +111,8 @@
                 'type'          => 'submit',
                 'name'          => 'news-add',
                 'id'            => 'news-add',
-                'class'         => 'btn float-right signup_btn',
-                'value'         => 'Dodaj'
+                'class'         => 'btn float-left delete_users_btn',
+                'value'         => 'Dodaj post'
               );
               echo form_submit($data);
             ?>
@@ -113,6 +121,5 @@
 
     <?php echo form_close(); ?>
 
-    <div style="height: 300px;"></div>
   </div>
 </div>

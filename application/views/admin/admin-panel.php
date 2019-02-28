@@ -29,7 +29,7 @@
     <br>
     <br>
     <br>
-    <input type="button" onclick="https://poczta.zenbox.pl/?_task=mail&_mbox=INBOX" class="btn float-left delete_users_btn">Poczta Zenbox</input>
+    <input type="button" onclick="https://poczta.zenbox.pl/?_task=mail&_mbox=INBOX" class="btn float-left delete_users_btn" value="Poczta Zenbox"></input>
 
     <div style="height: 100px;"></div>
   </div>
