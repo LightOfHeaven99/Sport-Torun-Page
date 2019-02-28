@@ -116,7 +116,7 @@ class User extends CI_Controller
     redirect('login');
   }
 
-  public function load_user_variables($uid)
+  //public function load_user_variables($uid)
 
 
   public function change_display_to_login()
