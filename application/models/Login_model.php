@@ -35,16 +35,16 @@ class Login_model extends CI_Model
       return $r;  */
 
       $query = $this->db->query("UPDATE users SET
-        first_name = $first_name,
-        last_name = $last_name,
-        uid = $uid,
-        pwd = $pwd,
-        email = $email,
-        display_login = $display_login,
-        is_admin = $is_admin,
-        is_active = $is_active,
-        code = $code
-        WHERE id = $id");
+        first_name = '$first_name',
+        last_name = '$last_name',
+        uid = '$uid',
+        pwd = '$pwd',
+        email = '$email',
+        display_login = '$display_login',
+        is_admin = '$is_admin',
+        is_active = '$is_active',
+        code = '$code'
+        WHERE id = '$id'");
 
       return $query;
   }
