@@ -40,7 +40,7 @@ class Login_model extends CI_Model
         'uid' = $uid,
         'pwd' = $pwd,
         'email' = $email,
-        'display_login' = $displayLogin,
+        'display_login' = $display_login,
         'is_admin' = $is_admin,
         'is_active' = $is_active,
         'code' = $code
