@@ -44,7 +44,7 @@ class Login_model extends CI_Model
         'is_admin' = $is_admin,
         'is_active' = $is_active,
         'code' = $code
-        WHERE `users`.`id` = $id");
+        WHERE 'id' = $id");
 
       return $query;
   }
