@@ -30,7 +30,7 @@ class News extends CI_Controller
     {
       $title = $this->input->post('title-news');
       $content = $this->input->post('content-news');
-      $image = $this->upload->data('image-news');
+      $image = $this->input->post('image-news');
       $voting = isset($_POST['voting-news']) ? 0 : 1;
       $commenting = isset($_POST['commenting-news']) ? 0 : 1;
 
