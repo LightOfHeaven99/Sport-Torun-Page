@@ -66,21 +66,16 @@
 
             <?php echo form_open_multipart('fileuploaded');?>
               <input type="file" name="image-news" id="image-news" size="20" />
-              <br /><br />
-              <input type="submit" value="załaduj" />
+              <br />
+                <p>lub wybierz z <b>domyślnych</b></p>
+                <input type="checkbox"><input type="checkbox"><input type="checkbox">
+              <br />
+              <input type="submit" value="Załaduj plik" />
             </form>
 
             </div>
           </div>
 
-          <div class="row">
-            <div class="col-md-6">
-              <p>lub wybierz z <b>domyślnych</b></p>
-
-              <input type="checkbox"><input type="checkbox"><input type="checkbox">
-
-              </div>
-            </div>
 
           <div class="row align-items-center remember">
 
@@ -126,6 +121,8 @@
           </div>
 
     <?php echo form_close(); ?>
+
+    <div class="space200"></div>
 
   </div>
 </div>
