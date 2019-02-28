@@ -2,8 +2,8 @@
 
 class Login_model extends CI_Model
 {
-  public function insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin){
-    $query = $this->db->query("INSERT INTO users (first_name, last_name, uid, pwd, email, display_login) VALUES ('$firstName', '$lastName', '$uid', md5('$pwd'), '$email', '$displayLogin')");
+  public function insert_user($first_name, $last_name, $uid, $pwd, $email, $display_login){
+    $query = $this->db->query("INSERT INTO users (first_name, last_name, uid, pwd, email, display_login) VALUES ('$first_name', '$last_name', '$uid', md5('$pwd'), '$email', '$display_login')");
   }
 
   public function update_user(
@@ -18,7 +18,7 @@ class Login_model extends CI_Model
     $is_active,
     $code
   ) {
-      $dane = array(
+      /*$dane = array(
         'first_name' => $first_name,
         'last_name' => $last_name,
         'uid' => $uid,
@@ -32,7 +32,21 @@ class Login_model extends CI_Model
 
       $r = $this->db->where('id', $id)->update('users', $dane);
 
-      return $r;
+      return $r;  */
+
+      $query = $this->db->query("UPDATE `users` SET
+        'first_name' = $first_name,
+        'last_name' = $last_name,
+        'uid' = $uid,
+        'pwd' = $pwd,
+        'email' = $email,
+        'display_login' = $displayLogin,
+        'is_admin' = $is_admin,
+        'is_active' = $is_active,
+        'code' = $code
+        WHERE `users`.`id` = $id");
+
+      return $query;
   }
 
   public function login_user($uid, $pwd){
