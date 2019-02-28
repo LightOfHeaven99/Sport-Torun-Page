@@ -14,6 +14,7 @@
   font-size: 40px;
 }
 
+
 /* Change color on hover */
 .navbar a:hover {
   background-color: #e6b800 ;
@@ -67,6 +68,16 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+Source
 
 /* Links inside the dropdown */
 .dropdown-content a {
