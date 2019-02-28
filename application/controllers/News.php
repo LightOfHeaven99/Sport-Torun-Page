@@ -12,9 +12,8 @@ class News extends CI_Controller
 
   public function add_news()
   {
-    $this->form_validation->set_rules('first-name', 'Imię', 'required');
-    $this->form_validation->set_rules('last-name', 'Nazwisko', 'required');
-
+    $this->form_validation->set_rules('title-news', 'Tytuł', 'required');
+    $this->form_validation->set_rules('content-news', 'Treść', 'required');
 
     if ($this->form_validation->run() == FALSE)
     {
@@ -28,9 +27,8 @@ class News extends CI_Controller
       $voting = isset($_POST['voting-news']) ? 0 : 1;
       $commenting = isset($_POST['commenting-news']) ? 0 : 1;
 
-      $this->login_model->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
-      $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
-      redirect('login');
+      $this->news_model->insert_news($title, $content, $image, $voting, $commenting);
+      redirect('news');
     }
   }
 }

@@ -78,7 +78,7 @@
               );
               echo form_input($data);
             ?>
-            <label for="display-login" style="padding-left: 3px; padding-top: 7px;">Wyłącz ocenianie tego postu</label>
+            <label for="display-login" style="padding-left: 3px; padding-top: 7px; color: black;">Wyłącz ocenianie tego postu</label>
 
           </div>
 
@@ -92,7 +92,7 @@
               );
               echo form_input($data);
             ?>
-            <label for="display-login" style="padding-left: 3px; padding-top: 7px;">Wyłącz komentowanie tego postu</label>
+            <label for="display-login" style="padding-left: 3px; padding-top: 7px; color: black;">Wyłącz komentowanie tego postu</label>
 
           </div>
 
