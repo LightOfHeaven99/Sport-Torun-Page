@@ -5,10 +5,6 @@
 .header-up-nav {
   background-image: url('../assets/img/navbar-logo.png');
   background:  #ffd200;
-  padding: 25px;
-  /* text-align: center;
-  color: white;
-  font-size: 30px; */
 }
 .header-up-nav h1 {
   font-size: 40px;
