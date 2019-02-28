@@ -9,7 +9,6 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarResponsive">
-  <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
       <ul class="nav ml-auto text-center">
         <li class="nav-item">
           <a class="nav-link" href="start">Start</a>
@@ -29,10 +28,6 @@
         <li class="nav-item">
           <a class="nav-link" href="statistics">Statystyki</a>
         </li>
-      </ul>
-    </div>
-        <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
-            <ul class="nav mr-auto text-center">
         <li class="nav-item">
           <a class="nav-link" href="gallery">Galeria</a>
         </li>
