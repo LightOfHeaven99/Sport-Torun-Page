@@ -6,7 +6,7 @@
 
     <?php
       $attributes = array('class' => 'form-signin');
-      echo form_open('newsadded', $attributes);
+      echo form_open_multipart('newsadded', $attributes);
     ?>
 
     <?php

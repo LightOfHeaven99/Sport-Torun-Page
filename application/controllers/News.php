@@ -30,22 +30,30 @@ class News extends CI_Controller
     {
       $title = $this->input->post('title-news');
       $content = $this->input->post('content-news');
-      //$image = $this->input->post('image-news');
+      $image = $this->input->post('image-news');
       $voting = isset($_POST['voting-news']) ? 0 : 1;
       $commenting = isset($_POST['commenting-news']) ? 0 : 1;
 
 
-                // $file_name = $_FILES['image-news']['name'];
-                // $file_type = $_FILES['image-news']['type'];
-                // $file_tmp_name = $_FILES['image-news']['tmp_name'];
-                // $file_size = $_FILES['image-news']['size'];
+                  // $file_name = $_FILES['image-news']['name'];
+                  // $file_type = $_FILES['image-news']['type'];
+                  // $file_tmp_name = $_FILES['image-news']['tmp_name'];
+                  // $file_size = $_FILES['image-news']['size'];
+
+      $config['upload_path'] = '../../assets/uploads/';
+      $config['allowed_types'] = 'gif|jpg|png';
+      $this->load->library('upload', $config);
+      $this->upload->do_upload();
+      $data = $this->upload->data();
 
 
-        //Get the content of the image and then add slashes to it
-        $image = addslashes(file_get_contents($_FILES['image-news']['tmp_name'])); //SQL Injection defence!
-        $image_name = addslashes($_FILES['image-news']['name']);
+          $image = addslashes(file_get_contents($_FILES['image-news']['tmp_name'])); //SQL Injection defence!
+          $image_name = addslashes($_FILES['image-news']['name']);
 
-        $this->news_model->insert_news($title,
+
+
+
+          $this->news_model->insert_news($title,
                                         $content,
                                         $image,
                                         $voting,
