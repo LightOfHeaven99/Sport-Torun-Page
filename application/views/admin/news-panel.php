@@ -96,8 +96,8 @@
             <?php
               $data = array(
                 'type'          => 'checkbox',
-                'name'          => 'commenting-voting',
-                'id'            => 'commenting-voting'
+                'name'          => 'commenting-news',
+                'id'            => 'commenting-news'
               );
               echo form_input($data);
             ?>

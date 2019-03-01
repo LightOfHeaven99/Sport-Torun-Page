@@ -40,14 +40,14 @@ class News extends CI_Controller
                 // $file_tmp_name = $_FILES['image-news']['tmp_name'];
                 // $file_size = $_FILES['image-news']['size'];
 
-        $imagename = $_FILES["myimage"]["name"];
 
         //Get the content of the image and then add slashes to it
-        $imagetmp = addslashes(file_get_contents($_FILES['myimage']['tmp_name']));
+        $image = addslashes(file_get_contents($_FILES['image-news']['tmp_name'])); //SQL Injection defence!
+        $image_name = addslashes($_FILES['image-news']['name']);
 
         $this->news_model->insert_news($title,
                                         $content,
-                                        $imagetmp,
+                                        $image,
                                         $voting,
                                         $commenting);
                 // // target directory
