@@ -64,14 +64,14 @@
               echo form_input($data); */
             ?>
 
-            <?php echo form_open_multipart('fileuploaded');?>
+            <?php // echo form_open_multipart('fileuploaded');?>
               <input type="file" name="image-news" id="image-news" size="20" />
               <br />
                 <p>lub wybierz z <b>domyślnych</b></p>
                 <input type="checkbox"><input type="checkbox"><input type="checkbox">
               <br />
-              <input type="submit" value="Załaduj plik" />
-            </form>
+              <!-- <input type="submit" value="Załaduj plik" /> -->
+            <!-- </form> -->
 
             </div>
           </div>
