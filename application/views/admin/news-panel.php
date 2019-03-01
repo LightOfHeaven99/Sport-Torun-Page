@@ -70,7 +70,7 @@
                 <p>lub wybierz z <b>domyślnych</b></p>
                 <input type="checkbox"><input type="checkbox"><input type="checkbox">
               <br />
-              <!-- <input type="submit" value="Załaduj plik" /> -->
+              <input type="submit" value="Załaduj plik" />
             </form>
 
             </div>
