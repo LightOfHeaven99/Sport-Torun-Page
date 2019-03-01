@@ -18,8 +18,8 @@
             </a>
           </div>
           <div class="col-md-5">
-            <h3><?php echo // $post->title;?></h3>
-            <p><?php echo // $post->content;?></p>
+            <h3><?php //echo  $post->title;?></h3>
+            <p><?php //echo  $post->content;?></p>
             <a class="btn btn-primary" href="#">View Project</a>
           </div>
         </div>
