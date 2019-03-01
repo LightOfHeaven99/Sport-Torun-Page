@@ -71,7 +71,7 @@
                 <input type="checkbox"><input type="checkbox"><input type="checkbox">
               <br />
               <!-- <input type="submit" value="Załaduj plik" /> -->
-            </form>
+            <!-- </form> -->
 
             </div>
           </div>
