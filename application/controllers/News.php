@@ -37,28 +37,37 @@ class News extends CI_Controller
       // check for uploaded file
       if(isset($_FILES['image-news']))
       {
-        // file name, type, size, temporary name
-        $file_name = $_FILES['image-news']['name'];
-        $file_type = $_FILES['image-news']['type'];
-        $file_tmp_name = $_FILES['image-news']['tmp_name'];
-        $file_size = $_FILES['image-news']['size'];
+                // $file_name = $_FILES['image-news']['name'];
+                // $file_type = $_FILES['image-news']['type'];
+                // $file_tmp_name = $_FILES['image-news']['tmp_name'];
+                // $file_size = $_FILES['image-news']['size'];
 
-        // target directory
-        $target_dir = "../../assets/uploads/";
+        $imagename = $_FILES["myimage"]["name"];
 
-        // uploding file
-        if(move_uploaded_file($file_tmp_name,$target_dir.$file_name))
-        {
-          $this->news_model->insert_news($title,
-                                          $content,
-                                          "'.$target_dir.$file_name.'",
-                                          $voting,
-                                          $commenting);
-        }
-        else
-        {
-          echo "File can not be uploaded";
-        }
+        //Get the content of the image and then add slashes to it
+        $imagetmp = addslashes(file_get_contents($_FILES['myimage']['tmp_name']));
+
+        $this->news_model->insert_news($title,
+                                        $content,
+                                        $imagetmp,
+                                        $voting,
+                                        $commenting);
+                // // target directory
+                // $target_dir = "../../assets/uploads/";
+
+                // // uploding file
+                // if(move_uploaded_file($file_tmp_name,$target_dir.$file_name))
+                // {
+                //   $this->news_model->insert_news($title,
+                //                                   $content,
+                //                                   "'.$target_dir.$file_name.'",
+                //                                   $voting,
+                //                                   $commenting);
+                // }
+                // else
+                // {
+                //   echo "File can not be uploaded";
+                // }
       }
 
       redirect('news');
