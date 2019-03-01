@@ -34,9 +34,7 @@ class News extends CI_Controller
       $voting = isset($_POST['voting-news']) ? 0 : 1;
       $commenting = isset($_POST['commenting-news']) ? 0 : 1;
 
-      // check for uploaded file
-      if(isset($_FILES['image-news']))
-      {
+
                 // $file_name = $_FILES['image-news']['name'];
                 // $file_type = $_FILES['image-news']['type'];
                 // $file_tmp_name = $_FILES['image-news']['tmp_name'];
@@ -49,7 +47,7 @@ class News extends CI_Controller
 
         $this->news_model->insert_news($title,
                                         $content,
-
+                                        $imagetmp,
                                         $voting,
                                         $commenting);
                 // // target directory
@@ -68,7 +66,6 @@ class News extends CI_Controller
                 // {
                 //   echo "File can not be uploaded";
                 // }
-      }
 
       redirect('news-panel');
     }
