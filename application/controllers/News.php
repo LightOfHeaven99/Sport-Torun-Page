@@ -49,7 +49,7 @@ class News extends CI_Controller
 
         $this->news_model->insert_news($title,
                                         $content,
-                                        $imagetmp,
+
                                         $voting,
                                         $commenting);
                 // // target directory
@@ -70,7 +70,7 @@ class News extends CI_Controller
                 // }
       }
 
-      redirect('news');
+      redirect('news-panel');
     }
   }
 }
