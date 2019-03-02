@@ -17,6 +17,7 @@ class Pages extends CI_Controller {
     }
 
     $data['title'] = ucfirst($page); // Capitalize the first letter
+    $data['news'] = $this->news_model->get_posts();
 
     $this->load->view('templates/header');
     $this->load->view('templates/menu');

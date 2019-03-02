@@ -15,6 +15,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link rel="shortcut icon" type="image/png" href="../../../assets/icon/favicon.png"/>
+
   <title>Toruńska Liga Siatkówki</title>
 
   <!-- Bootstrap core CSS -->

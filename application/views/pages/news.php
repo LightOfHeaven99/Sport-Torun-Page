@@ -9,8 +9,7 @@
 
 
       <?php
-        $this->data['posts'] = $this->news_model->get_posts();
-        foreach($this->data['posts'] as $post):
+        foreach($this->data['news'] as $post):
       ?>
         <div class="row">
           <div class="col-md-7">
