@@ -8,23 +8,26 @@
       <div class="space20"></div>
 
 
-      <?php //foreach($this->data['posts'] as $post){?>
+      <?php
+        $this->data['posts'] = $this->news_model->get_posts();
+        foreach($this->data['posts'] as $post):
+      ?>
         <div class="row">
           <div class="col-md-7">
             <a href="#">
               <!-- <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""> -->
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php // echo $post->image;?>
+              <?php echo $post->image;?>
             </a>
           </div>
           <div class="col-md-5">
-            <h3><?php //echo  $post->title;?></h3>
-            <p><?php //echo  $post->content;?></p>
+            <h3><?php echo  $post->title;?></h3>
+            <p><?php echo  $post->content;?></p>
             <a class="btn btn-primary" href="#">View Project</a>
           </div>
         </div>
         <hr>
-     <?php // }?>
+     <?php endforeach;?>
 
 
 

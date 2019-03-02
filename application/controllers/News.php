@@ -24,6 +24,7 @@ class News extends CI_Controller
 
     if ($this->form_validation->run() == FALSE)
     {
+      // TODO: komunikaty błędów
       redirect('news-panel');
     }
     else
@@ -35,11 +36,6 @@ class News extends CI_Controller
       $commenting = isset($_POST['commenting-news']) ? 0 : 1;
 
 
-                  // $file_name = $_FILES['image-news']['name'];
-                  // $file_type = $_FILES['image-news']['type'];
-                  // $file_tmp_name = $_FILES['image-news']['tmp_name'];
-                  // $file_size = $_FILES['image-news']['size'];
-
       $config['upload_path'] = '../../assets/uploads/';
       $config['allowed_types'] = 'gif|jpg|png';
       $this->load->library('upload', $config);
@@ -47,33 +43,14 @@ class News extends CI_Controller
       $data = $this->upload->data();
 
 
-          $image = addslashes(file_get_contents($_FILES['image-news']['tmp_name'])); //SQL Injection defence!
-          $image_name = addslashes($_FILES['image-news']['name']);
+      $image = addslashes(file_get_contents($_FILES['image-news']['tmp_name'])); //SQL Injection defence!
+      $image_name = addslashes($_FILES['image-news']['name']);
 
-
-
-
-          $this->news_model->insert_news($title,
-                                        $content,
-                                        $image,
-                                        $voting,
-                                        $commenting);
-                // // target directory
-                // $target_dir = "../../assets/uploads/";
-
-                // // uploding file
-                // if(move_uploaded_file($file_tmp_name,$target_dir.$file_name))
-                // {
-                //   $this->news_model->insert_news($title,
-                //                                   $content,
-                //                                   "'.$target_dir.$file_name.'",
-                //                                   $voting,
-                //                                   $commenting);
-                // }
-                // else
-                // {
-                //   echo "File can not be uploaded";
-                // }
+      $this->news_model->insert_news($title,
+                                    $content,
+                                    $image,
+                                    $voting,
+                                    $commenting);
 
       redirect('news-panel');
     }
