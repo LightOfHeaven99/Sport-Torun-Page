@@ -18,7 +18,7 @@
             <a href="#">
               <!-- <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""> -->
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php '<img src="data:image/jpeg;base64,'.base64_encode( $row->image ).'"/>'; ?>
+              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'"/>'; ?>
             </a>
           </div>
           <div class="col-md-5">
