@@ -24,7 +24,7 @@
           <div class="col-md-5">
             <h3><?php echo  $row->title;?></h3>
             <p><?php echo  $row->content;?></p>
-            <a class="btn btn-primary" href="#">View Project</a>
+            <a class="btn btn-primary" href="#">Czytaj więcej</a>
           </div>
         </div>
         <hr>
