@@ -9,19 +9,21 @@
 
 
       <?php
-        foreach($this->data['news'] as $post):
+        $query = $this->db->query("SELECT * FROM news;");
+
+        foreach($query->result() as $row):
       ?>
         <div class="row">
           <div class="col-md-7">
             <a href="#">
               <!-- <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""> -->
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo $post->image;?>
+              <?php echo $row->image;?>
             </a>
           </div>
           <div class="col-md-5">
-            <h3><?php echo  $post->title;?></h3>
-            <p><?php echo  $post->content;?></p>
+            <h3><?php echo  $row->title;?></h3>
+            <p><?php echo  $row->content;?></p>
             <a class="btn btn-primary" href="#">View Project</a>
           </div>
         </div>

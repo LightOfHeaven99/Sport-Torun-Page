@@ -5,20 +5,23 @@ class Pages extends CI_Controller {
   {
       parent::__construct();
       $this->load->helper('form');
-      $this->load->model('news_model');
+      // $this->load->model('news_model');
   }
 
-  // GŁÓWNE PODSTRONY
   public function view($page = 'start')
   {
     if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
     {
-        // Whoops, we don't have a page for that!
         show_404();
     }
 
     $data['title'] = ucfirst($page); // Capitalize the first letter
-    $data['news'] = $this->news_model->get_posts();
+    // $data['news'] = $this->news_model->get_posts();
+
+    // $data = array(
+    //     'title' => ucfirst($page),
+    //     'news' => $this->news_model->get_posts()
+    // );
 
     $this->load->view('templates/header');
     $this->load->view('templates/menu');
