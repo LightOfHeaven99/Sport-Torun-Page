@@ -15,7 +15,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <link href="../../../assets/icon/planet.png" rel="shortcut icon" />
+  <link href="../../../assets/icon/planet.ico" rel="shortcut icon" />
 
   <title>Toruńska Liga Siatkówki</title>
 
