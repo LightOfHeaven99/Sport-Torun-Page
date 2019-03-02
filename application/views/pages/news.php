@@ -25,6 +25,8 @@
             <h3><?php echo  $row->title;?></h3>
             <p><?php echo  $row->content;?></p>
             <a class="btn btn-primary" href="#">Czytaj więcej</a>
+            <br>
+            <p><i><?php echo  'Dodano: '.$row->postdate;?></i></p>
           </div>
         </div>
         <hr>
