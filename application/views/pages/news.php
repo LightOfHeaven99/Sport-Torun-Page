@@ -32,7 +32,7 @@
           <!-- Overlay content -->
           <div class="overlay-content">
               <h3 style="color: white;"><?php echo $row->title;?></h3>
-              <p style="color: white;"><?php echo $row->content;?></p>
+              <p style="color: white; text-align: justify;"><?php echo $row->content;?></p>
           </div>
         </div>
 
@@ -48,7 +48,7 @@
           <div class="col-md-5">
             <br>
             <h3><?php echo $row->title;?></h3>
-            <p><?php if(strlen($row->content) > 520):
+            <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
             echo substr($row->content, 0, 520)."...";?></p>
             <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
             <?php else:
