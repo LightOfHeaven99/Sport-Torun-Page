@@ -34,12 +34,12 @@
       <li><b>Warunki uczestnictwa w TLS</b>
         <ol type="1">
           <li>W TLS biorą udział drużyny zgłoszone do rozgrywek Toruńskiej Ligi Siatkówki.</li>
-          <li>Zgłoszenia drużyny należy dokonać na formularzu udostępnionym przez organizatora na stronie internetowej www.tls-torun.pl lub poprzez drogę mailową biuro@tls-torun.pl  w terminie określonym przez organizatora (do 22.03.2019 r.).</li>
+          <li>Zgłoszenia drużyny należy dokonać na formularzu udostępnionym przez organizatora na stronie internetowej www.tls-torun.pl lub poprzez drogę mailową biuro@tls-torun.pl wterminie określonym przez organizatora (do 25.03.2019 r.).</li>
           <li>Zgłoszenia powinien dokonać kapitan drużyny, który jednocześnie będzie osobą odpowiedzialną za kontakt z Organizatorem.</li>
           <li>Zgłoszenie do rozgrywek jest jednoznaczne z zaakceptowaniem regulaminu TLS.</li>
-          <li>Udział w rozgrywkach TLS jest odpłatny. Opłatę w wysokości 2 500 zł brutto od drużyny, o ile organizator nie ustali inaczej, należy uiścić przelewem bankowym do dnia rozpoczęcia rozgrywek. Wpłat należy dokonać na nr rachunku bankowego Organizatora: ING Bank …</li>
-          <li>Istnieje możliwość płatności ratalnej, z zastrzeżeniem, że opłata za udział w rozgrywkach wynosi 2 200 zł brutto i jest rozłożona maksymalnie na 4 raty. Harmonogram płatności ustalany jest przez Organizatora z kapitanem drużyny.</li>
-          <li>Każda drużyna może zgłosić do udziału w TLS maksymalnie 15 zawodników (w meczu można wpisać do protokołu maksymalnie 12 zawodników).</li>
+          <li>Udział w rozgrywkach TLS jest odpłatny. Opłatę w wysokości 1 500 zł brutto od drużyny, o ile organizator nie ustali inaczej, należy uiścić przelewem bankowym do dnia rozpoczęcia rozgrywek. Wpłat należy dokonać na nr rachunku bankowego Organizatora: (podane do wiadomości kapitana drużyny).</li>
+          <li>Istnieje możliwość płatności ratalnej, z zastrzeżeniem, że opłata za udział w rozgrywkach wynosi 1500 zł brutto i jest rozłożona maksymalnie na 3 raty. Harmonogram płatności ustalany jest przez Organizatora z kapitanem drużyny.</li>
+          <li>Każda drużyna może zgłosić do udziału w TLS maksymalnie 12 zawodników (w meczu można wpisać do protokołu maksymalnie 12 zawodników).</li>
           <li>W trakcie trwania rozgrywek nie można dokonać korekty zgłoszonego składu drużyny.</li>
           <li>Zawodnik może być zgłoszony tylko do jednej drużyny, chyba, że na prośbę zawodnika lub drużyny Organizator ustali inaczej.</li>
           <li>Każdy zawodnik zgłoszony do rozgrywek zobowiązany jest do posiadania na zawodach dokumentu tożsamości oraz okazania go na wezwanie Organizatora lub sędziego zawodów.</li>
@@ -53,7 +53,7 @@
       <br>
       <li><b>Zasady rozgrywek</b>
         <ol type="1">
-          <li>Organizator zapewnia każdej drużynie występującej w TLS rozegranie minimum 10-12 (w zależności od liczby zgłoszeń)  spotkań ligowych. </li>
+          <li>Organizator zapewnia każdej drużynie występującej w TLS rozegranie minimum 10-12 (w zależności od liczby zgłoszeń) spotkań ligowych. </li>
           <li>Drużyny, w sezonie Wiosna’19 są przyporządkowane do poszczególnych lig (jeśli powstanie więcej niż jedna) na podstawie losowania. W kolejnych sezonach przyporządkowanie będzie się obywało na podstawie wyników jakie drużyny osiągnęły w poprzednim okresie.</li>
           <li>W przypadku wycofania się z rozgrywek którejś z drużyn Organizator nie przewiduje rozegrania dodatkowych meczów i zwrotu kosztów za nierozegrane mecze.</li>
           <li>Mecze będą rozgrywane zgodnie z terminarzem udostępnionym przez organizatora na stronie internetowej.</li>

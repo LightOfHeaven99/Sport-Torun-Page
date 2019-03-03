@@ -22,7 +22,7 @@
 					<ul class="list-unstyled quick-links">
 						<li><a href="sponsors"><i class="fa fa-angle-double-right"></i>Sponsorzy</a></li>
 						<li><a href="advertisement"><i class="fa fa-angle-double-right"></i>Możliwość reklamy</a></li>
-						<li><a href="multimedia"><i class="fa fa-angle-double-right"></i>Obsuga multimedialna</a></li>
+						<li><a href="multimedia"><i class="fa fa-angle-double-right"></i>Obsługa multimedialna</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">

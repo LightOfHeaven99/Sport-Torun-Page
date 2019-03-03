@@ -15,52 +15,39 @@
     <div class="accordion-item">
       <a>Gdzie mogę otrzymać informacje związane z rozgrywkami?</a>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Wszelkie informacje znajdziesz na stronie www.tls-torun.pl. Pytania szczegółowe kieruj na maila niuro@tls-torun.pl lub zadzwoń na numer tel. 505 137 735.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Kto może wziąć udział w rozgrywkach Toruńskiej Ligi Siatkówki?</a>
+      <a>Kto może wziąć udział w rozgrywkach Toruńskiej Ligi Siatkówki i ilu zawodników liczy drużyna?</a>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>W rozgrywkach TLS może wziąć udział każda osoba dorosła zarówno kobieta jak i mężczyzna. Osoby niepełnoletnie również mogą startwioać w rozgrywkach TLS o ile posiadają psiemną zgodę prawnego opiekuna i ukończyły 15 rok życia.</p>
       </div>
     </div>
     <div class="accordion-item">
       <a>Jak można zgłosić zespół do Toruńskiej Ligi Siatkówki?</a>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Drużyny zgłaszamy na stronie tls-torun.pl wypełniając odpowiedni formularz w zakładce „Zgłoszenie”.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Czy można rozłożyć płatność za udział w Toruńskiej Ligi Siatkówki na raty?</a>
+      <a>Jaki jest koszt udziału drużyny w Toruńskiej Ligi Siatkówki i na co zostaną przeznaczone te środki?</a>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Koszt udziału w TLS to 1500zł od drużyny. Pieniądze te zostaną przeznaczone na wynajem hali sportowej, sędziów i sędziów stolikowych, fotoreportera, stworzenie i utrzymywanie strony internetowej, stworzenie i utrzymywanie fanpaga na Facebooku, nagrody drużynowe i indywidualne na koniec sezonu, inne koszta związane z organizacją TLS.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>Jaki jest koszt udziału drużyny w Toruńskiej Ligi Siatkówki?</a>
+      <a>W jakie dni i w jakich godzinach rozgrywane będą mecze Toruńskiej Ligi Siatkówki?</a>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Rozgrywki TLS zaplanowano wstępnie na poniedziałki i/lub czwartki w godzinach 18-21.</p>
       </div>
     </div>
     <div class="accordion-item">
-      <a>W jakie dni rozgrywane będą mecze Toruńskiej Ligi Siatkówki?</a>
+      <a>Do kogo się zwrócić w razie problemów technicznych ze stroną internetową?</a>
       <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+        <p>Proszę zwrócić się do administratora strony za pomocą formularzu kontaktowego.</p>
       </div>
     </div>
-    <div class="accordion-item">
-      <a>W jakich godzinach będą rozgrywane mecze?</a>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-      </div>
-    </div><div class="accordion-item">
-      <a>Czym jest Toruńska Liga Siatkówki?</a>
-      <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
-      </div>
-    </div>
-  </div>
- </div>
 <br><br><br>
 <script>
 
