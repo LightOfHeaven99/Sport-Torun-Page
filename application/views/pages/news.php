@@ -9,7 +9,7 @@
 
 
       <?php
-        $query = $this->db->query("SELECT * FROM news;");
+        $query = $this->db->query("SELECT * FROM news ORDER BY id DESC");
 
         foreach($query->result() as $row):
       ?>
