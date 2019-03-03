@@ -29,8 +29,8 @@
             echo substr($row->content, 1, 520)."...";?></p>
             <a class="btn btn-primary" href="#">Czytaj więcej</a>
             <?php else:
-              echo $row->content;</p>
-            endif; ?>
+              echo $row->content;?></p>
+            <?php endif; ?>
             <br>
           </div>
         </div>
