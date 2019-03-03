@@ -33,6 +33,7 @@
   <!-- Own JavaScript files -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="../../../assets/js/highlight.js"></script>
+  <script src="../../../assets/js/readMore.js"></script>
   <script src="//code.jquery.com/jquery.min.js"></script>
   <script src="../../../assets/js/jquery.checkImageSize.js"></script>
 

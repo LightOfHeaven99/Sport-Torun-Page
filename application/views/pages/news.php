@@ -13,6 +13,18 @@
 
         foreach($query->result() as $row):
       ?>
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+          <!-- Overlay content -->
+          <div class="overlay-content">
+              <h3><?php echo $row->title;?></h3>
+              <p><?php echo $row->content;?></p>
+          </div>
+        </div>
+
         <div class="row">
           <div class="col-md-7">
             <a href="#">
@@ -26,8 +38,8 @@
             <br>
             <h3><?php echo $row->title;?></h3>
             <p><?php if(strlen($row->content) > 520):
-            echo substr($row->content, 1, 520)."...";?></p>
-            <a class="btn btn-primary" href="#">Czytaj więcej</a>
+            echo substr($row->content, 0, 520)."...";?></p>
+            <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
             <?php else:
               echo $row->content;?></p>
             <?php endif; ?>
