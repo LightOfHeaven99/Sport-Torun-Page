@@ -55,20 +55,20 @@
   <div class="dropdown">
   <button class="dropbtn">Forum</button>
   <div class="dropdown-content">
-    <a href="#">Drużyna poszukuje</a>
-    <a href="#">Poszukuję drużyny</a>
-   <a href="#">Dodaj ogłoszenie</a>
+    <a href="forum">Drużyna poszukuje</a>
+    <a href="forum">Poszukuję drużyny</a>
+   <a href="forum">Dodaj ogłoszenie</a>
 </div>
 </div>
         <li class="nav-item">
-          <a class="nav-link" href="join">Zgłoszenia</a>
+          <a class="nav-link" href="join">Zgłoszenie</a>
         </li>
         <li class="nav-item">
-          <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+          <?php //if($this->session->userdata('logged_in') == TRUE) : ?>
             <a class="nav-link" href="login">Profil</a>
-          <?php else : ?>
+          <?php //else : ?>
             <a class="nav-link" href="login">Zaloguj się!</a>
-          <?php endif; ?>
+          <?php //endif; ?>
         </li>
       </ul>
     </div>

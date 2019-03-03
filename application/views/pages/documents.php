@@ -1,12 +1,26 @@
 <!-- Page Content -->
+<div class="timetable-bg">
   <div class="container">
-    <br>
-    <h2><b>Dokumenty do pobrania:</b></h2><br>
-    <ul>
-  <li><a href="../assets/downloads/Regulamin.pdf" download><font color="#e6b800" size="5">REGULAMIN ROZGRYWEK TORUŃSKIEJ LIGI SIATKÓWKI WIOSNA’19</font></a><br><br></li>
-  <li><a href="../assets/downloads/Polityka Prywatności.pdf" download><font color="#e6b800" size="5">Polityka Prywatności</font></a><br><br></li>
-  <li><a href="../assets/downloads/Polityka Cookies.pdf" download><font color="#e6b800" size="5">Polityka Cookies</font></a><br><br></li>
-  <li><a href="../assets/downloads/Formularz zgłoszeniowy drużyny TLS.docx" download><font color="#e6b800" size="5">Formularz zgłoszeniowy drużyny TLS</font></a><br><br></li>
- </ul>
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="space20"></div>
+        <div class="parallax-card-timetable">
+          <br><br><br>
+          <h1 style="color: white; font-size: 70px;"><b>DOKUMENTY<b></h1>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <a href="../assets/downloads/Formularz drużynowy.docx" style="color: #364FD2; font-size: 20px;">Formularz drużynowy</a><br>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <a href="../assets/downloads/Regulamin.pdf" style="color: #364FD2; font-size: 20px;">Regulamin</a><br>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <a href="../assets/downloads/Polityka cookies.pdf" style="color: #364FD2; font-size: 20px;">Polityka cookies</a><br>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <a href="../assets/downloads/Polityka prywatności.pdf" style="color: #364FD2; font-size: 20px;">Polityka prywatności</a>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+        </div>
+        <div class="space50"></div>
+      </div>
+    </div>
   </div>
+
+
+</div>
