@@ -64,11 +64,11 @@
           <a class="nav-link" href="join">Zgłoszenie</a>
         </li>
         <li class="nav-item">
-          <?php //if($this->session->userdata('logged_in') == TRUE) : ?>
+          <?php if($this->session->userdata('logged_in') == TRUE) : ?>
             <a class="nav-link" href="login">Profil</a>
-          <?php //else : ?>
+          <?php else : ?>
             <a class="nav-link" href="login">Zaloguj się!</a>
-          <?php //endif; ?>
+          <?php endif; ?>
         </li>
       </ul>
     </div>
