@@ -32,7 +32,7 @@
           <!-- Overlay content -->
           <div class="overlay-content">
               <h3 style="color: white;"><?php echo $row->title;?></h3>
-              <p style="color: white; text-align: justify;"><?php echo $row->content;?></p>
+              <p style="color: white;"><?php echo $row->content;?></p>
           </div>
         </div>
 
