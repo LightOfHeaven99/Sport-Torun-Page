@@ -10,12 +10,12 @@
       <script>
         /* Open when someone clicks on the span element */
         function openNav() {
-          document.getElementById("myNav").style.width = "100%";
+          document.getElementById("myNav").style.height = "100%";
         }
 
         /* Close when someone clicks on the "x" symbol inside the overlay */
         function closeNav() {
-          document.getElementById("myNav").style.width = "0%";
+          document.getElementById("myNav").style.height = "0%";
         }
       </script>
 
@@ -31,8 +31,8 @@
 
           <!-- Overlay content -->
           <div class="overlay-content">
-              <h3><?php echo $row->title;?></h3>
-              <p><?php echo $row->content;?></p>
+              <h3 style="color: white;"><?php echo $row->title;?></h3>
+              <p style="color: white; text-align: justify;"><?php echo $row->content;?></p>
           </div>
         </div>
 
