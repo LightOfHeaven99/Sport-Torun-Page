@@ -31,7 +31,7 @@
 
         </div>
       </div>
-
+      <br>
       <div class="row">
         <div class="col-md-6">
           <p><b>Treść posta</b></p>
@@ -49,29 +49,16 @@
 
           </div>
         </div>
-
+        <br>
         <div class="row">
           <div class="col-md-6">
-            <p><b>Zdjęcie</b></p>
+            <p><b>Zdjęcie (min. 650x300 pikseli)</b></p>
 
-            <?php /*
-              $data = array(
-                'type'          => 'file',
-                'name'          => 'image-news',
-                'id'            => 'image-news'
-                //'required'      => 'required'
-              );
-              echo form_input($data); */
-            ?>
-
-            <?php // echo form_open_multipart('fileuploaded');?>
               <input type="file" name="image-news" id="image-news" size="20" />
               <br />
-                <p>lub wybierz z <b>domyślnych</b></p>
-                <input type="checkbox"><input type="checkbox"><input type="checkbox">
+                <!-- <p>lub wybierz z <b>domyślnych</b></p>
+                <input type="checkbox"><input type="checkbox"><input type="checkbox"> -->
               <br />
-              <!-- <input type="submit" value="Załaduj plik" /> -->
-            <!-- </form> -->
 
             </div>
           </div>
