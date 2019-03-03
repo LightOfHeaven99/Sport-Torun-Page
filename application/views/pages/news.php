@@ -20,12 +20,17 @@
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
               <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" width="650" height="300"/>'; ?>
             </a>
-            <p><i><?php echo  'Dodano: '.$row->postdate;?></i></p>
+            <p><i><?php echo 'Dodano: '.$row->postdate;?></i></p>
           </div>
           <div class="col-md-5">
-            <h3><?php echo  $row->title;?></h3>
-            <p><?php echo  substr($row->content, 1, 521)."...";?></p>
+            <br>
+            <h3><?php echo $row->title;?></h3>
+            <p><?php if(strlen($row->content) > 520):
+            echo substr($row->content, 1, 520)."...";?></p>
             <a class="btn btn-primary" href="#">Czytaj więcej</a>
+            <?php else:
+              echo $row->content;</p>
+            endif; ?>
             <br>
           </div>
         </div>
