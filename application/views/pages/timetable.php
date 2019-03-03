@@ -41,9 +41,9 @@
        <div style="height: 20px;"></div>
        <div class="row justify-content-center">
           <div class="row" style="padding: 2rem;">
-            <div class="col-sm-4"><h6 class="header">Toruńskie Pierniki</h6></div>
+            <div class="col-sm-4"><h6 class="header">Drużyna Pierwsza</h6></div>
             <div class="col-sm-4"><h6 class="header">:</h4></div>
-            <div class="col-sm-4"><h6 class="header">Wrocławska Zgroza</h6></div>
+            <div class="col-sm-4"><h6 class="header">Drużyna Druga</h6></div>
           </div>
        </div>
       </div>
