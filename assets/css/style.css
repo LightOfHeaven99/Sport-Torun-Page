@@ -2,6 +2,11 @@
   backgorund-color: grey;
 } */
 
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
 .header-up-nav {
   background-image: url('../assets/img/navbar-logo.png');
   background:  #ffd200;

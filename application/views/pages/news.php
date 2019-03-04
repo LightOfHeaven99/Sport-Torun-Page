@@ -43,7 +43,7 @@
             <a href="#">
               <!-- <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""> -->
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" />'; ?>
+              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" width="650" height="300" class="responsive"/>'; ?>
             </a>
             <p><i><?php echo 'Dodano: '.$row->postdate;?></i></p>
           </div>
