@@ -39,10 +39,10 @@
             <div class="col">
               <?php if($this->session->userdata('logged_in') == TRUE) : ?>
                 <?php if($row->voting == 1) : ?>
-                  <p><i><a href="#" style = "text-align: right; color: #364FD2;">Polub</a></i></p>
+                  <p style="text-align: right;"><i><a href="#" style="color: #364FD2;">Polub</a></i>
                 <?php endif; ?>
                 <?php if($row->commenting == 1) : ?>
-                <p><i><a href="#" style = "text-align: right; color: #364FD2;">Skomentuj</a></i></p>
+                  <i><a href="#" style="color: #364FD2;">Skomentuj</a></i></p>
                 <?php endif; ?>
                 <?php if($row->voting == 0 && $row->commenting == 0) : ?>
                   <p style = "text-align: right;"><i>Ocenianie postu zablokowane.</i></p>
@@ -62,6 +62,20 @@
               echo $row->content;?></p>
             <?php endif; ?>
             <br>
+
+            <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+              <?php if($row->voting == 1) : ?>
+                <p style="vertical-align: bottom; text-align: center;"><i><a href="#" style="color: #364FD2;">Polub</a></i>
+              <?php endif; ?>
+              <?php if($row->commenting == 1) : ?>
+                <i><a href="#" style="color: #364FD2;">Skomentuj</a></i></p>
+              <?php endif; ?>
+              <?php if($row->voting == 0 && $row->commenting == 0) : ?>
+                <p style = "vertical-align: bottom; text-align: center;"><i>Ocenianie postu zablokowane.</i></p>
+              <?php endif; ?>
+            <?php else : ?>
+              <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
+            <?php endif; ?>
           </div>
         </div>
 
