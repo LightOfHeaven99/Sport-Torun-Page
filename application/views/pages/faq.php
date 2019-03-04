@@ -48,7 +48,9 @@
         <p>Proszę zwrócić się do administratora strony za pomocą formularzu kontaktowego.</p>
       </div>
     </div>
-<br><br><br>
+  </div>
+</div>
+<br><br><br><br><br><br>
 <script>
 
 const items = document.querySelectorAll(".accordion a");

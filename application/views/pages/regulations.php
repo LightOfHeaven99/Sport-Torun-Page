@@ -68,7 +68,7 @@
           <li>Organizator zastrzega sobie, że z przyczyn niezależnych, takich jak przedłużający się czas poprzedniego spotkania, mecz może rozpocząć się z opóźnieniem.</li>
           <li>Po zakończonym meczu drużyny muszą opuścić boisko nie później niż po 5 minutach. </li>
           <li>Krawędź siatki będzie umieszczona na wysokości 243 cm.</li>
-          <li>Mecze rozgrywane będą do 3 wygranych setów (set do 25 pkt., tie-break do 15 pkt. z zachowaniem obowiązku uzyskania dwóch punktów przewagi w celu wygrania seta)</li>
+          <li>Mecze rozgrywane będą do 2 wygranych setów (set do 25 pkt., tie-break do 15 pkt. z zachowaniem obowiązku uzyskania dwóch punktów przewagi w celu wygrania seta)</li>
           <li>Zespół wygrywający spotkanie otrzymuje za zwycięstwo:
             <p>a) 3 pkt przy wyniku 2:0 <br>
                b) 2 pkt przy wyniku 2:1</p>
