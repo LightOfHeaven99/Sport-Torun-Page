@@ -33,12 +33,29 @@
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
               <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" width="650" height="300" class="responsive"/>'; ?>
             </a>
-            <p><i><?php echo 'Dodano: '.$row->postdate;?></i></p>
+            <div class="col">
+              <p><i><?php echo 'Dodano: '.$row->postdate;?></i></p>
+            </div>
+            <div class="col">
+              <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+                <?php if($row->voting == 1) : ?>
+                  <p><i><a href="#" style = "text-align: right; color: #364FD2;">Polub</a></i></p>
+                <?php endif; ?>
+                <?php if($row->commenting == 1) : ?>
+                <p><i><a href="#" style = "text-align: right; color: #364FD2;">Skomentuj</a></i></p>
+                <?php endif; ?>
+                <?php if($row->voting == 0 && $row->commenting == 0) : ?>
+                  <p style = "text-align: right;"><i>Ocenianie postu zablokowane.</i></p>
+                <?php endif; ?>
+              <?php else : ?>
+                <p style="text-align: right;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
+              <?php endif; ?>
+            </div>
           </div>
           <div class="col-md-6">
             <br>
             <h3><?php echo $row->title;?></h3>
-            <p style="text-align: justify;"><?php if(strlen($row->content) > 1):
+            <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
             echo substr($row->content, 0, 520)."...";?></p>
             <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
             <?php else:
