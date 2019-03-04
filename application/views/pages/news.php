@@ -32,7 +32,7 @@
           <!-- Overlay content -->
           <div class="overlay-content">
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" width="650" height="300"/>'; ?>
+              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" "/>'; ?>
               <h3 style="color: white;"><?php echo $row->title;?></h3>
               <p style="color: white; text-align: justify;"><?php echo $row->content;?></p>
           </div>
