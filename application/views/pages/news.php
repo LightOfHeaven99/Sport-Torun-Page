@@ -24,19 +24,7 @@
 
         foreach($query->result() as $row):
       ?>
-        <!-- The overlay -->
-        <div id="myNav" class="overlay">
-          <!-- Button to close the overlay navigation -->
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
-          <!-- Overlay content -->
-          <div class="overlay-content">
-              <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" "/>'; ?>
-              <br><h3 style="color: white;"><?php echo $row->title;?></h3><br>
-              <p style="color: white; text-align: justify;"><?php echo $row->content;?></p>
-          </div>
-        </div>
 
         <div class="row">
           <div class="col-md-6">
@@ -59,6 +47,27 @@
             <br>
           </div>
         </div>
+
+        <?php
+          $title = $row->title;
+          $content = $row->content;
+          $image = $row->image;
+        ?>
+
+        <!-- The overlay -->
+        <div id="myNav" class="overlay">
+          <!-- Button to close the overlay navigation -->
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <!-- Overlay content -->
+          <div class="overlay-content">
+              <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
+              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $image ).'" "/>'; ?>
+              <br><h3 style="color: white;"><?php echo $title;?></h3><br>
+              <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $content;?></p>
+          </div>
+
+        </div>
+
         <hr>
      <?php endforeach;?>
 
