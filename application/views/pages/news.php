@@ -39,15 +39,15 @@
         </div>
 
         <div class="row">
-          <div class="col-md-7">
+          <div class="col-md-6">
             <a href="#">
               <!-- <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt=""> -->
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" width="650" height="300"/>'; ?>
+              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" />'; ?>
             </a>
             <p><i><?php echo 'Dodano: '.$row->postdate;?></i></p>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-6">
             <br>
             <h3><?php echo $row->title;?></h3>
             <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
