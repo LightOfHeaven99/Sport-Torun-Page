@@ -38,7 +38,7 @@
           <div class="col-md-6">
             <br>
             <h3><?php echo $row->title;?></h3>
-            <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
+            <p style="text-align: justify;"><?php if(strlen($row->content) > 1):
             echo substr($row->content, 0, 520)."...";?></p>
             <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
             <?php else:
@@ -48,12 +48,6 @@
           </div>
         </div>
 
-        <?php
-          $title = $row->title;
-          $content = $row->content;
-          $image = $row->image;
-        ?>
-
         <!-- The overlay -->
         <div id="myNav" class="overlay">
           <!-- Button to close the overlay navigation -->
@@ -61,9 +55,9 @@
           <!-- Overlay content -->
           <div class="overlay-content">
               <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $image ).'" "/>'; ?>
-              <br><h3 style="color: white;"><?php echo $title;?></h3><br>
-              <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $content;?></p>
+              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" "/>'; ?>
+              <br><h3 style="color: white;"><?php echo $row->title;?></h3><br>
+              <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $row->content;?></p>
           </div>
 
         </div>
