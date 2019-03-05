@@ -19,7 +19,7 @@
           ?>
           <div class="row">
             <div class="col-md-3">
-              <label for="">Piszesz jako <font style="color: #364FD2;"><?= $this->session->userdata('first_name').' '.$this->session->userdata('last_name'); ?></font>,<br>a odpowiemy na <font style="color: #364FD2;"><?= $this->session->userdata('email'); ?></font>.</label>
+              <label for="">Piszesz jako <font style="color: #364FD2;"><?= $this->session->userdata('first_name').' '.$this->session->userdata('last_name'); ?></font>,<br>a odpowiemy na <font style="color: #364FD2;"><?= $this->session->userdata('email'); ?></font></label>
 
               <br>
               <label for="topic-contact"><b>Temat</b></label>
@@ -55,7 +55,7 @@
 
               </div>
             </div>
-
+            <br>
             <?php
               $data = array(
                 'type'          => 'submit',
