@@ -16,13 +16,22 @@ class Mailer extends CI_Controller
 
   public function sendcontact()
   {
-      $nameContact = $this->input->post('name-contact');
-      $emailContact = $this->input->post('email-contact');
+      if($this->session->userdata('logged_in') == TRUE) {
+        $nameContact = $this->session->userdata('first_name').' '.$this->session->userdata('last_name');
+        $emailContact = $$this->session->userdata('email');
+      }
+      else {
+        $nameContact = $this->input->post('name-contact');
+        $emailContact = $this->input->post('email-contact');
+      }
       $topicContact = $this->input->post('topic-contact');
       $messageContact = $this->input->post('message-contact');
 
-      $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
-      $this->form_validation->set_rules('email-contact', 'E-mail', 'required|valid_email');
+
+      if($this->session->userdata('logged_in') == FALSE) {
+        $this->form_validation->set_rules('name-contact', 'Imię Nazwisko', 'required');
+        $this->form_validation->set_rules('email-contact', 'E-mail', 'required|valid_email');
+      }
       $this->form_validation->set_rules('topic-contact', 'Temat', 'required');
       $this->form_validation->set_rules('message-contact', 'Wiadomość', 'required');
 

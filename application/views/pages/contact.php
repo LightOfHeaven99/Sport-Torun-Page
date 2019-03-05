@@ -19,32 +19,9 @@
           ?>
           <div class="row">
             <div class="col-md-3">
-              <label for="name-contact"><b>Imię i nazwisko</b></label>
+              <label for="">Piszesz jako <font style="color: #364FD2;"><?= $this->session->userdata('first_name').' '.$this->session->userdata('last_name'); ?></font>,<br>a odpowiemy na <font style="color: #364FD2;"><?= $this->session->userdata('email'); ?></font>.</label>
 
-              <?php
-                $data = array(
-                  'type'          => 'textarea',
-                  'name'          => 'name-contact',
-                  'id'            => 'name-contact',
-                  'class'         => 'form-control'
-                  //'required'      => 'required'
-                );
-                echo form_input($data);
-              ?>
-
-              <label for="email-contact"><b>E-mail</b></label>
-
-              <?php
-                $data = array(
-                  'type'          => 'email',
-                  'name'          => 'email-contact',
-                  'id'            => 'email-contact',
-                  'class'         => 'form-control'
-                  //'required'      => 'required'
-                );
-                echo form_input($data);
-              ?>
-
+              <br>
               <label for="topic-contact"><b>Temat</b></label>
 
               <?php
@@ -78,11 +55,6 @@
 
               </div>
             </div>
-
-            <br>
-            <p align="justify"><input type="checkbox" id="myCheck" onclick="myFunction()" required> Zgadzam się z Polityką Prywatności<br>
-              <p><font size="2.5">Administratorem Twoich danych osobowych jest organizator ligi Toruńska Liga Siatkówki (w skrócie jako ,,TLS’’). Przetwarzamy Twoje dane osobowe zawarte w niniejszym formularzu, aby umożliwić Ci kontakt z nami poprzez zadanie pytania.</font><br>
-              <a href="../assets/downloads/Polityka Prywatności.pdf"><font color="#e6b800" size="2.5">Polityka Prywatności</font></a></p>
 
             <?php
               $data = array(
