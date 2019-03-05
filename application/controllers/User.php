@@ -73,10 +73,6 @@ class User extends CI_Controller
 
   public function register()
   {
-    if($this->session->login == 'true'){
-      redirect('');
-    }
-
     $this->form_validation->set_rules('first-name', 'Imię', 'required');
     $this->form_validation->set_rules('last-name', 'Nazwisko', 'required');
     $this->form_validation->set_rules('uid', 'Login', 'required|is_unique[users.uid]');
@@ -86,7 +82,7 @@ class User extends CI_Controller
 
     if ($this->form_validation->run() == FALSE)
     {
-      redirect('register');
+      // TODO: niepowowdzenie
     }
     else
     {
