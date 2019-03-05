@@ -14,7 +14,7 @@
             foreach($query->result() as $row):
           ?>
 
-          <?= if($row->category == 'teams') : ?>
+          <?php if($row->category == 'teams') : ?>
             <?= '___________________________________' ?>
 
             <?= 'Temat: '.$row->topic."\n".'Treść: '.$row->content; ?>
