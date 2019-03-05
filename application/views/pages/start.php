@@ -27,7 +27,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <div class="w3-justify">
           <br>
-          <p><strong>Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec auctor nunc. Aliquam augue sem, imperdiet non mauris a, scelerisque vulputate tortor. Quisque dolor lacus, luctus viverra urna vel, sagittis dictum urna. In semper turpis dapibus nisi pulvinar, vulputate fringilla ipsum ultrices. Curabitur in odio at augue elementum suscipit.</p>
+          <p><strong>Serdecznie zapraszamy</strong> wszystkich chętnych do zapisania się do Toruńskiej Ligi Siatkówki! Dostępny jest Formulraz Zgłoszeniowy w zakładce "Zgłoszenie", gdzie można wypełnić i przesłać potrzebne dokumenty, aby zgłosić się do nadchodzących rozgrywek. W razie jakichkolwiek pytań, proszę kontaktować się ze mną za pomocą Formularza Kontaktowego, który znajduje się w stopce strony.</p>
           <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
           <p class="w3-clear"></p>
@@ -36,41 +36,6 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
       <hr>
-
-      <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h2>Zapraszamy do współpracy!</h2>
-          <h3><span class="w3-opacity">2 Marca, 2019</span></h3>
-        </div>
-
-        <div class="w3-justify">
-          <br>
-          <p><strong>Lorem Ipsum</strong></p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec auctor nunc. Aliquam augue sem, imperdiet non mauris a, scelerisque vulputate tortor. Quisque dolor lacus, luctus viverra urna vel, sagittis dictum urna. In semper turpis dapibus nisi pulvinar, vulputate fringilla ipsum ultrices. Curabitur in odio at augue elementum suscipit</p>
-          <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo2')"><b>Replies  </b> <span class="w3-tag w3-white">2</span></button></p>
-          <p class="w3-clear"></p>
-        </div>
-      </div>
-
-      <!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h2>Powstaje strona oraz fanpage!</h2>
-          <h3><span class="w3-opacity">1 Marca, 2019</span></h3>
-        </div>
-
-        <div class="w3-justify">
-          <br>
-          <p><strong>Lorem Ipsum</strong> The runway in New York City this weekend is gonna be legendary!</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec auctor nunc. Aliquam augue sem, imperdiet non mauris a, scelerisque vulputate tortor. Quisque dolor lacus, luctus viverra urna vel, sagittis dictum urna. In semper turpis dapibus nisi pulvinar, vulputate fringilla ipsum ultrices. Curabitur in odio at augue elementum suscipit</p>
-          <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
-          <p class="w3-clear"></p>
-        </div>
-      </div>
-
     <!-- END BLOG ENTRIES -->
     </div>
 
