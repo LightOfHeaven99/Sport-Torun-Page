@@ -55,4 +55,13 @@ class News extends CI_Controller
       redirect('news-panel');
     }
   }
+
+  public function remove_news($id)
+  {
+      //$this->db->delete('frekwencja', array('Wydarzenie' => $id));
+      //$this->db->delete('lista_repertuarowa', array('Wydarzenie' => $id));
+
+      return $this->db->delete('news', array('id' => $id));
+  }
+
 }

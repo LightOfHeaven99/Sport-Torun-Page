@@ -162,7 +162,7 @@ function myFunction(id) {
 
 function likeFunction(x) {
   x.style.fontWeight = "bold";
-  x.innerHTML = "✓ Liked";
+  x.innerHTML = "✓ Polubiono";
 }
 </script>
 

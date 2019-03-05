@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <!-- Page Content -->
   <div class="news-bg">
     <div class="container">
@@ -5,7 +10,10 @@
       <!-- Page Heading -->
       <div class="space20"></div>
       <h1>Aktualności</h1>
-      <div class="space20"></div>
+      <?php if($this->session->userdata('is_admin') == TRUE) : ?>
+        <a href="news-panel" class="btn btn-primary">Dodaj nowy post</a>
+      <?php endif; ?>
+      <div class="space10"></div>
 
       <script>
         /* Open when someone clicks on the span element */
@@ -36,21 +44,6 @@
             <div class="col">
               <p><i><?php echo 'Dodano: '.$row->postdate;?></i></p>
             </div>
-            <div class="col">
-              <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-                <?php if($row->voting == 1) : ?>
-                  <p style="text-align: right;"><i><a href="#" style="color: #364FD2;">Polub</a></i>
-                <?php endif; ?>
-                <?php if($row->commenting == 1) : ?>
-                  <i><a href="#" style="color: #364FD2;">Skomentuj</a></i></p>
-                <?php endif; ?>
-                <?php if($row->voting == 0 && $row->commenting == 0) : ?>
-                  <p style = "text-align: right;"><i>Ocenianie postu zablokowane.</i></p>
-                <?php endif; ?>
-              <?php else : ?>
-                <p style="text-align: right;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
-              <?php endif; ?>
-            </div>
           </div>
           <div class="col-md-6">
             <br>
@@ -61,21 +54,29 @@
             <?php else:
               echo $row->content;?></p>
             <?php endif; ?>
+
+            <?php if($this->session->userdata('is_admin') == TRUE) : ?>
+              <a href="#" class="btn delete_users_btn" onclick="editNewsAlert($row)">Edytuj</a>
+              <a href="" class="btn delete_users_btn" onclick="deleteNewsAlert($row)">Usuń</a>
+            <?php endif; ?>
             <br>
 
-            <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-              <?php if($row->voting == 1) : ?>
-                <p style="vertical-align: bottom; text-align: center;"><i><a href="#" style="color: #364FD2;">Polub</a></i>
+            <div class="w3-justify">
+              <br>
+              <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+                <?php if($row->voting == 1) : ?>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
+                <?php endif; ?>
+                <?php if($row->commenting == 1) : ?>
+                  <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Skomentuj  </b> <span class="w3-tag w3-white">1</span></button></p>
+                <?php endif; ?>
+                <?php if($row->voting == 0 && $row->commenting == 0) : ?>
+                  <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
+                <?php endif; ?>
+              <?php else : ?>
+                <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
               <?php endif; ?>
-              <?php if($row->commenting == 1) : ?>
-                <i><a href="#" style="color: #364FD2;">Skomentuj</a></i></p>
-              <?php endif; ?>
-              <?php if($row->voting == 0 && $row->commenting == 0) : ?>
-                <p style = "vertical-align: bottom; text-align: center;"><i>Ocenianie postu zablokowane.</i></p>
-              <?php endif; ?>
-            <?php else : ?>
-              <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
-            <?php endif; ?>
+            </div>
           </div>
         </div>
 
@@ -126,3 +127,36 @@
 
     </div>
   </div>
+
+
+<script>
+// Toggle between hiding and showing blog replies/comments
+document.getElementById("myBtn").click();
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Polubiono";
+}
+
+function editNewsAlert($n) {
+  alert("Funkcja edycji zostanie dodana później.");
+}
+
+function deleteNewsAlert($n) {
+  var retVal = confirm("Uwaga! Czy na pewno chcesz usunąć post?");
+  if( retVal == true ) {
+    <a href="<?= site_url('newsdeleted/' . $n['id']) ?>">
+    return true;
+  } else {
+    return false;
+  }
+}
+</script>
