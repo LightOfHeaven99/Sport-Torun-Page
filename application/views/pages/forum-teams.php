@@ -17,7 +17,7 @@
           <?php if($row->category == 'teams') : ?>
             <?= '___________________________________' ?>
 
-            <?= 'Temat: '.$row->topic."\n".'Treść: '.$row->content; ?>
+            <?= 'Temat: '.$row->topic."\n".'Treść: '.$row->content;."\n\n"; ?>
           <?php endif; ?>
 
           <?php endforeach;?>
