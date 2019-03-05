@@ -153,7 +153,7 @@ function editNewsAlert($n) {
 function deleteNewsAlert($n) {
   var retVal = confirm("Uwaga! Czy na pewno chcesz usunąć post?");
   if( retVal == true ) {
-    <a href="<?= site_url('newsdeleted/' . $n['id']) ?>">
+    header('Location: ' . site_url('newsdeleted/' . $n['id']));
     return true;
   } else {
     return false;
