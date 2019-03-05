@@ -37,7 +37,7 @@ class Forum extends CI_Controller
       $email = $this->input->post('email-forum');
 
 
-      $this->news_model->insert_advertisement($category,
+      $this->forum_model->insert_advertisement($category,
                                               $author_id,
                                               $topic,
                                               $content,
