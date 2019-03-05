@@ -139,9 +139,10 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <div class="w3-row-padding w3-white">
           <div class="w3-col s6">
-            <iframe width="370" height="310"
+            <iframe width="300" height="300"
             src="https://www.youtube.com/embed/UL8_o0RaHf0">
-            </iframe>          </div>
+            </iframe>
+          </div>
           <div class="w3-col s6">
          </div>
         </div>
