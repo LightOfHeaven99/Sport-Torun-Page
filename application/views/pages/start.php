@@ -27,9 +27,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <div class="w3-justify">
           <br>
-          <p><strong>More Hats!</strong> I am crazy about hats these days. Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor
-            magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <p><strong>Lorem</strong> ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec auctor nunc. Aliquam augue sem, imperdiet non mauris a, scelerisque vulputate tortor. Quisque dolor lacus, luctus viverra urna vel, sagittis dictum urna. In semper turpis dapibus nisi pulvinar, vulputate fringilla ipsum ultrices. Curabitur in odio at augue elementum suscipit.</p>
           <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
           <p class="w3-clear"></p>
@@ -48,9 +46,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <div class="w3-justify">
           <br>
-          <p><strong>Hats!</strong> The trend this summer is hats for men!</p>
-          <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-            mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+          <p><strong>Lorem Ipsum</strong></p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec auctor nunc. Aliquam augue sem, imperdiet non mauris a, scelerisque vulputate tortor. Quisque dolor lacus, luctus viverra urna vel, sagittis dictum urna. In semper turpis dapibus nisi pulvinar, vulputate fringilla ipsum ultrices. Curabitur in odio at augue elementum suscipit</p>
           <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo2')"><b>Replies  </b> <span class="w3-tag w3-white">2</span></button></p>
           <p class="w3-clear"></p>
@@ -66,9 +63,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 
         <div class="w3-justify">
           <br>
-          <p><strong>Dont miss!</strong> The runway in New York City this weekend is gonna be legendary!</p>
-          <p>Some text about this blog entry. Fashion fashion and mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies
-            mi non congue ullam corper. Praesent tincidunt sedtellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+          <p><strong>Lorem Ipsum</strong> The runway in New York City this weekend is gonna be legendary!</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec auctor nunc. Aliquam augue sem, imperdiet non mauris a, scelerisque vulputate tortor. Quisque dolor lacus, luctus viverra urna vel, sagittis dictum urna. In semper turpis dapibus nisi pulvinar, vulputate fringilla ipsum ultrices. Curabitur in odio at augue elementum suscipit</p>
           <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo3')"><b>Replies  </b> <span class="w3-tag w3-white">3</span></button></p>
           <p class="w3-clear"></p>
@@ -84,7 +80,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-blue w3-margin">
         <div class="w3-container w3-indigo">
           <h4>Czym jest TLS?</h4>
-          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa, która powstaje na terenie naszego miasta. Będzie ona zrzeszać każdego, kto zechce zebrać swoją drużynę i spróbować swych sił w turnieju w piłkę siatkową!.</p>
+          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!.</p>
         </div>
       </div>
       <hr>
@@ -113,7 +109,7 @@ and is wrapped around the whole page content, except for the footer in this exam
           <li class="w3-padding-16">
             <span class="w3-large">Strona w budowie!</span>
             <br>
-            <span><font size="2,5">Cały czas pracujemy, aby strona wyglądała lepiej.</font></span>
+            <span><font size="2,5">Cały czas pracujemy, aby strona się rozwijała.</font></span>
           </li>
         </ul>
       </div>
