@@ -1,5 +1,5 @@
 <!-- Page Content -->
-<div class="timetable-bg">
+<div class="forum-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
@@ -19,7 +19,7 @@
                 echo validation_errors('<div class="alert alert-danger">', '</div>');
               ?>
 
-              <label for=""><b>Poszukuję:</b></label>
+              <label class="float-left" style="text-align: left; color: white;" for=""><b>Poszukuję:</b></label>
               <div class="row align-items-center remember">
 
                 <?php
@@ -30,7 +30,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-teams-forum" style="padding-left: 3px; padding-top: 7px; color: black;">zawodnika do drużyny</label>
+                <label for="category-teams-forum" style="padding-left: 3px; padding-top: 7px; color: white;">zawodnika do drużyny</label>
               </div>
               <div class="row align-items-center remember">
 
@@ -42,13 +42,13 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-players-forum" style="padding-left: 3px; padding-top: 7px; color: black;">drużyne jako zawodnik</label>
+                <label for="category-players-forum" style="padding-left: 3px; padding-top: 7px; color: white;">drużynę jako zawodnik</label>
               </div>
 
               <div class="row">
                 <div class="col-md-3">
 
-                  <label for="topic-contact"><b>Temat</b></label>
+                  <label style="color: white;" for="topic-contact"><b>Temat</b></label>
 
                   <?php
                     $data = array(
@@ -67,7 +67,7 @@
                 <div class="row">
                   <div class="col-md-6">
 
-                    <label for="content-forum"><b>Treść</b></label>
+                    <label style="color: white;" for="content-forum"><b>Treść</b></label>
 
                     <?php
                       $data = array(
@@ -84,29 +84,34 @@
                   </div>
                   <br>
 
-                  <p align="justify"><input type="checkbox" id="phone-check" onclick="myFunction()" required> Telefon<br>
-                    <?php
-                      $data = array(
-                        'type'          => 'textarea',
-                        'name'          => 'phone-forum',
-                        'id'            => 'phone-forum',
-                        'class'         => 'form-control'
-                        //'required'      => 'required'
-                      );
-                      echo form_input($data);
-                    ?>
-                    
-                  <p align="justify"><input type="checkbox" id="emial-check" onclick="myFunction()" required> E-mail<br>
-                    <?php
-                      $data = array(
-                        'type'          => 'textarea',
-                        'name'          => 'email-forum',
-                        'id'            => 'email-forum',
-                        'class'         => 'form-control'
-                        //'required'      => 'required'
-                      );
-                      echo form_input($data);
-                    ?>
+                  <div class="row">
+                    <div class="col-md-6">
+
+                      <p align="justify" style="color: white;"><input type="checkbox" id="phone-check" onclick="myFunction()" required> Telefon<br>
+                        <?php
+                          $data = array(
+                            'type'          => 'textarea',
+                            'name'          => 'phone-forum',
+                            'id'            => 'phone-forum',
+                            'class'         => 'form-control'
+                            //'required'      => 'required'
+                          );
+                          echo form_input($data);
+                        ?>
+
+                      <p align="justify" style="color: white;"><input type="checkbox" id="email-check" onclick="myFunction()" required> E-mail<br>
+                        <?php
+                          $data = array(
+                            'type'          => 'textarea',
+                            'name'          => 'email-forum',
+                            'id'            => 'email-forum',
+                            'class'         => 'form-control'
+                            //'required'      => 'required'
+                          );
+                          echo form_input($data);
+                        ?>
+                      </div>
+                    </div>
 
                     <div class="form-group">
 

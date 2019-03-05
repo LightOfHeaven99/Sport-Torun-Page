@@ -1,7 +1,5 @@
 <?php
 
-//require_once dirname(__FILE__) . '/../../assets/default/phpmailer/src/PHPMailer.php';
-
 class Mailer extends CI_Controller
 {
   public function __construct()
@@ -18,7 +16,7 @@ class Mailer extends CI_Controller
   {
       if($this->session->userdata('logged_in') == TRUE) {
         $nameContact = $this->session->userdata('first_name').' '.$this->session->userdata('last_name');
-        $emailContact = $$this->session->userdata('email');
+        $emailContact = $this->session->userdata('email');
       }
       else {
         $nameContact = $this->input->post('name-contact');

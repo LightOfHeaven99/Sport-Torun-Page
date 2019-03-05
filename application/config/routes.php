@@ -76,6 +76,8 @@ $route['back'] = 'pages/view/login';
 $route['usersdeleted'] = 'pages/admin/admin-panel';
 $route['fileuploaded'] = 'upload/do_upload';
 $route['newsadded'] = 'news/add_news';
+$route['forumadded'] = 'forum/add_advertisement';
+
 
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';

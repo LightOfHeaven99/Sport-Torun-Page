@@ -1,5 +1,5 @@
 <!-- Page Content -->
-<div class="timetable-bg">
+<div class="forum-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
