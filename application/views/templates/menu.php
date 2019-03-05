@@ -55,9 +55,9 @@
   <div class="dropdown">
   <button class="dropbtn">Forum</button>
   <div class="dropdown-content">
-    <a href="forum">Drużyna poszukuje</a>
-    <a href="forum">Poszukuję drużyny</a>
-   <a href="forum">Dodaj ogłoszenie</a>
+    <a href="forum-teams">Drużyna poszukuje</a>
+    <a href="forum-players">Poszukuję drużyny</a>
+   <a href="forum-add">Dodaj ogłoszenie</a>
 </div>
 </div>
         <li class="nav-item">
