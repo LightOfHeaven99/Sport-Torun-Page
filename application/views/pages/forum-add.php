@@ -19,7 +19,7 @@
                 echo validation_errors('<div class="alert alert-danger">', '</div>');
               ?>
 
-              <label class="float-left" style="text-align: left; color: white;" for=""><b>Poszukuję:</b></label>
+              <label class="float-left" style="text-align: left; color: white;" for=""><b>Poszukuję:</b></label><br>
               <div class="row align-items-center remember">
 
                 <?php
