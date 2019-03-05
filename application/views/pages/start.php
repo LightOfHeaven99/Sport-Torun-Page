@@ -21,8 +21,8 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>TITLE HEADING</h2>
-          <h3>Title description, <span class="w3-opacity">May 2, 2016</span></h3>
+          <h2>Liga rusza już w kwietniu!</h2>
+          <h3><span class="w3-opacity">3 Marca, 2019</span></h3>
         </div>
 
         <div class="w3-justify">
@@ -42,8 +42,8 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>TITLE HEADING</h2>
-          <h3>Title description, <span class="w3-opacity">April 23, 2016</span></h3>
+          <h2>Zapraszamy do współpracy!</h2>
+          <h3><span class="w3-opacity">2 Marca, 2019</span></h3>
         </div>
 
         <div class="w3-justify">
@@ -60,8 +60,8 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>TITLE HEADING</h2>
-          <h3>Title description, <span class="w3-opacity">April 7, 2016</span></h3>
+          <h2>Powstaje strona oraz fanpage!</h2>
+          <h3><span class="w3-opacity">1 Marca, 2019</span></h3>
         </div>
 
         <div class="w3-justify">
@@ -84,7 +84,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-blue w3-margin">
         <div class="w3-container w3-indigo">
           <h4>Czym jest TLS?</h4>
-          <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa, która powstaje na terenie naszego miasta. Będzie ona zrzeszać każdego, kto zechce zebrać swoją drużynę i spróbować swych sił w turnieju w piłkę siatkową!.</p>
         </div>
       </div>
       <hr>
@@ -96,24 +96,24 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <ul class="w3-ul w3-hoverable w3-white">
           <li class="w3-padding-16">
-            <span class="w3-large">Denim</span>
+            <span class="w3-large">Liga rusza już w kwietniu!</span>
             <br>
-            <span>Sed mattis nunc</span>
+            <span><font size="2,5">Zapisz się już dziś.</font></span>
           </li>
           <li class="w3-padding-16">
-            <span class="w3-large">Sweaters</span>
+            <span class="w3-large">Zapraszamy do współpracy!</span>
             <br>
-            <span>Praes tinci sed</span>
+            <span><font size="2,5">Zachęcamy do kontaktu.</font></span>
           </li>
           <li class="w3-padding-16">
-            <span class="w3-large">Workshop</span>
+            <span class="w3-large">Zbierz swoją drużynę!</span>
             <br>
-            <span>Ultricies congue</span>
+            <span><font size="2,5">Wraz ze znajomymi pokonaj tytanów siatkówki.</font></span>
           </li>
           <li class="w3-padding-16">
-            <span class="w3-large">Trends</span>
+            <span class="w3-large">Strona w budowie!</span>
             <br>
-            <span>Lorem ipsum dipsum</span>
+            <span><font size="2,5">Cały czas pracujemy, aby strona wyglądała lepiej.</font></span>
           </li>
         </ul>
       </div>
@@ -132,36 +132,17 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
       <hr>
 
-      <!-- Tags -->
-      <div class="w3-white w3-margin">
-        <div class="w3-container w3-padding w3-indigo">
-          <h4>Tagi</h4>
-        </div>
-        <div class="w3-container w3-white">
-          <p>
-            <span class="w3-tag w3-black w3-margin-bottom">Fashion</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Hats</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Norway</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sweaters</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Deals</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Accessories</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
-            <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Jeans</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trends</span>
-          </p>
-        </div>
-      </div>
-      <hr>
-
       <!-- Inspiration -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Inspiracje</h4>
+          <h4>Nasz film promocyjny!</h4>
         </div>
         <div class="w3-row-padding w3-white">
           <div class="w3-col s6">
-            <p><img src="/w3images/jeans.jpg" alt="Jeans" style="width:100%"></p>
-            <p><img src="/w3images/team1.jpg" alt="Jeans" style="width:100%"></p>
-          </div>
+            <iframe width="570" height="310"
+            src="https://www.youtube.com/embed/UL8_o0RaHf0">
+            </iframe>          </div>
           <div class="w3-col s6">
-            <p><img src="/w3images/avatar_hat.jpg" alt="Men in Hats" style="width:100%" class="w3-grayscale"></p>
-            <p><img src="/w3images/team4.jpg" alt="Jeans" style="width:100%"></p>
          </div>
         </div>
       </div>
