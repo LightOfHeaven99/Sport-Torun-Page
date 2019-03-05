@@ -21,7 +21,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>Liga rusza już w kwietniu!</h2>
+          <h2>Szymon Żebrowski królem jest!</h2>
           <h3><span class="w3-opacity">3 Marca, 2019</span></h3>
         </div>
 
