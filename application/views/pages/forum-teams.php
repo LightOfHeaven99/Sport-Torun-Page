@@ -18,7 +18,7 @@
             <?= '___________________________________' ?>
 
             <?= 'Temat: '.$row->topic."\n".'Treść: '.$row->content; ?>
-          <?= endif(); ?>
+          <?php endif; ?>
 
           <?php endforeach;?>
 
