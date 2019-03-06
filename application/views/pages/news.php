@@ -47,39 +47,43 @@
             </div>
           </div>
           <div class="col-md-6">
-            <br>
-            <h3><?php echo $row->title;?></h3>
-            <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
-            echo substr($row->content, 0, 520)."...";?></p>
-            <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
-            <?php else:
-              echo $row->content;?></p>
-            <?php endif; ?>
-
-            <?php if($this->session->userdata('is_admin') == TRUE) : ?>
-              <a href="#" class="btn delete_news_btn float-right" onclick="editNewsAlert($row)">Edytuj</a>
-              <a href="" class="btn delete_news_btn float-right" onclick="deleteNewsAlert($row)">Usuń</a>
-            <?php endif; ?>
-            <br>
-
-            <div class="w3-justify">
+            <div class="row">
               <br>
-              <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-                <?php if($row->voting == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
-                <?php endif; ?>
-                <?php if($row->commenting == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Skomentuj  </b> <span class="w3-tag w3-white"></span></button></p>
-                <?php endif; ?>
-                <?php if($row->mailing == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Wyślij zapytanie</b></button></p>
-                <?php endif; ?>
-                <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
-                  <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
-                <?php endif; ?>
-              <?php else : ?>
-                <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
+              <h3><?php echo $row->title;?></h3>
+              <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
+              echo substr($row->content, 0, 520)."...";?></p>
+              <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
+              <?php else:
+                echo $row->content;?></p>
               <?php endif; ?>
+
+              <?php if($this->session->userdata('is_admin') == TRUE) : ?>
+                <a href="#" class="btn delete_news_btn float-right" onclick="deleteNewsAlert($row)">Usuń</a>
+                <a href="#" class="btn delete_news_btn float-right" onclick="editNewsAlert($row)">Edytuj</a>
+              <?php endif; ?>
+              <br>
+            </div>
+
+            <div class="row" style="vertical-align: bottom;">
+              <div class="w3-justify">
+                <br>
+                <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+                  <?php if($row->voting == 1) : ?>
+                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
+                  <?php endif; ?>
+                  <?php if($row->commenting == 1) : ?>
+                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><i class="fa fa-comment"></i> Skomentuj</b></button></p>
+                  <?php endif; ?>
+                  <?php if($row->mailing == 1) : ?>
+                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Wyślij zapytanie</b></button></p>
+                  <?php endif; ?>
+                  <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
+                    <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
+                  <?php endif; ?>
+                <?php else : ?>
+                  <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
+                <?php endif; ?>
+              </div>
             </div>
           </div>
         </div>
@@ -161,9 +165,9 @@ function editNewsAlert(n) {
 }
 
 function deleteNewsAlert(n) {
-  var retVal = confirm("Uwaga! Czy na pewno chcesz usunąć post?");
-  if( retVal == true ) {
-    header('Location: ' . site_url('newsdeleted/' . $n['id']));
+  if( confirm("Uwaga! Czy na pewno chcesz usunąć post?") ) {
+    //header('Location: ' . site_url('newsdeleted/' . $n['id']));
+    redirect('newsdeleted/' . $n['id']);
     return true;
   } else {
     return false;
