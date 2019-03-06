@@ -17,7 +17,8 @@
 
       <script>
         /* Open when someone clicks on the span element */
-        function openNav() {
+        function openNav(n) {
+          readMore($n);
           document.getElementById("myNav").style.width = "100%";
         }
 
@@ -50,7 +51,7 @@
             <h3><?php echo $row->title;?></h3>
             <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
             echo substr($row->content, 0, 520)."...";?></p>
-            <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
+            <a class="btn btn-primary" onclick="openNav($row)">Czytaj więcej</a>
             <?php else:
               echo $row->content;?></p>
             <?php endif; ?>
@@ -68,7 +69,7 @@
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
                 <?php endif; ?>
                 <?php if($row->commenting == 1) : ?>
-                  <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Skomentuj  </b> <span class="w3-tag w3-white">1</span></button></p>
+                  <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Skomentuj  </b> <span class="w3-tag w3-white"></span></button></p>
                 <?php endif; ?>
                 <?php if($row->voting == 0 && $row->commenting == 0) : ?>
                   <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
@@ -78,20 +79,6 @@
               <?php endif; ?>
             </div>
           </div>
-        </div>
-
-        <!-- The overlay -->
-        <div id="myNav" class="overlay">
-          <!-- Button to close the overlay navigation -->
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <!-- Overlay content -->
-          <div class="overlay-content">
-              <img class="img-fluid rounded mb-3 mb-md-0" src="$post->image" alt="">
-              <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" "/>'; ?>
-              <br><h3 style="color: white;"><?php echo $row->title;?></h3><br>
-              <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $row->content;?></p>
-          </div>
-
         </div>
 
         <hr>
@@ -130,7 +117,6 @@
 
 
 <script>
-// Toggle between hiding and showing blog replies/comments
 document.getElementById("myBtn").click();
 function myFunction(id) {
   var x = document.getElementById(id);
@@ -146,11 +132,27 @@ function likeFunction(x) {
   x.innerHTML = "✓ Polubiono";
 }
 
-function editNewsAlert($n) {
+function readMore(n) {
+  <!-- The overlay -->
+  <div id="myNav" class="overlay">
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!-- Overlay content -->
+    <div class="overlay-content">
+        <img class="img-fluid rounded mb-3 mb-md-0 responsive" onclick="closeNav()" src="$post->image" alt="">
+        <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $n->image ).'" "/>'; ?>
+        <br><h3 style="color: white;"><?php echo $n->title;?></h3><br>
+        <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $n->content;?></p>
+    </div>
+
+  </div>
+}
+
+function editNewsAlert(n) {
   alert("Funkcja edycji zostanie dodana później.");
 }
 
-function deleteNewsAlert($n) {
+function deleteNewsAlert(n) {
   var retVal = confirm("Uwaga! Czy na pewno chcesz usunąć post?");
   if( retVal == true ) {
     header('Location: ' . site_url('newsdeleted/' . $n['id']));

@@ -92,6 +92,20 @@
 
           </div>
 
+          <div class="row align-items-center remember">
+
+            <?php
+              $data = array(
+                'type'          => 'checkbox',
+                'name'          => 'mailing-news',
+                'id'            => 'mailing-news'
+              );
+              echo form_input($data);
+            ?>
+            <label for="display-login" style="padding-left: 3px; padding-top: 7px; color: black;">Wyłącz mailowanie z tego postu</label>
+
+          </div>
+
           <div class="form-group">
 
             <?php

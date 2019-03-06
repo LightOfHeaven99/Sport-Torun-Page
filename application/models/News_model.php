@@ -5,7 +5,7 @@ class News_model extends CI_Model
 
   function get_posts()
   {
-     $this->db->select("id, title, content, image, postdate, voting, commenting");
+     $this->db->select("id, title, content, image, postdate, voting, commenting, mailing");
      $this->db->from('news');
      $query = $this->db->get();
      return $query->result();
@@ -13,11 +13,11 @@ class News_model extends CI_Model
 
 
   public function insert_news($title, $content, $image, $voting,
-  $commenting)
+  $commenting, $mailing)
   {
     $query = $this->db->query("INSERT
-                              INTO news (title, content, image, voting, commenting)
-                              VALUES ('$title', '$content', '$image', '$voting', '$commenting')");
+                              INTO news (title, content, image, voting, commenting, mailing)
+                              VALUES ('$title', '$content', '$image', '$voting', '$commenting', '$mailing')");
   }
 
   public function update_news(
@@ -26,17 +26,19 @@ class News_model extends CI_Model
     $content,
     $image,
     $voting,
-    $commenting
+    $commenting,
+    $mailing
     ) {
       $query = $this->db->query("UPDATE news SET
         title = '$title',
         content = '$content',
         image = '$image',
         voting = '$voting',
-        commenting = '$commenting'
+        commenting = '$commenting',
+        mailing = '$mailing'
         WHERE id = '$id'");
 
         return $query;
     }
-    
+
 }

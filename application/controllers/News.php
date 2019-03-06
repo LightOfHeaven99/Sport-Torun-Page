@@ -34,6 +34,7 @@ class News extends CI_Controller
       $image = $this->input->post('image-news');
       $voting = isset($_POST['voting-news']) ? 0 : 1;
       $commenting = isset($_POST['commenting-news']) ? 0 : 1;
+      $mailing = isset($_POST['mailing-news']) ? 0 : 1;
 
 
       $config['upload_path'] = '../../assets/uploads/';
@@ -50,7 +51,8 @@ class News extends CI_Controller
                                     $content,
                                     $image,
                                     $voting,
-                                    $commenting);
+                                    $commenting,
+                                    $mailing);
 
       redirect('news-panel');
     }
