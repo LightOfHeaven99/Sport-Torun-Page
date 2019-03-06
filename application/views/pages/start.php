@@ -18,6 +18,21 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- Blog entries -->
     <div class="w3-col l8 s12">
 
+      <h2 class="w3-center"></h2>
+
+<div class="w3-content w3-display-container">
+  <img class="mySlides" src="../assets/img/siat1.jpg" style="width:100%">
+  <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
+    <p align="center"><b>Toruńska Liga Siatkówki - dołącz już teraz!</b></p>
+  </div>
+  <img class="mySlides" src="../assets/img/siat2.jpg" style="width:100%">
+  <img class="mySlides" src="../assets/img/siat3.jpg" style="width:100%">
+
+  <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+<br><br>
+
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
@@ -160,6 +175,22 @@ function myFunction(id) {
 function likeFunction(x) {
   x.style.fontWeight = "bold";
   x.innerHTML = "✓ Polubiono";
+}
+</script>
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 5000); // Change image every 2 seconds
 }
 </script>
 
