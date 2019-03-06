@@ -70,8 +70,8 @@
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
                 <?php endif; ?>
                 <?php if($this->session->userdata('is_admin') == TRUE) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="editNewsAlert($row)"><b>Edytuj</b></button></p>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row)"><b>Usuń</b></button></p>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="editNewsAlert($row->id)"><b>Edytuj</b></button></p>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row->id)"><b>Usuń</b></button></p>
                 <?php endif; ?>
                 <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
                   <br><br><br><p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
@@ -79,8 +79,6 @@
               <?php else : ?>
                 <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
               <?php endif; ?>
-
-              <p style="vertical-align: bottom; text-align: center;"><i><a href="'newsdeleted/' . $n['id']" style = "color: #DD4E4E;">Usuń</a></i></p>
 
               <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
               </div>
@@ -161,17 +159,18 @@ function updateDiv() {
     $( "#here" ).load(window.location.href + " #here" );
 }
 
-function editNewsAlert(n) {
+function editNewsAlert(id) {
   alert("Funkcja edycji zostanie dodana później.");
 }
 
-function deleteNewsAlert(n) {
+function deleteNewsAlert(id) {
   if( confirm("Uwaga! Czy na pewno chcesz usunąć post?") ) {
     //header('Location: ' . site_url('newsdeleted/' . $n['id']));
-    redirect('newsdeleted/' . $n['id']);
-    return true;
+    //redirect('newsdeleted/' . $n['id']);
+    window.location.href = "newsdeleted/" + id;
+    //return true;
   } else {
-    return false;
+    //return false;
   }
 }
 </script>
