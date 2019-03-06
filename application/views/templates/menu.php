@@ -29,10 +29,10 @@
           <a class="nav-link" href="timetable">Terminarz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="results">Wyniki</a>
+          <a class="nav-link" href="table">Tabela</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="table">Tabela</a>
+          <a class="nav-link" href="results">Wyniki</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="statistics">Statystyki</a>
@@ -44,7 +44,7 @@
           <a class="nav-link" href="video">Video</a>
         </li>
         <div class="dropdown">
-        <button class="dropbtn">O lidze</button>
+        <button class="dropbtn">Liga</button>
         <div class="dropdown-content">
           <a href="teams">Drużyny</a>
           <a href="players">Zawodnicy</a>
