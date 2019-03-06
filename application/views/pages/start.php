@@ -5,6 +5,19 @@
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 </style>
 <body class="w3-light-grey">
 
@@ -22,13 +35,12 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h2 class="w3-center"></h2>
 
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="../assets/img/siat1.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="../assets/img/siat2.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="../assets/img/siat3.jpg" style="width:100%">
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
     <p align="center"><b>Toruńska Liga Siatkówki - dołącz już teraz!</b></p>
   </div>
-  <img class="mySlides" src="../assets/img/siat2.jpg" style="width:100%">
-  <img class="mySlides" src="../assets/img/siat3.jpg" style="width:100%">
-
   <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div>
@@ -115,11 +127,11 @@ and is wrapped around the whole page content, except for the footer in this exam
           <h4>Nasz film promocyjny!</h4>
         </div>
         <div class="w3-row-padding w3-white">
-          <div class="w3-col s6">
-            <iframe width="250" height="250"
-            src="https://www.youtube.com/embed/UL8_o0RaHf0">
-            </iframe>
-          </div>
+          <div class="w3-col s12">
+            <div class="videoWrapper">
+      <!-- Copy & Pasted from YouTube -->
+      <iframe width="560" height="500" src="http://www.youtube.com/embed/UL8_o0RaHf0" frameborder="0" allowfullscreen></iframe>
+  </div>
           <div class="w3-col s6">
          </div>
         </div>
