@@ -71,7 +71,7 @@
                 <?php endif; ?>
                 <?php if($this->session->userdata('is_admin') == TRUE) : ?>
                   <p class="w3-left"><a class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="editNewsAlert($row->id)"><b>Edytuj</b></a></p>
-                  <p class="w3-left"><a class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row->id)"><b>Usuń</b></a></p>
+                  <p class="w3-left"><a href ="newsdeleted/$row->id" + id class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row->id)"><b>Usuń</b></a></p>
                 <?php endif; ?>
                 <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
                   <br><br><br><p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
