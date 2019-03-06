@@ -74,6 +74,10 @@
                 <?php if($row->mailing == 1) : ?>
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Wyślij zapytanie</b></button></p>
                 <?php endif; ?>
+                <?php if($this->session->userdata('is_admin') == TRUE) : ?>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="editNewsAlert($row)"><b>Edytuj</b></button></p>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row)"><b>Usuń</b></button></p>
+                <?php endif; ?>
                 <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
                   <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
                 <?php endif; ?>
