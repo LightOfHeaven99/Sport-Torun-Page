@@ -18,6 +18,7 @@ and is wrapped around the whole page content, except for the footer in this exam
     <!-- Blog entries -->
     <div class="w3-col l8 s12">
 
+
       <h2 class="w3-center"></h2>
 
 <div class="w3-content w3-display-container">
@@ -60,7 +61,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-blue w3-margin">
         <div class="w3-container w3-indigo">
           <h4>Czym jest TLS?</h4>
-          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!.</p>
+          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!</p>
         </div>
       </div>
       <hr>
@@ -190,7 +191,7 @@ function carousel() {
   myIndex++;
   if (myIndex > x.length) {myIndex = 1}
   x[myIndex-1].style.display = "block";
-  setTimeout(carousel, 5000); // Change image every 2 seconds
+  setTimeout(carousel, 5000); // Change image every 5 seconds
 }
 </script>
 
