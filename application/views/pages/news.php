@@ -17,8 +17,8 @@
 
       <script>
         /* Open when someone clicks on the span element */
-        function openNav(n) {
-          readMore($n);
+        function openNav() {
+          updateDiv();
           document.getElementById("myNav").style.width = "100%";
         }
 
@@ -51,14 +51,14 @@
             <h3><?php echo $row->title;?></h3>
             <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
             echo substr($row->content, 0, 520)."...";?></p>
-            <a class="btn btn-primary" onclick="openNav($row)">Czytaj więcej</a>
+            <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a>
             <?php else:
               echo $row->content;?></p>
             <?php endif; ?>
 
             <?php if($this->session->userdata('is_admin') == TRUE) : ?>
-              <a href="#" class="btn delete_users_btn" onclick="editNewsAlert($row)">Edytuj</a>
-              <a href="" class="btn delete_users_btn" onclick="deleteNewsAlert($row)">Usuń</a>
+              <a href="#" class="btn delete_news_btn float-right" onclick="editNewsAlert($row)">Edytuj</a>
+              <a href="" class="btn delete_news_btn float-right" onclick="deleteNewsAlert($row)">Usuń</a>
             <?php endif; ?>
             <br>
 
@@ -69,9 +69,12 @@
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
                 <?php endif; ?>
                 <?php if($row->commenting == 1) : ?>
-                  <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Skomentuj  </b> <span class="w3-tag w3-white"></span></button></p>
+                  <p class="w3-left"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Skomentuj  </b> <span class="w3-tag w3-white"></span></button></p>
                 <?php endif; ?>
-                <?php if($row->voting == 0 && $row->commenting == 0) : ?>
+                <?php if($row->mailing == 1) : ?>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Wyślij zapytanie</b></button></p>
+                <?php endif; ?>
+                <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
                   <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
                 <?php endif; ?>
               <?php else : ?>
@@ -84,7 +87,19 @@
         <hr>
      <?php endforeach;?>
 
+     <!-- The overlay -->
+     <div id="myNav" class="overlay">
+       <!-- Button to close the overlay navigation -->
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <!-- Overlay content -->
+       <div class="overlay-content">
+           <img class="img-fluid rounded mb-3 mb-md-0 responsive" onclick="closeNav()" src="$post->image" alt="">
+           <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->image ).'" "/>'; ?>
+           <br><h3 style="color: white;"><?php echo $row->title;?></h3><br>
+           <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $row->content;?></p>
+       </div>
 
+     </div>
 
 
       <!-- Pagination -->
@@ -118,6 +133,12 @@
 
 <script>
 document.getElementById("myBtn").click();
+
+function likeFunction(x) {
+  x.style.fontWeight = "bold";
+  x.innerHTML = "✓ Polubiono";
+}
+
 function myFunction(id) {
   var x = document.getElementById(id);
   if (x.className.indexOf("w3-show") == -1) {
@@ -127,25 +148,12 @@ function myFunction(id) {
   }
 }
 
-function likeFunction(x) {
-  x.style.fontWeight = "bold";
-  x.innerHTML = "✓ Polubiono";
+function mailFunction() {
+
 }
 
-function readMore(n) {
-  <!-- The overlay -->
-  <div id="myNav" class="overlay">
-    <!-- Button to close the overlay navigation -->
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <!-- Overlay content -->
-    <div class="overlay-content">
-        <img class="img-fluid rounded mb-3 mb-md-0 responsive" onclick="closeNav()" src="$post->image" alt="">
-        <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $n->image ).'" "/>'; ?>
-        <br><h3 style="color: white;"><?php echo $n->title;?></h3><br>
-        <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $n->content;?></p>
-    </div>
-
-  </div>
+function updateDiv() {
+    $( "#here" ).load(window.location.href + " #here" );
 }
 
 function editNewsAlert(n) {
