@@ -2,6 +2,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
 h1,h2,h3,h4,h5,h6 {font-family: "Oswald"}
 body {font-family: "Open Sans"}
@@ -17,6 +19,35 @@ body {font-family: "Open Sans"}
 	left: 0;
 	width: 100%;
 	height: 100%;
+}
+
+  .fa {
+  padding: 15px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
 }
 </style>
 <body class="w3-light-grey">
@@ -56,7 +87,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-justify">
           <br>
           <p><strong>Serdecznie zapraszamy</strong> wszystkich chętnych do zapisania się do Toruńskiej Ligi Siatkówki! Dostępny jest Formularz Zgłoszeniowy w zakładce "Zgłoszenie", gdzie można wypełnić i przesłać potrzebne dokumenty, aby zgłosić się do nadchodzących rozgrywek. W razie jakichkolwiek pytań, proszę kontaktować się ze mną za pomocą Formularza Kontaktowego, który znajduje się w stopce strony.</p>
-          <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Like</b></button></p>
+          <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="thumbs-up"></i> Like</b></button></p>
           <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
           <p class="w3-clear"></p>
           <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
@@ -87,22 +118,22 @@ and is wrapped around the whole page content, except for the footer in this exam
           <li class="w3-padding-16">
             <span class="w3-large">Liga rusza już w kwietniu!</span>
             <br>
-            <span><font size="2,5">Zapisz się już dziś.</font></span>
+            <span><font size="2">Zapisz się już dziś.</font></span>
           </li>
           <li class="w3-padding-16">
             <span class="w3-large">Zapraszamy do współpracy!</span>
             <br>
-            <span><font size="2,5">Zachęcamy do kontaktu.</font></span>
+            <span><font size="2">Zachęcamy do kontaktu.</font></span>
           </li>
           <li class="w3-padding-16">
             <span class="w3-large">Zbierz swoją drużynę!</span>
             <br>
-            <span><font size="2,5">Wraz ze znajomymi pokonaj tytanów siatkówki.</font></span>
+            <span><font size="2">Wraz ze znajomymi pokonaj tytanów siatkówki.</font></span>
           </li>
           <li class="w3-padding-16">
             <span class="w3-large">Strona w budowie!</span>
             <br>
-            <span><font size="2,5">Cały czas pracujemy, aby strona się rozwijała.</font></span>
+            <span><font size="2">Cały czas pracujemy, aby strona się rozwijała.</font></span>
           </li>
         </ul>
       </div>
@@ -142,10 +173,11 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-container w3-padding w3-indigo">
           <h4 style="text-align: center;">Obserwuj Nas!</h4>
         </div>
-        <div class="w3-container w3-xlarge w3-padding" style="text-align: center;">
-          <i class="fa fa-facebook-official w3-hover-opacity"></i>
-          <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-twitter w3-hover-opacity"></i>
+        <div class="w3-container w3-large w3-padding" style="text-align: center;">
+          <a href="https://www.facebook.com/tls.torun/" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-instagram"></a>
+
         </div>
       </div>
       <hr>
