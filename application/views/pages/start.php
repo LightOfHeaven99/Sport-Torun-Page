@@ -112,15 +112,12 @@ and is wrapped around the whole page content, except for the footer in this exam
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Obserwuj Nas!</h4>
+          <h4 style="text-align: center;">Obserwuj Nas!</h4>
         </div>
-        <div class="w3-container w3-xlarge w3-padding">
+        <div class="w3-container w3-xlarge w3-padding" style="text-align: center;">
           <i class="fa fa-facebook-official w3-hover-opacity"></i>
           <i class="fa fa-instagram w3-hover-opacity"></i>
-          <i class="fa fa-snapchat w3-hover-opacity"></i>
-          <i class="fa fa-pinterest-p w3-hover-opacity"></i>
           <i class="fa fa-twitter w3-hover-opacity"></i>
-          <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
       </div>
       <hr>

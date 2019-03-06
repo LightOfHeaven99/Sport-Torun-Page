@@ -55,11 +55,6 @@
             <?php else:
               echo $row->content;?></p>
             <?php endif; ?>
-
-            <?php if($this->session->userdata('is_admin') == TRUE) : ?>
-              <a href="#" class="btn delete_news_btn float-right" onclick="deleteNewsAlert($row)">Usuń</a>
-              <a href="#" class="btn delete_news_btn float-right" onclick="editNewsAlert($row)">Edytuj</a>
-            <?php endif; ?>
             <br>
 
             <div class="w3-justify" style="vertical-align: bottom;">
@@ -76,14 +71,18 @@
                 <?php endif; ?>
                 <?php if($this->session->userdata('is_admin') == TRUE) : ?>
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="editNewsAlert($row)"><b>Edytuj</b></button></p>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row)"><b>Usuń</b></button></p>
+                  <p class="w3-left"><button href="'newsdeleted/' . $n['id']" class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="deleteNewsAlert($row)"><b>Usuń</b></button></p>
                 <?php endif; ?>
                 <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
-                  <p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
+                  <br><br><br><p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
                 <?php endif; ?>
               <?php else : ?>
                 <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
               <?php endif; ?>
+
+              <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+              </div>
+
             </div>
           </div>
         </div>
