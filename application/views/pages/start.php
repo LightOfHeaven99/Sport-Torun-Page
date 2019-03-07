@@ -136,7 +136,7 @@ and is wrapped around the whole page content, except for the footer in this exam
           <li class="w3-padding-16">
             <span class="w3-large"><?= $row->title; ?></span>
             <br>
-            <span><font size="2"><?= substr($row->content, 0, 63).'...'; ?></font></span>
+            <span><font size="2"><?= substr($row->content, 0, 160).'...'; ?></font></span>
           </li>
 					<?php
 						$counter++;
@@ -157,7 +157,9 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
-            <span class="w3-display-middle">Miejsce na reklamę</span>
+            <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
+																						<font size="1"><a href="contact">napisz do nas</a></font>
+						</span>
           </div>
         </div>
       </div>
@@ -166,7 +168,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Inspiration -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Nasz film promocyjny!</h4>
+          <h4>Teaser</h4>
         </div>
         <div class="w3-row-padding w3-white">
           <div class="w3-col s12">
@@ -182,7 +184,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4 style="text-align: center;">Obserwuj Nas!</h4>
+          <h4 style="text-align: center;">OBSERWUJ NAS</h4>
         </div>
         <div class="w3-container w3-large w3-padding" style="text-align: center;">
           <a href="https://www.facebook.com/tls.torun/" class="fa fa-facebook" style="padding: 15px; width: 50px;"></a>
