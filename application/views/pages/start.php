@@ -113,24 +113,11 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
           <h2>Chcesz współtworzyć społeczność?</h2>
-          <h3><span class="w3-opacity">
-						<?php
-							$today = date("Y-m-d H:i:s");
-
-							list($year, $month, $day) = explode("-", $today);
-							$day = substr($day, 0, 2);
-
-							echo $day.'.'.$month.'.'.$year;
-
-						?></span></h3>
         </div>
 
         <div class="w3-justify">
           <br>
           <p><strong>Nie zwlekaj</strong>, tylko przejdź do zakładki "<a href="login">Zaloguj się!</a>" i załóż swoje unikalne konto! Będąc użytkownikiem naszej strony możesz m.in. lajkować i komentować posty, dodawać i reagować na ogłoszenia innych użytkowników, a także głosować na zwycięzcę nadchodzącego meczu.</p>
-          <p class="w3-clear"></p>
-          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-          </div>
         </div>
       </div>
 
@@ -138,24 +125,11 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
           <h2>Bogate media</h2>
-          <h3><span class="w3-opacity">
-						<?php
-							$today = date("Y-m-d H:i:s");
-
-							list($year, $month, $day) = explode("-", $today);
-							$day = substr($day, 0, 2);
-
-							echo $day.'.'.$month.'.'.$year;
-
-						?></span></h3>
-        </div>
+				</div>
 
         <div class="w3-justify">
           <br>
           <p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
-          <p class="w3-clear"></p>
-          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-          </div>
         </div>
       </div>
 
@@ -209,7 +183,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
             <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
-																						<br><font size="1"><a href="contact">napisz do nas</a></font>
+																						<br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font>
 						</span>
           </div>
         </div>
