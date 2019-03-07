@@ -83,6 +83,7 @@ class User extends CI_Controller
     if ($this->form_validation->run() == FALSE)
     {
       // TODO: niepowowdzenie
+      redirect('register');
     }
     else
     {
