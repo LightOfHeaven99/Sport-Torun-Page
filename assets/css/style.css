@@ -1,6 +1,7 @@
-  /* body {
-  backgorund-color: grey;
-} */
+div.forum-wrapper * {
+  font-size: 20px;
+  color: white;
+}
 
 .responsive {
   width: 100%;

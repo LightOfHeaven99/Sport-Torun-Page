@@ -13,12 +13,17 @@
 
             foreach($query->result() as $row):
           ?>
-
-          <?php if($row->category == 'teams') : ?>
-            <?= '___________________________________' ?>
-
-            <?= 'Temat: '.$row->topic."\n".'Treść: '.$row->content."\n\n"; ?>
-          <?php endif; ?>
+              <div class="card-header forum-wrapper">
+              <?php if($row->category == 'teams') : ?>
+                <br>
+                <?= '___________________________________' ?>
+                <br>
+                <?= 'Temat: '.$row->topic; ?>
+                <br>
+                <?= 'Treść: '.$row->content; ?>
+                <br><br>
+              <?php endif; ?>
+              </div>
 
           <?php endforeach;?>
 
