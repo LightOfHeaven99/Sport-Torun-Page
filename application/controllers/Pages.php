@@ -24,7 +24,8 @@ class Pages extends CI_Controller {
     // );
 
     $this->load->view('templates/header');
-    $this->load->view('templates/menu');
+    if ($page != 'main')
+      $this->load->view('templates/menu');
     $this->load->view('pages/'.$page, $data);
     if ($page != 'main')
       $this->load->view('templates/footer');
