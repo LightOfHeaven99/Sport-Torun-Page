@@ -129,7 +129,7 @@ class User extends CI_Controller
     }
   }
 
-  public function change_display_login($choice)
+  public function change_display_login(choice)
   {
     $this->login_model->update_user(
       $this->session->userdata('id'),
