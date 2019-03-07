@@ -55,14 +55,17 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'user/login';
 $route['logged'] = 'user/login_post';
-$route['registered'] = 'user/registered';
+$route['registration'] = 'user/registration';
 $route['logout'] = 'user/logout';
+$route['accountactivation'] = 'user/activate_account';
 
-$route['nametologin'] = 'user/change_display_to_login';
-$route['logintoname'] = 'user/change_display_to_name';
+$route['changedisplaylogin'] = 'user/change_display_login';
+// $route['nametologin'] = 'user/change_display_to_login';
+// $route['logintoname'] = 'user/change_display_to_name';
 
-$route['mailsent'] = 'mailer/sendcontact';
-$route['teamsent'] = 'mailer/sendteam';
+$route['mailsent'] = 'mailer/send_contact';
+$route['teamsent'] = 'mailer/send_team';
+$route['codesent'] = 'user/send_reset_code';
 
 $route['admin-panel'] = 'pages/admin/admin-panel';
 $route['news-panel'] = 'pages/admin/news-panel';
@@ -79,7 +82,6 @@ $route['newsadded'] = 'news/add_news';
 $route['newsdeleted/(:num)'] = 'news/remove_news/$1';
 
 $route['forumadded'] = 'forum/add_advertisement';
-
 
 $route['(:any)'] = 'pages/view/$1';
 $route['(:any)/(:any)'] = 'pages/view/$1/$2';

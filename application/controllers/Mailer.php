@@ -12,7 +12,7 @@ class Mailer extends CI_Controller
       $this->load->model('login_model');
   }
 
-  public function sendcontact()
+  public function send_contact()
   {
       if($this->session->userdata('logged_in') == TRUE) {
         $nameContact = $this->session->userdata('first_name').' '.$this->session->userdata('last_name');
@@ -54,7 +54,7 @@ class Mailer extends CI_Controller
       redirect('contact');
   }
 
-  public function sendteam()
+  public function send_team()
   {
       $teamJoin = $this->input->post('team-join');
       $streetJoin = $this->input->post('street-join');
@@ -316,11 +316,46 @@ class Mailer extends CI_Controller
       redirect('join');
   }
 
-  public function sendresetcode()
+  public function send_code()
   {
-      $emailReset = $this->input->post('reset-code');
+      $emailReset = 1;
 
-      $this->form_validation->set_rules('reset-code', 'E-mail', 'required|valid_email');
+      $this->email->clear();
+
+      $this->email->from('no-reply@tls-torun.pl', 'Administracja');
+      $this->email->to($emailReset);
+
+      $code = generate_random_string(10);
+      $date = date("D M d, Y G:i");
+
+      $this->email->subject('Kod aktywacyjny konta na TLS-Toruń: '.$emailReset);
+      $this->email->message(
+      'Drogi użytkowniku,'."\n".'dnia '.$date.' został wygenerowany'
+      ."\n".'dla Ciebie kod aktywacyjny konta na stronie www.tls-torun.pl.'.
+      "\n\n".'Zaloguj się swoimi danymi i wprowadź 10-znakowy kod:'.
+      "\n\n".'                 '.$code."\n\n\n".
+      'Po wciśnięciu przycisku [Aktywuj] zostaniesz zalogowany,'.
+      "\n".'a Twoje konto przygotowane do wykorzystywania funkcji'.
+      "\n".'na stronie. Od teraz możesz dodawać ogłoszenia, a także'.
+      "\n".'wyrażać opinie pod dodawanymi postami.'.
+      "\n\n".'Gorąco pozdrawiamy,'."\n".'Administracja TLS-Toruń');
+
+      if($nameContact && $emailContact && $topicContact && $messageContact){
+        $this->email->send();
+      }
+
+      echo $this->email->print_debugger();
+      echo "Kod aktywacyjny został wysłany na skrzynkę pocztową!";
+
+      redirect('login');
+  }
+
+
+  public function send_reset_code()
+  {
+      $emailReset = $this->input->post('reset-email');
+
+      $this->form_validation->set_rules('reset-email', 'E-mail', 'required|valid_email');
 
       if($this->login_model->check_user_mail($emailReset) == true)
       {
@@ -329,10 +364,10 @@ class Mailer extends CI_Controller
         $this->email->from('no-reply@tls-torun.pl', 'Administracja');
         $this->email->to($emailReset);
 
-        $code = generateRandomString(10);
+        $code = generate_random_string(10);
         $date = date("D M d, Y G:i");
 
-        $this->email->subject('Kod odzyskania konta na TLS-Toruń '.$emailReset);
+        $this->email->subject('Kod odzyskania konta na TLS-Toruń: '.$emailReset);
         $this->email->message(
         'Drogi użytkowniku,'."\n".'dnia '.$date.' został wygenerowany'
         ."\n".'dla Ciebie kod do odzyskania konta na stronie www.tls-torun.pl.'.
@@ -349,7 +384,7 @@ class Mailer extends CI_Controller
         }
 
         echo $this->email->print_debugger();
-        echo "Kod został wysłany na podaną skrzynke pocztową!";
+        echo "Kod został wysłany na podaną skrzynkę pocztową!";
 
         redirect('enter-reset-code');
       }
@@ -359,7 +394,7 @@ class Mailer extends CI_Controller
       }
   }
 
-public function generateRandomString($length = 10) {
+public function generate_random_string($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';

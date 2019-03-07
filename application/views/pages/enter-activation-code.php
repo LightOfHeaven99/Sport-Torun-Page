@@ -7,12 +7,13 @@
 
     <?php
       $attributes = array('class' => 'form-signin');
-      echo form_open(' ', $attributes);
+      echo form_open('accountactivation', $attributes);
     ?>
 
     <div class="card">
       <div class="card-header">
-        <h3>Wprowadź odebrany kod</h3>
+        <h3>Wprowadź kod aktywacyjny</h3>
+        <p>Wysłany na <font style="color: #364FD2;"> <?= $this->session->userdata('email'); ?></font></p></br>
       </div>
       <div class="card-body">
         <div class="input-group form-group">
@@ -40,12 +41,31 @@
               'name'          => 'reset-submit',
               'id'						=> 'reset-submit',
               'class'         => 'btn float-right logout_btn',
-              'value'         => 'Odblokuj'
+              'value'         => 'Aktywuj'
             );
             echo form_submit($data);
           ?>
         </div>
+
+        <?php echo form_close(); ?>
+
         <div class="space20"></div>
+
+
+        <?php
+          $attributes = array('class' => 'form-signin');
+          echo form_open('logout', $attributes);
+
+            $data = array(
+              'type'          => 'submit',
+              'name'          => 'logout-submit',
+              'class'         => 'btn float-right logout_btn',
+              'value'         => 'Wyloguj'
+            );
+            echo form_submit($data);
+
+            echo form_close();
+          ?>
       </div>
     </div>
   </div>

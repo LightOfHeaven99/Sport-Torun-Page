@@ -30,12 +30,14 @@ class User extends CI_Controller
     $this->form_validation->set_rules('uid', 'Login', 'required');
     $this->form_validation->set_rules('pwd', 'Hasło', 'required');
 
+    // CZY DOBRZE WPROWADZONO DANE
     if ($this->form_validation->run() == FALSE)
     {
       $this->login();
     }
     else
     {
+      // CZY DANE ISTNIEJĄ W BAZIE
       if($this->login_model->login_user($uid, $pwd) == true)
       {
         $result = $this->login_model->read_user_information($uid);
@@ -51,8 +53,12 @@ class User extends CI_Controller
           'is_admin' => $result[0]->is_admin,
           'is_active' => $result[0]->is_active,
           'code' => $result[0]->code,
+          'last_login_date' => $result[0]->last_login_date,
           'logged_in' => TRUE
           );
+
+          login_date_update();
+
           // Dodanie informacji o użytkowniku do sesji
           $this->session->set_userdata($session_data);
         }
@@ -70,8 +76,33 @@ class User extends CI_Controller
     }
   }
 
+  public function logout()
+  {
+    $this->session->unset_userdata($session_data);
+    $this->session->sess_destroy();
 
-  public function registered()
+    redirect('login');
+  }
+
+  public function login_date_update()
+  {
+    $this->login_model->update_user(
+      $this->session->userdata('id'),
+      $this->session->userdata('first_name'),
+      $this->session->userdata('last_name'),
+      $this->session->userdata('uid'),
+      $this->session->userdata('pwd'),
+      $this->session->userdata('email'),
+      $this->session->userdata('display_login'),
+      $this->session->userdata('is_admin'),
+      $this->session->userdata('is_active'),
+      $this->session->userdata('code'),
+      date("Y-m-d H:i:s");
+    );
+  }
+
+
+  public function registration()
   {
     $this->form_validation->set_rules('first-name', 'Imię', 'required');
     $this->form_validation->set_rules('last-name', 'Nazwisko', 'required');
@@ -100,15 +131,21 @@ class User extends CI_Controller
     }
   }
 
-
-  public function logout()
+  public function change_display_to_login()
   {
-    $this->session->unset_userdata($session_data);
-    $this->session->sess_destroy();
-
-    redirect('login');
-  }
-
+    $this->login_model->update_user(
+      $this->session->userdata('id'),
+      $this->session->userdata('first_name'),
+      $this->session->userdata('last_name'),
+      $this->session->userdata('uid'),
+      $this->session->userdata('pwd'),
+      $this->session->userdata('email'),
+      1,
+      $this->session->userdata('is_admin'),
+      $this->session->userdata('is_active'),
+      $this->session->userdata('code'),
+      $this->session->userdata('last_login_date')
+    );
 
   public function change_display_to_login()
   {
@@ -122,7 +159,8 @@ class User extends CI_Controller
       1,
       $this->session->userdata('is_admin'),
       $this->session->userdata('is_active'),
-      $this->session->userdata('code')
+      $this->session->userdata('code'),
+      $this->session->userdata('last_login_date')
     );
 
     $result = $this->login_model->read_user_information($this->session->userdata('uid'));
@@ -138,6 +176,7 @@ class User extends CI_Controller
       'is_admin' => $result[0]->is_admin,
       'is_active' => $result[0]->is_active,
       'code' => $result[0]->code,
+      'last_login_date' => $result[0]->last_login_date,
       'logged_in' => TRUE
       );
       // Dodanie informacji o użytkowniku do sesji
@@ -159,7 +198,8 @@ class User extends CI_Controller
       0,
       $this->session->userdata('is_admin'),
       $this->session->userdata('is_active'),
-      $this->session->userdata('code')
+      $this->session->userdata('code'),
+      $this->session->userdata('last_login_date')
     );
 
     $result = $this->login_model->read_user_information($this->session->userdata('uid'));
@@ -175,6 +215,7 @@ class User extends CI_Controller
       'is_admin' => $result[0]->is_admin,
       'is_active' => $result[0]->is_active,
       'code' => $result[0]->code,
+      'last_login_date' => $result[0]->last_login_date,
       'logged_in' => TRUE
       );
       // Dodanie informacji o użytkowniku do sesji
@@ -182,4 +223,12 @@ class User extends CI_Controller
     }
     redirect('login');
   }
+
+
+  public function activate_account() {
+
+  }
+
+
+
 }

@@ -4,6 +4,12 @@
 		<div class="space50"></div>
 		<div class="space50"></div>
 		<div class="d-flex justify-content-center">
+
+			<?php
+				$attributes = array('class' => 'form-signin');
+				echo form_open('codesent', $attributes);
+			?>
+
 			<div class="card">
         <div class="card-header">
           <h3>Odzyskaj konto</h3>
@@ -19,8 +25,8 @@
 																		-moz-border-radius: 4px 4px 4px 4px;
 																		-webkit-border-radius: 4px 4px 4px 4px;
 																		border-radius: 4px 4px 4px 4px;',
-								'name'          => 'reset-code',
-								'id'            => 'reset-code',
+								'name'          => 'reset-email',
+								'id'            => 'reset-email',
 								'class'         => 'form-control',
 								'placeholder'   => 'E-mail'
 								//'required'      => 'required'
@@ -43,6 +49,9 @@
           <div class="space20"></div>
         </div>
       </div>
+
+			<?php echo form_close(); ?>
+
     </div>
 		<div class="space200"></div>
 		<div class="space100"></div>

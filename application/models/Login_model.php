@@ -16,7 +16,8 @@ class Login_model extends CI_Model
     $display_login,
     $is_admin,
     $is_active,
-    $code
+    $code,
+    $last_login_date
   ) {
       /*$dane = array(
         'first_name' => $first_name,
@@ -43,7 +44,8 @@ class Login_model extends CI_Model
         display_login = '$display_login',
         is_admin = '$is_admin',
         is_active = '$is_active',
-        code = '$code'
+        code = '$code',
+        last_login_date = '$last_login_date'
         WHERE id = '$id'");
 
       return $query;
