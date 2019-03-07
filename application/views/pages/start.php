@@ -63,14 +63,18 @@ and is wrapped around the whole page content, except for the footer in this exam
 	<?php
 		$query = $this->db->query("SELECT * FROM news ORDER BY id DESC");
 
-		while($row = $query->result()){
-    	$row_array[] = $row;
-		}
-
-		for($i = 1; $i <= 3; $i++):
+		$counter = 0;
+		foreach ($query->result() as $row)
+		{
 			echo '<img src="data:image/jpeg;base64,'.base64_encode( $row_array[i]->image ).'" style="width:100%" class="mySlides w3-animate-fading"/>';
 	  	//<img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
-		endfor; ?>
+
+			$counter++;
+			if($counter == 3) {
+				break;
+			}
+
+		} ?>
 
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
     <p align="center"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #002266;"><b>dołącz</b></a> już teraz!</b></p>
