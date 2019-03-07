@@ -79,8 +79,8 @@ and is wrapped around the whole page content, except for the footer in this exam
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
     <p align="center"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #ffd200;">dołącz</a> już teraz!</b></p>
   </div>
-  <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <!-- <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
 </div>
 <br><br>
 
