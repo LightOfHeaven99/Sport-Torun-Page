@@ -8,7 +8,7 @@
           <br><br><br>
           <h1 style="color: white; font-size: 70px;"><b>DOKUMENTY<b></h1>
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
-          <a href="../assets/downloads/Formularz drużynowy.docx" style="color: #364FD2; font-size: 20px;">Formularz drużynowy</a><br>
+          <a href="../assets/downloads/Formularz zgłoszeniowy.docx" style="color: #364FD2; font-size: 20px;">Formularz drużynowy</a><br>
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
           <a href="../assets/downloads/Regulamin.pdf" style="color: #364FD2; font-size: 20px;">Regulamin</a><br>
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
