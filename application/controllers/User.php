@@ -129,7 +129,45 @@ class User extends CI_Controller
     }
   }
 
-  public function change_display_login($choice)
+  // public function change_display_login($choice)
+  // {
+  //   $this->login_model->update_user(
+  //     $this->session->userdata('id'),
+  //     $this->session->userdata('first_name'),
+  //     $this->session->userdata('last_name'),
+  //     $this->session->userdata('uid'),
+  //     $this->session->userdata('pwd'),
+  //     $this->session->userdata('email'),
+  //     $choice,  // 1 -> login,  0 -> firstname lastname
+  //     $this->session->userdata('is_admin'),
+  //     $this->session->userdata('is_active'),
+  //     $this->session->userdata('code'),
+  //     $this->session->userdata('last_login_date')
+  //   );
+  //
+  //   $result = $this->login_model->read_user_information($this->session->userdata('uid'));
+  //   if ($result != false) {
+  //     $session_data = array(
+  //     'id' => $result[0]->id,
+  //     'first_name' => $result[0]->first_name,
+  //     'last_name' => $result[0]->last_name,
+  //     'uid' => $result[0]->uid,
+  //     'pwd' => $result[0]->pwd,
+  //     'email' => $result[0]->email,
+  //     'display_login' => $result[0]->display_login,
+  //     'is_admin' => $result[0]->is_admin,
+  //     'is_active' => $result[0]->is_active,
+  //     'code' => $result[0]->code,
+  //     'last_login_date' => $result[0]->last_login_date,
+  //     'logged_in' => TRUE
+  //     );
+  //     // Dodanie informacji o użytkowniku do sesji
+  //     $this->session->set_userdata($session_data);
+  //   }
+  //   redirect('login');
+  // }
+
+  public function change_display_to_login()
   {
     $this->login_model->update_user(
       $this->session->userdata('id'),
@@ -138,7 +176,7 @@ class User extends CI_Controller
       $this->session->userdata('uid'),
       $this->session->userdata('pwd'),
       $this->session->userdata('email'),
-      $choice,  // 1 -> login,  0 -> firstname lastname
+      1,
       $this->session->userdata('is_admin'),
       $this->session->userdata('is_active'),
       $this->session->userdata('code'),
@@ -167,82 +205,44 @@ class User extends CI_Controller
     redirect('login');
   }
 
-  // public function change_display_to_login()
-  // {
-  //   $this->login_model->update_user(
-  //     $this->session->userdata('id'),
-  //     $this->session->userdata('first_name'),
-  //     $this->session->userdata('last_name'),
-  //     $this->session->userdata('uid'),
-  //     $this->session->userdata('pwd'),
-  //     $this->session->userdata('email'),
-  //     1,
-  //     $this->session->userdata('is_admin'),
-  //     $this->session->userdata('is_active'),
-  //     $this->session->userdata('code'),
-  //     $this->session->userdata('last_login_date')
-  //   );
-  //
-  //   $result = $this->login_model->read_user_information($this->session->userdata('uid'));
-  //   if ($result != false) {
-  //     $session_data = array(
-  //     'id' => $result[0]->id,
-  //     'first_name' => $result[0]->first_name,
-  //     'last_name' => $result[0]->last_name,
-  //     'uid' => $result[0]->uid,
-  //     'pwd' => $result[0]->pwd,
-  //     'email' => $result[0]->email,
-  //     'display_login' => $result[0]->display_login,
-  //     'is_admin' => $result[0]->is_admin,
-  //     'is_active' => $result[0]->is_active,
-  //     'code' => $result[0]->code,
-  //     'last_login_date' => $result[0]->last_login_date,
-  //     'logged_in' => TRUE
-  //     );
-  //     // Dodanie informacji o użytkowniku do sesji
-  //     $this->session->set_userdata($session_data);
-  //   }
-  //   redirect('login');
-  // }
-  //
-  //
-  // public function change_display_to_name()
-  // {
-  //   $this->login_model->update_user(
-  //     $this->session->userdata('id'),
-  //     $this->session->userdata('first_name'),
-  //     $this->session->userdata('last_name'),
-  //     $this->session->userdata('uid'),
-  //     $this->session->userdata('pwd'),
-  //     $this->session->userdata('email'),
-  //     0,
-  //     $this->session->userdata('is_admin'),
-  //     $this->session->userdata('is_active'),
-  //     $this->session->userdata('code'),
-  //     $this->session->userdata('last_login_date')
-  //   );
-  //
-  //   $result = $this->login_model->read_user_information($this->session->userdata('uid'));
-  //   if ($result != false) {
-  //     $session_data = array(
-  //     'id' => $result[0]->id,
-  //     'first_name' => $result[0]->first_name,
-  //     'last_name' => $result[0]->last_name,
-  //     'uid' => $result[0]->uid,
-  //     'pwd' => $result[0]->pwd,
-  //     'email' => $result[0]->email,
-  //     'display_login' => $result[0]->display_login,
-  //     'is_admin' => $result[0]->is_admin,
-  //     'is_active' => $result[0]->is_active,
-  //     'code' => $result[0]->code,
-  //     'last_login_date' => $result[0]->last_login_date,
-  //     'logged_in' => TRUE
-  //     );
-  //     // Dodanie informacji o użytkowniku do sesji
-  //     $this->session->set_userdata($session_data);
-  //   }
-  //   redirect('login');
-  // }
+
+  public function change_display_to_name()
+  {
+    $this->login_model->update_user(
+      $this->session->userdata('id'),
+      $this->session->userdata('first_name'),
+      $this->session->userdata('last_name'),
+      $this->session->userdata('uid'),
+      $this->session->userdata('pwd'),
+      $this->session->userdata('email'),
+      0,
+      $this->session->userdata('is_admin'),
+      $this->session->userdata('is_active'),
+      $this->session->userdata('code'),
+      $this->session->userdata('last_login_date')
+    );
+
+    $result = $this->login_model->read_user_information($this->session->userdata('uid'));
+    if ($result != false) {
+      $session_data = array(
+      'id' => $result[0]->id,
+      'first_name' => $result[0]->first_name,
+      'last_name' => $result[0]->last_name,
+      'uid' => $result[0]->uid,
+      'pwd' => $result[0]->pwd,
+      'email' => $result[0]->email,
+      'display_login' => $result[0]->display_login,
+      'is_admin' => $result[0]->is_admin,
+      'is_active' => $result[0]->is_active,
+      'code' => $result[0]->code,
+      'last_login_date' => $result[0]->last_login_date,
+      'logged_in' => TRUE
+      );
+      // Dodanie informacji o użytkowniku do sesji
+      $this->session->set_userdata($session_data);
+    }
+    redirect('login');
+  }
 
 
   public function activate_account() {

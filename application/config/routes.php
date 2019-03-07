@@ -59,9 +59,9 @@ $route['registration'] = 'user/registration';
 $route['logout'] = 'user/logout';
 $route['accountactivation'] = 'user/activate_account';
 
-$route['changedisplaylogin'] = 'user/change_display_login';
-// $route['nametologin'] = 'user/change_display_to_login';
-// $route['logintoname'] = 'user/change_display_to_name';
+// $route['changedisplaylogin'] = 'user/change_display_login';
+$route['nametologin'] = 'user/change_display_to_login';
+$route['logintoname'] = 'user/change_display_to_name';
 
 $route['mailsent'] = 'mailer/send_contact';
 $route['teamsent'] = 'mailer/send_team';
