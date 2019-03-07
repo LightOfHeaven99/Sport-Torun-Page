@@ -7,10 +7,10 @@
     <div class="row">
       <div class="col-lg-6">
         <h1 class="mt-5"></h1>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br>
+
+        <div class="space200";></div>
+        <div class="space200";></div>
+        <div class="space200";></div>
       </div>
     </div>
   </div>

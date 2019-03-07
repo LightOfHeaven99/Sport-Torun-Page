@@ -635,6 +635,7 @@ background-image: url('../img/main-bg.jpg');
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
+weight: 100%;
 }
 
 .start-bg {
