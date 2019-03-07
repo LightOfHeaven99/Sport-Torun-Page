@@ -23,8 +23,6 @@ class User extends CI_Controller
     $this->load->view('templates/footer');
   }
 
-
-
   public function login_post(){
     $uid = $this->input->post('uid');
     $pwd = $this->input->post('pwd');
@@ -59,20 +57,6 @@ class User extends CI_Controller
           'logged_in' => TRUE
           );
 
-          $this->login_model->update_user(
-            $this->session->userdata('id'),
-            $this->session->userdata('first_name'),
-            $this->session->userdata('last_name'),
-            $this->session->userdata('uid'),
-            $this->session->userdata('pwd'),
-            $this->session->userdata('email'),
-            $this->session->userdata('display_login'),
-            $this->session->userdata('is_admin'),
-            $this->session->userdata('is_active'),
-            $this->session->userdata('code'),
-            date("Y-m-d H:i:s")
-          );
-
           // Dodanie informacji o użytkowniku do sesji
           $this->session->set_userdata($session_data);
         }
@@ -96,6 +80,23 @@ class User extends CI_Controller
     $this->session->sess_destroy();
 
     redirect('login');
+  }
+
+  public function login_date_update()
+  {
+    $this->login_model->update_user(
+      $this->session->userdata('id'),
+      $this->session->userdata('first_name'),
+      $this->session->userdata('last_name'),
+      $this->session->userdata('uid'),
+      $this->session->userdata('pwd'),
+      $this->session->userdata('email'),
+      $this->session->userdata('display_login'),
+      $this->session->userdata('is_admin'),
+      $this->session->userdata('is_active'),
+      $this->session->userdata('code'),
+      date("Y-m-d H:i:s")
+    );
   }
 
 
