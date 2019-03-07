@@ -63,7 +63,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 	<?php
 		$query = $this->db->query("SELECT * FROM news ORDER BY id DESC");
 
-		while($row = mysql_fetch_assoc($query->result())){
+		while($row = $query->result()){
     	$row_array[] = $row;
 		}
 
