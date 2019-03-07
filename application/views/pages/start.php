@@ -77,58 +77,12 @@ and is wrapped around the whole page content, except for the footer in this exam
 		} ?>
 
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
-    <p align="center" style="font-size: 20px;"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #ffd200;">dołącz</a> już teraz!</b></p>
+    <p align="center"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #ffd200;">dołącz</a> już teraz!</b></p>
   </div>
   <!-- <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
 </div>
 <br><br>
-
-<div class="parallax-wrapper">
- <div class="parallax-card">
-	 <div class="card__cometOuter">
-	 </div>
-	 <div style="height: 20px;"></div>
-	 <div class="row justify-content-center">
-		 <div class="col">
-			 <h4 class="header">Najbliższy mecz</h4>
-		 </div>
-	 </div>
-	 <div class="row justify-content-center">
-		 <div class="col">
-			 <h5 class="header">odbędzie się za:</h5>
-		 </div>
-	 </div>
-	 <div class="row justify-content-center">
-		 <div id="clockdiv" class="clockdiv card__circle">
-			 <div style="background-color: #333EE1;">
-				 <span class="days"></span>
-				 <div class="smalltext">Dni</div>
-			 </div>
-			 <div style="background-color: #E1D633;">
-				 <span class="hours"></span>
-				 <div class="smalltext">Godzin</div>
-			 </div>
-			 <div style="background-color: #333EE1;">
-				 <span class="minutes"></span>
-				 <div class="smalltext">Minut</div>
-			 </div>
-			 <div style="background-color: #E1D633;">
-				 <span class="seconds"></span>
-				 <div class="smalltext">Sekund</div>
-			 </div>
-		 </div>
-	 </div>
-	 <div style="height: 20px;"></div>
-	 <div class="row justify-content-center">
-			<div class="row" style="padding: 2rem;">
-				<div class="col-sm-4"><h6 class="header">Drużyna Pierwsza</h6></div>
-				<div class="col-sm-4"><h6 class="header">:</h4></div>
-				<div class="col-sm-4"><h6 class="header">Drużyna Druga</h6></div>
-			</div>
-	 </div>
-	</div>
-</div>
 
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
@@ -158,24 +112,30 @@ and is wrapped around the whole page content, except for the footer in this exam
 			<!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>Czego szukasz?</h2>
+          <h2>Chcesz współtworzyć społeczność?</h2>
         </div>
 
         <div class="w3-justify">
           <br>
           <p><strong>Nie zwlekaj</strong>, tylko przejdź do zakładki "<a href="login">Zaloguj się!</a>" i załóż swoje unikalne konto! Będąc użytkownikiem naszej strony możesz m.in. lajkować i komentować posty, dodawać i reagować na ogłoszenia innych użytkowników, a także głosować na zwycięzcę nadchodzącego meczu.</p>
-					<br>
-					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
-					<br>
-					<p><strong>Zachęta 3</strong></p>
-					<br>
-					<p><strong>Zachęta 4</strong></p>
-					<br>
-					<p><strong>Zachęta 5</strong></p>
-
-				</div>
+        </div>
       </div>
-		</div>
+
+			<!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h2>Bogate media</h2>
+				</div>
+
+        <div class="w3-justify">
+          <br>
+          <p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
+        </div>
+      </div>
+
+      <hr>
+    <!-- END BLOG ENTRIES -->
+    </div>
 
     <!-- About/Information menu -->
     <div class="w3-col l4">
@@ -218,12 +178,12 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Advertising -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Reklama</h4>
+          <h4>Reklamy</h4>
         </div>
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
             <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
-																						<br><center><font size="1"><a href="contact">napisz do nas</a></font></center>
+																						<br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font>
 						</span>
           </div>
         </div>
@@ -246,6 +206,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
       <hr>
+			<br>
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
