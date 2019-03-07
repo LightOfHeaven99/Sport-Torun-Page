@@ -1,7 +1,7 @@
 <!-- Page Content -->
 <div class="main-bg">
     <div class="main-logo-bg">
-      <div class="main-player-bg">
+      <div class="main-player-bg" style="height: 120%;">
         <div class="main-ball-bg">
   <div class="container">
     <div class="row">
@@ -10,7 +10,7 @@
 
         <div class="space200";></div>
         <div class="space200";></div>
-        <div class="space200";></div>
+        <div class="space100";></div>
       </div>
     </div>
   </div>
