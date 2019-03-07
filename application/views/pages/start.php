@@ -66,7 +66,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 		$counter = 0;
 		foreach ($query->result() as $row)
 		{
-			echo '<img src="data:image/jpeg;base64,'.base64_encode( $row_array[i]->image ).'" style="width:100%" class="mySlides w3-animate-fading"/>';
+			echo '<img src="data:image/jpeg;base64,'.base64_encode( $row->image ).'" style="width:100%" class="mySlides w3-animate-fading"/>';
 	  	//<img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
 
 			$counter++;
