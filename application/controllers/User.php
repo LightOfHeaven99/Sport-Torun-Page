@@ -14,8 +14,13 @@ class User extends CI_Controller
   }
 
   public function login(){
-    redirect('login');
-    exit();
+    // if($this->session->login == 'true'){
+    //   redirect('/');
+    // }
+    $this->load->view('templates/header');
+    $this->load->view('templates/menu');
+    $this->load->view('pages/login');
+    $this->load->view('templates/footer');
   }
 
   public function login_post(){
@@ -78,8 +83,6 @@ class User extends CI_Controller
     if ($this->form_validation->run() == FALSE)
     {
       // TODO: niepowowdzenie
-      redirect('register');
-      exit();
     }
     else
     {
@@ -92,8 +95,6 @@ class User extends CI_Controller
 
       $this->login_model->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
       $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
-      redirect('login');
-      exit();
     }
   }
 
@@ -104,7 +105,6 @@ class User extends CI_Controller
     $this->session->sess_destroy();
 
     redirect('login');
-    exit();
   }
 
 
@@ -142,7 +142,6 @@ class User extends CI_Controller
       $this->session->set_userdata($session_data);
     }
     redirect('login');
-    exit();
   }
 
 
@@ -180,6 +179,5 @@ class User extends CI_Controller
       $this->session->set_userdata($session_data);
     }
     redirect('login');
-    exit();
   }
 }
