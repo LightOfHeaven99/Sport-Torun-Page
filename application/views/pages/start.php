@@ -183,7 +183,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
             <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
-																						<br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font>
+																						<br><font size="1" class="w3-display-middle"><a href="contact" style="text-align: center;">napisz do nas</a></font>
 						</span>
           </div>
         </div>
