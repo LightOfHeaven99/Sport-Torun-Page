@@ -55,7 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'user/login';
 $route['logged'] = 'user/login_post';
-$route['register'] = 'user/register';
+$route['registered'] = 'user/registered';
 $route['logout'] = 'user/logout';
 
 $route['nametologin'] = 'user/change_display_to_login';

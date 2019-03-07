@@ -71,7 +71,7 @@ class User extends CI_Controller
   }
 
 
-  public function register()
+  public function registered()
   {
     $this->form_validation->set_rules('first-name', 'Imię', 'required');
     $this->form_validation->set_rules('last-name', 'Nazwisko', 'required');
@@ -83,6 +83,7 @@ class User extends CI_Controller
     if ($this->form_validation->run() == FALSE)
     {
       // TODO: niepowowdzenie
+      redirect('register');
     }
     else
     {
@@ -95,6 +96,7 @@ class User extends CI_Controller
 
       $this->login_model->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
       $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
+      redirect('login');
     }
   }
 
