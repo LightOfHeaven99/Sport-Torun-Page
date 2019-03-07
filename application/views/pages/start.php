@@ -21,14 +21,8 @@ body {font-family: "Open Sans"}
 	height: 100%;
 }
 
-  .fa {
-  padding: 15px;
-  font-size: 30px;
-  width: 50px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-}
+.fa{}
+
 
 .fa:hover {
     opacity: 0.7;
@@ -174,9 +168,9 @@ and is wrapped around the whole page content, except for the footer in this exam
           <h4 style="text-align: center;">Obserwuj Nas!</h4>
         </div>
         <div class="w3-container w3-large w3-padding" style="text-align: center;">
-          <a href="https://www.facebook.com/tls.torun/" class="fa fa-facebook"></a>
-          <a href="#" class="fa fa-youtube"></a>
-          <a href="#" class="fa fa-instagram"></a>
+          <a href="https://www.facebook.com/tls.torun/" class="fa fa-facebook" style="padding: 15px; width: 50px;"></a>
+          <a href="#" class="fa fa-youtube" style="padding: 15px; width: 50px;"></a>
+          <a href="#" class="fa fa-instagram" style="padding: 15px; width: 50px;"></a>
 
         </div>
       </div>
