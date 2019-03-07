@@ -60,11 +60,20 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h2 class="w3-center"></h2>
 
 <div class="w3-content w3-display-container">
-  <img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="../assets/img/siat2.jpg" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="../assets/img/siat3.jpg" style="width:100%">
+	<?php
+		$query = $this->db->query("SELECT * FROM news ORDER BY id DESC");
+
+		while($row = mysql_fetch_assoc($query->result())){
+    	$row_array[] = $row;
+		}
+
+		for($i = 1; $i <= 3; $i++):
+			echo '<img src="data:image/jpeg;base64,'.base64_encode( $row_array[i]->image ).'" style="width:100%" class="mySlides w3-animate-fading"/>';
+	  	//<img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
+		endfor; ?>
+
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
-    <p align="center"><b>Toruńska Liga Siatkówki - dołącz już teraz!</b></p>
+    <p align="center"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #002266;"><b>dołącz</b></a> już teraz!</b></p>
   </div>
   <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -98,7 +107,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-blue w3-margin">
         <div class="w3-container w3-indigo">
           <h4>Czym jest TLS?</h4>
-          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!</p>
+          <p>Toruńska Liga Siatkówki to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!</p>
         </div>
       </div>
       <hr>
