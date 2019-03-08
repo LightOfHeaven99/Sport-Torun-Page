@@ -12,6 +12,44 @@
               <a href="forum-stuff" style="color: #364FD2;">Towar</a> / </font><b>Inne</b></h1>
               <br>
           </div>
+
+          <?php
+            $query = $this->db->query("SELECT * FROM forum ORDER BY id DESC");
+
+            foreach($query->result() as $row):
+          ?>
+            <span style="color: white;">
+              <div class="card-header">
+              <?php if($row->category == 'others') : ?>
+                <?= 'Temat: '.$row->topic; ?>
+                <br>
+                <?= 'Treść: '.$row->content; ?>
+                <br>
+                <?= 'Kontakt: '.$row->email.' / '.$row->phone; ?>
+                <br>
+
+                <?php
+                  $query_finder = $this->db->query("SELECT * FROM users");
+                  foreach($query_finder->result() as $row_finder)
+                  {
+                      if($row_finder->id == $row->author_id)
+                      {
+                        $first_name = $row_finder->first_name;
+                        $last_name = $row_finder->last_name;
+                      }
+                  }
+
+                ?>
+
+                <?= 'Dodał: '.$first_name.' '.$last_name; ?>
+                <br>
+                <?= 'Data: '.$row->postdate; ?>
+              <?php endif; ?>
+              </div>
+            </span>
+
+          <?php endforeach;?>
+
         </div>
         <div class="space50"></div>
       </div>
