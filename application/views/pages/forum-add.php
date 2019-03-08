@@ -5,10 +5,11 @@
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
         <div class="parallax-card-forum">
+          <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
             <br><br>
             <h1 style="color: white; font-size: 70px;"><b>Dodaj ogłoszenie<b></h1>
-
+          </div>
               <?php
                 $attributes = array('class' => 'form-signin');
                 echo form_open_multipart('forumadded', $attributes);
