@@ -118,13 +118,13 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-justify">
           <br>
           <p><strong>Nie zwlekaj</strong>, tylko przejdź do zakładki "<a href="login">Zaloguj się!</a>" i załóż swoje unikalne konto! Będąc użytkownikiem naszej strony możesz m.in. lajkować i komentować posty, dodawać i reagować na ogłoszenia innych użytkowników, a także głosować na zwycięzcę nadchodzącego meczu.</p>
-					<br><br>
+					<br>
 					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
-					<br><br>
+					<br>
 					<p><strong>Zachęta 3</strong></p>
-					<br><br>
+					<br>
 					<p><strong>Zachęta 4</strong></p>
-					<br><br>
+					<br>
 					<p><strong>Zachęta 5</strong></p>
 
 				</div>
