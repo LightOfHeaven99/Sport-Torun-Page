@@ -112,30 +112,23 @@ and is wrapped around the whole page content, except for the footer in this exam
 			<!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>Chcesz współtworzyć społeczność?</h2>
+          <h2>Czego szukasz?</h2>
         </div>
 
         <div class="w3-justify">
           <br>
           <p><strong>Nie zwlekaj</strong>, tylko przejdź do zakładki "<a href="login">Zaloguj się!</a>" i załóż swoje unikalne konto! Będąc użytkownikiem naszej strony możesz m.in. lajkować i komentować posty, dodawać i reagować na ogłoszenia innych użytkowników, a także głosować na zwycięzcę nadchodzącego meczu.</p>
-        </div>
-      </div>
+					<br><br>
+					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
+					<br><br>
+					<p><strong>Zachęta 3</strong></p>
+					<br><br>
+					<p><strong>Zachęta 4</strong></p>
+					<br><br>
+					<p><strong>Zachęta 5</strong></p>
 
-			<!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h2>Bogate media</h2>
 				</div>
-
-        <div class="w3-justify">
-          <br>
-          <p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
-        </div>
       </div>
-
-      <hr>
-    <!-- END BLOG ENTRIES -->
-    </div>
 
     <!-- About/Information menu -->
     <div class="w3-col l4">
