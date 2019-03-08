@@ -351,9 +351,7 @@ class Mailer extends CI_Controller
       "\n".'wyrażać opinie pod dodawanymi postami.'.
       "\n\n".'Gorąco pozdrawiamy,'."\n".'Administracja TLS-Toruń');
 
-      if($nameContact && $emailContact && $topicContact && $messageContact){
-        $this->email->send();
-      }
+      $this->email->send();
 
       echo $this->email->print_debugger();
       echo "Kod aktywacyjny został wysłany na skrzynkę pocztową!";
@@ -390,9 +388,7 @@ class Mailer extends CI_Controller
         "\n".'swoje hasło, które od teraz z łatwością zapamiętasz!'.
         "\n\n".'Gorąco pozdrawiamy,'."\n".'Administracja TLS-Toruń');
 
-        if($nameContact && $emailContact && $topicContact && $messageContact){
-          $this->email->send();
-        }
+        $this->email->send();
 
         echo $this->email->print_debugger();
         echo "Kod został wysłany na podaną skrzynkę pocztową!";
