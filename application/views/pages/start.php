@@ -85,10 +85,11 @@ and is wrapped around the whole page content, except for the footer in this exam
 <br><br>
 
 <div class="parallax-wrapper">
+	<div style="background-color: inherit;"
  <div class="parallax-card">
 	 <div class="card__cometOuter">
 	 </div>
-	 <div style="height: 20px; background-color: inherit;"></div>
+	 <div style="height: 20px;"></div>
 	 <div class="row justify-content-center">
 		 <div class="col">
 			 <center><h4 class="header">Najbliższy mecz</h4></center>
