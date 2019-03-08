@@ -297,7 +297,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <script src="../../../assets/js/blueimp-gallery.min.js"></script>
 <script src="../../../assets/js/countDown.js"></script>
-<script src="../../../assets/js/parallax-card.js"></script>
+<!-- <script src="../../../assets/js/parallax-card.js"></script> -->
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127827042-3"></script>
