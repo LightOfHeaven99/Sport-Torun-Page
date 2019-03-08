@@ -6,7 +6,10 @@
         <div class="space20"></div>
         <div class="parallax-card-forum">
           <br><br>
-          <h1 style="color: white; font-size: 30px;"><font style="color: #364FD2;"><a href="forum-squads">Składy</a> / <a href="forum-stuff">Towar</a> / <a href="forum-others">Inne</a></font></h1>
+          <h1 style="color: white; font-size: 30px;"><font style="color: #364FD2;">
+            <a href="forum-squads" style="color: #364FD2;">Składy</a> /
+            <a href="forum-stuff" style="color: #364FD2;">Towar</a> /
+            <a href="forum-others" style="color: #364FD2">Inne</a></font></h1>
 
         </div>
         <div class="space50"></div>
