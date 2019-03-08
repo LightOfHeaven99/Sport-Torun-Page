@@ -15,18 +15,25 @@ class Pages extends CI_Controller {
         show_404();
     }
 
-    $data['title'] = ucfirst($page); // Capitalize the first letter
-    // $data['news'] = $this->news_model->get_posts();
+    $data['title'] = ucfirst($page);
 
-    // $data = array(
-    //     'title' => ucfirst($page),
-    //     'news' => $this->news_model->get_posts()
-    // );
 
     $this->load->view('templates/header');
     if ($page != 'main')
       $this->load->view('templates/menu');
-    $this->load->view('pages/'.$page, $data);
+
+    if($page == 'login') {
+      if($this->session->userdata('is_active') == 1) {
+          $this->load->view('pages/login', $data);
+      }
+      else {
+          $this->load->view('pages/enter-activation-code', $data);
+      }
+    }
+    else {
+      $this->load->view('pages/'.$page, $data);
+    }
+
     if ($page != 'main')
       $this->load->view('templates/footer');
   }
