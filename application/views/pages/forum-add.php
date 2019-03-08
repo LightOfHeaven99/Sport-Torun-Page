@@ -21,7 +21,6 @@
                 echo validation_errors('<div class="alert alert-danger">', '</div>');
               ?>
 
-              <center>
               <label class="float-left" style="text-align: left; color: white;" for="">Kategoria:</label><br>
               <div class="row align-items-center remember">
 
@@ -148,8 +147,6 @@
                       ?>
 
                     </div>
-
-                  </center>
 
               <?php echo form_close(); ?>
 
