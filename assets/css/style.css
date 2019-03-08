@@ -574,7 +574,7 @@ color: white;
 /* COUNTDOWN */
 .clockdiv{
 	font-family: sans-serif;
-	color: white;
+	color: #fff;
 	display: inline-block;
 	font-weight: 100;
 	text-align: center;
@@ -589,7 +589,7 @@ color: white;
 .clockdiv div > span{
 	padding: 15px;
 	border-radius: 3px;
-	background: white;
+	background: rgba(0, 0, 0, 0.5);
 	display: inline-block;
 }
 .smalltext{
@@ -601,12 +601,11 @@ color: white;
 
 
 /* FRAME */
-
 .parallax-wrapper {
   height: 500px;
 }
 .parallax-card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   background-size: cover;
   height: 400px;
   border-radius: 5px;
@@ -615,7 +614,7 @@ color: white;
 }
 
 .parallax-card-timetable {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   background-size: cover;
   height: 500px;
   border-radius: 5px;
@@ -623,12 +622,11 @@ color: white;
 }
 
 .parallax-card-forum {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   background-size: cover;
-  height: 650px;
+  height: auto;
   border-radius: 5px;
   z-index: 4;
-}
 }
 /* END FRAME */
 

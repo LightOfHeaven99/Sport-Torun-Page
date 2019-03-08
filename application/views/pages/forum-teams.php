@@ -27,10 +27,16 @@
                 <br>
 
                 <?php
-                  $query = "SELECT * FROM users WHERE id='$row->author_id'";
-                  $row = mysql_fetch_array($query);
-                  $first_name = $row['first_name'];
-                  $last_name = $row['last_name'];
+                  $query_finder = $this->db->query("SELECT * FROM users");
+                  foreach($query_finder->result() as $row_finder)
+                  {
+                      if($row_finder['id'] == $row->author_id)
+                      {
+                        $first_name = $row_finder['first_name'];
+                        $last_name = $row_finder['last_name'];
+                      }
+                  }
+
                 ?>
 
                 <?= 'Dodał: '.$first_name.' '.$last_name; ?>
