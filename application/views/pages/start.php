@@ -153,6 +153,7 @@ and is wrapped around the whole page content, except for the footer in this exam
           <p class="w3-clear"></p>
 					<p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Komentarze  </b> <span class="w3-tag w3-white">1</span></button></p>
           <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+						<p>babla</p>
           </div>
         </div>
       </div>
