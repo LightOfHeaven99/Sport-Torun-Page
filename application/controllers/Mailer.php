@@ -316,19 +316,28 @@ class Mailer extends CI_Controller
       redirect('join');
   }
 
-  public function send_code()
+  public function generate_random_string($length = 10) {
+      $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+      $charactersLength = strlen($characters);
+      $randomString = '';
+      for ($i = 0; $i < $length; $i++) {
+          $randomString .= $characters[rand(0, $charactersLength - 1)];
+      }
+      return $randomString;
+  }
+
+  public function send_code($email)
   {
-      $emailReset = 1;
 
       $this->email->clear();
 
       $this->email->from('no-reply@tls-torun.pl', 'Administracja');
-      $this->email->to($emailReset);
+      $this->email->to($email);
 
       $code = generate_random_string(10);
       $date = date("D M d, Y G:i");
 
-      $this->email->subject('Kod aktywacyjny konta na TLS-Toruń: '.$emailReset);
+      $this->email->subject('Kod aktywacyjny konta na TLS-Toruń: '.$email);
       $this->email->message(
       'Drogi użytkowniku,'."\n".'dnia '.$date.' został wygenerowany'
       ."\n".'dla Ciebie kod aktywacyjny konta na stronie www.tls-torun.pl.'.
@@ -393,15 +402,5 @@ class Mailer extends CI_Controller
         redirect('reset-account');
       }
   }
-
-public function generate_random_string($length = 10) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $charactersLength = strlen($characters);
-    $randomString = '';
-    for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, $charactersLength - 1)];
-    }
-    return $randomString;
-}
 
 }
