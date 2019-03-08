@@ -85,7 +85,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 <br><br>
 
 <div class="parallax-wrapper">
-	<div style="background-color:#3F51B5;"
+	<div style="background-color:#3F51B5;">
  <div class="parallax-card">
 	 <div class="card__cometOuter">
 	 </div>
