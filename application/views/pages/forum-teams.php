@@ -14,15 +14,26 @@
             foreach($query->result() as $row):
           ?>
             <span style="color: white;">
-              <div class="card-header forum-wrapper">
+              <div class="card-header">
               <?php if($row->category == 'teams') : ?>
-                <br>
+                <?= 'Temat: '.$row->topic; ?>
                 <?= '___________________________________' ?>
                 <br>
-                <?= 'Temat: '.$row->topic; ?>
-                <br>
                 <?= 'Treść: '.$row->content; ?>
-                <br><br>
+                <br>
+                <?= 'Data: '.$row->postdate; ?>
+                <br>
+                <?= 'Kontakt: '.$row->email.' / '.$row->phone; ?>
+                <br>
+
+                <?php
+                  $query = "SELECT * FROM users WHERE id='$row->author_id'"
+                  $row = mysql_fetch_array($query);
+                  $first_name = $row['first_name'];
+                  $last_name = $row['last_name'];
+                ?>
+
+                <?= 'Dodał: '.$first_name.' '.$last_name; ?>
               <?php endif; ?>
               </div>
             </span>
