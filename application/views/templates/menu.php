@@ -59,7 +59,7 @@
     <a href="forum-categories">Kategorie</a>
     <a href="forum-add">Dodaj ogłoszenie</a>
     <a href="forum-my">Moje ogłoszenia</a>
-    <a href="forum-message">Napisz wiadomość</a>
+    <a href="forum-message">Wiadomości</a>
 </div>
 </div>
         <li class="nav-item">

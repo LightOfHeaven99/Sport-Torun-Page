@@ -7,7 +7,7 @@
 
 			<?php
 				$attributes = array('class' => 'form-signin');
-				echo form_open('codesent', $attributes);
+				echo form_open('resetcodesent', $attributes);
 			?>
 
 			<div class="card">

@@ -19,21 +19,6 @@ class Login_model extends CI_Model
     $code,
     $last_login_date
   ) {
-      /*$dane = array(
-        'first_name' => $first_name,
-        'last_name' => $last_name,
-        'uid' => $uid,
-        'pwd' => $pwd,
-        'email' => $email,
-        'display_login' => $display_login,
-        'is_admin' => $is_admin,
-        'is_active' => $is_active,
-        'code' => $code
-      );
-
-      $r = $this->db->where('id', $id)->update('users', $dane);
-
-      return $r;  */
 
       $query = $this->db->query("UPDATE users SET
         first_name = '$first_name',
@@ -55,6 +40,19 @@ class Login_model extends CI_Model
     $query = $this->db->query("SELECT * FROM users WHERE uid='$uid' AND pwd=md5('$pwd')");
     if($query->num_rows() == 1)
     {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
+  public function activation_user($id, $code){
+    $query = $this->db->query("SELECT * FROM users WHERE id='$id' AND code='$code'");
+    if($query->num_rows() == 1)
+    {
+      $query = $this->db->query("UPDATE users SET is_active = 1, code = '' WHERE id = '$id'");
       return true;
     }
     else

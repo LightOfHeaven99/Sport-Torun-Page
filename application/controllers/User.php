@@ -74,6 +74,58 @@ class User extends CI_Controller
     }
   }
 
+  // Z KODEM RESETUJACYm, MA SIE USUNAC PO ZALOGOWANIU ELO 
+  public function login_post_code(){
+    $uid = $this->input->post('uid');
+    $pwd = $this->input->post('pwd');
+
+    $this->form_validation->set_rules('uid', 'Login', 'required');
+    $this->form_validation->set_rules('pwd', 'Hasło', 'required');
+
+    // CZY DOBRZE WPROWADZONO DANE
+    if ($this->form_validation->run() == FALSE)
+    {
+      $this->login();
+    }
+    else
+    {
+      // CZY DANE ISTNIEJĄ W BAZIE
+      if($this->login_model->login_user($uid, $pwd) == true)
+      {
+        $result = $this->login_model->read_user_information($uid);
+        if ($result != false) {
+          $session_data = array(
+          'id' => $result[0]->id,
+          'first_name' => $result[0]->first_name,
+          'last_name' => $result[0]->last_name,
+          'uid' => $result[0]->uid,
+          'pwd' => $result[0]->pwd,
+          'email' => $result[0]->email,
+          'display_login' => $result[0]->display_login,
+          'is_admin' => $result[0]->is_admin,
+          'is_active' => $result[0]->is_active,
+          'code' => $result[0]->code,
+          'last_login_date' => $result[0]->last_login_date,
+          'logged_in' => TRUE
+          );
+
+          // Dodanie informacji o użytkowniku do sesji
+          $this->session->set_userdata($session_data);
+        }
+        else {
+          // blad przy czytaniu z bazy danych
+        }
+
+          $this->login();
+      }
+      else {
+        $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
+        //$this->session->flashdata('login_info');
+        $this->login();
+      }
+    }
+  }
+
   public function logout()
   {
     $this->session->unset_userdata($session_data);
@@ -247,6 +299,26 @@ class User extends CI_Controller
 
   public function activate_account() {
 
+      $code = $this->input->post('enter-code');
+
+      $this->form_validation->set_rules('enter-code', 'Kod', 'required');
+
+      if ($this->form_validation->run() == FALSE)
+      {
+        redirect('enter-activation-code');
+      }
+      else
+      {
+        if($this->login_model->activation_user($this->session->userdata('id'), $code) == true)
+        {
+        $this->login();
+        }
+        else
+        {
+          // błędny kod
+          redirect('enter-activation-code');
+        }
+      }
   }
 
 

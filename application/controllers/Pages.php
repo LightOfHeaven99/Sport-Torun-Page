@@ -21,19 +21,7 @@ class Pages extends CI_Controller {
     $this->load->view('templates/header');
     if ($page != 'main')
       $this->load->view('templates/menu');
-
-    if($page == 'login') {
-      if($this->session->userdata('is_active') == 1) {
-          $this->load->view('pages/login', $data);
-      }
-      else {
-          $this->load->view('pages/enter-activation-code', $data);
-      }
-    }
-    else {
-      $this->load->view('pages/'.$page, $data);
-    }
-
+    $this->load->view('pages/'.$page, $data);
     if ($page != 'main')
       $this->load->view('templates/footer');
   }

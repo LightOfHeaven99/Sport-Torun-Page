@@ -15,50 +15,59 @@
             <div class="space30"></div>
             <div class="d-flex justify-content-center">
               <div class="card">
-              <?php if($this->session->userdata('is_admin') == 0) : ?>
-          			<div class="card-header">
-          				<h3>Zalogowany jako</h3>
-          			</div>
-          			<div class="card-header">
-          				<div class ="space10"></div>
-          				<h4 style="color: white; text-align: center;">
-                    <?php if($this->session->userdata('display_login') == 0) {
-                      echo $this->session->userdata('first_name')." ".$this->session->userdata('last_name');
-                    } else {
-                      echo $this->session->userdata('uid') ;
-                    }
-                    ?>
-                  </h4>
-          				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
-          			</div>
-          			<div class="card-body">
-                  <?php if($this->session->userdata('display_login') == 0) : ?>
-                    <a href="nametologin" style="color: #364FD2;">Zmień wyświetlanie na login</a></br> <!-- display_login 0->1 -->
-                  <?php else : ?>
-                    <a href="logintoname" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
-                  <?php endif; ?>
-                  <!-- <a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br> <!-- podobne do panelu rejestracji --> -->
-          				<!-- <a href="#" style="color: #364FD2;">Usuń konto</a>  <!-- ostrzeżenie do akceptacji, usunięcie rekordu z tabeli i LOGOUT --> -->
 
-              <?php else : ?>
-                <div class="card-header">
-                  <h3 style="color: #364FD2";>ADMIN</h3>
-                </div>
-                <div class="card-header">
-          				<div class ="space10"></div>
-          				<h4 style="color: white; text-align: center;">
-                    <?= $this->session->userdata('first_name')." ".$this->session->userdata('last_name'); ?>
-                  </h4>
-          			</div>
-                <div class="card-body">
-                <a href="admin-panel" style="color: #364FD2;">Główny panel</a></br> <!-- DD4E4E czerwony -->
-                <a href="news-panel" style="color: #364FD2;">Zarządzaj aktualnościami</a></br>
-        				<a href="matches-panel" style="color: #364FD2;">Zarządzaj meczami</a></br>
-        				<a href="teams-panel" style="color: #364FD2;">Zarządzaj drużynami</a></br>
-                <a href="players-panel" style="color: #364FD2;">Zarządzaj zawodnikami</a></br>
-                <a href="multimedia-panel" style="color: #364FD2;">Zarządzaj multimediami</a></br>
-                <a href="users-panel" style="color: #364FD2;">Zarządzaj użytkownikami</a>
-              <?php endif; ?>
+                <?php if($this->session->userdata('is_active') == 1) : ?>
+
+                    <?php if($this->session->userdata('is_admin') == 0) : ?>
+                			<div class="card-header">
+                				<h3>Zalogowany jako</h3>
+                			</div>
+                			<div class="card-header">
+                				<div class ="space10"></div>
+                				<h4 style="color: white; text-align: center;">
+                          <?php if($this->session->userdata('display_login') == 0) {
+                            echo $this->session->userdata('first_name')." ".$this->session->userdata('last_name');
+                          } else {
+                            echo $this->session->userdata('uid') ;
+                          }
+                          ?>
+                        </h4>
+                				<p style="color: gray; text-align: center;">(pod taką nazwą będziesz komentować)</p>
+                			</div>
+                			<div class="card-body">
+                        <?php if($this->session->userdata('display_login') == 0) : ?>
+                          <a href="nametologin" style="color: #364FD2;">Zmień wyświetlanie na login</a></br> <!-- display_login 0->1 -->
+                        <?php else : ?>
+                          <a href="logintoname" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
+                        <?php endif; ?>
+                        <!-- <a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br> <!-- podobne do panelu rejestracji --> -->
+                				<!-- <a href="#" style="color: #364FD2;">Usuń konto</a>  <!-- ostrzeżenie do akceptacji, usunięcie rekordu z tabeli i LOGOUT --> -->
+
+                    <?php else : ?>
+                      <div class="card-header">
+                        <h3 style="color: #364FD2";>ADMIN</h3>
+                      </div>
+                      <div class="card-header">
+                				<div class ="space10"></div>
+                				<h4 style="color: white; text-align: center;">
+                          <?= $this->session->userdata('first_name')." ".$this->session->userdata('last_name'); ?>
+                        </h4>
+                			</div>
+                      <div class="card-body">
+                      <a href="admin-panel" style="color: #364FD2;">Główny panel</a></br> <!-- DD4E4E czerwony -->
+                      <a href="news-panel" style="color: #364FD2;">Zarządzaj aktualnościami</a></br>
+              				<a href="matches-panel" style="color: #364FD2;">Zarządzaj meczami</a></br>
+              				<a href="teams-panel" style="color: #364FD2;">Zarządzaj drużynami</a></br>
+                      <a href="players-panel" style="color: #364FD2;">Zarządzaj zawodnikami</a></br>
+                      <a href="multimedia-panel" style="color: #364FD2;">Zarządzaj multimediami</a></br>
+                      <a href="users-panel" style="color: #364FD2;">Zarządzaj użytkownikami</a>
+                    <?php endif; ?>
+
+                <?php else : ?>
+                  <div class="card-body">
+                  <p style="color: white; text-align: center; vertical-align: center;"><a href="enter-activation-code" style="color: #364FD2;">Aktywuj</a> swoje konto.</p>
+
+                <?php endif; ?>
 
         			</div>
 

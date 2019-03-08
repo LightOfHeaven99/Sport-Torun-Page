@@ -55,6 +55,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'user/login';
 $route['logged'] = 'user/login_post';
+$route['loggedbycode'] = 'user/login_post_code';
 $route['registration'] = 'user/registration';
 $route['logout'] = 'user/logout';
 $route['accountactivation'] = 'user/activate_account';
@@ -65,7 +66,8 @@ $route['logintoname'] = 'user/change_display_to_name';
 
 $route['mailsent'] = 'mailer/send_contact';
 $route['teamsent'] = 'mailer/send_team';
-$route['codesent'] = 'user/send_reset_code';
+$route['resetcodesent'] = 'mailer/send_reset_code';
+$route['codesent'] = 'mailer/send_code';
 
 $route['admin-panel'] = 'pages/admin/admin-panel';
 $route['news-panel'] = 'pages/admin/news-panel';

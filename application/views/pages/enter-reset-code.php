@@ -7,7 +7,7 @@
 
     <?php
       $attributes = array('class' => 'form-signin');
-      echo form_open(' ', $attributes);
+      echo form_open('loggedbycode', $attributes);
     ?>
 
     <div class="card">

@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="parallax-card-forum">
+        <div class="card">
           <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
             <br>
@@ -151,7 +151,14 @@
               <?php echo form_close(); ?>
 
           <?php else : ?>
-            <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
+
+            <br><br>
+            <?php if($this->session->userdata('is_active') == 1) : ?>
+              <p style="vertical-align: center; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
+            <?php else : ?>
+              <p style="vertical-align: center; text-align: center;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby dodać ogłoszenie.</i></p>
+            <?php endif; ?>
+
           <?php endif; ?>
         </div>
         <div class="space50"></div>
