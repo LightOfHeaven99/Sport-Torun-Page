@@ -60,30 +60,36 @@
             <div class="w3-justify" style="vertical-align: bottom;">
               <br>
               <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-                <?php if($row->voting == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
-                <?php endif; ?>
-                <?php if($row->mailing == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
-                <?php endif; ?>
-                <?php if($row->commenting == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><span class="fa fa-comment"></i> Skomentuj</b></button></p>
-                    <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-                    </div>
-                <?php endif; ?>
-                <?php if($this->session->userdata('is_admin') == TRUE) : ?>
-                  <p class="w3-left"><a href ="#" class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="return confirm('Chcesz przejść do edycji?');"><b>Edytuj</b></a></p>
+                <?php if($this->session->userdata('is_active') == 0) : ?>
+                  <p style="vertical-align: bottom; text-align: center;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby wyrazić opinię.</i></p>
 
-                  <?php
-                    //$attributes = array('class' => 'form-signin');
-                    //echo form_open('newsdeleted($row->id)', $attributes);
-                  ?>
+                <?php else : ?>
+                  <?php if($row->voting == 1) : ?>
+                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
+                  <?php endif; ?>
+                  <?php if($row->mailing == 1) : ?>
+                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
+                  <?php endif; ?>
+                  <?php if($row->commenting == 1) : ?>
+                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><span class="fa fa-comment"></i> Skomentuj</b></button></p>
+                      <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+                      </div>
+                  <?php endif; ?>
+                  <?php if($this->session->userdata('is_admin') == TRUE) : ?>
+                    <p class="w3-left"><a href ="#" class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="return confirm('Chcesz przejść do edycji?');"><b>Edytuj</b></a></p>
 
-                  <p class="w3-left"><a class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="return confirm('Jesteś pewien, że chcesz usunąć ten post?');"><b>Usuń</b></a></p>
+                    <?php
+                      //$attributes = array('class' => 'form-signin');
+                      //echo form_open('newsdeleted($row->id)', $attributes);
+                    ?>
+
+                      <p class="w3-left"><a class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="return confirm('Jesteś pewien, że chcesz usunąć ten post?');"><b>Usuń</b></a></p>
+                    <?php endif; ?>
+                    <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
+                      <br><br><br><p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
+                    <?php endif; ?>
                 <?php endif; ?>
-                <?php if($row->voting == 0 && $row->commenting == 0 && $row->mailing == 0) : ?>
-                  <br><br><br><p style = "vertical-align: bottom; text-align: center; color: gray;"><i>Ocenianie postu zablokowane.</i></p>
-                <?php endif; ?>
+
               <?php else : ?>
                 <p style="vertical-align: bottom; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby wyrazić opinię.</i></p>
               <?php endif; ?>
