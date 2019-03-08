@@ -375,7 +375,7 @@ class Mailer extends CI_Controller
         $this->email->from('no-reply@tls-torun.pl', 'Administracja');
         $this->email->to($emailReset);
 
-        $code = generate_random_string(10);
+        $code = $this->generate_random_string(10);
         $date = date("D M d, Y G:i");
 
         $this->email->subject('Kod odzyskania konta na TLS-Toruń: '.$emailReset);
