@@ -8,6 +8,7 @@
           <div class="card-header">
             <br><br>
             <h1 style="color: white; font-size: 30px;">Moje ogłoszenia</h1>
+            <br>
           </div>
         </div>
         <div class="space50"></div>

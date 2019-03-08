@@ -11,6 +11,7 @@
               <a href="forum-squads" style="color: #364FD2;">Składy</a> /
               <a href="forum-stuff" style="color: #364FD2;">Towar</a> /
               <a href="forum-others" style="color: #364FD2">Inne</a></font></h1>
+              <br>
           </div>
         </div>
         <div class="space50"></div>

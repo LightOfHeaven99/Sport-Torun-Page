@@ -7,8 +7,9 @@
         <div class="parallax-card-forum">
           <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-            <br><br>
-            <h1 style="color: white; font-size: 70px;"><b>Dodaj ogłoszenie<b></h1>
+            <br>
+            <h1 style="color: white; font-size: 70px;"><b>Dodaj ogłoszenie</b></h1>
+            <br>
           </div>
               <?php
                 $attributes = array('class' => 'form-signin');
@@ -31,9 +32,8 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-squads-forum" style="padding-left: 3px; padding-top: 7px; color: white;">[składy]</label>
-              </div>
-              <div class="row align-items-center remember">
+                <p style="color: white;">[składy]</p>
+
 
                 <?php
                   $data = array(
@@ -43,9 +43,8 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-stuff-forum" style="padding-left: 3px; padding-top: 7px; color: white;">[towar]</label>
-              </div>
-              <div class="row align-items-center remember">
+                <p style="color: white;">[towar]</p>
+
 
                 <?php
                   $data = array(
@@ -55,7 +54,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-others-forum" style="padding-left: 3px; padding-top: 7px; color: white;">[inne]</label>
+                <p style="color: white;">[inne]</p>
               </div>
 
               <div class="row">
@@ -98,9 +97,9 @@
                   <br>
 
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
 
-                      <p align="justify" style="color: white;"><input type="checkbox" id="phone-check" onclick="myFunction()" required> Telefon<br>
+                      <label style="color: white;" for="phone-forum"><b>Telefon</b></label>
                         <?php
                           $data = array(
                             'type'          => 'textarea',
@@ -112,7 +111,12 @@
                           echo form_input($data);
                         ?>
 
-                      <p align="justify" style="color: white;"><input type="checkbox" id="email-check" onclick="myFunction()" required> E-mail<br>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-3">
+
+                      <label style="color: white;" for="email-forum"><b>E-mail</b></label>
                         <?php
                           $data = array(
                             'type'          => 'textarea',

@@ -10,6 +10,7 @@
             <h1 style="color: white; font-size: 30px;"><font style="color: #364FD2;">
               <a href="forum-squads" style="color: #364FD2;">Składy</a> /
               <a href="forum-stuff" style="color: #364FD2;">Towar</a> / </font><b>Inne</b></h1>
+              <br>
           </div>
         </div>
         <div class="space50"></div>
