@@ -168,7 +168,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 					<br>
 					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
 					<br>
-					<p><strong>Rzecz 3</strong></p>
+					<p><strong></strong></p>
 				</div>
 
       </div>
