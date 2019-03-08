@@ -601,11 +601,12 @@ color: white;
 
 
 /* FRAME */
+
 .parallax-wrapper {
   height: 500px;
 }
 .parallax-card {
-  background-color: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 400px;
   border-radius: 5px;
@@ -614,7 +615,7 @@ color: white;
 }
 
 .parallax-card-timetable {
-  background-color: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   height: 500px;
   border-radius: 5px;
@@ -622,11 +623,12 @@ color: white;
 }
 
 .parallax-card-forum {
-  background-color: inherit;
+  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
-  height: auto;
+  height: 650px;
   border-radius: 5px;
   z-index: 4;
+}
 }
 /* END FRAME */
 
