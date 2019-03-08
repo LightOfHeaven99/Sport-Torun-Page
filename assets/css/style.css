@@ -605,7 +605,7 @@ color: white;
   height: 500px;
 }
 .parallax-card {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   background-size: cover;
   height: 400px;
   border-radius: 5px;
