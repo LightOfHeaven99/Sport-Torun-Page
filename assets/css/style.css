@@ -582,13 +582,13 @@ color: white;
 }
 .clockdiv > div{
 	padding: 10px;
-	border-radius: 2px;
+	border-radius: px;
 	display: inline-block;
   margin-top: 0.5rem;
 }
 .clockdiv div > span{
 	padding: 15px;
-	border-radius: 3px;
+	border-radius: px;
 	background: rgba(0, 0, 0, 0.5);
 	display: inline-block;
 }
