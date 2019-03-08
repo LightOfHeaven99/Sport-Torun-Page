@@ -76,23 +76,22 @@ class User extends CI_Controller
 
   // Z KODEM RESETUJACYm, MA SIE USUNAC PO ZALOGOWANIU ELO
   public function login_post_code(){
-    $uid = $this->input->post('uid');
-    $pwd = $this->input->post('pwd');
+    $email = $this->input->post('reset-email');
+    $code = $this->input->post('enter-code');
 
-    $this->form_validation->set_rules('uid', 'Login', 'required');
-    $this->form_validation->set_rules('pwd', 'Hasło', 'required');
+    $this->form_validation->set_rules('enter-code', 'Kod', 'required');
 
     // CZY DOBRZE WPROWADZONO DANE
     if ($this->form_validation->run() == FALSE)
     {
-      $this->login();
+      redirect('enter-reset-code');
     }
     else
     {
       // CZY DANE ISTNIEJĄ W BAZIE
-      if($this->login_model->login_user($uid, $pwd) == true)
+      if($this->login_model->login_user_by_code($email, $code) == true)
       {
-        $result = $this->login_model->read_user_information($uid);
+        $result = $this->login_model->read_user_information_by_email($email);
         if ($result != false) {
           $session_data = array(
           'id' => $result[0]->id,
@@ -119,7 +118,7 @@ class User extends CI_Controller
           $this->login();
       }
       else {
-        $this->session->set_flashdata('login_info', 'Nie udało się zalogować.');
+        $this->session->set_flashdata('login_info', 'Nie udało się odblokować.');
         //$this->session->flashdata('login_info');
         $this->login();
       }
@@ -313,7 +312,7 @@ class User extends CI_Controller
       {
         if($this->login_model->activation_user($this->session->userdata('id'), $code) == true)
         {
-        $this->login();
+            $this->login();
         }
         else
         {
