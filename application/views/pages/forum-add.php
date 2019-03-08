@@ -1,10 +1,20 @@
+<style>
+.card{
+height: auto;
+margin-top: auto;
+margin-bottom: auto;
+width: 900px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+</style>
+
 <!-- Page Content -->
 <div class="forum-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="card" style="width: 1200px;">
+        <div class="card">
           <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
             <br>
