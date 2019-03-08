@@ -601,20 +601,7 @@ color: white;
 
 
 /* FRAME */
-.parallax-wrapper {
-  height: 500px;
-}
-.parallax-card {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  height: 400px;
-  border-radius: 5px;
-  /* box-shadow: -20px 30px 116px 0 rgba(51, 62, 225, 0.54); */
-  z-index: 4;
-}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .parallax-card-forum {
   background-color: inherit;
   background-size: cover;
@@ -622,25 +609,6 @@ color: white;
   border-radius: 5px;
   z-index: 4;
 }
-=======
->>>>>>> e7328d2e183d92d63fd5c2b1990898955ed90845
-=======
-.parallax-card-timetable {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  height: 500px;
-  border-radius: 5px;
-  z-index: 4;
-}
-
-.parallax-card-forum {
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  height: 650px;
-  border-radius: 5px;
-  z-index: 4;
-}
->>>>>>> 9f4e52f4f908f89d5e59da2c882b5bc447edeefd
 /* END FRAME */
 
 /* Klasy do przetrzymywania zdjęć dla oddzielnych stron */
