@@ -102,7 +102,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 	 </div>
 	 <div class="row justify-content-center">
 		 <center><div id="clockdiv" class="clockdiv card__circle">
-			 <div style="background-color: #3F51B5;">
+			 <div style="background-color: #ffd200;">
 				 <span class="days"></span>
 				 <div class="smalltext">Dni</div>
 			 </div>
@@ -110,7 +110,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 				 <span class="hours"></span>
 				 <div class="smalltext">Godzin</div>
 			 </div>
-			 <div style="background-color: #3F51B5;">
+			 <div style="background-color: #ffd200;">
 				 <span class="minutes"></span>
 				 <div class="smalltext">Minut</div>
 			 </div>
