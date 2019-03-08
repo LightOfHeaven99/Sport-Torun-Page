@@ -13,6 +13,7 @@
 
             foreach($query->result() as $row):
           ?>
+            <span style="color: white;">
               <div class="card-header forum-wrapper">
               <?php if($row->category == 'teams') : ?>
                 <br>
@@ -24,6 +25,7 @@
                 <br><br>
               <?php endif; ?>
               </div>
+            </span>
 
           <?php endforeach;?>
 

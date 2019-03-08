@@ -624,7 +624,7 @@ color: white;
 .parallax-card-forum {
   background-color: inherit;
   background-size: cover;
-  height: 650px;
+  height: auto;
   border-radius: 5px;
   z-index: 4;
 }
