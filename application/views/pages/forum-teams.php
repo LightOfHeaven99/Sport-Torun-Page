@@ -30,7 +30,7 @@
                   $query_finder = $this->db->query("SELECT * FROM users");
                   foreach($query_finder->result() as $row_finder)
                   {
-                      if($row_finder['id'] == $row->author_id)
+                      if($row_finder->id == $row->author_id)
                       {
                         $first_name = $row_finder['first_name'];
                         $last_name = $row_finder['last_name'];
