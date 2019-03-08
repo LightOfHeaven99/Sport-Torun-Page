@@ -282,6 +282,19 @@ and is wrapped around the whole page content, except for the footer in this exam
   </div>
 </div>
 
+<script src="../../../assets/js/blueimp-gallery.min.js"></script>
+<script src="../../../assets/js/countDown.js"></script>
+<script src="../../../assets/js/parallax-card.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127827042-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127827042-3');
+</script>
 
 <script>
 // Toggle between hiding and showing blog replies/comments
@@ -300,6 +313,7 @@ function likeFunction(x) {
   x.innerHTML = "✓ Polubiono";
 }
 </script>
+
 <script>
 var myIndex = 0;
 carousel();
