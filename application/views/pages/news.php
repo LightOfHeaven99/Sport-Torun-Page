@@ -56,7 +56,7 @@
               echo $row->content;?></p>
             <?php endif; ?>
             <br>
-
+            
             <div class="w3-justify" style="vertical-align: bottom;">
               <br>
               <?php if($this->session->userdata('logged_in') == TRUE) : ?>
@@ -64,7 +64,9 @@
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
                 <?php endif; ?>
                 <?php if($row->commenting == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><i class="fa fa-comment"></i> Skomentuj</b></button></p>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><span class="fa fa-comment"></i> Skomentuj</b></button></p>
+                    <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+                    </div>
                 <?php endif; ?>
                 <?php if($row->mailing == 1) : ?>
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
