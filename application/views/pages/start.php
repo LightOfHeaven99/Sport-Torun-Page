@@ -77,7 +77,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 		} ?>
 
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
-    <p align="center"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #ffd200;">dołącz</a> już teraz!</b></p>
+    <p align="center" style="font-size: 20px;"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #ffd200;">dołącz</a> już teraz!</b></p>
   </div>
   <!-- <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
@@ -118,7 +118,6 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-justify">
           <br>
           <p><strong>Nie zwlekaj</strong>, tylko przejdź do zakładki "<a href="login">Zaloguj się!</a>" i załóż swoje unikalne konto! Będąc użytkownikiem naszej strony możesz m.in. lajkować i komentować posty, dodawać i reagować na ogłoszenia innych użytkowników, a także głosować na zwycięzcę nadchodzącego meczu.</p>
-<<<<<<< HEAD
 					<br>
 					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
 					<br>
@@ -127,21 +126,8 @@ and is wrapped around the whole page content, except for the footer in this exam
 					<p><strong>Rzecz 4</strong></p>
 					<br>
 					<p><strong>Rzecz 5</strong></p>
-=======
-        </div>
-      </div>
-
-			<!-- Blog entry -->
-      <div class="w3-container w3-white w3-margin w3-padding-large">
-        <div class="w3-center">
-          <h2>Bogate media</h2>
->>>>>>> 9d326b80613046e8646a3f8420c152252ff0644e
 				</div>
 
-        <div class="w3-justify">
-          <br>
-          <p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
-        </div>
       </div>
 
       <hr>
@@ -194,11 +180,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
             <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
-<<<<<<< HEAD
 																						<center><br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font><center>
-=======
-																						<br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font>
->>>>>>> 9d326b80613046e8646a3f8420c152252ff0644e
 						</span>
           </div>
         </div>
