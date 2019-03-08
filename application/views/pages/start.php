@@ -91,33 +91,33 @@ and is wrapped around the whole page content, except for the footer in this exam
 	 <div style="height: 20px;"></div>
 	 <div class="row justify-content-center">
 		 <div class="col">
-			 <h4 class="header">Najbliższy mecz</h4>
+			 <center><h4 class="header">Najbliższy mecz</h4></center>
 		 </div>
 	 </div>
 	 <div class="row justify-content-center">
 		 <div class="col">
-			 <h5 class="header">odbędzie się za:</h5>
+			 <center><h5 class="header">odbędzie się za:</h5></center>
 		 </div>
 	 </div>
 	 <div class="row justify-content-center">
-		 <div id="clockdiv" class="clockdiv card__circle">
-			 <div style="background-color: #333EE1;">
+		 <center><div id="clockdiv" class="clockdiv card__circle">
+			 <div style="background-color: #3F51B5;">
 				 <span class="days"></span>
 				 <div class="smalltext">Dni</div>
 			 </div>
-			 <div style="background-color: #E1D633;">
+			 <div style="background-color: #ffd200;">
 				 <span class="hours"></span>
 				 <div class="smalltext">Godzin</div>
 			 </div>
-			 <div style="background-color: #333EE1;">
+			 <div style="background-color: #3F51B5;">
 				 <span class="minutes"></span>
 				 <div class="smalltext">Minut</div>
 			 </div>
-			 <div style="background-color: #E1D633;">
+			 <div style="background-color: #ffd200;">
 				 <span class="seconds"></span>
 				 <div class="smalltext">Sekund</div>
 			 </div>
-		 </div>
+		 </div></center>
 	 </div>
 	 <div style="height: 20px;"></div>
 	 <div class="row justify-content-center">
@@ -158,7 +158,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 			<!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
-          <h2>Chcesz współtworzyć społeczność?</h2>
+          <h2>Czego szukasz?</h2>
         </div>
 
         <div class="w3-justify">
@@ -168,10 +168,6 @@ and is wrapped around the whole page content, except for the footer in this exam
 					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
 					<br>
 					<p><strong>Rzecz 3</strong></p>
-					<br>
-					<p><strong>Rzecz 4</strong></p>
-					<br>
-					<p><strong>Rzecz 5</strong></p>
 				</div>
 
       </div>
