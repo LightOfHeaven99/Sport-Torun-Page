@@ -123,9 +123,9 @@ and is wrapped around the whole page content, except for the footer in this exam
 	 <div style="height: 20px;"></div>
 	 <div class="row justify-content-center">
 			<div class="row" style="padding: 2rem;">
-				<div class="row-sm-4"><center><h6 class="header"><img src="../assets/downloads/Schemat Logo.png" style="height: 50px; width: 50px;"></img> Drużyna Pierwsza</h6></center></div>
+				<div class="row-sm-4"><center><h6 class="header"><img src="../assets/downloads/Schemat Logo.png" style="height: 80px; width: 80px;"></img> Drużyna Pierwsza </h6></center></div>
 				<div class="row-sm-4"><center><h6 class="header"> : </h4></center></div>
-				<div class="row-sm-4"><center><h6 class="header">Drużyna Druga <img src="../assets/downloads/Schemat Logo.png" style="height: 50px; width: 50px;"></img></h6></center></div>
+				<div class="row-sm-4"><center><h6 class="header"> Drużyna Druga <img src="../assets/downloads/Schemat Logo.png" style="height: 80px; width: 80px;"></img></h6></center></div>
 			</div>
 	 </div>
 	</div>
