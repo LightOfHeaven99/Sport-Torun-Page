@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="card">
+        <div class="card" style="width: 800px;">
           <div class="card-header">
             <br><br>
             <h1 style="color: white; font-size: 30px;"><b>Składy</b><font style="color: #364FD2;"> /
