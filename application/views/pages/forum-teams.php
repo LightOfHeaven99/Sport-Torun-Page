@@ -32,8 +32,8 @@
                   {
                       if($row_finder->id == $row->author_id)
                       {
-                        $first_name = $row_finder['first_name'];
-                        $last_name = $row_finder['last_name'];
+                        $first_name = $row_finder->first_name;
+                        $last_name = $row_finder->last_name;
                       }
                   }
 
