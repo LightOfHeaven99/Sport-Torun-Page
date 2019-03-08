@@ -316,6 +316,7 @@ class Mailer extends CI_Controller
       redirect('join');
   }
 
+
   public function generate_random_string($length = 10) {
       $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
       $charactersLength = strlen($characters);
@@ -326,6 +327,7 @@ class Mailer extends CI_Controller
       return $randomString;
   }
 
+
   public function send_code($email)
   {
 
@@ -334,7 +336,7 @@ class Mailer extends CI_Controller
       $this->email->from('no-reply@tls-torun.pl', 'Administracja');
       $this->email->to($email);
 
-      $code = generate_random_string(10);
+      $code = $this->generate_random_string(10);
       $date = date("D M d, Y G:i");
 
       $this->email->subject('Kod aktywacyjny konta na TLS-Toruń: '.$email);
