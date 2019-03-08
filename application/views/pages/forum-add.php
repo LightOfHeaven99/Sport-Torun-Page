@@ -19,30 +19,42 @@
                 echo validation_errors('<div class="alert alert-danger">', '</div>');
               ?>
 
-              <label class="float-left" style="text-align: left; color: white;" for=""><b>Poszukuję:</b></label><br>
+              <label class="float-left" style="text-align: left; color: white;" for="">Kategoria:</label><br>
               <div class="row align-items-center remember">
 
                 <?php
                   $data = array(
                     'type'          => 'checkbox',
-                    'name'          => 'category-teams-forum',
-                    'id'            => 'category-teams-forum'
+                    'name'          => 'category-squads-forum',
+                    'id'            => 'category-squads-forum'
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-teams-forum" style="padding-left: 3px; padding-top: 7px; color: white;">zawodnika do drużyny</label>
+                <label for="category-squads-forum" style="padding-left: 3px; padding-top: 7px; color: white;">[składy]</label>
               </div>
               <div class="row align-items-center remember">
 
                 <?php
                   $data = array(
                     'type'          => 'checkbox',
-                    'name'          => 'category-players-forum',
-                    'id'            => 'category-players-forum'
+                    'name'          => 'category-stuff-forum',
+                    'id'            => 'category-stuff-forum'
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-players-forum" style="padding-left: 3px; padding-top: 7px; color: white;">drużynę jako zawodnik</label>
+                <label for="category-stuff-forum" style="padding-left: 3px; padding-top: 7px; color: white;">[towar]</label>
+              </div>
+              <div class="row align-items-center remember">
+
+                <?php
+                  $data = array(
+                    'type'          => 'checkbox',
+                    'name'          => 'category-others-forum',
+                    'id'            => 'category-others-forum'
+                  );
+                  echo form_input($data);
+                ?>
+                <label for="category-others-forum" style="padding-left: 3px; padding-top: 7px; color: white;">[inne]</label>
               </div>
 
               <div class="row">

@@ -29,7 +29,13 @@ class Forum extends CI_Controller
     }
     else
     {
-      $category = isset($_POST['category-teams-forum']) ? 'teams' : 'players';
+      if(isset($_POST['category-squads-forum']))
+        $category = 'squads';
+      else if(isset($_POST['category-stuff-forum']))
+        $category = 'stuff';
+      else
+        $category = 'others';
+
       $author_id = $this->session->userdata('id');
       $topic = $this->input->post('topic-forum');
       $content = $this->input->post('content-forum');
@@ -44,10 +50,12 @@ class Forum extends CI_Controller
                                               $phone,
                                               $email);
 
-      if($category == 'teams')
-        redirect('forum-teams');
+      if($category == 'squads')
+        redirect('forum-squads');
+      else if($category == 'stuff')
+        redirect('forum-stuff');
       else
-        redirect('forum-players');
+        redirect('forum-others');
     }
   }
 }

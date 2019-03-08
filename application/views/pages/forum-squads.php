@@ -5,9 +5,11 @@
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
         <div class="parallax-card-forum">
-          <br><br>
-          <h1 style="color: white; font-size: 20px;"><b>Drużyna poszukuje</b> / <a href="forum-players" style="color: #364FD2;">Poszukuję drużyny</a></h1>
-
+          <div class="card-header">
+            <br><br>
+            <h1 style="color: white; font-size: 30px;"><b>Składy</b><font style="color: #364FD2;"> / <a href="forum-stuff">Towar</a> / <a href="forum-others">Inne</a></font></h1>
+            <br><br>
+          </div>
           <?php
             $query = $this->db->query("SELECT * FROM forum ORDER BY id DESC");
 
@@ -15,13 +17,10 @@
           ?>
             <span style="color: white;">
               <div class="card-header">
-              <?php if($row->category == 'teams') : ?>
+              <?php if($row->category == 'squads') : ?>
                 <?= 'Temat: '.$row->topic; ?>
-                <?= '___________________________________' ?>
                 <br>
                 <?= 'Treść: '.$row->content; ?>
-                <br>
-                <?= 'Data: '.$row->postdate; ?>
                 <br>
                 <?= 'Kontakt: '.$row->email.' / '.$row->phone; ?>
                 <br>
@@ -40,6 +39,8 @@
                 ?>
 
                 <?= 'Dodał: '.$first_name.' '.$last_name; ?>
+                <br>
+                <?= 'Data: '.$row->postdate; ?>
               <?php endif; ?>
               </div>
             </span>
