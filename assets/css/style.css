@@ -614,7 +614,7 @@ color: white;
 }
 
 .parallax-card-timetable {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   background-size: cover;
   height: 500px;
   border-radius: 5px;
@@ -622,7 +622,7 @@ color: white;
 }
 
 .parallax-card-forum {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: inherit;
   background-size: cover;
   height: 650px;
   border-radius: 5px;
