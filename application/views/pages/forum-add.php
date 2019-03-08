@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="card" style="width: 800px;">
+        <div class="card" style="width: 1500px;">
           <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
             <br>
