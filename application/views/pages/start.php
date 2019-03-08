@@ -104,19 +104,19 @@ and is wrapped around the whole page content, except for the footer in this exam
 		 <center><div id="clockdiv" class="clockdiv card__circle">
 			 <div style="background-color:  #e6b800;">
 				 <span class="days" style="background-color: #e6b800 "></span>
-				 <div class="smalltext">Dni</div>
+				 <div class="smalltext"><b>Dni</b></div>
 			 </div>
 			 <div style="background-color:  #e6b800;">
 				 <span class="hours" style="background-color: #e6b800 "></span>
-				 <div class="smalltext">Godzin</div>
+				 <div class="smalltext"><b>Godzin</b></div>
 			 </div>
 			 <div style="background-color:  #e6b800;">
 				 <span class="minutes" style="background-color: #e6b800"></span>
-				 <div class="smalltext">Minut</div>
+				 <div class="smalltext"><b>Minut</b></div>
 			 </div>
 			 <div style="background-color:  #e6b800;">
 				 <span class="seconds" style="background-color: #e6b800"></span>
-				 <div class="smalltext">Sekund</div>
+				 <div class="smalltext"><b>Sekund</b></div>
 			 </div>
 		 </div></center>
 	 </div>
