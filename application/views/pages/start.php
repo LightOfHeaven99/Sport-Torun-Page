@@ -246,6 +246,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       </div>
 		</div>
       <hr>
+			<br>
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
