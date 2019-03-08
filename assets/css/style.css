@@ -601,7 +601,6 @@ color: white;
 
 
 /* FRAME */
-
 .parallax-wrapper {
   height: 500px;
 }
@@ -629,6 +628,13 @@ color: white;
   border-radius: 5px;
   z-index: 4;
 }
+
+.parallax-card-forum {
+  background-color: inherit;
+  background-size: cover;
+  height: auto;
+  border-radius: 5px;
+  z-index: 4;
 }
 /* END FRAME */
 

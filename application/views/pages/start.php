@@ -102,30 +102,30 @@ and is wrapped around the whole page content, except for the footer in this exam
 	 </div>
 	 <div class="row justify-content-center">
 		 <center><div id="clockdiv" class="clockdiv card__circle">
-			 <div style="background-color: #3F51B5;">
-				 <span class="days"></span>
-				 <div class="smalltext">Dni</div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="days" style="background-color: #e6b800 "></span>
+				 <div class="smalltext"><b>Dni</b></div>
 			 </div>
-			 <div style="background-color: #ffd200;">
-				 <span class="hours"></span>
-				 <div class="smalltext">Godzin</div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="hours" style="background-color: #e6b800 "></span>
+				 <div class="smalltext"><b>Godzin</b></div>
 			 </div>
-			 <div style="background-color: #3F51B5;">
-				 <span class="minutes"></span>
-				 <div class="smalltext">Minut</div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="minutes" style="background-color: #e6b800"></span>
+				 <div class="smalltext"><b>Minut</b></div>
 			 </div>
-			 <div style="background-color: #ffd200;">
-				 <span class="seconds"></span>
-				 <div class="smalltext">Sekund</div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="seconds" style="background-color: #e6b800"></span>
+				 <div class="smalltext"><b>Sekund</b></div>
 			 </div>
 		 </div></center>
 	 </div>
 	 <div style="height: 20px;"></div>
 	 <div class="row justify-content-center">
 			<div class="row" style="padding: 2rem;">
-				<div class="col-sm-4"><center><h6 class="header">Drużyna Pierwsza</h6></center></div>
-				<div class="col-sm-4"><center><h6 class="header">:</h4></center></div>
-				<div class="col-sm-4"><center><h6 class="header">Drużyna Druga</h6></center></div>
+				<div class="row-sm-4"><center><h6 class="header"><img src="../assets/downloads/Schemat Logo.png" style="height: 80px; width: 80px;"></img> Drużyna Pierwsza </h6></center></div>
+				<div class="row-sm-4"><center><h6 class="header"> : </h4></center></div>
+				<div class="row-sm-4"><center><h6 class="header"> Drużyna Druga <img src="../assets/downloads/Schemat Logo.png" style="height: 80px; width: 80px;"></img></h6></center></div>
 			</div>
 	 </div>
 	</div>
