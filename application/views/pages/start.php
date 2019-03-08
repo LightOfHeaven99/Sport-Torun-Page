@@ -150,33 +150,34 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-justify">
           <br>
           <p><strong>Serdecznie zapraszamy</strong> wszystkich chętnych do zapisania się do Toruńskiej Ligi Siatkówki! Dostępny jest Formularz Zgłoszeniowy w zakładce "<a href="join">Zgłoszenie</a>", gdzie można wypełnić i przesłać potrzebne dokumenty, aby zgłosić się do nadchodzących rozgrywek. W razie jakichkolwiek pytań, proszę kontaktować się ze mną za pomocą Formularza Kontaktowego, który znajduje się w stopce strony.</p>
-          <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+          <p class="w3-clear"></p>
+					<div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
 						<p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Komentarze  </b> <span class="w3-tag w3-white">1</span></button></p>
-						<p class="w3-clear"></p>
-						<!-- Example of comment field -->
-				<div id="demo2" style="display:none">
-					<div class="w3-row">
-						<hr>
-						<div class="w3-col l2 m3">
-							<img src="/w3images/girl_train.jpg" style="width:90px;">
-						</div>
-						<div class="w3-col l10 m9">
-							<h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
-							<p>Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
-						</div>
-					</div>
-					<div class="w3-row w3-margin-bottom">
-						<div class="w3-col l2 m3">
-							<img src="/w3images/girl.jpg" style="width:90px;">
-						</div>
-						<div class="w3-col l10 m9">
-							<h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
-							<p>Love hats!!</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<p class="w3-clear"></p>
+		<!-- Example of comment field -->
+<div id="demo2" style="display:none">
+	<div class="w3-row">
+		<hr>
+		<div class="w3-col l2 m3">
+			<img src="/w3images/girl_train.jpg" style="width:90px;">
 		</div>
+		<div class="w3-col l10 m9">
+			<h4>Amber <span class="w3-opacity w3-medium">April 26, 2015, 10:52 PM</span></h4>
+			<p>Love your blog page! Simply the best! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+		</div>
+	</div>
+	<div class="w3-row w3-margin-bottom">
+		<div class="w3-col l2 m3">
+			<img src="/w3images/girl.jpg" style="width:90px;">
+		</div>
+		<div class="w3-col l10 m9">
+			<h4>Angie <span class="w3-opacity w3-medium">April 23, 2015, 9:12 PM</span></h4>
+			<p>Love hats!!</p>
+		</div>
+	</div>
+</div>
+</div>
+</div>
           </div>
         </div>
       </div>
