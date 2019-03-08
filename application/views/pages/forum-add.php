@@ -21,6 +21,7 @@
                 echo validation_errors('<div class="alert alert-danger">', '</div>');
               ?>
 
+              <center>
               <label class="float-left" style="text-align: left; color: white;" for="">Kategoria:</label><br>
               <div class="row align-items-center remember">
 
@@ -32,8 +33,8 @@
                   );
                   echo form_input($data);
                 ?>
-                <p style="color: white; padding-left: 3px; padding-top: 7px;">składy</p>
 
+                <label for="category-squads-forum" style="color: white; padding-left: 3px; padding-top: 7px;">składy</label>
 
                 <?php
                   $data = array(
@@ -43,7 +44,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <p style="color: white; padding-left: 3px; padding-top: 7px;">towar</p>
+                <label for="category-stuff-forum" style="color: white; padding-left: 3px; padding-top: 7px;">towar</label>
 
 
                 <?php
@@ -54,7 +55,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <p style="color: white; padding-left: 3px; padding-top: 7px;">inne</p>
+                <label for="category-others-forum" style="color: white; padding-left: 3px; padding-top: 7px;">inne</label>
               </div>
 
               <div class="row">
@@ -113,6 +114,8 @@
 
                       </div>
                     </div>
+                    <br>
+
                     <div class="row">
                       <div class="col-md-3">
 
@@ -129,6 +132,7 @@
                         ?>
                       </div>
                     </div>
+                    <br>
 
                     <div class="form-group">
 
@@ -144,6 +148,8 @@
                       ?>
 
                     </div>
+
+                  </center>
 
               <?php echo form_close(); ?>
 
