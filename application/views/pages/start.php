@@ -60,34 +60,120 @@ and is wrapped around the whole page content, except for the footer in this exam
       <h2 class="w3-center"></h2>
 
 <div class="w3-content w3-display-container">
-  <img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="../assets/img/siat2.jpg" style="width:100%">
-  <img class="mySlides w3-animate-fading" src="../assets/img/siat3.jpg" style="width:100%">
+	<?php
+		$query = $this->db->query("SELECT * FROM news ORDER BY id DESC");
+
+		$counter = 0;
+		foreach ($query->result() as $row)
+		{
+			echo '<img src="data:image/jpeg;base64,'.base64_encode( $row->image ).'" style="width:100%" class="mySlides w3-animate-fading"/>';
+	  	//<img class="mySlides w3-animate-fading" src="../assets/img/siat1.jpg" style="width:100%">
+
+			$counter++;
+			if($counter == 3) {
+				break;
+			}
+
+		} ?>
+
   <div class="w3-display-center w3-container w3-padding-16 w3-indigo">
-    <p align="center"><b>Toruńska Liga Siatkówki - dołącz już teraz!</b></p>
+    <p align="center" style="font-size: 20px;"><b>Toruńska Liga Siatkówki - <a href="join" style="color: #ffd200;">dołącz</a> już teraz!</b></p>
   </div>
-  <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-  <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+  <!-- <button class="w3-button w3-indigo w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-indigo w3-display-right" onclick="plusDivs(1)">&#10095;</button> -->
 </div>
 <br><br>
+
+<div class="parallax-wrapper">
+	<div style="background-color:#3F51B5;"
+ <div class="parallax-card">
+	 <div class="card__cometOuter">
+	 </div>
+	 <div style="height: 20px;"></div>
+	 <div class="row justify-content-center">
+		 <div class="col">
+			 <center><h4 class="header">Najbliższy mecz</h4></center>
+		 </div>
+	 </div>
+	 <div class="row justify-content-center">
+		 <div class="col">
+			 <center><h5 class="header">odbędzie się za:</h5></center>
+		 </div>
+	 </div>
+	 <div class="row justify-content-center">
+		 <center><div id="clockdiv" class="clockdiv card__circle">
+			 <div style="background-color:  #e6b800;">
+				 <span class="days" style="background-color: #e6b800 "></span>
+				 <div class="smalltext"><b>Dni</b></div>
+			 </div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="hours" style="background-color: #e6b800 "></span>
+				 <div class="smalltext"><b>Godzin</b></div>
+			 </div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="minutes" style="background-color: #e6b800"></span>
+				 <div class="smalltext"><b>Minut</b></div>
+			 </div>
+			 <div style="background-color:  #e6b800;">
+				 <span class="seconds" style="background-color: #e6b800"></span>
+				 <div class="smalltext"><b>Sekund</b></div>
+			 </div>
+		 </div></center>
+	 </div>
+	 <div style="height: 20px;"></div>
+	 <div class="row justify-content-center">
+			<div class="row" style="padding: 2rem;">
+				<div class="col-sm-4"><center><h6 class="header">Drużyna Pierwsza</h6></center></div>
+				<div class="col-sm-4"><center><h6 class="header">:</h4></center></div>
+				<div class="col-sm-4"><center><h6 class="header">Drużyna Druga</h6></center></div>
+			</div>
+	 </div>
+	</div>
+</div>
 
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
           <h2>Liga rusza już w kwietniu!</h2>
-          <h3><span class="w3-opacity">3 Marca, 2019</span></h3>
+          <h3><span class="w3-opacity">
+						<?php
+							$today = date("Y-m-d H:i:s");
+
+							list($year, $month, $day) = explode("-", $today);
+							$day = substr($day, 0, 2);
+
+							echo $day.'.'.$month.'.'.$year;
+
+						?></span></h3>
         </div>
 
         <div class="w3-justify">
           <br>
-          <p><strong>Serdecznie zapraszamy</strong> wszystkich chętnych do zapisania się do Toruńskiej Ligi Siatkówki! Dostępny jest Formularz Zgłoszeniowy w zakładce "Zgłoszenie", gdzie można wypełnić i przesłać potrzebne dokumenty, aby zgłosić się do nadchodzących rozgrywek. W razie jakichkolwiek pytań, proszę kontaktować się ze mną za pomocą Formularza Kontaktowego, który znajduje się w stopce strony.</p>
-          <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="thumbs-up"></i> Like</b></button></p>
-          <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Replies  </b> <span class="w3-tag w3-white">1</span></button></p>
+          <p><strong>Serdecznie zapraszamy</strong> wszystkich chętnych do zapisania się do Toruńskiej Ligi Siatkówki! Dostępny jest Formularz Zgłoszeniowy w zakładce "<a href="join">Zgłoszenie</a>", gdzie można wypełnić i przesłać potrzebne dokumenty, aby zgłosić się do nadchodzących rozgrywek. W razie jakichkolwiek pytań, proszę kontaktować się ze mną za pomocą Formularza Kontaktowego, który znajduje się w stopce strony.</p>
           <p class="w3-clear"></p>
+					<p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Komentarze  </b> <span class="w3-tag w3-white">1</span></button></p>
           <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
           </div>
         </div>
       </div>
+
+			<!-- Blog entry -->
+      <div class="w3-container w3-white w3-margin w3-padding-large">
+        <div class="w3-center">
+          <h2>Czego szukasz?</h2>
+        </div>
+
+        <div class="w3-justify">
+          <br>
+          <p><strong>Nie zwlekaj</strong>, tylko przejdź do zakładki "<a href="login">Zaloguj się!</a>" i załóż swoje unikalne konto! Będąc użytkownikiem naszej strony możesz m.in. lajkować i komentować posty, dodawać i reagować na ogłoszenia innych użytkowników, a także głosować na zwycięzcę nadchodzącego meczu.</p>
+					<br>
+					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
+					<br>
+					<p><strong></strong></p>
+				</div>
+
+      </div>
+
       <hr>
     <!-- END BLOG ENTRIES -->
     </div>
@@ -98,7 +184,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <div class="w3-blue w3-margin">
         <div class="w3-container w3-indigo">
           <h4>Czym jest TLS?</h4>
-          <p>TLS czyli Toruńska Liga Siatkówki to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!</p>
+          <p><b>Toruńska Liga Siatkówki</b> to nowa inicjatywa sportowa, która będzie zrzeszać każdego, kto zechce zebrać swoją drużynę i wystartować w rozgrywkach. Zapraszamy do zapisania się i spróbowania swoich sił w piłce siatkowej!</p>
         </div>
       </div>
       <hr>
@@ -106,29 +192,26 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Posts -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Popularne Posty</h4>
+          <h4>Najnowsze posty</h4>
         </div>
         <ul class="w3-ul w3-hoverable w3-white">
+					<?php
+						$counter = 0;
+						foreach ($query->result() as $row) :
+					?>
           <li class="w3-padding-16">
-            <span class="w3-large">Liga rusza już w kwietniu!</span>
+            <span class="w3-large"><?= $row->title; ?></span>
             <br>
-            <span><font size="2">Zapisz się już dziś.</font></span>
+            <span><font size="2"><?= substr($row->content, 0, 180).'...'; ?></font></span>
           </li>
-          <li class="w3-padding-16">
-            <span class="w3-large">Zapraszamy do współpracy!</span>
-            <br>
-            <span><font size="2">Zachęcamy do kontaktu.</font></span>
-          </li>
-          <li class="w3-padding-16">
-            <span class="w3-large">Zbierz swoją drużynę!</span>
-            <br>
-            <span><font size="2">Wraz ze znajomymi pokonaj tytanów siatkówki.</font></span>
-          </li>
-          <li class="w3-padding-16">
-            <span class="w3-large">Strona w budowie!</span>
-            <br>
-            <span><font size="2">Cały czas pracujemy, aby strona się rozwijała.</font></span>
-          </li>
+					<?php
+						$counter++;
+						if($counter == 4) {
+							break;
+						}
+
+						endforeach;
+					?>
         </ul>
       </div>
       <hr>
@@ -136,11 +219,13 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Advertising -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Reklamy</h4>
+          <h4>Reklama</h4>
         </div>
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
-            <span class="w3-display-middle">Miejsce na reklamę</span>
+            <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
+																						<center><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font><center>
+						</span>
           </div>
         </div>
       </div>
@@ -149,7 +234,7 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Inspiration -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Nasz film promocyjny!</h4>
+          <h4>Teaser</h4>
         </div>
         <div class="w3-row-padding w3-white">
           <div class="w3-col s12">
@@ -161,11 +246,13 @@ and is wrapped around the whole page content, except for the footer in this exam
          </div>
         </div>
       </div>
+		</div>
       <hr>
+			<br>
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4 style="text-align: center;">Obserwuj Nas!</h4>
+          <h4 style="text-align: center;">OBSERWUJ NAS</h4>
         </div>
         <div class="w3-container w3-large w3-padding" style="text-align: center;">
           <a href="https://www.facebook.com/tls.torun/" class="fa fa-facebook" style="padding: 15px; width: 50px;"></a>
@@ -198,6 +285,19 @@ and is wrapped around the whole page content, except for the footer in this exam
   </div>
 </div>
 
+<script src="../../../assets/js/blueimp-gallery.min.js"></script>
+<script src="../../../assets/js/countDown.js"></script>
+<!-- <script src="../../../assets/js/parallax-card.js"></script> -->
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127827042-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127827042-3');
+</script>
 
 <script>
 // Toggle between hiding and showing blog replies/comments
@@ -216,6 +316,7 @@ function likeFunction(x) {
   x.innerHTML = "✓ Polubiono";
 }
 </script>
+
 <script>
 var myIndex = 0;
 carousel();

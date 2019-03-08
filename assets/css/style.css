@@ -1,6 +1,7 @@
-  /* body {
-  backgorund-color: grey;
-} */
+div.forum-wrapper * {
+  font-size: 20px;
+  color: white;
+}
 
 .responsive {
   width: 100%;
@@ -608,7 +609,7 @@ color: white;
   background-size: cover;
   height: 400px;
   border-radius: 5px;
-  box-shadow: -20px 30px 116px 0 rgba(51, 62, 225, 0.54);
+  /* box-shadow: -20px 30px 116px 0 rgba(51, 62, 225, 0.54); */
   z-index: 4;
 }
 

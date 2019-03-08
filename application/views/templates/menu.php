@@ -56,9 +56,10 @@
   <div class="dropdown">
   <button class="dropbtn">Forum</button>
   <div class="dropdown-content">
-    <a href="forum-teams">Drużyna poszukuje</a>
-    <a href="forum-players">Poszukuję drużyny</a>
-   <a href="forum-add">Dodaj ogłoszenie</a>
+    <a href="forum-categories">Kategorie</a>
+    <a href="forum-add">Dodaj ogłoszenie</a>
+    <a href="forum-my">Moje ogłoszenia</a>
+    <a href="forum-message">Napisz wiadomość</a>
 </div>
 </div>
         <li class="nav-item">

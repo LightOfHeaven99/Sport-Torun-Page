@@ -63,11 +63,13 @@
                 <?php if($row->voting == 1) : ?>
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
                 <?php endif; ?>
-                <?php if($row->commenting == 1) : ?>
-                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><i class="fa fa-comment"></i> Skomentuj</b></button></p>
-                <?php endif; ?>
                 <?php if($row->mailing == 1) : ?>
                   <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
+                <?php endif; ?>
+                <?php if($row->commenting == 1) : ?>
+                  <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><span class="fa fa-comment"></i> Skomentuj</b></button></p>
+                    <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+                    </div>
                 <?php endif; ?>
                 <?php if($this->session->userdata('is_admin') == TRUE) : ?>
                   <p class="w3-left"><a href ="#" class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="return confirm('Chcesz przejść do edycji?');"><b>Edytuj</b></a></p>

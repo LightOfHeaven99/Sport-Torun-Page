@@ -5,10 +5,12 @@
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
         <div class="parallax-card-forum">
+          <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-            <br><br>
-            <h1 style="color: white; font-size: 70px;"><b>Dodaj ogłoszenie<b></h1>
-
+            <br>
+            <h1 style="color: white; font-size: 70px;"><b>Dodaj ogłoszenie</b></h1>
+            <br>
+          </div>
               <?php
                 $attributes = array('class' => 'form-signin');
                 echo form_open_multipart('forumadded', $attributes);
@@ -19,36 +21,46 @@
                 echo validation_errors('<div class="alert alert-danger">', '</div>');
               ?>
 
-              <label class="float-left" style="text-align: left; color: white;" for=""><b>Poszukuję:</b></label><br>
+              <label class="float-left" style="text-align: left; color: white;" for="">Kategoria:</label><br>
               <div class="row align-items-center remember">
 
                 <?php
                   $data = array(
                     'type'          => 'checkbox',
-                    'name'          => 'category-teams-forum',
-                    'id'            => 'category-teams-forum'
+                    'name'          => 'category-squads-forum',
+                    'id'            => 'category-squads-forum'
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-teams-forum" style="padding-left: 3px; padding-top: 7px; color: white;">zawodnika do drużyny</label>
-              </div>
-              <div class="row align-items-center remember">
+
+                <label for="category-squads-forum" style="color: white; padding-left: 3px; padding-top: 7px;">składy</label>
 
                 <?php
                   $data = array(
                     'type'          => 'checkbox',
-                    'name'          => 'category-players-forum',
-                    'id'            => 'category-players-forum'
+                    'name'          => 'category-stuff-forum',
+                    'id'            => 'category-stuff-forum'
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-players-forum" style="padding-left: 3px; padding-top: 7px; color: white;">drużynę jako zawodnik</label>
+                <label for="category-stuff-forum" style="color: white; padding-left: 3px; padding-top: 7px;">towar</label>
+
+
+                <?php
+                  $data = array(
+                    'type'          => 'checkbox',
+                    'name'          => 'category-others-forum',
+                    'id'            => 'category-others-forum'
+                  );
+                  echo form_input($data);
+                ?>
+                <label for="category-others-forum" style="color: white; padding-left: 3px; padding-top: 7px;">inne</label>
               </div>
 
               <div class="row">
                 <div class="col-md-3">
 
-                  <label style="color: white;" for="topic-contact"><b>Temat</b></label>
+                  <label style="color: white;" for="topic-contact">Temat</label>
 
                   <?php
                     $data = array(
@@ -67,7 +79,7 @@
                 <div class="row">
                   <div class="col-md-6">
 
-                    <label style="color: white;" for="content-forum"><b>Treść</b></label>
+                    <label style="color: white;" for="content-forum">Treść</label>
 
                     <?php
                       $data = array(
@@ -85,9 +97,9 @@
                   <br>
 
                   <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
 
-                      <p align="justify" style="color: white;"><input type="checkbox" id="phone-check" onclick="myFunction()" required> Telefon<br>
+                      <label style="color: white;" for="phone-forum">Telefon</label>
                         <?php
                           $data = array(
                             'type'          => 'textarea',
@@ -99,7 +111,14 @@
                           echo form_input($data);
                         ?>
 
-                      <p align="justify" style="color: white;"><input type="checkbox" id="email-check" onclick="myFunction()" required> E-mail<br>
+                      </div>
+                    </div>
+                    <br>
+
+                    <div class="row">
+                      <div class="col-md-3">
+
+                      <label style="color: white;" for="email-forum">E-mail</label>
                         <?php
                           $data = array(
                             'type'          => 'textarea',
@@ -112,6 +131,7 @@
                         ?>
                       </div>
                     </div>
+                    <br>
 
                     <div class="form-group">
 
