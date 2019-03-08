@@ -21,7 +21,9 @@ body {font-family: "Open Sans"}
 	height: 100%;
 }
 
-.fa{}
+.fa{
+
+}
 
 
 .fa:hover {
