@@ -167,15 +167,17 @@ and is wrapped around the whole page content, except for the footer in this exam
 					<br>
 					<p><strong>Profesjonalny fotograf</strong> zadba, aby w zakładkach "<a href="gallery">Galeria</a>" oraz "<a href="video">Video</a>" pojawiały się na bieżąco relacje z najgorętszych meczów tego sezonu. Jeśli to wciąż będzie dla Was za mało, więcej materiałów możecie poszukać na naszym <a href="https://www.facebook.com/tls.torun/">facebooku</a>.</p>
 					<br>
-					<p><strong>Zachęta 3</strong></p>
+					<p><strong>Rzecz 3</strong></p>
 					<br>
-					<p><strong>Zachęta 4</strong></p>
+					<p><strong>Rzecz 4</strong></p>
 					<br>
-					<p><strong>Zachęta 5</strong></p>
-
+					<p><strong>Rzecz 5</strong></p>
 				</div>
       </div>
-		</div>
+
+      <hr>
+    <!-- END BLOG ENTRIES -->
+    </div>
 
     <!-- About/Information menu -->
     <div class="w3-col l4">
@@ -223,7 +225,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
             <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
-																						<br><center><font size="1"><a href="contact">napisz do nas</a></font></center>
+																						<center><br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font><center>
 						</span>
           </div>
         </div>
@@ -246,6 +248,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
       </div>
       <hr>
+			<br>
 
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
