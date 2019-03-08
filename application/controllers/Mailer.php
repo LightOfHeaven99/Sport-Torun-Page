@@ -392,8 +392,6 @@ class Mailer extends CI_Controller
 
         echo $this->email->print_debugger();
         echo "Kod został wysłany na podaną skrzynkę pocztową!";
-
-        redirect('enter-reset-code');
       }
       else
       {

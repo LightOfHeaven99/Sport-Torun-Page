@@ -48,6 +48,18 @@ class Login_model extends CI_Model
     }
   }
 
+  public function login_user_by_code($email, $code){
+    $query = $this->db->query("SELECT * FROM users WHERE email='$email' AND code='$code'");
+    if($query->num_rows() == 1)
+    {
+      return true;
+    }
+    else
+    {
+      return false;
+    }
+  }
+
   public function activation_user($id, $code){
     $query = $this->db->query("SELECT * FROM users WHERE id='$id' AND code='$code'");
     if($query->num_rows() == 1)
@@ -76,6 +88,23 @@ class Login_model extends CI_Model
   public function read_user_information($uid) {
 
     $condition = "uid =" . "'" . $uid . "'";
+    $this->db->select('*');
+    $this->db->from('users');
+    $this->db->where($condition);
+    $this->db->limit(1);
+    $query = $this->db->get();
+
+    if ($query->num_rows() == 1) {
+      return $query->result();
+    }
+    else {
+      return false;
+    }
+  }
+
+  public function read_user_information_by_email($email) {
+
+    $condition = "email =" . "'" . $email . "'";
     $this->db->select('*');
     $this->db->from('users');
     $this->db->where($condition);
