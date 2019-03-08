@@ -84,6 +84,52 @@ and is wrapped around the whole page content, except for the footer in this exam
 </div>
 <br><br>
 
+<div class="parallax-wrapper">
+ <div class="parallax-card">
+	 <div class="card__cometOuter">
+	 </div>
+	 <div style="height: 20px;"></div>
+	 <div class="row justify-content-center">
+		 <div class="col">
+			 <h4 class="header">Najbliższy mecz</h4>
+		 </div>
+	 </div>
+	 <div class="row justify-content-center">
+		 <div class="col">
+			 <h5 class="header">odbędzie się za:</h5>
+		 </div>
+	 </div>
+	 <div class="row justify-content-center">
+		 <div id="clockdiv" class="clockdiv card__circle">
+			 <div style="background-color: #333EE1;">
+				 <span class="days"></span>
+				 <div class="smalltext">Dni</div>
+			 </div>
+			 <div style="background-color: #E1D633;">
+				 <span class="hours"></span>
+				 <div class="smalltext">Godzin</div>
+			 </div>
+			 <div style="background-color: #333EE1;">
+				 <span class="minutes"></span>
+				 <div class="smalltext">Minut</div>
+			 </div>
+			 <div style="background-color: #E1D633;">
+				 <span class="seconds"></span>
+				 <div class="smalltext">Sekund</div>
+			 </div>
+		 </div>
+	 </div>
+	 <div style="height: 20px;"></div>
+	 <div class="row justify-content-center">
+			<div class="row" style="padding: 2rem;">
+				<div class="col-sm-4"><h6 class="header">Drużyna Pierwsza</h6></div>
+				<div class="col-sm-4"><h6 class="header">:</h4></div>
+				<div class="col-sm-4"><h6 class="header">Drużyna Druga</h6></div>
+			</div>
+	 </div>
+	</div>
+</div>
+
       <!-- Blog entry -->
       <div class="w3-container w3-white w3-margin w3-padding-large">
         <div class="w3-center">
@@ -175,12 +221,12 @@ and is wrapped around the whole page content, except for the footer in this exam
       <!-- Advertising -->
       <div class="w3-white w3-margin">
         <div class="w3-container w3-padding w3-indigo">
-          <h4>Reklamy</h4>
+          <h4>Reklama</h4>
         </div>
         <div class="w3-container w3-white">
           <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
             <span class="w3-display-middle">[miejsce na <b>Twoją</b> reklamę]
-																						<center><br><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font><center>
+																						<center><font size="1"><a href="contact" style="text-align: center;">napisz do nas</a></font><center>
 						</span>
           </div>
         </div>
