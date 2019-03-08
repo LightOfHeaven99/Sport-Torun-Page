@@ -161,7 +161,7 @@
           );
           echo form_input($data);
           ?>
-          <label for="remember-me" style="padding-left: 3px; padding-top: 7px;">Zapamiętaj mnie</label>
+          <label for="remember-me" style=" padding-left: 3px; padding-top: 7px;">Zapamiętaj mnie</label>
 				</div>
 				<div class="form-group">
 

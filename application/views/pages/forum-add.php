@@ -32,7 +32,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <p style="color: white;">[składy]</p>
+                <p style="color: white; padding-left: 3px; padding-top: 7px;">składy</p>
 
 
                 <?php
@@ -43,7 +43,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <p style="color: white;">[towar]</p>
+                <p style="color: white; padding-left: 3px; padding-top: 7px;">towar</p>
 
 
                 <?php
@@ -54,13 +54,13 @@
                   );
                   echo form_input($data);
                 ?>
-                <p style="color: white;">[inne]</p>
+                <p style="color: white; padding-left: 3px; padding-top: 7px;">inne</p>
               </div>
 
               <div class="row">
                 <div class="col-md-3">
 
-                  <label style="color: white;" for="topic-contact"><b>Temat</b></label>
+                  <label style="color: white;" for="topic-contact">Temat</label>
 
                   <?php
                     $data = array(
@@ -79,7 +79,7 @@
                 <div class="row">
                   <div class="col-md-6">
 
-                    <label style="color: white;" for="content-forum"><b>Treść</b></label>
+                    <label style="color: white;" for="content-forum">Treść</label>
 
                     <?php
                       $data = array(
@@ -99,7 +99,7 @@
                   <div class="row">
                     <div class="col-md-3">
 
-                      <label style="color: white;" for="phone-forum"><b>Telefon</b></label>
+                      <label style="color: white;" for="phone-forum">Telefon</label>
                         <?php
                           $data = array(
                             'type'          => 'textarea',
@@ -116,7 +116,7 @@
                     <div class="row">
                       <div class="col-md-3">
 
-                      <label style="color: white;" for="email-forum"><b>E-mail</b></label>
+                      <label style="color: white;" for="email-forum">E-mail</label>
                         <?php
                           $data = array(
                             'type'          => 'textarea',
