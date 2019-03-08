@@ -101,7 +101,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 		 </div>
 	 </div>
 	 <div class="row justify-content-center">
-		 <center><div id="clockdiv" class="clockdiv card__circle">
+		 <center><div id="clockdiv" class="clockdiv card">
 			 <div style="background-color:  #e6b800;">
 				 <span class="days" style="background-color: #e6b800 "></span>
 				 <div class="smalltext">Dni</div>
