@@ -27,7 +27,7 @@
                 <br>
 
                 <?php
-                  $query = "SELECT * FROM users WHERE id='$row->author_id'"
+                  $query = "SELECT * FROM users WHERE id='$row->author_id'";
                   $row = mysql_fetch_array($query);
                   $first_name = $row['first_name'];
                   $last_name = $row['last_name'];
