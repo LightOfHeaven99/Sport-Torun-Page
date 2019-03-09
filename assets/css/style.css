@@ -1,3 +1,13 @@
+.team-name {
+  color: white;
+  font-size: 40px;
+}
+
+.team-name:hover {
+  color: #364FD2;
+  text-decoration: none;
+}
+
 div.forum-wrapper * {
   font-size: 20px;
   color: white;

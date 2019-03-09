@@ -30,10 +30,10 @@
           <a class="nav-link" href="timetable">Terminarz</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="table">Tabela</a>
+          <a class="nav-link" href="results">Wyniki</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="results">Wyniki</a>
+          <a class="nav-link" href="table">Tabela</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="statistics">Statystyki</a>

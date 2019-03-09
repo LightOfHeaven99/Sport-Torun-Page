@@ -5,13 +5,22 @@
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
         <div class="card" style="width: auto;">
+
+          <?php
+            $query = $this->db->query("SELECT * FROM teams ORDER BY name");
+
+            foreach($query->result() as $row):
+          ?>
+
           <div class="card-header">
-          <br><br>
-          <div class="row">
-          &nbsp; &nbsp;<img src="../assets/img/facebook-logo2.png" alt="logo" height="70px" width="70px">
-          <p style="color: white; font-size: 40px;"><a href="#"><font color="white">&nbsp; Drużyna 1</font></a></p>
-        </div>
-        </div>
+            <div class="row">
+            &nbsp; &nbsp;
+            <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->logo ).'" width="70" height="70" class="responsive"/>'; ?>
+            &nbsp;<a class="team-name" href="#"><?= $row->name;?></a>
+            </div>
+          </div>
+
+          <?php endforeach;?>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
       <br><br><br>
