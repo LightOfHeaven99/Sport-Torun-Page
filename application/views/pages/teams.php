@@ -29,13 +29,13 @@
               foreach($query_players->result() as $row_players):
                 //if($row_players->id != 0) :
 
-                  function show_player_after_click($row_players, $current_id) {
-                    if($row_players->id == $current_id) :
-                      echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                  function show_player_after_click($current_row, $current_id) {
+                    if($current_row->id == $current_id) :
+                      echo '<img src = "data:image/jpeg;base64,'.base64_encode( $current_row->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                       echo '<br>';
-                      echo $row_players->first_name;
+                      echo $current_row->first_name;
                       echo '&nbsp;';
-                      echo $row_players->last_name;
+                      echo $current_row->last_name;
                     endif;
                   }
 
