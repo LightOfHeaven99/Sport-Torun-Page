@@ -22,30 +22,31 @@
               $query_players = $this->db->query("SELECT * FROM players");
 
               foreach($query_players->result() as $row_players):
+                //if($row_players->id != 0) :
+                  if($row_players->id == $row->player1_id) :
+                    echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                    ?> <br> <?php
+                    echo $row_players->first_name;
+                    ?> &nbsp; <?php
+                    echo $row_players->last_name;
+                  endif;
 
-                if($row_players->id == $row->player1_id) :
-                  echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
-                  ?> <br> <?php
-                  echo $row_players->first_name;
-                  ?> &nbsp; <?php
-                  echo $row_players->last_name;
-                endif;
+                  if($row_players->id == $row->player2_id) :
+                    echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                    ?> <br> <?php
+                    echo $row_players->first_name;
+                    ?> &nbsp; <?php
+                    echo $row_players->last_name;
+                  endif;
 
-                if($row_players->id == $row->player2_id) :
-                  echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
-                  ?> <br> <?php
-                  echo $row_players->first_name;
-                  ?> &nbsp; <?php
-                  echo $row_players->last_name;
-                endif;
-
-                if($row_players->id == $row->player3_id) :
-                  echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
-                  ?> <br> <?php
-                  echo $row_players->first_name;
-                  ?> &nbsp; <?php
-                  echo $row_players->last_name;
-                endif;
+                  if($row_players->id == $row->player3_id) :
+                    echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                    ?> <br> <?php
+                    echo $row_players->first_name;
+                    ?> &nbsp; <?php
+                    echo $row_players->last_name;
+                  endif;
+                //endif;
             ?>
 
             <?php endforeach; ?>
@@ -54,7 +55,7 @@
           <?php $counter--; ?>
           <?php endforeach; ?>
 
-          <?php for($i = 0; $i < $counter; $i++); ?>
+          <?php for($i = 0; $i < $counter; $i++) : ?>
             <br><br><br><br>
           <?php endfor; ?>
       </div>
