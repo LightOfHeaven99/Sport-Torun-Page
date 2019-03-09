@@ -32,6 +32,7 @@
                   );
                   echo form_input($data);
                 ?>
+                <br>
 
                 <label style="color: white;" for="topic-message">Temat</label>
 
@@ -45,6 +46,7 @@
                   );
                   echo form_input($data);
                 ?>
+                <br>
 
                 <label style="color: white;" for="content-message">Wiadomość</label>
 
@@ -58,14 +60,14 @@
                   );
                   echo form_input($data);
                 ?>
-
+                <br>
 
 
                 <?php
                   $data = array(
                     'type'          => 'submit',
                     'name'          => 'message-submit',
-                    'class'         => 'registerbtn2 float-left',
+                    'class'         => 'registerbtn2 float-center center centered',
                     'value'         => 'Wyślij'
                   );
                   echo form_submit($data);
