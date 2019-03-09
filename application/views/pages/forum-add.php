@@ -1,13 +1,3 @@
-<style>
-.card{
-height: auto;
-margin-top: auto;
-margin-bottom: auto;
-width: 900px;
-background-color: rgba(0,0,0,0.5) !important;
-}
-</style>
-
 <!-- Page Content -->
 <div class="forum-bg">
   <div class="container">
