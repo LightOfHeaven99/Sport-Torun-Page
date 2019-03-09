@@ -8,11 +8,11 @@
           <div class="card-header">
           <br><br>
           <div class="row">
-          <img src="../assets/img/facebook-logo2.png" alt="logo" height="70px" width="70px">
+          &nbsp; &nbsp;<img src="../assets/img/facebook-logo2.png" alt="logo" height="70px" width="70px">
           <p style="color: white; font-size: 40px;"><a href="#"><font color="white">&nbsp; Drużyna 1</font></a></p>
         </div>
         </div>
-        <div class="space50"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       </div>
     </div>
   </div>
