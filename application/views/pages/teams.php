@@ -15,7 +15,7 @@
           <div class="card-header">
             <div class="row">
             &nbsp; &nbsp;
-            <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->logo ).'" width="70" height="70" class="responsive"/>'; ?>
+            <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
             &nbsp;<a class="team-name" href="#"><?= $row->name;?></a>
             </div>
           </div>
