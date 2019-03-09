@@ -258,7 +258,7 @@ and is wrapped around the whole page content, except for the footer in this exam
         </div>
         <div class="w3-container w3-large w3-padding" style="text-align: center;">
           <a href="https://www.facebook.com/tls.torun/" class="fa fa-facebook" style="padding: 15px; width: 50px;"></a>
-          <a href="#" class="fa fa-youtube" style="padding: 15px; width: 50px;"></a>
+          <a href="https://m.youtube.com/channel/UCCgL5Ona3wyLoYQ1jM_jjUw" class="fa fa-youtube" style="padding: 15px; width: 50px;"></a>
           <a href="#" class="fa fa-instagram" style="padding: 15px; width: 50px;"></a>
 
         </div>
