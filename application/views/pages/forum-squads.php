@@ -20,7 +20,7 @@
             <span style="color: white;">
               <div class="card-header">
               <?php if($row->category == 'squads') : ?>
-                <font style="color: #e6b800; size: 20px;"><b><?= 'Temat: ' ?></b></font> <font style="size: 20px;"><?= $row->topic; ?></font>
+                <font style="color: #e6b800;"><b><?= 'Temat: ' ?></b></font> <?= $row->topic; ?>
                 <br>
                 <font style="color: #e6b800;"><b><?= 'Treść: ' ?></b></font> <?= $row->content; ?>
                 <br><br>

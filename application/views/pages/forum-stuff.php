@@ -21,12 +21,10 @@
             <span style="color: white;">
               <div class="card-header">
               <?php if($row->category == 'stuff') : ?>
-                <?= 'Temat: '.$row->topic; ?>
+                <font style="color: #e6b800;"><b><?= 'Temat: ' ?></b></font> <?= $row->topic; ?>
                 <br>
-                <?= 'Treść: '.$row->content; ?>
-                <br>
-                <?= 'Kontakt: '.$row->email.' / '.$row->phone; ?>
-                <br>
+                <font style="color: #e6b800;"><b><?= 'Treść: ' ?></b></font> <?= $row->content; ?>
+                <br><br>
 
                 <?php
                   $query_finder = $this->db->query("SELECT * FROM users");
@@ -41,9 +39,15 @@
 
                 ?>
 
-                <?= 'Dodał: '.$first_name.' '.$last_name; ?>
-                <br>
-                <?= 'Data: '.$row->postdate; ?>
+                <?= $first_name.' '.$last_name; ?>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <?= $row->email.' / '.$row->phone; ?>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <?php
+    							list($year, $month, $day) = explode("-", $row->postdate);
+    							$day = substr($day, 0, 2);
+    							echo $day.'.'.$month.'.'.$year;
+    						?>
               <?php endif; ?>
               </div>
             </span>

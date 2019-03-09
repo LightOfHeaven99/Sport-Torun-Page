@@ -40,8 +40,8 @@
                         <?php else : ?>
                           <a href="logintoname" style="color: #364FD2;">Zmień wyświetlanie na imię i nazwisko</a></br> <!-- display_login 1->0 -->
                         <?php endif; ?>
-                        <!-- <a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br> <!-- podobne do panelu rejestracji --> -->
-                				<!-- <a href="#" style="color: #364FD2;">Usuń konto</a>  <!-- ostrzeżenie do akceptacji, usunięcie rekordu z tabeli i LOGOUT --> -->
+                        <!-- <a href="#" style="color: #364FD2;">Edytuj swoje dane</a></br> -->
+                				<!-- <a href="#" style="color: #364FD2;">Usuń konto</a> -->
 
                     <?php else : ?>
                       <div class="card-header">

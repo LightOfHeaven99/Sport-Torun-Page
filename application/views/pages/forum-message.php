@@ -7,7 +7,7 @@
         <div class="card" style="width: auto;">
           <div class="card-header">
             <?php if($this->session->userdata('logged_in') == TRUE) : ?>
-
+              <?php if($this->session->userdata('is_active') == 1) : ?>
             <div class="row">
               <div class="col-sm-6">
 
@@ -59,7 +59,7 @@
                   echo form_input($data);
                 ?>
 
-              </div>
+
 
                 <?php
                   $data = array(
@@ -80,15 +80,16 @@
               </div>
 
             <?php else : ?>
+              <p style="vertical-align: center; text-align: center; color: white;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby dodać ogłoszenie.</i></p>
+            <?php endif; ?>
 
-               <br><br>
-               <?php if($this->session->userdata('is_active') == 1) : ?>
-                 <p style="vertical-align: center; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
-               <?php else : ?>
-                 <p style="vertical-align: center; text-align: center;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby dodać ogłoszenie.</i></p>
-               <?php endif; ?>
+        <?php else : ?>
 
-             <?php endif; ?>
+           <br><br>
+
+           <p style="vertical-align: center; text-align: center; color: white;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
+
+         <?php endif; ?>
 
           </div>
         </div>
