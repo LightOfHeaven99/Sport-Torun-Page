@@ -1,69 +1,23 @@
 <!-- Page Content -->
-<div class="start-bg">
-<div class="container">
-  <div style="height:50px;"></div>
-  <div class="col-12 col-md-7 col-sm-12 hover-header d-none d-lg-block">
-    <div class="parallax-wrapper">
-     <div class="parallax-card">
-       <div class="card__cometOuter">
-       </div>
-       <div style="height: 20px;"></div>
-       <div class="row justify-content-center">
-         <div class="col">
-           <h4 class="header">Najbliższy mecz</h4>
-         </div>
-       </div>
-       <div class="row justify-content-center">
-         <div class="col">
-           <h5 class="header">odbędzie się za:</h5>
-         </div>
-       </div>
-       <div class="row justify-content-center">
-         <div id="clockdiv" class="clockdiv card__circle">
-           <div style="background-color: #333EE1;">
-             <span class="days"></span>
-             <div class="smalltext">Dni</div>
-           </div>
-           <div style="background-color: #E1D633;">
-             <span class="hours"></span>
-             <div class="smalltext">Godzin</div>
-           </div>
-           <div style="background-color: #333EE1;">
-             <span class="minutes"></span>
-             <div class="smalltext">Minut</div>
-           </div>
-           <div style="background-color: #E1D633;">
-             <span class="seconds"></span>
-             <div class="smalltext">Sekund</div>
-           </div>
-         </div>
-       </div>
-       <div style="height: 20px;"></div>
-       <div class="row justify-content-center">
-          <div class="row" style="padding: 2rem;">
-            <div class="col-sm-4"><h6 class="header">Drużyna Pierwsza</h6></div>
-            <div class="col-sm-4"><h6 class="header">:</h4></div>
-            <div class="col-sm-4"><h6 class="header">Drużyna Druga</h6></div>
-          </div>
-       </div>
+<div class="timetable-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="space20"></div>
+        <div class="parallax-card-timetable">
+          <br><br><br><br><br>
+          <h1 style="color: white; font-size: 70px;"><b>TERMINARZ<b></h1>
+          <h3 style="color: white; font-size: 20px;">Liga startuje na początku kwietnia!</h3>
+          <br>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <br>
+          <h3 style="color: white; font-size: 14px;">Wszelkie pytania kieruj na <a href="contact" style="color: #364FD2;">biuro@tls-torun.pl</a></h3>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+        </div>
+        <div class="space50"></div>
       </div>
     </div>
-    <div style="height: 30px;"></div>
   </div>
+
+
 </div>
-<br><br><br><br><br><br><br><br><br><br>
-</div>
-
-<script src="../../../assets/js/blueimp-gallery.min.js"></script>
-<script src="../../../assets/js/countDown.js"></script>
-<script src="../../../assets/js/parallax-card.js"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127827042-3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-127827042-3');
-</script>
