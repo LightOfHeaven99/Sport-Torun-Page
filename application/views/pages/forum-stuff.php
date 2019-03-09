@@ -4,11 +4,11 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="card">
-          <div class="card-header" style="width: auto;">
+        <div class="card" style="width: auto;">
+          <div class="card-header">
             <br><br>
             <h1 style="color: white; font-size: 30px;"><font style="color: #364FD2;">
-              <a href="forum-squads" style="color: #364FD2;">Składy</a> / </font><b>Towar</b><font style="color: #364FD2;"> /
+              <a href="forum-squads" style="color: #364FD2;">Poszukuję</a> / </font><b>Sprzęt</b><font style="color: #364FD2;"> /
               <a href="forum-others" style="color: #364FD2;">Inne</a></font></h1>
               <br>
           </div>
