@@ -179,8 +179,8 @@ class User extends CI_Controller
       $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
 
       require_once('Mailer.php');
-
-      $this->send_code($email);
+      $mailer = new Mailer();
+      $mailer->send_code($email);
     }
   }
 
