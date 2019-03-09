@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="parallax-card-timetable">
+        <div class="card" style="width: auto;">
           <br><br><br><br><br><br><br>
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
           <br>

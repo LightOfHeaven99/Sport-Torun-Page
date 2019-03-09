@@ -1,20 +1,22 @@
 <!-- Page Content -->
-<div class="teams-bg">
+<div class="timetable-bg">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="parallax-card-timetable">
-          <br><br><br><br><br><br><br>
-          <h3 style="color: white; font-size: 20px;">__________________________</h3>
-          <br>
-          <h3 style="color: white; font-size: 20px;"><b>Drużyny są właśnie przygotowywane!</b></h3>
-          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+        <div class="card" style="width: auto;">
+          <div class="card-header">
+          <br><br>
+          <div class="row">
+          <img src="../assets/img/facebook-logo2.png" alt="logo" height="70px" width="70px">
+          <p style="color: white; font-size: 30px;"><a href="#"><font color="#e6b800"> Drużyna 1</font></a></p>
+        </div>
         </div>
         <div class="space50"></div>
       </div>
     </div>
   </div>
+</div>
 
 
 </div>
