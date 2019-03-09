@@ -178,7 +178,8 @@ class User extends CI_Controller
       $this->login_model->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
       $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
 
-      require_once('Mailer.php');
+      require_once(APPPATH.'controllers/Mailer.php');
+      $this->load->file('controllers/Mailer.php');
       $mailer = new Mailer();
       $mailer->send_code($email);
     }
