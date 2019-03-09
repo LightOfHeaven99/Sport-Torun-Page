@@ -79,12 +79,13 @@ class User extends CI_Controller
     $email = $this->input->post('reset-email');
     $code = $this->input->post('enter-code');
 
+    $this->form_validation->set_rules('reset-email', 'Email', 'required');
     $this->form_validation->set_rules('enter-code', 'Kod', 'required');
 
     // CZY DOBRZE WPROWADZONO DANE
     if ($this->form_validation->run() == FALSE)
     {
-      redirect('enter-reset-code');
+      redirect('reset-account');
     }
     else
     {
@@ -174,11 +175,12 @@ class User extends CI_Controller
       $email =  $this->input->post('email');
       $displayLogin = isset($_POST['display-login']) ? 1 : 0;
 
-      $this->mailer->send_code($email);
-
       $this->login_model->insert_user($firstName, $lastName, $uid, $pwd, $email, $displayLogin);
       $this->session->set_flashdata('register_info', 'Zarejestrowano pomyślnie!');
-      redirect('login');
+
+      require_once('Mailer.php');
+
+      $this->send_code($email);
     }
   }
 
