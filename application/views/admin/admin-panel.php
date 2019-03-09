@@ -23,7 +23,7 @@
       $condition_user = true;
 
       foreach($query->result() as $row){
-        if($condition_news){
+        if($condition_user){
           $last_user = $row->joindate;
           $condition_user = false;
         }
