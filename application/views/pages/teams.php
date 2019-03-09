@@ -9,7 +9,7 @@
           <br><br>
           <div class="row">
           <img src="../assets/img/facebook-logo2.png" alt="logo" height="70px" width="70px">
-          <p style="color: white; font-size: 30px;"><a href="#"> Drużyna 1</a></p>
+          <p style="color: white; font-size: 30px;"><a href="#"><font color="#e6b800"> Drużyna 1</font></a></p>
         </div>
         </div>
         <div class="space50"></div>
