@@ -77,7 +77,9 @@
 
                 <br><br>
                 <h1 style="color: white; font-size: 30px;">Odebrane</h1>
-                <br>
+                <br><br>
+
+                <p style="color: white;">Wysyłanie wiadomości będzie dostępne w przyszłości.</p>
 
               </div>
 
