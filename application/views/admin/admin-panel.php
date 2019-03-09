@@ -36,7 +36,7 @@
     <br>
     <h3>Ilość zarejestrowanych użytkowników: <?= $counter_user ?><h3>
     <h3>Ostatnia rejestracja: <?= $last_user ?><h3>
-    <?php/*
+    <?php
       $attributes = array('class' => 'form-signin');
       echo form_open('usersdeleted', $attributes);
     ?>
@@ -47,12 +47,12 @@
           'name'          => 'delete-noactive',
           'id'            => 'delete-noactive',
           'class'         => 'btn float-left delete_users_btn',
-          'value'         => 'Usuń nieaktywnych'
+          'value'         => 'jeszcze nic'
         );
         echo form_submit($data);
       ?>
     </div>
-    <?php echo form_close(); */?>
+    <?php echo form_close(); ?>
 
     <br>
     <br>
