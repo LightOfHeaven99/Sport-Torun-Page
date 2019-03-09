@@ -33,7 +33,7 @@
                   echo form_input($data);
                 ?>
 
-                <label for="category-squads-forum" style="color: white; padding-left: 3px; padding-top: 7px;">składy</label>
+                <label for="category-squads-forum" style="color: white; padding-left: 3px; padding-top: 7px;">Poszukuję</label>
 
                 <?php
                   $data = array(
@@ -43,7 +43,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-stuff-forum" style="color: white; padding-left: 3px; padding-top: 7px;">towar</label>
+                <label for="category-stuff-forum" style="color: white; padding-left: 3px; padding-top: 7px;">Sprzęt</label>
 
 
                 <?php
@@ -54,7 +54,7 @@
                   );
                   echo form_input($data);
                 ?>
-                <label for="category-others-forum" style="color: white; padding-left: 3px; padding-top: 7px;">inne</label>
+                <label for="category-others-forum" style="color: white; padding-left: 3px; padding-top: 7px;">Inne</label>
               </div>
 
               <div class="row">

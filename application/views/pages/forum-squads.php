@@ -7,8 +7,8 @@
         <div class="card" style="width: auto;">
           <div class="card-header">
             <br><br>
-            <h1 style="color: white; font-size: 30px;"><b>Składy</b><font style="color: #364FD2;"> /
-              <a href="forum-stuff" style="color: #364FD2;">Towar</a> /
+            <h1 style="color: white; font-size: 30px;"><b>Poszukuję</b><font style="color: #364FD2;"> /
+              <a href="forum-stuff" style="color: #364FD2;">Sprzęt</a> /
               <a href="forum-others" style="color: #364FD2;">Inne</a></font></h1>
             <br>
           </div>
