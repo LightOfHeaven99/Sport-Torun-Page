@@ -22,7 +22,7 @@
               </div>
 
               <!-- on click-->
-              <div class="col-sm-9" style="text-align: center; margin-left: auto; margin-right: auto;">
+              <div  style="text-align: center; margin-left: auto; margin-right: auto;">
             <?php
               $query_players = $this->db->query("SELECT * FROM players");
 
@@ -83,7 +83,7 @@
                     echo $row_players->last_name;
                   endif;
                   echo '</div>';
-    
+
                 //endif;
             ?>
           </div>
