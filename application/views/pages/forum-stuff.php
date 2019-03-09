@@ -15,7 +15,7 @@
 
           <?php
             $query = $this->db->query("SELECT * FROM forum ORDER BY id DESC");
-            $coutner = 0;
+            $counter = 0;
 
             foreach($query->result() as $row):
           ?>
@@ -58,7 +58,7 @@
           <?php endforeach;?>
 
           <?php if($counter == 0) {
-              echo '<p style="color: white;">Wysyłanie wiadomości będzie dostępne w przyszłości.</p>';
+              echo '<br><br><p style="color: white;">Nie ma jeszcze żadnych ogłoszeń.</p><br><br><br>';
           } ?>
 
         </div>

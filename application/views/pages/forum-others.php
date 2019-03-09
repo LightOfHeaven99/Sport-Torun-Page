@@ -58,7 +58,7 @@
           <?php endforeach;?>
 
           <?php if($counter == 0) {
-              echo '<p style="color: white;">Wysyłanie wiadomości będzie dostępne w przyszłości.</p>';
+              echo '<br><br><p style="color: white;">Nie ma jeszcze żadnych ogłoszeń.</p><br><br><br>';
           } ?>
 
         </div>
