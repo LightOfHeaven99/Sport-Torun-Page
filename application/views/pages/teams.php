@@ -8,6 +8,7 @@
 
           <?php
             $query = $this->db->query("SELECT * FROM teams ORDER BY name");
+            $counter = 6;
 
             foreach($query->result() as $row):
           ?>
@@ -16,12 +17,46 @@
             <div class="row">
             &nbsp; &nbsp;
             <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
-            &nbsp;<a class="team-name" href="#"><?= $row->name;?></a>
+            &nbsp;&nbsp;&nbsp;<a class="team-name" onclick=""><?= $row->name;?></a>
+            <?php
+              $query_players = $this->db->query("SELECT * FROM players");
+
+              foreach($query_players->result() as $row_players):
+
+                if($row_players->id == $row->player1_id) :
+                  echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                  ?> <br> <?php
+                  echo $row_players->first_name;
+                  ?> &nbsp; <?php
+                  echo $row_players->last_name;
+                endif;
+
+                if($row_players->id == $row->player2_id) :
+                  echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                  ?> <br> <?php
+                  echo $row_players->first_name;
+                  ?> &nbsp; <?php
+                  echo $row_players->last_name;
+                endif;
+
+                if($row_players->id == $row->player3_id) :
+                  echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
+                  ?> <br> <?php
+                  echo $row_players->first_name;
+                  ?> &nbsp; <?php
+                  echo $row_players->last_name;
+                endif;
+            ?>
+
+            <?php endforeach; ?>
             </div>
           </div>
+          <?php $counter--; ?>
+          <?php endforeach; ?>
 
-          <?php endforeach;?>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <?php for($i = 0; $i < $counter; $i++); ?>
+            <br><br><br><br>
+          <?php endfor; ?>
       </div>
       <br><br><br>
     </div>
