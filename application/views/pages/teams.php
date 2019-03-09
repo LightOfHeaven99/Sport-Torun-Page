@@ -7,8 +7,10 @@
         <div class="card" style="width: auto;">
           <div class="card-header">
           <br><br>
+          <div class="row">
           <img src="../assets/img/facebook-logo2.png" alt="logo" height="70px" width="70px">
           <p style="color: white; font-size: 20px;">Drużyna 1</p>
+        </div>
         </div>
         <div class="space50"></div>
       </div>
