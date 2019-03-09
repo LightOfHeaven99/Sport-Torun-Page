@@ -55,16 +55,16 @@
       }
     ?>
 
-    <h3><b>POSTY</b><h3>
+    <h3><b>POSTY</b></h3>
     <p>Ilość dodanych: <?= $counter_news ?><p>
     <p>Ostatni post: <?= $last_news ?><p>
     <br>
-    <h3><b>OGŁOSZENIA</b><h3>
+    <h3><b>OGŁOSZENIA</b></h3>
     <p>Ilość dodanych: <?= $counter_forum ?><p>
     <p>Ostatnie ogłoszenie: <?= $last_forum ?><p>
     <p>Ostatni zgłaszający: <?= $user_forum ?><p>
     <br>
-    <h3><b>UŻYTKOWNICY</b><h3>
+    <h3><b>UŻYTKOWNICY</b></h3>
     <p>Ilość zarejestrowanych (aktywnych): <?= $counter_user ?> (<?= $counter_active_user ?>)<p>
     <p>Ostatnia rejestracja: <?= $last_user ?><p>
     <p>Ostatni użytkownik: <?= $user ?><p>
