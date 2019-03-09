@@ -29,60 +29,42 @@
               foreach($query_players->result() as $row_players):
                 //if($row_players->id != 0) :
 
-                  echo '<div class="row"';
                   if($row_players->id == $row->player1_id) :
+                    echo '<div class="col-sm-3">'
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
+                    echo '</div>'
                   endif;
                   if($row_players->id == $row->player2_id) :
+                    echo '<div class="col-sm-3">'
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
+                    echo '</div>'
                   endif;
                   if($row_players->id == $row->player3_id) :
+                    echo '<div class="col-sm-3">'
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
+                    echo '</div>'
                   endif;
                   if($row_players->id == $row->player4_id) :
+                    echo '<div class="col-sm-3">'
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
+                    echo '</div>'
                   endif;
-                  echo '</div>';
-                  echo '<br>';
-                  echo '<div class="row"';
-                  if($row_players->id == $row->player5_id) :
-                    echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
-                    echo '<br>';
-                    echo $row_players->first_name;
-                    echo '&nbsp;';
-                    echo $row_players->last_name;
-                  endif;
-                  if($row_players->id == $row->player6_id) :
-                    echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
-                    echo '<br>';
-                    echo $row_players->first_name;
-                    echo '&nbsp;';
-                    echo $row_players->last_name;
-                  endif;
-                  if($row_players->id == $row->player7_id) :
-                    echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
-                    echo '<br>';
-                    echo $row_players->first_name;
-                    echo '&nbsp;';
-                    echo $row_players->last_name;
-                  endif;
-                  echo '</div>';
 
                 //endif;
             ?>
