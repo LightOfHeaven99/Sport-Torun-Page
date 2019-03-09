@@ -84,19 +84,20 @@
               </div>
 
             <?php else : ?>
+              <br><br><br>
               <p style="vertical-align: center; text-align: center; color: white;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby dodać ogłoszenie.</i></p>
+              <br><br>
             <?php endif; ?>
 
         <?php else : ?>
 
-           <br><br>
+           <br><br><br>
 
            <p style="vertical-align: center; text-align: center; color: white;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
-
+           <br><br>
          <?php endif; ?>
 
           </div>
-        </div>
       </div>
       <div class="space50"></div>
     </div>
