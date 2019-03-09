@@ -7,6 +7,7 @@
         <div class="card" style="width: auto;">
           <div class="card-header">
           <?php if($this->session->userdata('logged_in') == TRUE) : ?>
+            <?php if($this->session->userdata('is_active') == 1) : ?>
             <br>
             <h1 style="color: white; font-size: 70px;"><b>Dodaj ogłoszenie</b></h1>
             <br>
@@ -150,16 +151,17 @@
 
               <?php echo form_close(); ?>
 
-          <?php else : ?>
-
-            <br><br>
-            <?php if($this->session->userdata('is_active') == 1) : ?>
-              <p style="vertical-align: center; text-align: center;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
             <?php else : ?>
-              <p style="vertical-align: center; text-align: center;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby dodać ogłoszenie.</i></p>
+              <p style="vertical-align: center; text-align: center; color: white;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby dodać ogłoszenie.</i></p>
             <?php endif; ?>
 
-          <?php endif; ?>
+        <?php else : ?>
+
+           <br><br>
+
+           <p style="vertical-align: center; text-align: center; color: white;"><i><a href="login" style = "color: #364FD2;">Zaloguj się</a>, aby dodać ogłoszenie.</i></p>
+
+         <?php endif; ?>
         </div>
         <div class="space50"></div>
       </div>
