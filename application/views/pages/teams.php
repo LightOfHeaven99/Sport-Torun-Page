@@ -30,40 +30,40 @@
                 //if($row_players->id != 0) :
 
                   if($row_players->id == $row->player1_id) :
-                    echo '<div class="col-sm-3">'
+                    echo '<div class="col-sm-3">';
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
-                    echo '</div>'
+                    echo '</div>';
                   endif;
                   if($row_players->id == $row->player2_id) :
-                    echo '<div class="col-sm-3">'
+                    echo '<div class="col-sm-3">';
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
-                    echo '</div>'
+                    echo '</div>';
                   endif;
                   if($row_players->id == $row->player3_id) :
-                    echo '<div class="col-sm-3">'
+                    echo '<div class="col-sm-3">';
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
-                    echo '</div>'
+                    echo '</div>';
                   endif;
                   if($row_players->id == $row->player4_id) :
-                    echo '<div class="col-sm-3">'
+                    echo '<div class="col-sm-3">';
                     echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row_players->photo ).'" style="width: 100px; height: 100px;" class="responsive"/>';
                     echo '<br>';
                     echo $row_players->first_name;
                     echo '&nbsp;';
                     echo $row_players->last_name;
-                    echo '</div>'
+                    echo '</div>';
                   endif;
 
                 //endif;
