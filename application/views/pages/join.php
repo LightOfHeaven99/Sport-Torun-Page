@@ -163,7 +163,7 @@
             <br>
 
             <p><font size="2.5">Po pozytywnym rozpatrzeniu zgłoszenia otrzymasz mail zwrotny z dalszą instrukcją.</font>
-            <br><font size="2.5">Przygotuj LOGO drużyny w rozmiarze <b>600</b>x<b>600</b> i formacie <b>PNG</b> (<a href="../assets/downloads/Schemat Logo.png"><font color="#e6b800" size="2.5">przykład</font></a>).</font>
+            <br><font size="2.5">Przygotuj LOGO drużyny w rozmiarze <b>400</b>x<b>400</b> i formacie <b>PNG</b> (<a href="../assets/downloads/Schemat Logo.png"><font color="#e6b800" size="2.5">przykład</font></a>).</font>
             <br><font size="2.5">Pobierz i wypełnij <a href="../assets/downloads/Formularz zgłoszeniowy.docx"><font color="#e6b800" size="2.5">formularz</font></a>, a gotowy zapisz do formatu <b>PDF</b>.</font></p>
 
             <?php /*
