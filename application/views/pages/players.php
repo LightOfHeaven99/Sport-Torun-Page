@@ -12,15 +12,16 @@
 
             foreach($query->result() as $row):
           ?>
-
-          <div class="card-header">
-            <div class="row">
-                &nbsp; &nbsp;
-                <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->photo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
-                &nbsp;&nbsp;&nbsp;<a class="team-name" href=""><?= $row->first_name.' '.$row->last_name;?></a>
-            </div>
-          </div>
-          <?php $counter--; ?>
+            <?php if($row->id != 0) : ?>
+              <div class="card-header">
+                <div class="row">
+                    &nbsp; &nbsp;
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->photo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
+                    &nbsp;&nbsp;&nbsp;<a class="team-name" href=""><?= $row->first_name.' '.$row->last_name;?></a>
+                </div>
+              </div>
+              <?php $counter--; ?>
+            <?php endif; ?>
           <?php endforeach; ?>
 
           <?php for($i = 0; $i < $counter; $i++) : ?>
