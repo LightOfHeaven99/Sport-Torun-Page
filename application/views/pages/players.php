@@ -5,23 +5,29 @@
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
         <div class="card" style="width: auto;">
+
+          <?php
+            $query = $this->db->query("SELECT * FROM players ORDER BY last_name");
+            $counter = 6;
+
+            foreach($query->result() as $row):
+          ?>
+
           <div class="card-header">
-          <br><br>
-          <br><br>
+            <div class="row">
+                &nbsp; &nbsp;
+                <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->photo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
+                &nbsp;&nbsp;&nbsp;<a class="team-name" href=""><?= $row->first_name.' '.$row->last_name;?></a>
+            </div>
+          </div>
+          <?php $counter--; ?>
+          <?php endforeach; ?>
 
-          <p style="color: white;">W bazie nie ma jeszcze żadnych zawodników.</p>
-
-          <br><br>
-          <br><br>
-        </div>
-        </div>
-        <div class="space50"></div>
-        <div class="space50"></div>
-        <div class="space50"></div>
-        <div class="space50"></div>
-        <div class="space50"></div>
-        <div class="space50"></div>
+          <?php for($i = 0; $i < $counter; $i++) : ?>
+            <br><br><br><br>
+          <?php endfor; ?>
       </div>
+      <br><br><br>
     </div>
   </div>
 </div>

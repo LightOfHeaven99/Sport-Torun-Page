@@ -27,7 +27,7 @@
               $query_players = $this->db->query("SELECT * FROM players");
 
               foreach($query_players->result() as $row_players):
-                //if($row_players->id != 0) :
+                if($row_players->id != 0) :
 
                   if($row_players->id == $row->player1_id) :
                     echo '<div class="col-sm-3">';
@@ -65,8 +65,8 @@
                     echo $row_players->last_name;
                     echo '</div>';
                   endif;
-
-                //endif;
+                  //jeszcze 5-15
+                endif;
             ?>
           </div>
             <?php endforeach; ?>
