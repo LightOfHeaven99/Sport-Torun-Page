@@ -7,8 +7,8 @@
         <div class="card" style="width: auto;">
           <div class="card-header">
           <br><br>
-          <img src="" alt="">
-          <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <img src="../assets/img/facebook-logo2.png" alt="logo">
+          <p style="color: white; font-size: 20px;">Drużyna 1</p>
         </div>
         <div class="space50"></div>
       </div>
