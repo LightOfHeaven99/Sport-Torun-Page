@@ -369,7 +369,7 @@ padding: 16px 20px;
 margin: 8px 0;
 border: none;
 cursor: pointer;
-width: 22%;
+width: auto;
 opacity: 0.9;
 }
 .registerbtn2 {
@@ -380,7 +380,7 @@ padding: 10px 20px;
 margin: 8px 0;
 border: none;
 cursor: pointer;
-width: 22%;
+width: auto;
 opacity: 0.9;
 }
 
