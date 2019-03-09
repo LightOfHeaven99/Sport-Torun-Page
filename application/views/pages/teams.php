@@ -40,30 +40,30 @@
                   }
 
                   echo '<div class="row"';
-                    show_player_after_click($row_players, $row->player1_id);
-                    show_player_after_click($row_players, $row->player2_id);
-                    show_player_after_click($row_players, $row->player3_id);
-                    show_player_after_click($row_players, $row->player4_id);
+                    show_player_after_click($row_players, '$row->player1_id');
+                    show_player_after_click($row_players, '$row->player2_id');
+                    show_player_after_click($row_players, '$row->player3_id');
+                    show_player_after_click($row_players, '$row->player4_id');
                   echo '</div>';
                   echo '<br>';
                   echo '<div class="row"';
-                    show_player_after_click($row_players, $row->player5_id);
-                    show_player_after_click($row_players, $row->player6_id);
-                    show_player_after_click($row_players, $row->player7_id);
-                    show_player_after_click($row_players, $row->player8_id);
+                    show_player_after_click($row_players, '$row->player5_id');
+                    show_player_after_click($row_players, '$row->player6_id');
+                    show_player_after_click($row_players, '$row->player7_id');
+                    show_player_after_click($row_players, '$row->player8_id');
                   echo '</div>';
                   echo '<br>';
                   echo '<div class="row"';
-                    show_player_after_click($row_players, $row->player9_id);
-                    show_player_after_click($row_players, $row->player10_id);
-                    show_player_after_click($row_players, $row->player11_id);
-                    show_player_after_click($row_players, $row->player12_id);
+                    show_player_after_click($row_players, '$row->player9_id');
+                    show_player_after_click($row_players, '$row->player10_id');
+                    show_player_after_click($row_players, '$row->player11_id');
+                    show_player_after_click($row_players, '$row->player12_id');
                   echo '</div>';
                   echo '<br>';
                   echo '<div class="row"';
-                    show_player_after_click($row_players, $row->player13_id);
-                    show_player_after_click($row_players, $row->player14_id);
-                    show_player_after_click($row_players, $row->player15_id);
+                    show_player_after_click($row_players, '$row->player13_id');
+                    show_player_after_click($row_players, '$row->player14_id');
+                    show_player_after_click($row_players, '$row->player15_id');
                   echo '</div>';
                 //endif;
             ?>
