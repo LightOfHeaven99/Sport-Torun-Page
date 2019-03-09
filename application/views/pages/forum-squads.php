@@ -20,12 +20,10 @@
             <span style="color: white;">
               <div class="card-header">
               <?php if($row->category == 'squads') : ?>
-                <?= 'Temat: '.$row->topic; ?>
+                <b><?= 'Temat: ' ?></b> <?= $row->topic; ?>
                 <br>
-                <?= 'Treść: '.$row->content; ?>
-                <br>
-                <?= 'Kontakt: '.$row->email.' / '.$row->phone; ?>
-                <br>
+                <b><?= 'Treść: ' ?></b> <?= $row->content; ?>
+                <br><br>
 
                 <?php
                   $query_finder = $this->db->query("SELECT * FROM users");
@@ -40,9 +38,11 @@
 
                 ?>
 
-                <?= 'Dodał: '.$first_name.' '.$last_name; ?>
-                <br>
-                <?= 'Data: '.$row->postdate; ?>
+                <?= $first_name.' '.$last_name; ?>
+                &#09;
+                <?= $row->email.' / '.$row->phone; ?>
+                &#09;
+                <?= substr($row->postdate, 0, 10); ?>
               <?php endif; ?>
               </div>
             </span>

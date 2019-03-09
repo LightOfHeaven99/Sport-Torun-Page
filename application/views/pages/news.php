@@ -101,7 +101,7 @@
           </div>
         </div>
 
-        <!-- The overlay -->
+<?php /*        <!-- The overlay -->
         <div id="myNav" class="overlay">
           <!-- Button to close the overlay navigation -->
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -113,7 +113,7 @@
               <p style="color: white; text-align: justify; padding-left: 30px; padding-right: 30px;"><?php echo $row->content;?></p>
           </div>
 
-        </div>
+        </div> */ ?>
 
         <hr>
      <?php endforeach;?>
