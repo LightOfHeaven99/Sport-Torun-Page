@@ -32,6 +32,7 @@
                   );
                   echo form_input($data);
                 ?>
+                <br>
 
                 <label style="color: white;" for="topic-message">Temat</label>
 
@@ -45,6 +46,7 @@
                   );
                   echo form_input($data);
                 ?>
+                <br>
 
                 <label style="color: white;" for="content-message">Wiadomość</label>
 
@@ -58,14 +60,14 @@
                   );
                   echo form_input($data);
                 ?>
-
+                <br>
 
 
                 <?php
                   $data = array(
                     'type'          => 'submit',
                     'name'          => 'message-submit',
-                    'class'         => 'registerbtn2 float-left',
+                    'class'         => 'registerbtn2 float-center center centered',
                     'value'         => 'Wyślij'
                   );
                   echo form_submit($data);
@@ -75,7 +77,9 @@
 
                 <br><br>
                 <h1 style="color: white; font-size: 30px;">Odebrane</h1>
-                <br>
+                <br><br>
+
+                <p style="color: white;">Wysyłanie wiadomości będzie dostępne w przyszłości.</p>
 
               </div>
 
@@ -93,10 +97,10 @@
 
           </div>
         </div>
-        <div class="space50"></div>
       </div>
+      <div class="space50"></div>
     </div>
   </div>
-
+</div>
 
 </div>
