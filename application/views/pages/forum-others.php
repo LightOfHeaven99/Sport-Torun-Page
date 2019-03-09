@@ -15,6 +15,7 @@
 
           <?php
             $query = $this->db->query("SELECT * FROM forum ORDER BY id DESC");
+            $counter = 0;
 
             foreach($query->result() as $row):
           ?>
@@ -47,12 +48,18 @@
     							list($year, $month, $day) = explode("-", $row->postdate);
     							$day = substr($day, 0, 2);
     							echo $day.'.'.$month.'.'.$year;
+
+                  $counter++;
     						?>
               <?php endif; ?>
               </div>
             </span>
 
           <?php endforeach;?>
+
+          <?php if($counter == 0) {
+              echo '<p style="color: white;">Wysyłanie wiadomości będzie dostępne w przyszłości.</p>';
+          } ?>
 
         </div>
         <div class="space50"></div>
