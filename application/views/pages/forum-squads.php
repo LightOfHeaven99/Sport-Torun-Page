@@ -20,9 +20,9 @@
             <span style="color: white;">
               <div class="card-header">
               <?php if($row->category == 'squads') : ?>
-                <b><?= 'Temat: ' ?></b> <?= $row->topic; ?>
+                <font styl="font-size: 16px;"><font style="color: #364FD2;"><b><?= 'Temat: ' ?></b></font> <?= $row->topic; ?></font>
                 <br>
-                <b><?= 'Treść: ' ?></b> <?= $row->content; ?>
+                <font style="color: #364FD2;"><b><?= 'Treść: ' ?></b></font> <?= $row->content; ?>
                 <br><br>
 
                 <?php
@@ -39,10 +39,15 @@
                 ?>
 
                 <?= $first_name.' '.$last_name; ?>
-                &#09;
+                &nbsp; &nbsp; &nbsp; &nbsp;
                 <?= $row->email.' / '.$row->phone; ?>
-                &#09;
-                <?= substr($row->postdate, 0, 10); ?>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <?php
+    							list($year, $month, $day) = explode("-", $row->postdate);
+    							$day = substr($day, 0, 2);
+    							echo $day.'.'.$month.'.'.$year;
+    						?>
+
               <?php endif; ?>
               </div>
             </span>
