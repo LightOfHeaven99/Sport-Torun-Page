@@ -19,8 +19,6 @@
             <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $row->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
             &nbsp;&nbsp;&nbsp;<a class="team-name"><?= $row->name;?></a>
             
-
-            <?php endforeach; ?>
             </div>
           </div>
           <?php $counter--; ?>
