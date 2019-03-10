@@ -39,11 +39,22 @@ function initializeClock(id, endtime) {
 
 var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
-// first raw taken from timetable database table
-var deadline = new Date(2019, 03, 15, 15);
+/*
+$first_match
 
-if (w < 768) {
-  initializeClock('clockdivPhone', deadline);
-} else {
+$query = $this->db->query("SELECT * FROM matches ORDER BY date_match");
+foreach($query->result() as $row){
+  $first_match = $row->date_match;
+  exit();
+}
+*/
+
+// first raw taken from timetable database table
+var deadline = new Date(2019, 03, 15, 15);  //$first_match -> jeśli minuty, to trzeba dorobić
+
+
+//if (w < 768) {
+//  initializeClock('clockdivPhone', deadline);
+//} else {
   initializeClock('clockdiv', deadline);
-};
+//};

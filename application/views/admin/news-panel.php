@@ -2,8 +2,10 @@
 <div class="admin-bg">
   <div class="container">
     <div style="height: 20px;"></div>
-    <h1><b>PANEL DODAWANIA POSTU<b></h1>
-      <a href="news" class="btn delete_users_btn">Przejdź do aktualności</a>
+    <a href="news" class="btn delete_users_btn">Przejdź do aktualności</a>
+
+    <div style="height: 30px;"></div>
+    <h1>DODAJ POST</h1>
     <div style="height: 10px;"></div>
     <?php
       $attributes = array('class' => 'form-signin');

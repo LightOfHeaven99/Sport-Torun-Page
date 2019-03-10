@@ -64,17 +64,22 @@
                   <p style="vertical-align: bottom; text-align: center;"><i><a href="enter-activation-code" style = "color: #364FD2;">Aktywuj konto</a>, aby wyrazić opinię.</i></p>
 
                 <?php else : ?>
-                  <?php if($row->voting == 1) : ?>
-                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
+                  <?php if(FALSE) : ?>
+                    <?php if($row->voting == 1) : ?>
+                      <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="likeFunction(this)"><b><i class="fa fa-thumbs-up"></i> Polub</b></button></p>
+                    <?php endif; ?>
+                    <?php if($row->mailing == 1) : ?>
+                      <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
+                    <?php endif; ?>
+                    <?php if($row->commenting == 1) : ?>
+                      <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><span class="fa fa-comment"></i> Skomentuj</b></button></p>
+                        <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+                        </div>
+                    <?php endif; ?>
+                  <?php else : ?>
+                      <p>Funkcje społecznościowe zostaną dodane wkrótce.</p>
                   <?php endif; ?>
-                  <?php if($row->mailing == 1) : ?>
-                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="mailFunction()"><b><i class="fa fa-envelope"></i> Zapytaj</b></button></p>
-                  <?php endif; ?>
-                  <?php if($row->commenting == 1) : ?>
-                    <p class="w3-left"><button class="w3-button w3-indigo w3-border" onclick="myFunction('demo1')" id="myBtn"><b><span class="fa fa-comment"></i> Skomentuj</b></button></p>
-                      <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-                      </div>
-                  <?php endif; ?>
+
                   <?php if($this->session->userdata('is_admin') == TRUE) : ?>
                     <p class="w3-left"><a href ="#" class="w3-button w3-indigo w3-border" style="color: #DD4E4E; background-color: #DD4E4E;" onclick="return confirm('Chcesz przejść do edycji?');"><b>Edytuj</b></a></p>
 
