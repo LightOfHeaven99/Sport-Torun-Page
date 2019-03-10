@@ -5,7 +5,7 @@
 
     <?php
       // MECZE
-      $query = $this->db->query("SELECT * FROM matches ORDER BY data_match DESC");
+      $query = $this->db->query("SELECT * FROM matches ORDER BY match_date DESC");
       $counter_match = 0;
       $condition_match = true;
 

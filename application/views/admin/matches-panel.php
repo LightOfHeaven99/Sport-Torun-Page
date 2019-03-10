@@ -17,8 +17,8 @@
         <?php
           $data = array(
             'type'          => 'date',
-            'name'          => 'date-match',
-            'id'            => 'date-match',
+            'name'          => 'match-date',
+            'id'            => 'match-date',
             'class'         => 'form-control',
             'value'         => date("Y-m-d"),
             'min'           => date("Y-m-d"),
@@ -44,8 +44,8 @@
         <?php
           $data = array(
             'type'          => 'date',
-            'name'          => 'date-match',
-            'id'            => 'date-match',
+            'name'          => 'team1',
+            'id'            => 'team1',
             'class'         => 'form-control'
             //'required'      => 'required'
           );
@@ -57,8 +57,8 @@
         <?php
           $data = array(
             'type'          => 'date',
-            'name'          => 'date-match',
-            'id'            => 'date-match',
+            'name'          => 'team2',
+            'id'            => 'team2',
             'class'         => 'form-control'
             //'required'      => 'required'
           );
@@ -97,8 +97,8 @@
         <?php
           $data = array(
             'type'          => 'date',
-            'name'          => 'date-match',
-            'id'            => 'date-match',
+            'name'          => 'match-date',
+            'id'            => 'match-date',
             'class'         => 'form-control'
             //'required'      => 'required'
           );
@@ -107,7 +107,7 @@
       </div>
 
       <?php
-        $query = $this->db->query("SELECT * FROM matches WHERE date_match = 'date-match'");
+        $query = $this->db->query("SELECT * FROM matches /*WHERE match_date = 'match-date'*/");
         $match = $query->result();
 
         $query = $this->db->query("SELECT * FROM teams WHERE id = $match->team1_id");
