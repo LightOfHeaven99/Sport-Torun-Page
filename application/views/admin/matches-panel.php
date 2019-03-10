@@ -105,7 +105,7 @@
       </div>
 
       <?php
-        $query = $this->db->query("SELECT * FROM matches /*WHERE match_date = 'match-date'*/");
+        $query = $this->db->query("SELECT * FROM matches WHERE match_date = '2019-03-15'");
         $match = $query->result();
 
         $query = $this->db->query("SELECT * FROM teams WHERE id = $match->team1_id");
