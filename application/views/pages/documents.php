@@ -10,6 +10,8 @@
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
           <a href="../assets/downloads/Formularz zgłoszeniowy.docx" style="color: #364FD2; font-size: 20px;">Formularz zgłoszeniowy</a><br>
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
+          <a href="../assets/downloads/Formularz meczowy.docx" style="color: #364FD2; font-size: 20px;">Formularz meczowy</a><br>
+          <h3 style="color: white; font-size: 20px;">__________________________</h3>
           <a href="../assets/downloads/Regulamin.pdf" style="color: #364FD2; font-size: 20px;">Regulamin</a><br>
           <h3 style="color: white; font-size: 20px;">__________________________</h3>
           <a href="../assets/downloads/Polityka Cookies.pdf" style="color: #364FD2; font-size: 20px;">Polityka cookies</a><br>
