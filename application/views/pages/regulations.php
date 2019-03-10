@@ -46,7 +46,7 @@
           <li>W rozgrywkach mogą uczestniczyć zawodnicy, którzy ukończyli 18 rok życia. Osoby niepełnoletnie zostaną dopuszczone do rozgrywek tylko po dostarczeniu Organizatorowi pisemnej zgody jednego z rodziców bądź opiekuna prawnego. Minimalny wiek zawodnika zgłoszonego do rozgrywek wynosi 15 lat.</li>
           <li>Składy drużyn mogą być mieszane, tzn. w jednej drużynie mogą grać zarówno kobiety jak i mężczyźni.</li>
           <li>Zgłoszony zespół musi posiadać swoją unikalną nazwę, jednakowe koszulki z numerami oraz logo.</li>
-          <li>Zawodnik nie może posiadać jakichkolwiek przedmiotów, które mogą stanowić zagrożenie dla niego oraz innych uczestników meczu (zegarki, kolczyki, naszyjniki itp.). Dopuszcza się grę w okularach korekcyjnych, jednak tylko za zgodą Organizatora, która zapadła po ówczesnym zwróceniu się zainteresowanego drogą elektroniczną.</li>
+          <li>Zawodnik nie może posiadać jakichkolwiek przedmiotów, które mogą stanowić zagrożenie dla niego oraz innych uczestników meczu (zegarki, kolczyki, naszyjniki itp.). Dopuszcza się grę w okularach korekcyjnych na własne ryzyko i odpowiedzialność zawodnika.</li>
           <li>Każdy zawodnik winien występować w obuwiu sportowym - buty sportowe na płaskiej podeszwie. Zabrania się grania w obuwiu mającym jakiekolwiek elementy metalowe.</li>
         </ol>
       </li>
@@ -64,7 +64,7 @@
           <li>Organizator nie zapewnia piłek do rozgrzewki przed meczem.</li>
           <li>Organizator odpowiada za zapewnienie obsady sędziowskiej.</li>
           <li>Każda drużyna powinna przybyć na miejsce spotkania, co najmniej 15 minut przed wyznaczoną godziną rozpoczęcia meczu.</li>
-          <li>Co najmniej 15 minut przed rozpoczęciem meczu, kapitan drużyny zobowiązuje się do dostarczenia protokołu z listą zawodników biorących udział w spotkaniu, na formularzu przygotowanym przez Organizatora. Po zakończeniu meczu kapitan zobowiązuje się do podpisania protokołu. </li>
+          <li>12.	Co najmniej 15 minut przed rozpoczęciem meczu, kapitan drużyny zobowiązuje się do dostarczenia listy zawodników z numerami biorącymi udział w spotkaniu, na formularzu przygotowanym przez Organizatora. Po zakończeniu meczu kapitan zobowiązuje się do podpisania protokołu.  </li>
           <li>Organizator zastrzega sobie, że z przyczyn niezależnych, takich jak przedłużający się czas poprzedniego spotkania, mecz może rozpocząć się z opóźnieniem.</li>
           <li>Po zakończonym meczu drużyny muszą opuścić boisko nie później niż po 5 minutach. </li>
           <li>Krawędź siatki będzie umieszczona na wysokości 243 cm.</li>
@@ -91,7 +91,7 @@
              </p></li>
           <li>Organizator dopuszcza udział w meczu drużyny z niepełnym składem, z zastrzeżeniem, że drużyna nie może liczyć mniej niż 4 zawodników, co musi zostać wpisane do protokołu meczu.</li>
           <li>Zmiany zawodników:
-            <p>a)	W trakcie seta i meczu nie ma ograniczenia co do liczby przeprowadzanych zmian w zespole. <br>
+            <p>a)	W trakcie seta każdej z drużyn przysługuje maksymalnie 6 zmian chyba, że miała miejsce kontuzja zawodnika. <br>
                b)	Dopuszcza się grę zawodnika Libero. Zastąpienia zawodnika Libero odbywają się zgodnie z Przepisami Gry w Piłkę Siatkową. <br>
                c)	Chęć dokonania zmiany musi być zgłoszona sędziemu.
               </p></li>
