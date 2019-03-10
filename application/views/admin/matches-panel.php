@@ -10,7 +10,7 @@
       echo form_open('matchadded', $attributes);
     ?>
 
-    <div class="col-md-2">
+    <div class="col-md-3">
       <p><b>Data meczu</b></p>
       <?php
         $data = array(
@@ -30,10 +30,10 @@
     <?php
       $data = array(
         'type'          => 'submit',
-        'name'          => 'news-add',
-        'id'            => 'news-add',
+        'name'          => 'match-add',
+        'id'            => 'match-add',
         'class'         => 'btn float-left delete_users_btn',
-        'value'         => 'Dodaj post'
+        'value'         => 'Dodaj mecz'
       );
       echo form_submit($data);
     ?>

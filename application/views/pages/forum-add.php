@@ -27,9 +27,10 @@
 
                 <?php
                   $data = array(
-                    'type'          => 'checkbox',
+                    'type'          => 'radio',
                     'name'          => 'category-squads-forum',
-                    'id'            => 'category-squads-forum'
+                    'id'            => 'category-squads-forum',
+                    'checked'
                   );
                   echo form_input($data);
                 ?>
@@ -38,7 +39,7 @@
 
                 <?php
                   $data = array(
-                    'type'          => 'checkbox',
+                    'type'          => 'radio',
                     'name'          => 'category-stuff-forum',
                     'id'            => 'category-stuff-forum'
                   );
@@ -49,7 +50,7 @@
 
                 <?php
                   $data = array(
-                    'type'          => 'checkbox',
+                    'type'          => 'radio',
                     'name'          => 'category-others-forum',
                     'id'            => 'category-others-forum'
                   );
