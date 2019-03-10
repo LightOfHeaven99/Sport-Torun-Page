@@ -29,10 +29,8 @@ class Forum extends CI_Controller
     }
     else
     {
-      if(isset($_POST['category-squads-forum']))
-        $category = 'squads';
-      else if(isset($_POST['category-stuff-forum']))
-        $category = 'stuff';
+      if(isset($_POST['category-forum']))
+        $category = $_POST['category-forum'];
       else
         $category = 'others';
 
