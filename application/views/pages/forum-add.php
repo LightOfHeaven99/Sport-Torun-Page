@@ -25,10 +25,11 @@
               <label class="float-left" style="text-align: left; color: white;" for="">Kategoria:</label><br>
               <div class="row align-items-center remember">
 
+                <form>
                 <?php
                   $data = array(
                     'type'          => 'radio',
-                    'name'          => 'category-squads-forum',
+                    'name'          => 'category-forum',
                     'id'            => 'category-squads-forum',
                     'checked'
                   );
@@ -40,7 +41,7 @@
                 <?php
                   $data = array(
                     'type'          => 'radio',
-                    'name'          => 'category-stuff-forum',
+                    'name'          => 'category-forum',
                     'id'            => 'category-stuff-forum'
                   );
                   echo form_input($data);
@@ -51,12 +52,13 @@
                 <?php
                   $data = array(
                     'type'          => 'radio',
-                    'name'          => 'category-others-forum',
+                    'name'          => 'category-forum',
                     'id'            => 'category-others-forum'
                   );
                   echo form_input($data);
                 ?>
                 <label for="category-others-forum" style="color: white; padding-left: 3px; padding-top: 7px;">Inne</label>
+              </form>
               </div>
 
               <div class="row">
