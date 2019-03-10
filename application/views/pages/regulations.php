@@ -64,7 +64,7 @@
           <li>Organizator nie zapewnia piłek do rozgrzewki przed meczem.</li>
           <li>Organizator odpowiada za zapewnienie obsady sędziowskiej.</li>
           <li>Każda drużyna powinna przybyć na miejsce spotkania, co najmniej 15 minut przed wyznaczoną godziną rozpoczęcia meczu.</li>
-          <li>12.	Co najmniej 15 minut przed rozpoczęciem meczu, kapitan drużyny zobowiązuje się do dostarczenia listy zawodników z numerami biorącymi udział w spotkaniu, na formularzu przygotowanym przez Organizatora. Po zakończeniu meczu kapitan zobowiązuje się do podpisania protokołu.  </li>
+          <li>Co najmniej 15 minut przed rozpoczęciem meczu, kapitan drużyny zobowiązuje się do dostarczenia listy zawodników z numerami biorącymi udział w spotkaniu, na formularzu przygotowanym przez Organizatora. Po zakończeniu meczu kapitan zobowiązuje się do podpisania protokołu.  </li>
           <li>Organizator zastrzega sobie, że z przyczyn niezależnych, takich jak przedłużający się czas poprzedniego spotkania, mecz może rozpocząć się z opóźnieniem.</li>
           <li>Po zakończonym meczu drużyny muszą opuścić boisko nie później niż po 5 minutach. </li>
           <li>Krawędź siatki będzie umieszczona na wysokości 243 cm.</li>
