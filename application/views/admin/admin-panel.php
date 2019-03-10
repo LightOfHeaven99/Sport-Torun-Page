@@ -60,7 +60,7 @@
           $name_team = $row->name;
           $condition_team = true;
         }
-        $conter_team++;
+        $counter_team++;
       }
 
       // ZAWODNICY
