@@ -124,7 +124,7 @@
 
     <?php echo form_close(); ?>
 
-    <div class="space200"></div>
+    <div class="space50"></div>
 
   </div>
 </div>
