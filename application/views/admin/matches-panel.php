@@ -10,20 +10,22 @@
       echo form_open('matchadded', $attributes);
     ?>
 
-    <p><b>Data meczu</b></p>
-    <?php
-      $data = array(
-        'type'          => 'date',
-        'name'          => 'date-match',
-        'id'            => 'date-match',
-        'class'         => 'form-control',
-        'value'         => date("Y-m-d"),
-        'min'           => date("Y-m-d"),
-        'max'           => '2019-12-31'
-        //'required'      => 'required'
-      );
-      echo form_input($data);
-    ?>
+    <div class="col-md-2">
+      <p><b>Data meczu</b></p>
+      <?php
+        $data = array(
+          'type'          => 'date',
+          'name'          => 'date-match',
+          'id'            => 'date-match',
+          'class'         => 'form-control',
+          'value'         => date("Y-m-d"),
+          'min'           => date("Y-m-d"),
+          'max'           => '2019-12-31'
+          //'required'      => 'required'
+        );
+        echo form_input($data);
+      ?>
+    </div>
 
     <?php
       $data = array(
