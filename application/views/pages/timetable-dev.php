@@ -14,7 +14,7 @@
           ?>
             <?php if($row->id != 0) : ?>
               <div class="card-header">
-                <div class="row" style="color: white;">
+                <center><div class="row" style="color: white;">
                     &nbsp; &nbsp;
                     <?php
         							$today = $row->match_date;
@@ -53,14 +53,14 @@
 
                     <?= $team1_name ?>
                     &nbsp;&nbsp;
-                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team1_logo ).'" style="width: 30px; height: 30px;" class="responsive"/>'; ?>
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team1_logo ).'" style="width: 24px; height: 24px;" class="responsive"/>'; ?>
                     &nbsp;&nbsp;&nbsp;
                     <b><?= ' : ' ?></b>
                     &nbsp;&nbsp;&nbsp;
-                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2_logo ).'" style="width: 30px; height: 30px;" class="responsive"/>'; ?>
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2_logo ).'" style="width: 24px; height: 24px;" class="responsive"/>'; ?>
                     &nbsp;&nbsp;
                     <?= $team2_name ?>
-                </div>
+                </div></center>
               </div>
               <?php $counter--; ?>
             <?php endif; ?>
