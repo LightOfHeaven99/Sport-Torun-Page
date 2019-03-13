@@ -225,9 +225,10 @@
           ?>
 
           <p><b>Wynik</b></p>
-          <br>
+        </div>
+        <br>
+        <div class="row">
           <div class="col-md-9">
-            <br>
               <table style="width: 75%;">
                 <tr>
                   <th></th>
