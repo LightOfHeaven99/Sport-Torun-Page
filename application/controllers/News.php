@@ -54,7 +54,7 @@ class News extends CI_Controller
                                     $commenting,
                                     $mailing);
 
-      redirect('news-panel');
+      redirect('news');
     }
   }
 

@@ -34,8 +34,8 @@
         <?php
           $data = array(
             'type'          => 'time',
-            'name'          => 'hour',
-            'id'            => 'hour',
+            'name'          => 'match-hour',
+            'id'            => 'match-hour',
             'class'         => 'form-control'
             //'required'      => 'required'
           );
@@ -43,27 +43,34 @@
         ?>
       </div>
 
-      <?php
-        $query = $this->db->query("SELECT * FROM teams ORDER BY name");
-
-        foreach($query->result() as $row) :
-
-      ?>
-
       <div class="col-md-3">
         <p><b>Lewa drużyna</b></p>
-        <select name="team1">
-          <option value='$row->id'><?= $row->name ?></option>
+        <select name="team1_id">
+          <?php
+            $query = $this->db->query("SELECT * FROM teams ORDER BY name");
+
+            foreach($query->result() as $row) :
+
+          ?>
+            <option value='$row->id'><?= $row->name ?></option>
+          <?php endforeach; ?>
         </select>
       </div>
       <div class="col-md-3">
         <p><b>Prawa drużyna</b></p>
-        <select name="team2">
-          <option value='$row->id'><?= $row->name ?></option>
+        <select name="team2_id">
+          <?php
+            $query = $this->db->query("SELECT * FROM teams ORDER BY name");
+
+            foreach($query->result() as $row) :
+
+          ?>
+            <option value='$row->id'><?= $row->name ?></option>
+          <?php endforeach; ?>
         </select>
       </div>
 
-    <?php endforeach; ?>
+
     </div>
 
     <?php
