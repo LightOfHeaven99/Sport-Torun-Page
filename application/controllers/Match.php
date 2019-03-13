@@ -30,7 +30,7 @@ class Match extends CI_Controller
       $this->match_model->insert_match($match_date,
                                     $match_hour,
                                     $team1_id,
-                                    $team2_id,
+                                    $team2_id
                                     );
 
       redirect('timetable');
