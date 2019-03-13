@@ -5,7 +5,7 @@
 
 
     </div>
-    <p class="m-0 text-center text-white"><font size="3">Panel Admina | Wsparcie techniczne: +48 530 543 770</font></p>
+    <center><p class="m-0 text-white"><font size="3">Panel Admina | Wsparcie techniczne: +48 530 543 770</font></p></center>
   </div>
 </footer>
 
