@@ -227,7 +227,7 @@
           <p><b>Wynik</b></p>
           <br>
           <div class="col-md-9">
-
+            <br>
               <table style="width: 75%;">
                 <tr>
                   <th></th>
@@ -236,18 +236,48 @@
                 </tr>
                 <tr>
                   <th>SET 1</th>
-                  <td><input type="text"></input></td>
-                  <td><input type="text"></input></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => 0,
+                    'name'          => 'team1_set1_points',
+                    'id'            => 'team1_set1_points'
+                  ); echo form_input($data); ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => 0,
+                    'name'          => 'team2_set1_points',
+                    'id'            => 'team2_set1_points'
+                  ); echo form_input($data); ?></td>
                 </tr>
                 <tr>
                   <th>SET 2</th>
-                  <td><input type="text"></input></td>
-                  <td><input type="text"></input></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => 0,
+                    'name'          => 'team1_set2_points',
+                    'id'            => 'team2_set2_points'
+                  ); echo form_input($data); ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => 0,
+                    'name'          => 'team1_set2_points',
+                    'id'            => 'team2_set2_points'
+                  ); echo form_input($data); ?></td>
                 </tr>
                 <tr>
                   <th>SET 3</th>
-                  <td><input type="text"></input></td>
-                  <td><input type="text"></input></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => 0,
+                    'name'          => 'team1_set3_points',
+                    'id'            => 'team2_set3_points'
+                  ); echo form_input($data); ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => 0,
+                    'name'          => 'team1_set3_points',
+                    'id'            => 'team2_set3_points'
+                  ); echo form_input($data); ?></td>
                 </tr>
               </table>
 
