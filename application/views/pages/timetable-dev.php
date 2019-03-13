@@ -4,17 +4,44 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="space20"></div>
-        <div class="parallax-card-timetable">
-          <br><br><br><br><br>
-          <h1 style="color: white; font-size: 70px;"><b>TERMINARZ<b></h1>
-          <h3 style="color: white; font-size: 20px;">Liga startuje na początku kwietnia!</h3>
-          <br>
-          <h3 style="color: white; font-size: 20px;">__________________________</h3>
-          <br>
-          <h3 style="color: white; font-size: 14px;">Wszelkie pytania kieruj na <a href="contact" style="color: #364FD2;">biuro@tls-torun.pl</a></h3>
-          <h3 style="color: white; font-size: 20px;">__________________________</h3>
-        </div>
-        <div class="space50"></div>
+        <div class="card" style="width: auto;">
+
+          <?php
+            $query = $this->db->query("SELECT * FROM matches ORDER BY match_date");
+            $counter = 6;
+
+            foreach($query->result() as $row):
+          ?>
+            <?php if($row->id != 0) : ?>
+              <div class="card-header">
+                <div class="row">
+                    &nbsp; &nbsp;
+                    <?php echo $row->match_date.'   '.$row->match_hour; ?>
+                    &nbsp; &nbsp;
+
+                    <?php
+                      $query = $this->db->query("SELECT * FROM teams WHERE id = '$row->team1_id'");
+                      $team1 = $query->result();
+
+                      $query = $this->db->query("SELECT * FROM teams WHERE id = '$row->team2_id'");
+                      $team2 = $query->result();
+                    ?>
+
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team1->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
+                    &nbsp;&nbsp;&nbsp;
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
+                </div>
+              </div>
+              <?php $counter--; ?>
+            <?php endif; ?>
+
+          <?php endforeach; ?>
+
+          <?php for($i = 0; $i < $counter; $i++) : ?>
+            <br><br><br><br>
+          <?php endfor; ?>
+      </div>
+      <br><br><br>
       </div>
     </div>
   </div>
