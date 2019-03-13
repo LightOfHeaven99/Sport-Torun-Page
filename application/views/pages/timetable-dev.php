@@ -20,14 +20,18 @@
                     &nbsp; &nbsp;
 
                     <?php
-                      $query = $this->db->query("SELECT * FROM teams WHERE id = '$row->team1_id'");
-                      $team1 = $query->result();
+                      $query_team1 = $this->db->query("SELECT * FROM teams");
+                      foreach($query_team1->result() as $row_team1) {
+                        if($row_team1->id == $row->team1_id) {
+                          $team1_logo = $row_team1->logo;
+                        }
+                      }
 
                       $query = $this->db->query("SELECT * FROM teams WHERE id = '$row->team2_id'");
                       $team2 = $query->result();
                     ?>
 
-                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team1->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team1_logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
                     &nbsp;&nbsp;&nbsp;
                     <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2->logo ).'" style="width: 70px; height: 70px;" class="responsive"/>'; ?>
                 </div>
