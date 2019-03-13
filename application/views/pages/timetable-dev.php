@@ -14,12 +14,14 @@
           ?>
             <?php if($row->id != 0) : ?>
               <div class="card-header">
-                <div class="row">
+                <div class="row" style="color: white;">
                     &nbsp; &nbsp;
                     <?php echo $row->match_date.'   '.$row->match_hour; ?>
                     &nbsp; &nbsp;
 
                     <?php
+                      $team1_logo = 0;
+
                       $query_team1 = $this->db->query("SELECT * FROM teams");
                       foreach($query_team1->result() as $row_team1) {
                         if($row_team1->id == $row->team1_id) {
