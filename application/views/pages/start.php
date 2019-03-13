@@ -145,17 +145,17 @@ and is wrapped around the whole page content, except for the footer in this exam
 							$day = substr($day, 0, 2);
 
 							echo $day.'.'.$month.'.'.$year;
-
-						?></span></h3>
+						?>
+					</span></h3>
         </div>
 
         <div class="w3-justify">
           <br>
           <p><strong>Serdecznie zapraszamy</strong> wszystkich chętnych do zapisania się do Toruńskiej Ligi Siatkówki! Dostępny jest Formularz Zgłoszeniowy w zakładce "<a href="join">Zgłoszenie</a>", gdzie można wypełnić i przesłać potrzebne dokumenty, aby zgłosić się do nadchodzących rozgrywek. W razie jakichkolwiek pytań, proszę kontaktować się ze mną za pomocą Formularza Kontaktowego, który znajduje się w stopce strony.</p>
           <p class="w3-clear"></p>
-					<p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Komentarze  </b> <span class="w3-tag w3-white">1</span></button></p>
+					<!-- <p class="w3-right"><button class="w3-button w3-indigo" onclick="myFunction('demo1')" id="myBtn"><b>Komentarze  </b> <span class="w3-tag w3-white">1</span></button></p>
           <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
-          </div>
+          </div> -->
         </div>
       </div>
 
