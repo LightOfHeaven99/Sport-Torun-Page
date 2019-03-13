@@ -25,7 +25,7 @@
         							echo $day.'.'.$month.'.'.$year;
         						?>
                     &nbsp; &nbsp;
-                    <?= substr($row->match_hour, 5) ?>
+                    <?= substr($row->match_hour, 0, 5) ?>
                     &nbsp; &nbsp;
 
                     <?php
@@ -51,15 +51,15 @@
                       }
                     ?>
 
-                    <?= $row_team1->name ?>
-                    &nbsp;&nbsp;&nbsp;
+                    <?= $team1_name ?>
+                    &nbsp;&nbsp;
                     <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team1_logo ).'" style="width: 30px; height: 30px;" class="responsive"/>'; ?>
-                    &nbsp;
-                    <b><?= ' : ' ?></b>
-                    &nbsp;
-                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2_logo ).'" style="width: 30px; height: 30px;" class="responsive"/>'; ?>
                     &nbsp;&nbsp;&nbsp;
-                    <?= $row_team2->name ?>
+                    <b><?= ' : ' ?></b>
+                    &nbsp;&nbsp;&nbsp;
+                    <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2_logo ).'" style="width: 30px; height: 30px;" class="responsive"/>'; ?>
+                    &nbsp;&nbsp;
+                    <?= $team2_name ?>
                 </div>
               </div>
               <?php $counter--; ?>
