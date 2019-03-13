@@ -99,7 +99,7 @@
     <div class="row">
       <div class="col-md-3">
         <p><b>Wybierz mecz</b></p>
-        <select name="select_match_date">
+        <select id="select_match_date" name="select_match_date">
           <?php
             $query = $this->db->query("SELECT * FROM matches ORDER BY match_date DESC");
 
@@ -125,8 +125,8 @@
     <br>
 
     <?php
-      $selected_match_id = 0;
-      $selected_match_id = $_POST['select_match_date'];
+      $select_match_id = 0;
+      $select_match_id = $_POST['select_match_date'];
     ?>
 
       <div class="row">
