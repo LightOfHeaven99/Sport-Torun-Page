@@ -72,7 +72,7 @@
 
 
     </div>
-
+    <br>
     <?php
       $data = array(
         'type'          => 'submit',
@@ -89,7 +89,7 @@
 
 
     <div style="height: 30px;"></div>
-    <br>
+    <br><br>
     <h1>AKTUALIZUJ MECZ</h1>
     <div style="height: 10px;"></div>
     <?php
@@ -99,30 +99,30 @@
     <div class="row">
       <div class="col-md-3">
         <p><b>Wybierz mecz</b></p>
-        <?php
-          $data = array(
-            'type'          => 'date',
-            'name'          => 'match-date',
-            'id'            => 'match-date',
-            'class'         => 'form-control'
-            //'required'      => 'required'
-          );
-          echo form_input($data);
-        ?>
+        <select name="match_date">
+          <?php
+            $query = $this->db->query("SELECT * FROM matches ORDER BY match_date");
+
+            foreach($query->result() as $row) :
+
+          ?>
+            <option value='$row->id'><?= $row->match_date ?></option>
+          <?php endforeach; ?>
+        </select>
       </div>
 
       <?php
         $query = $this->db->query("SELECT * FROM matches WHERE match_date = 'match-date'");
         $match = $query->result();
 
-        if(isset($_POST['match-date']))
-        {
+        if(isset($_POST['match-date'])) :
+
           $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
           $team1 = $query->result();
 
           $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
           $team2 = $query->result();
-        }
+
       ?>
 
       <div class="col-md-9">
@@ -241,6 +241,8 @@
       );
       echo form_submit($data);
     ?>
+
+    <?php endif; ?>
 
     <?php echo form_close(); ?>
 

@@ -84,7 +84,7 @@ $route['fileuploaded'] = 'upload/do_upload';
 $route['newsadded'] = 'news/add_news';
 $route['newsdeleted/(:num)'] = 'news/remove_news/$1';
 
-$route['matchadded'] = 'matches/add_match';
+$route['matchadded'] = 'match/add_match';
 
 $route['forumadded'] = 'forum/add_advertisement';
 
