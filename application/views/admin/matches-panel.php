@@ -43,7 +43,7 @@
         ?>
       </div>
 
-      <div class="col-md-3">
+      <div class="col-md-2">
         <p><b>Lewa drużyna</b></p>
         <select name="team1_id">
           <?php
@@ -56,7 +56,7 @@
           <?php endforeach; ?>
         </select>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-2">
         <p><b>Prawa drużyna</b></p>
         <select name="team2_id">
           <?php
@@ -101,7 +101,7 @@
         <p><b>Wybierz mecz</b></p>
         <select name="select_match_date">
           <?php
-            $query = $this->db->query("SELECT * FROM matches ORDER BY match_date");
+            $query = $this->db->query("SELECT * FROM matches ORDER BY match_date DESC");
 
             foreach($query->result() as $row) :
 
@@ -119,16 +119,6 @@
           <?php endforeach; ?>
         </select>
 
-        <script>
-          $(function(){
-              $('.button').click(function(event){
-                  var name = $(this).attr("name");
-                  $("#" + name + "div").slideToggle("slow");
-              })
-          });
-        </script>
-
-        &nbsp;<button type="button" name="updatematch">Pokaż</button>
       </div>
     </div>
 
@@ -139,7 +129,6 @@
       $selected_match_id = $_POST['select_match_date'];
     ?>
 
-    <div id="updatematchdiv" class="hide">
       <div class="row">
           <?php
             $match_match_date = 0;
@@ -164,7 +153,6 @@
             $team_team1_player14 = 0;
             $team_team1_player15 = 0;
 
-            $team_team2_name = 0;
             $team_team2_name = 0;
             $team_team2_player1 = 0;
             $team_team2_player2 = 0;
@@ -278,8 +266,12 @@
           }
         ?>
 
+        <br>
         <div class="row">
-          <p><b>STATYSTYKI</b></p>
+          <p><b>Statystyki</b></p>
+          <br>
+        </div>
+        <div class="row">
           <div class="col-md-6">
             <table style="width: 90%;">
               <tr>
@@ -306,19 +298,19 @@
                   ); echo form_input($data); ?></td>
                   <td><?php $data = array(
                     'type'          => 'text',
-                    'placeholder'   => '$row_players->attacks',
+                    'placeholder'   => $row_players->attacks,
                     'name'          => 'player1_1_attacks',
                     'id'            => 'player1_1_attacks'
                   ); echo form_input($data); ?></td>
                   <td><?php $data = array(
                     'type'          => 'text',
-                    'placeholder'   => '$row_players->blocks',
+                    'placeholder'   => $row_players->blocks,
                     'name'          => 'player1_1_blocks',
                     'id'            => 'player1_1_blocks'
                   ); echo form_input($data); ?></td>
                   <td><?php $data = array(
                     'type'          => 'text',
-                    'placeholder'   => '$row_players->aces',
+                    'placeholder'   => $row_players->aces,
                     'name'          => 'player1_1_aces',
                     'id'            => 'player1_1_aces'
                   ); echo form_input($data); ?></td>
@@ -353,6 +345,8 @@
           </div>
         </div>
 
+        <br>
+
         <?php
           $data = array(
             'type'          => 'submit',
@@ -365,8 +359,6 @@
         ?>
 
         <?php echo form_close(); ?>
-
-    </div>
 
     <div class="space50"></div>
   </div>
