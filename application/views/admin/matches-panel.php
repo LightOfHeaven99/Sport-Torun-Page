@@ -125,8 +125,8 @@
     <br>
 
     <?php
-      $select_match_id = 0;
-      $select_match_id = $_POST['select_match_date'];
+      $selected_match_id = 0;
+      $selected_match_id = $_POST["select_match_date"];
     ?>
 
       <div class="row">
@@ -224,8 +224,8 @@
 
           ?>
 
+          <p><b>Wynik</b></p>
           <div class="col-md-9">
-            <p><b>Wynik</b></p>
 
               <table style="width: 75%;">
                 <tr>
@@ -298,19 +298,19 @@
                   ); echo form_input($data); ?></td>
                   <td><?php $data = array(
                     'type'          => 'text',
-                    'placeholder'   => $row_players->attacks,
+                    'placeholder'   => 0,
                     'name'          => 'player1_1_attacks',
                     'id'            => 'player1_1_attacks'
                   ); echo form_input($data); ?></td>
                   <td><?php $data = array(
                     'type'          => 'text',
-                    'placeholder'   => $row_players->blocks,
+                    'placeholder'   => 0,
                     'name'          => 'player1_1_blocks',
                     'id'            => 'player1_1_blocks'
                   ); echo form_input($data); ?></td>
                   <td><?php $data = array(
                     'type'          => 'text',
-                    'placeholder'   => $row_players->aces,
+                    'placeholder'   => 0,
                     'name'          => 'player1_1_aces',
                     'id'            => 'player1_1_aces'
                   ); echo form_input($data); ?></td>
