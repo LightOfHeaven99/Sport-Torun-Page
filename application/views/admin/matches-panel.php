@@ -114,14 +114,16 @@
 
     <script>
       $(function(){
-          $('.hidden').click(function(event){
+          $('.button').click(function(event){
               var name = $(this).attr("name");
               $("#" + name + "div").slideToggle("slow");
           })
       });
     </script>
 
-    <div class="hidden">
+    <button type="button" name="updatematch">Pokaż</button>
+
+    <div id="updatematchdiv" class="hide">
       <div class="row">
           <?php
             $query = $this->db->query("SELECT * FROM matches WHERE match_date = 'match-date'");
