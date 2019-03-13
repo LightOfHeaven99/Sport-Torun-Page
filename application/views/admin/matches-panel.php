@@ -27,44 +27,43 @@
           );
           echo form_input($data);
         ?>
-
-        <p><b>Godzina</b></p>
       </div>
 
-      <?php
-        $query = $this->db->query("SELECT * FROM teams ORDER BY name");
-
-        foreach($query->result() as $row){
-
-        }
-      ?>
-
       <div class="col-md-3">
-        <p><b>Lewa drużyna</b></p>
+        <p><b>Godzina</b></p>
         <?php
           $data = array(
-            'type'          => 'date',
-            'name'          => 'team1',
-            'id'            => 'team1',
+            'type'          => 'time',
+            'name'          => 'hour',
+            'id'            => 'hour',
             'class'         => 'form-control'
             //'required'      => 'required'
           );
           echo form_input($data);  // GIVING id
         ?>
       </div>
+
+      <?php
+        $query = $this->db->query("SELECT * FROM teams ORDER BY name");
+
+        foreach($query->result() as $row) :
+
+      ?>
+
+      <div class="col-md-3">
+        <p><b>Lewa drużyna</b></p>
+        <select name="team1">
+          <option value='$row->id'><?= $row->name ?></option>
+        </select>
+      </div>
       <div class="col-md-3">
         <p><b>Prawa drużyna</b></p>
-        <?php
-          $data = array(
-            'type'          => 'date',
-            'name'          => 'team2',
-            'id'            => 'team2',
-            'class'         => 'form-control'
-            //'required'      => 'required'
-          );
-          echo form_input($data);   // GIVING id
-        ?>
+        <select name="team2">
+          <option value='$row->id'><?= $row->name ?></option>
+        </select>
       </div>
+
+    <?php endforeach; ?>
     </div>
 
     <?php
@@ -83,6 +82,7 @@
 
 
     <div style="height: 30px;"></div>
+    <br>
     <h1>AKTUALIZUJ MECZ</h1>
     <div style="height: 10px;"></div>
     <?php
@@ -105,14 +105,17 @@
       </div>
 
       <?php
-        $query = $this->db->query("SELECT * FROM matches WHERE match_date = '2019-03-15'");
+        $query = $this->db->query("SELECT * FROM matches WHERE match_date = 'match-date'");
         $match = $query->result();
 
-        $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
-        $team1 = $query->result();
+        if(isset($_POST['match-date']))
+        {
+          $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
+          $team1 = $query->result();
 
-        $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
-        $team2 = $query->result();
+          $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
+          $team2 = $query->result();
+        }
       ?>
 
       <div class="col-md-9">
@@ -227,7 +230,7 @@
         'name'          => 'match-update',
         'id'            => 'match-update',
         'class'         => 'btn float-left delete_users_btn',
-        'value'         => 'Dodaj mecz'
+        'value'         => 'Aktualizuj mecz'
       );
       echo form_submit($data);
     ?>
