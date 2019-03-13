@@ -126,7 +126,7 @@
 
     <?php
       $selected_match_id = 0;
-      $selected_match_id = $_POST["select_match_date"];
+      $selected_match_id = $this->input->post('select_match_date');
     ?>
 
       <div class="row">
@@ -225,6 +225,7 @@
           ?>
 
           <p><b>Wynik</b></p>
+          <br>
           <div class="col-md-9">
 
               <table style="width: 75%;">
