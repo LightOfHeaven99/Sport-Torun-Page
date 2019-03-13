@@ -226,7 +226,6 @@
 
           <p><b>Wynik</b></p>
         </div>
-        <br>
         <div class="row">
           <div class="col-md-9">
               <table style="width: 75%;">
