@@ -37,7 +37,7 @@
       <br>
       <div class="row">
         <div class="col-md-6">
-          <p><b>Treść posta (max 520 znaków)</b></p>
+          <p><b>Treść posta (max. 520 znaków)</b></p>
 
           <?php
             $data = array(

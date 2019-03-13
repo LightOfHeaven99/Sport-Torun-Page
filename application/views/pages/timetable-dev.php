@@ -14,7 +14,7 @@
           ?>
             <?php if($row->id != 0) : ?>
               <div class="card-header">
-                <center><div class="row" style="color: white;">
+                <div class="row" style="color: white;">
                     &nbsp; &nbsp;
                     <?php
         							$today = $row->match_date;
@@ -60,7 +60,7 @@
                     <?php echo '<img src = "data:image/jpeg;base64,'.base64_encode( $team2_logo ).'" style="width: 24px; height: 24px;" class="responsive"/>'; ?>
                     &nbsp;&nbsp;
                     <?= $team2_name ?>
-                </div></center>
+                </div>
               </div>
               <?php $counter--; ?>
             <?php endif; ?>

@@ -110,141 +110,151 @@
           <?php endforeach; ?>
         </select>
       </div>
-
-      <?php
-        $query = $this->db->query("SELECT * FROM matches WHERE match_date = 'match-date'");
-        $match = $query->result();
-
-        if(isset($_POST['match-date'])) :
-
-          $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
-          $team1 = $query->result();
-
-          $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
-          $team2 = $query->result();
-
-      ?>
-
-      <div class="col-md-9">
-        <p><b>Wynik</b></p>
-
-          <table style="width: 75%;">
-            <tr>
-              <th></th>
-              <th><?= $team1->name ?></th>
-              <th><?= $team2->name ?></th>
-            </tr>
-            <tr>
-              <th>SET 1</th>
-              <td><!-- team1_set1_points --></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>SET 2</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>SET 3</th>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-
-      </div>
     </div>
 
-    <?php
-      $query = $this->db->query("SELECT * FROM players WHERE id = '$team1->player1_id'");
-      $player1_1 = $query->result();
-    ?>
+    <script>
+      $(function(){
+          $('.hidden').click(function(event){
+              var name = $(this).attr("name");
+              $("#" + name + "div").slideToggle("slow");
+          })
+      });
+    </script>
 
-    <div class="row">
-      <p><b>STATYSTYKI</b></p>
-      <div class="col-md-6">
-        <table style="width: 90%;">
-          <tr>
-            <th><?= $team1->name ?></th>
-          </tr>
-          <tr>
-            <th>ID</th>
-            <th>NAZWISKO</th>
-            <th>OBECNY</th>
-            <th>ATAKI</th>
-            <th>BLOKI</th>
-            <th>ASY</th>
-          </tr>
-          <?php if($player1_1->id != 0) : ?>
-          <tr>
-            <td><?= $player1_1->id ?></td>
-            <td><?= $player1_1->last_name ?></td>
-            <td><?php $data = array(
-              'type'          => 'checkbox',
-              'name'          => 'player1_1',
-              'id'            => 'player1_1'
-            ); echo form_input($data); ?></td>
-            <td><?php $data = array(
-              'type'          => 'text',
-              'placeholder'   => '$player1_1->attacks',
-              'name'          => 'player1_1_attacks',
-              'id'            => 'player1_1_attacks'
-            ); echo form_input($data); ?></td>
-            <td><?php $data = array(
-              'type'          => 'text',
-              'placeholder'   => '$player1_1->blocks',
-              'name'          => 'player1_1_blocks',
-              'id'            => 'player1_1_blocks'
-            ); echo form_input($data); ?></td>
-            <td><?php $data = array(
-              'type'          => 'text',
-              'placeholder'   => '$player1_1->aces',
-              'name'          => 'player1_1_aces',
-              'id'            => 'player1_1_aces'
-            ); echo form_input($data); ?></td>
-          </tr>
-          <?php endif; ?>
-        </table>
-      </div>
+    <div class="hidden">
+      <div class="row">
+          <?php
+            $query = $this->db->query("SELECT * FROM matches WHERE match_date = 'match-date'");
+            $match = $query->result();
 
-      <div class="col-md-6">
-        <table style="width: 90%;">
-          <tr>
-            <th><?= $team2->name ?></th>
-          </tr>
-          <tr>
-            <th>ID</th>
-            <th>NAZWISKO</th>
-            <th>OBECNY</th>
-            <th>ATAKI</th>
-            <th>BLOKI</th>
-            <th>ASY</th>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </table>
-      </div>
+            $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
+            $team1 = $query->result();
+
+            $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
+            $team2 = $query->result();
+
+          ?>
+
+          <div class="col-md-9">
+            <p><b>Wynik</b></p>
+
+              <table style="width: 75%;">
+                <tr>
+                  <th></th>
+                  <th><?= $team1->name ?></th>
+                  <th><?= $team2->name ?></th>
+                </tr>
+                <tr>
+                  <th>SET 1</th>
+                  <td><!-- team1_set1_points --></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>SET 2</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th>SET 3</th>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+
+          </div>
+        </div>
+
+        <?php
+          $query = $this->db->query("SELECT * FROM players WHERE id = '$team1->player1_id'");
+          $player1_1 = $query->result();
+        ?>
+
+        <div class="row">
+          <p><b>STATYSTYKI</b></p>
+          <div class="col-md-6">
+            <table style="width: 90%;">
+              <tr>
+                <th><?= $team1->name ?></th>
+              </tr>
+              <tr>
+                <th>ID</th>
+                <th>NAZWISKO</th>
+                <th>OBECNY</th>
+                <th>ATAKI</th>
+                <th>BLOKI</th>
+                <th>ASY</th>
+              </tr>
+              <?php if($player1_1->id != 0) : ?>
+              <tr>
+                <td><?= $player1_1->id ?></td>
+                <td><?= $player1_1->last_name ?></td>
+                <td><?php $data = array(
+                  'type'          => 'checkbox',
+                  'name'          => 'player1_1',
+                  'id'            => 'player1_1'
+                ); echo form_input($data); ?></td>
+                <td><?php $data = array(
+                  'type'          => 'text',
+                  'placeholder'   => '$player1_1->attacks',
+                  'name'          => 'player1_1_attacks',
+                  'id'            => 'player1_1_attacks'
+                ); echo form_input($data); ?></td>
+                <td><?php $data = array(
+                  'type'          => 'text',
+                  'placeholder'   => '$player1_1->blocks',
+                  'name'          => 'player1_1_blocks',
+                  'id'            => 'player1_1_blocks'
+                ); echo form_input($data); ?></td>
+                <td><?php $data = array(
+                  'type'          => 'text',
+                  'placeholder'   => '$player1_1->aces',
+                  'name'          => 'player1_1_aces',
+                  'id'            => 'player1_1_aces'
+                ); echo form_input($data); ?></td>
+              </tr>
+              <?php endif; ?>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <table style="width: 90%;">
+              <tr>
+                <th><?= $team2->name ?></th>
+              </tr>
+              <tr>
+                <th>ID</th>
+                <th>NAZWISKO</th>
+                <th>OBECNY</th>
+                <th>ATAKI</th>
+                <th>BLOKI</th>
+                <th>ASY</th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <?php
+          $data = array(
+            'type'          => 'submit',
+            'name'          => 'match-update',
+            'id'            => 'match-update',
+            'class'         => 'btn float-left delete_users_btn',
+            'value'         => 'Aktualizuj mecz'
+          );
+          echo form_submit($data);
+        ?>
+
+        <?php echo form_close(); ?>
+
     </div>
-
-    <?php
-      $data = array(
-        'type'          => 'submit',
-        'name'          => 'match-update',
-        'id'            => 'match-update',
-        'class'         => 'btn float-left delete_users_btn',
-        'value'         => 'Aktualizuj mecz'
-      );
-      echo form_submit($data);
-    ?>
-
-    <?php endif; ?>
-
-    <?php echo form_close(); ?>
 
     <div class="space50"></div>
   </div>
