@@ -108,10 +108,10 @@
         $query = $this->db->query("SELECT * FROM matches WHERE match_date = '2019-03-15'");
         $match = $query->result();
 
-        $query = $this->db->query("SELECT * FROM teams WHERE id = $match->team1_id");
+        $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
         $team1 = $query->result();
 
-        $query = $this->db->query("SELECT * FROM teams WHERE id = $match->team2_id");
+        $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
         $team2 = $query->result();
       ?>
 
@@ -145,7 +145,7 @@
     </div>
 
     <?php
-      $query = $this->db->query("SELECT * FROM players WHERE id = $team1->player1_id");
+      $query = $this->db->query("SELECT * FROM players WHERE id = '$team1->player1_id'");
       $player1_1 = $query->result();
     ?>
 
