@@ -99,41 +99,100 @@
     <div class="row">
       <div class="col-md-3">
         <p><b>Wybierz mecz</b></p>
-        <select name="match_date">
+        <select name="select_match_date">
           <?php
             $query = $this->db->query("SELECT * FROM matches ORDER BY match_date");
 
             foreach($query->result() as $row) :
 
           ?>
-            <option value='$row->id'><?= $row->match_date ?></option>
+            <option value='$row->id'>
+                                  <?php
+                                  $today = $row->match_date;
+
+                                  list($year, $month, $day) = explode("-", $today);
+                                  $day = substr($day, 0, 2);
+
+                                  echo $day.'.'.$month.'.'.$year.'&nbsp;&nbsp;'.
+                                  substr($row->match_hour, 0, 5);
+                                  ?>
           <?php endforeach; ?>
         </select>
+
+        <script>
+          $(function(){
+              $('.button').click(function(event){
+                  var name = $(this).attr("name");
+                  $("#" + name + "div").slideToggle("slow");
+              })
+          });
+        </script>
+
+        <button type="button" name="updatematch">&nbsp; Pokaż</button>
       </div>
     </div>
 
-    <script>
-      $(function(){
-          $('.button').click(function(event){
-              var name = $(this).attr("name");
-              $("#" + name + "div").slideToggle("slow");
-          })
-      });
-    </script>
+    <br>
 
-    <button type="button" name="updatematch">Pokaż</button>
+    <?php $selected_match_id = $_POST['select_match_date']; ?>
 
     <div id="updatematchdiv" class="hide">
       <div class="row">
           <?php
-            $query = $this->db->query("SELECT * FROM matches WHERE match_date = 'match-date'");
-            $match = $query->result();
+            $result_team1_name = 0;
+            $result_team2_name = 0;
 
-            $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team1_id'");
-            $team1 = $query->result();
+            $query_matches = $this->db->query("SELECT * FROM matches");
 
-            $query = $this->db->query("SELECT * FROM teams WHERE id = '$match->team2_id'");
-            $team2 = $query->result();
+            foreach($query_matches->result() as $row_matches) {
+              if($row_matches->id == $selected_match_id) {
+                $match_match_date = $row_matches->match_date;
+                $match_match_hour = $row_matches->match_hour;
+                $match_team1_id = $row_matches->team1_id;
+                $match_team2_id = $row_matches->team2_id;
+              }
+            }
+
+            $query_teams = $this->db->query("SELECT * FROM teams");
+
+            foreach($query_teams->result() as $row_teams) {
+              if($row_teams->id == $match_team1_id) {
+                $team_team1_name = $row_teams->name;
+                $team_team1_player1 = $row_teams->player1_id;
+                $team_team1_player2 = $row_teams->player2_id;
+                $team_team1_player3 = $row_teams->player3_id;
+                $team_team1_player4 = $row_teams->player4_id;
+                $team_team1_player5 = $row_teams->player5_id;
+                $team_team1_player6 = $row_teams->player6_id;
+                $team_team1_player7 = $row_teams->player7_id;
+                $team_team1_player8 = $row_teams->player8_id;
+                $team_team1_player9 = $row_teams->player9_id;
+                $team_team1_player10 = $row_teams->player10_id;
+                $team_team1_player11 = $row_teams->player11_id;
+                $team_team1_player12 = $row_teams->player12_id;
+                $team_team1_player13 = $row_teams->player13_id;
+                $team_team1_player14 = $row_teams->player14_id;
+                $team_team1_player15 = $row_teams->player15_id;
+              }
+              if($row_teams->id == $match_team2_id) {
+                $team_team2_name = $row_teams->name;
+                $team_team2_player1 = $row_teams->player1_id;
+                $team_team2_player2 = $row_teams->player2_id;
+                $team_team2_player3 = $row_teams->player3_id;
+                $team_team2_player4 = $row_teams->player4_id;
+                $team_team2_player5 = $row_teams->player5_id;
+                $team_team2_player6 = $row_teams->player6_id;
+                $team_team2_player7 = $row_teams->player7_id;
+                $team_team2_player8 = $row_teams->player8_id;
+                $team_team2_player9 = $row_teams->player9_id;
+                $team_team2_player10 = $row_teams->player10_id;
+                $team_team2_player11 = $row_teams->player11_id;
+                $team_team2_player12 = $row_teams->player12_id;
+                $team_team2_player13 = $row_teams->player13_id;
+                $team_team2_player14 = $row_teams->player14_id;
+                $team_team2_player15 = $row_teams->player15_id;
+              }
+            }
 
           ?>
 
@@ -143,23 +202,23 @@
               <table style="width: 75%;">
                 <tr>
                   <th></th>
-                  <th><?= $team1->name ?></th>
-                  <th><?= $team2->name ?></th>
+                  <th><?= $team_team1_name ?></th>
+                  <th><?= $team_team2_name ?></th>
                 </tr>
                 <tr>
                   <th>SET 1</th>
-                  <td><!-- team1_set1_points --></td>
-                  <td></td>
+                  <td><input type="text"></input></td>
+                  <td><input type="text"></input></td>
                 </tr>
                 <tr>
                   <th>SET 2</th>
-                  <td></td>
-                  <td></td>
+                  <td><input type="text"></input></td>
+                  <td><input type="text"></input></td>
                 </tr>
                 <tr>
                   <th>SET 3</th>
-                  <td></td>
-                  <td></td>
+                  <td><input type="text"></input></td>
+                  <td><input type="text"></input></td>
                 </tr>
               </table>
 
@@ -167,8 +226,16 @@
         </div>
 
         <?php
-          $query = $this->db->query("SELECT * FROM players WHERE id = '$team1->player1_id'");
-          $player1_1 = $query->result();
+          $query_players = $this->db->query("SELECT * FROM players");
+
+          foreach($query_players->result() as $row_players) {
+            if($row_players->id == $team_team1_player1) {
+              $team1_player1_lastname = $row_players->last_name;
+              $team1_player1_attacks = $row_players->attacks;
+              $team1_player1_blocks = $row_players->blocks;
+              $team1_player1_aces = $row_players->aces;
+            }
+          }
         ?>
 
         <div class="row">
@@ -176,7 +243,7 @@
           <div class="col-md-6">
             <table style="width: 90%;">
               <tr>
-                <th><?= $team1->name ?></th>
+                <th><?= $team_team1_name ?></th>
               </tr>
               <tr>
                 <th>ID</th>
@@ -186,42 +253,45 @@
                 <th>BLOKI</th>
                 <th>ASY</th>
               </tr>
-              <?php if($player1_1->id != 0) : ?>
-              <tr>
-                <td><?= $player1_1->id ?></td>
-                <td><?= $player1_1->last_name ?></td>
-                <td><?php $data = array(
-                  'type'          => 'checkbox',
-                  'name'          => 'player1_1',
-                  'id'            => 'player1_1'
-                ); echo form_input($data); ?></td>
-                <td><?php $data = array(
-                  'type'          => 'text',
-                  'placeholder'   => '$player1_1->attacks',
-                  'name'          => 'player1_1_attacks',
-                  'id'            => 'player1_1_attacks'
-                ); echo form_input($data); ?></td>
-                <td><?php $data = array(
-                  'type'          => 'text',
-                  'placeholder'   => '$player1_1->blocks',
-                  'name'          => 'player1_1_blocks',
-                  'id'            => 'player1_1_blocks'
-                ); echo form_input($data); ?></td>
-                <td><?php $data = array(
-                  'type'          => 'text',
-                  'placeholder'   => '$player1_1->aces',
-                  'name'          => 'player1_1_aces',
-                  'id'            => 'player1_1_aces'
-                ); echo form_input($data); ?></td>
-              </tr>
-              <?php endif; ?>
+
+              <?php foreach($query_players->result() as $row_players) : ?>
+                <?php if($row_players->id == $team_team1_player1) : ?>
+                <tr>
+                  <td><?= $row_players->id ?></td>
+                  <td><?= $row_players->last_name ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'checkbox',
+                    'name'          => 'player1_1',
+                    'id'            => 'player1_1'
+                  ); echo form_input($data); ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => '$row_players->attacks',
+                    'name'          => 'player1_1_attacks',
+                    'id'            => 'player1_1_attacks'
+                  ); echo form_input($data); ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => '$row_players->blocks',
+                    'name'          => 'player1_1_blocks',
+                    'id'            => 'player1_1_blocks'
+                  ); echo form_input($data); ?></td>
+                  <td><?php $data = array(
+                    'type'          => 'text',
+                    'placeholder'   => '$row_players->aces',
+                    'name'          => 'player1_1_aces',
+                    'id'            => 'player1_1_aces'
+                  ); echo form_input($data); ?></td>
+                </tr>
+                <?php endif; ?>
+              <?php endforeach; ?>
             </table>
           </div>
 
           <div class="col-md-6">
             <table style="width: 90%;">
               <tr>
-                <th><?= $team2->name ?></th>
+                <th><?= $team_team2_name ?></th>
               </tr>
               <tr>
                 <th>ID</th>
