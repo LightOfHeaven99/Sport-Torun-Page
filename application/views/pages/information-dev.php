@@ -9,7 +9,7 @@
           <br><br>
           <br><br>
 
-          <p style="color: white;">Brak zgłoszonych drużyn.</p>
+          <p style="color: white;">Informacje o lidze zostaną uzupełnione wraz z pojawianiem się pierwszych drużyn.</p>
 
           <br><br>
           <br><br>
@@ -21,6 +21,7 @@
         <div class="space50"></div>
         <div class="space50"></div>
         <div class="space50"></div>
+      </div>
     </div>
   </div>
 </div>
