@@ -128,19 +128,59 @@
           });
         </script>
 
-        <button type="button" name="updatematch">&nbsp; Pokaż</button>
+        &nbsp;<button type="button" name="updatematch">Pokaż</button>
       </div>
     </div>
 
     <br>
 
-    <?php $selected_match_id = $_POST['select_match_date']; ?>
+    <?php
+      $selected_match_id = 0;
+      $selected_match_id = $_POST['select_match_date'];
+    ?>
 
     <div id="updatematchdiv" class="hide">
       <div class="row">
           <?php
-            $result_team1_name = 0;
-            $result_team2_name = 0;
+            $match_match_date = 0;
+            $match_match_hour = 0;
+            $match_team1_id = 0;
+            $match_team2_id = 0;
+
+            $team_team1_name = 0;
+            $team_team1_player1 = 0;
+            $team_team1_player2 = 0;
+            $team_team1_player3 = 0;
+            $team_team1_player4 = 0;
+            $team_team1_player5 = 0;
+            $team_team1_player6 = 0;
+            $team_team1_player7 = 0;
+            $team_team1_player8 = 0;
+            $team_team1_player9 = 0;
+            $team_team1_player10 = 0;
+            $team_team1_player11 = 0;
+            $team_team1_player12 = 0;
+            $team_team1_player13 = 0;
+            $team_team1_player14 = 0;
+            $team_team1_player15 = 0;
+
+            $team_team2_name = 0;
+            $team_team2_name = 0;
+            $team_team2_player1 = 0;
+            $team_team2_player2 = 0;
+            $team_team2_player3 = 0;
+            $team_team2_player4 = 0;
+            $team_team2_player5 = 0;
+            $team_team2_player6 = 0;
+            $team_team2_player7 = 0;
+            $team_team2_player8 = 0;
+            $team_team2_player9 = 0;
+            $team_team2_player10 = 0;
+            $team_team2_player11 = 0;
+            $team_team2_player12 = 0;
+            $team_team2_player13 = 0;
+            $team_team2_player14 = 0;
+            $team_team2_player15 = 0;
 
             $query_matches = $this->db->query("SELECT * FROM matches");
 
