@@ -49,7 +49,7 @@
         </div>
         <br>
         <div class="row">
-          <label class="float-left">Płeć:</label><br>
+          <label class="float-left">Płeć:&nbsp;</label><br>
 
             <?php
               $data = array(
@@ -61,7 +61,7 @@
               echo form_input($data);
             ?>
 
-            <label for="category-squads-forum">mężczyzna</label>
+            <label for="category-squads-forum"&nbsp;>mężczyzna&nbsp;&nbsp;&nbsp;</label>
 
             <?php
               $data = array(
@@ -72,7 +72,7 @@
               );
               echo form_input($data);
             ?>
-            <label for="female-sex">kobieta</label>
+            <label for="female-sex">&nbsp;kobieta</label>
         </div>
       </div>
       <div class="col-md-9">
