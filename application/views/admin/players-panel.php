@@ -20,7 +20,7 @@
     <div class="col-md-3">
       <div class="row">
 
-          <label for="topic-contact"><b>Imię i nazwisko</b></label>
+          <label for="first-name"><b>Imię</b></label>
 
           <?php
             $data = array(
@@ -33,6 +33,9 @@
             echo form_input($data);
           ?>
 
+          <br>
+          <label for="last-name"><b>Nazwisko</b></label>
+
           <?php
             $data = array(
               'type'          => 'textarea',
@@ -44,8 +47,9 @@
             echo form_input($data);
           ?>
         </div>
+        <br>
         <div class="row">
-          <label class="float-left" style="text-align: left; color: white;" for="">Płeć:</label><br>
+          <label class="float-left">Płeć:</label><br>
 
             <?php
               $data = array(
@@ -57,7 +61,7 @@
               echo form_input($data);
             ?>
 
-            <label for="category-squads-forum" style="color: white; padding-left: 3px; padding-top: 7px;">mężczyzna</label>
+            <label for="category-squads-forum">mężczyzna</label>
 
             <?php
               $data = array(
@@ -68,7 +72,7 @@
               );
               echo form_input($data);
             ?>
-            <label for="female-sex" style="color: white; padding-left: 3px; padding-top: 7px;">kobieta</label>
+            <label for="female-sex">kobieta</label>
         </div>
       </div>
       <div class="col-md-9">

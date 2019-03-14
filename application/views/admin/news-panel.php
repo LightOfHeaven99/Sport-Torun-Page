@@ -19,7 +19,7 @@
     <div class="row">
       <div class="col-md-3">
 
-        <label for="topic-contact"><b>Tytuł</b></label>
+        <label for="title-news"><b>Tytuł</b></label>
 
         <?php
           $data = array(
@@ -108,7 +108,7 @@
             <label for="display-login" style="padding-left: 3px; padding-top: 7px; color: black;">Wyłącz mailowanie z tego postu</label>
 
           </div>
-
+          <br>
           <div class="form-group">
 
             <?php
