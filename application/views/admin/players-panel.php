@@ -61,7 +61,7 @@
               echo form_input($data);
             ?>
 
-            <label for="category-squads-forum"&nbsp;>mężczyzna&nbsp;&nbsp;&nbsp;</label>
+            <label for="category-squads-forum">&nbsp;mężczyzna&nbsp;&nbsp;&nbsp;</label>
 
             <?php
               $data = array(

@@ -115,7 +115,7 @@
 
                                   echo $day.'.'.$month.'.'.$year.'&nbsp;&nbsp;'.
                                   substr($row->match_hour, 0, 5);
-                                  ?>
+                                  ?></option>
           <?php endforeach; ?>
         </select>
 

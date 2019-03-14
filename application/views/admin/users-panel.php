@@ -144,7 +144,7 @@
         );
         echo form_input($data);
       ?>
-      <label for="display-login" style="padding-left: 3px; padding-top: 7px;">Wyświetlanie loginu</label>
+      <label for="display-login" style="padding-left: 3px; padding-top: 7px; color: black;">Wyświetlanie loginu</label>
 
     </div>
     <div class="row align-items-center remember">
@@ -157,7 +157,7 @@
         );
         echo form_input($data);
       ?>
-      <label for="is_active" style="padding-left: 3px; padding-top: 7px;">Czy aktywny</label>
+      <label for="is_active" style="padding-left: 3px; padding-top: 7px; color: black;">Czy aktywny</label>
 
     </div>
     <div class="row align-items-center remember">
@@ -170,7 +170,7 @@
         );
         echo form_input($data);
       ?>
-      <label for="is_admin" style="padding-left: 3px; padding-top: 7px;">Czy admin</label>
+      <label for="is_admin" style="padding-left: 3px; padding-top: 7px; color: black;">Czy admin</label>
 
     </div>
 
@@ -179,8 +179,9 @@
       <?php
         $data = array(
           'type'          => 'submit',
-          'name'          => 'signup-submit',
-          'class'         => 'btn float-right signup_btn',
+          'name'          => 'user-add',
+          'id'            => 'user-add',
+          'class'         => 'btn float-left delete_users_btn',
           'value'         => 'Dodaj użytkownika'
         );
         echo form_submit($data);

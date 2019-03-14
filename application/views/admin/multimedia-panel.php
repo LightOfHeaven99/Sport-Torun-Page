@@ -2,8 +2,8 @@
 <div class="admin-bg">
   <div class="container">
     <div style="height: 20px;"></div>
-      <a href="teams" class="btn delete_users_btn">Przejdź do drużyn</a>
-
+      <a href="gallery" class="btn delete_users_btn">Przejdź do galerii</a>
+      <a href="video" class="btn delete_users_btn">Przejdź do video</a>
       <div style="height: 30px;"></div>
       <h1>DODAJ ALBUM</h1>
       <div style="height: 10px;"></div>
@@ -36,6 +36,7 @@
         <div class="col-md-3">
           <p><b>Powiąż z meczem</b></p>
           <select id="gallery_match_date" name="gallery_match_date">
+            <option value='0'>brak</option>
             <?php
               $query = $this->db->query("SELECT * FROM matches ORDER BY match_date");
 
@@ -51,7 +52,7 @@
 
                                     echo $day.'.'.$month.'.'.$year.'&nbsp;&nbsp;'.
                                     substr($row->match_hour, 0, 5);
-                                    ?>
+                                    ?></option>
             <?php endforeach; ?>
           </select>
 
@@ -157,6 +158,7 @@
 
       <?php echo form_close(); ?>
 
+      <br><br>
       <div style="height: 30px;"></div>
       <h1>DODAJ VIDEO</h1>
       <div style="height: 10px;"></div>
@@ -185,6 +187,7 @@
         <div class="col-md-3">
           <p><b>Powiąż z meczem</b></p>
           <select id="video_match_date" name="video_match_date">
+            <option value='0'>brak</option>
             <?php
               $query = $this->db->query("SELECT * FROM matches ORDER BY match_date");
 
@@ -200,7 +203,7 @@
 
                                     echo $day.'.'.$month.'.'.$year.'&nbsp;&nbsp;'.
                                     substr($row->match_hour, 0, 5);
-                                    ?>
+                                    ?></option>
             <?php endforeach; ?>
           </select>
 
@@ -217,7 +220,7 @@
           );
           echo form_input($data);
         ?>
-        <label for="new-data" style="padding-left: 3px; padding-top: 7px;">Ustaw nowe dane</label>
+        <label for="new-data" style="padding-left: 3px; padding-top: 7px; color: black;">Ustaw nowe dane</label>
       </div>
 
       <div class="row">
