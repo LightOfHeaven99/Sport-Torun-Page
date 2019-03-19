@@ -49,7 +49,7 @@
           <div class="col-md-6">
             <br>
             <h3><?php echo $row->title;?></h3>
-            <p style="text-align: justify;"><?php if(strlen($row->content) > 520):
+            <p style="text-align: justify;"><?php if(false/*strlen($row->content) > 520*/):
             echo substr($row->content, 0, 520)."...";?></p>
             <!-- <a class="btn btn-primary" onclick="openNav()">Czytaj więcej</a> -->
             <?php else:
